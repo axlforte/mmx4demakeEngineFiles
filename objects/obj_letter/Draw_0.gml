@@ -1,0 +1,1 @@
+draw_sprite(spr_font_small,ltrNum,x,y)

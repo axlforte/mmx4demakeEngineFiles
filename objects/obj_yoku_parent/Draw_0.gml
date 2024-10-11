@@ -1,0 +1,1 @@
+draw_sprite(yoku_image,image_index, x,y);

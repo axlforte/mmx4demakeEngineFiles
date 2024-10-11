@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "p_drill",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "DrillWall",
+    "path": "folders/Objects/Enemies/Entity/X3/DrillWall.yy",
+  },
+  "parentObjectId": {
+    "name": "par_p_enemy",
+    "path": "objects/par_p_enemy/par_p_enemy.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 0,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":24.0,"y":24.0,},
+  ],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_drillwall_base",
+    "path": "sprites/spr_drillwall_base/spr_drillwall_base.yy",
+  },
+  "spriteMaskId": null,
+  "visible": false,
+}

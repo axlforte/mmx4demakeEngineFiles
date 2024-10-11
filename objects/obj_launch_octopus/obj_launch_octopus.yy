@@ -1,0 +1,43 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_launch_octopus",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Launch Octopus",
+    "path": "folders/Objects/Bosses/Launch Octopus.yy",
+  },
+  "parentObjectId": {
+    "name": "par_boss",
+    "path": "objects/par_boss/par_boss.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 0,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_launch_octopus",
+    "path": "sprites/spr_launch_octopus/spr_launch_octopus.yy",
+  },
+  "spriteMaskId": {
+    "name": "mask_launch_octopus",
+    "path": "sprites/mask_launch_octopus/mask_launch_octopus.yy",
+  },
+  "visible": true,
+}

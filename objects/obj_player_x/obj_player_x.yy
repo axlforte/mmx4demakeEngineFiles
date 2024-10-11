@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_player_x",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "X",
+    "path": "folders/Objects/Players/Characters/X.yy",
+  },
+  "parentObjectId": {
+    "name": "obj_player_parent",
+    "path": "objects/obj_player_parent/obj_player_parent.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 0,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 0,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_x_idle",
+    "path": "sprites/spr_x_idle/spr_x_idle.yy",
+  },
+  "spriteMaskId": {
+    "name": "spr_x_mask",
+    "path": "sprites/spr_x_mask/spr_x_mask.yy",
+  },
+  "visible": false,
+}

@@ -1,0 +1,1 @@
+boss_object = Object260
