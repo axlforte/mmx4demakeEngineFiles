@@ -55,7 +55,8 @@ function global_values() {
 		door,
 		pickup,
 		boss_death,
-		special_attack
+		special_attack,
+		dialouge
 	};
 	global.background_list = ds_list_create();
 	global.start_menu_force_state = false;
