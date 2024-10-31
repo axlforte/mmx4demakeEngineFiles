@@ -20,6 +20,10 @@ if(time >= spd){
 	if(string_length(line) > index){
 		time += 1;
 	}
+	if (delay > 0){
+		time -= delay;
+		delay = 0;
+	}
 }
 
 if(die){

@@ -14,6 +14,19 @@ function player_weapon_settings() {
 		falcon_giga,
 		x2_giga_crush,
 		nova_strike,
+		// x4 weapons
+		soul_body,
+		aiming_laser,
+		lightning_web,
+		rising_fire,
+		frost_spike,
+		double_cyclone,
+		twin_slasher,
+		ground_hunter,
+		// extra weapons
+		pharoah_wave,
+		kendo_parry,
+		craft_grenade,
 		// Zero
 		messenko,
 		z_buster_x5,
