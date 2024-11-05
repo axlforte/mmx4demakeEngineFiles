@@ -11,7 +11,7 @@ if(!activate){
 		}
 		instance_destroy();
 	} else {
-		dilog = instance_create_depth(x + 4,y + 4,-100, obj_dialouge);
+		dilog = instance_create_depth(x - 140,y - 28,-100, obj_dialouge);
 		dilog.line = array_get(conversation, index);
 		if (index <= 0){
 			dilog.delay = 30;	
