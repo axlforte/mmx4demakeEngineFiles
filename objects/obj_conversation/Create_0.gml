@@ -11,7 +11,7 @@ conversation = [//you must have a /n between every 40 characters.
 pause_set(!global.paused, pause_types.dialouge);
 dspeed = global.DialougeSpeed;
 index = -1;
-dilog = instance_create_depth(x + 4,y + 4,-100, obj_dialouge);
+dilog = instance_create_depth(x - 140,y - 28,-100, obj_dialouge);
 dilog.delay = 30;
 dilog.line = "";
 activate = false;
