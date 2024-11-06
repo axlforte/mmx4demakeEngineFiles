@@ -43,6 +43,7 @@ function global_values() {
 	global.levelTransitionY = 0;
 	global.levelTransitionCameraId = 0;
 	global.DialougeSpeed = 2;
+	global.TeleportIn = true;
 	
 	enum diff_modes {
 		easy,
