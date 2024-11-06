@@ -3,9 +3,13 @@ py = 0;
 width = 32;
 height = 48;
 location = rm_frost_walrus;
+cam = 0;
 loc_x = 0;
 loc_y = 0;
 scr_keys_reset();
+
+animation_init();
+animations_init();
 
 animation_add("open",[
 0,0,

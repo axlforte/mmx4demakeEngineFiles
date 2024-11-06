@@ -189,7 +189,19 @@ switch (state) {
 			var tran = transition_create(transition_types.blink);
 			tran.color = c_white;
 			tran.transition_limit = 16;
-			menu_set_state(menu_states.stage_select, 16, 60);
+			//menu_set_state(menu_states.stage_select, 16, 60);
+			
+			//added
+			var _boss = global.boss_slot[1];
+			if (_boss != noone) {
+			var info = global.boss_info[_boss];
+			boss_room = info[3];
+			boss_object = info[4];
+			boss_name = info[0];
+			boss_defeated = global.boss_defeated[_boss];
+			}
+			menu_set_state(menu_states.player_select, 16, 60);
+			//original
 			audio_play(snd_player_success);
 			global.difficulty = selected_item;
 			break;
