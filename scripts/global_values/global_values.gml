@@ -43,7 +43,7 @@ function global_values() {
 	global.levelTransitionY = 0;
 	global.levelTransitionCameraId = 0;
 	global.DialougeSpeed = 2;
-	global.TeleportIn = true;
+	global.TeleportIn = false;
 	
 	enum diff_modes {
 		easy,
@@ -103,4 +103,5 @@ function global_values() {
 	global.running_replay = false;
 	global.replay_fname = "";
 	replay_init();
+	dialouge_activation();
 }

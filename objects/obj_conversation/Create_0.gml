@@ -15,6 +15,7 @@ dilog = instance_create_depth(x - 140,y - 28,-100, obj_dialouge);
 dilog.delay = 30;
 dilog.line = "";
 activate = false;
+dindex = 0;
 keys_init();
 keys_apply();
 scr_keys_reset();

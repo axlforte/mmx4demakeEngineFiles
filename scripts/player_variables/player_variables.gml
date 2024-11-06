@@ -41,6 +41,10 @@ function player_variables() {
 	grab_last_dir = 1;
 	energy_drain_y = 19;
 	energy_drain_x = -2;
+	
+	//ladder
+	climb_speed = 2;
+	top_of_ladder = 0;
 
 	// Walk
 	walk = false; // Is the player walking?
