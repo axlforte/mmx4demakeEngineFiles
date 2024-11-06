@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_light_capsule_column_psx",
-    "path": "sprites/spr_light_capsule_column_psx/spr_light_capsule_column_psx.yy",
+    "name": "spr_room_changer_open",
+    "path": "sprites/spr_room_changer_open/spr_room_changer_open.yy",
   },
   "spriteMaskId": null,
   "visible": true,

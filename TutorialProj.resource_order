@@ -60,6 +60,7 @@
     {"name":"X1","order":4,"path":"folders/Sprites/Player/Characters/Zero/Weapons/X1.yy",},
     {"name":"X5","order":5,"path":"folders/Sprites/Player/Characters/Zero/Weapons/X5.yy",},
     {"name":"Tile Sets","order":13,"path":"folders/Tile Sets.yy",},
+    {"name":"doors","order":2,"path":"folders/Sprites/Objects/doors.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_dash_spark","order":1,"path":"sprites/spr_player_dash_spark/spr_player_dash_spark.yy",},

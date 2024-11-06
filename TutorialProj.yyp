@@ -510,6 +510,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Magma Dragoon","folderPath":"folders/Tile Sets/Magma Dragoon.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Misc","folderPath":"folders/Tile Sets/Misc.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Test Stage","folderPath":"folders/Tile Sets/Test Stage.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"doors","folderPath":"folders/Sprites/Objects/doors.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ModPack.exe","CopyToMask":64,"filePath":"datafiles",},
@@ -927,6 +928,7 @@
     {"id":{"name":"player_megaman_buster","path":"scripts/player_megaman_buster/player_megaman_buster.yy",},},
     {"id":{"name":"spr_x_giga_crush_x2","path":"sprites/spr_x_giga_crush_x2/spr_x_giga_crush_x2.yy",},},
     {"id":{"name":"spr_x_intro2_end_x3_legs","path":"sprites/spr_x_intro2_end_x3_legs/spr_x_intro2_end_x3_legs.yy",},},
+    {"id":{"name":"spr_room_changer_open","path":"sprites/spr_room_changer_open/spr_room_changer_open.yy",},},
     {"id":{"name":"spr_x_idle_x3_legs","path":"sprites/spr_x_idle_x3_legs/spr_x_idle_x3_legs.yy",},},
     {"id":{"name":"spr_x_shoot_x3_legs","path":"sprites/spr_x_shoot_x3_legs/spr_x_shoot_x3_legs.yy",},},
     {"id":{"name":"spr_zero_glow_dash","path":"sprites/spr_zero_glow_dash/spr_zero_glow_dash.yy",},},
