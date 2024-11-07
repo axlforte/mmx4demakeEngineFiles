@@ -45,24 +45,23 @@ function player_x_animation() {
 		0, 7,
 		3, 0,
 		5, 1,
-		7, 2,
-		9, 3
-	], 9);
+		8, 2,
+	], 8);
 	
 	animation_add("fall|jump",
 	[
-	    0, 3,
-	    3, 4,
-	    6, 5,
-	    9, 6
+	    0, 2,
+	    3, 3,
+	    6, 4,
+	    9, 5
 	], 9);
 	
 	animation_add("land|jump",
 	[
-		0, 6,
-		2, 7,
-		3, 8,
-		4, 7
+		0, 5,
+		2, 6,
+		3, 7,
+		4, 6
 	]);
 	
 	animation_add("wall_jump|wall",
