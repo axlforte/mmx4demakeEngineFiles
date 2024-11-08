@@ -1,13 +1,19 @@
-Where to add an armor?
-Add armor sprites (spr_player_action_armor)
-Go to script Player/Global/player_global_armor_settings
+48, 2560
 
-Where to set armor skills?
-Go to script Player/Characters/[char]/player_[char]_armor
+272, 2560
 
-Where to add new weapons?
-Go to script Player/Weapons/player_weapon_settings
-Add weapon script Player/Characters/[char]/Weapons/player_[char]_[weapon]
+suburbs/road
 
-Live code editing check:
-if (live_call()) return live_result;
+48, 144
+
+2512, 144
+
+dragoon
+
+16, 240
+
+web spider
+
+16, 112
+
+1664, 1328
