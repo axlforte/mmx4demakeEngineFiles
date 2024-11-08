@@ -119,7 +119,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"34e2edb3-e2c1-4139-826e-86fd7ac19d52","path":"sprites/spr_x_shot_storm_tornado/spr_x_shot_storm_tornado.yy",},},},"Disabled":false,"id":"ce5dd74e-e6d5-48da-a21d-e3b4d1d0d4ff","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 8,
     "yorigin": 11,

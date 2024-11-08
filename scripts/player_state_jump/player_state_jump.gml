@@ -6,6 +6,11 @@ function player_state_jump() {
 	
 	if (!key_jump && v_speed < 0)
 		v_speed = 0;
+		
+	if(dash){
+		trail_sprites_enabled = true;
+		trail_sprites_remove = false;
+	}
 
 	// High Jump
 	if (substates[0] == 1) {
@@ -23,6 +28,8 @@ function player_state_jump() {
 		player_state_set(states.idle, 0);
 		walk_speed = walk_speed_default;
 		v_speed = 0;
+		trail_sprites_enabled = false;
+		trail_sprites_remove = true;
 		move_down();
 	}
 

@@ -17,6 +17,8 @@ function player_x_variables() {
 		{alpha: 0.2, radius: 42 },
 		{alpha: 1, radius: 30 }
 	];
+	
+	trail_mode = 1;
 	trail_color = c_blue;
 	plt_index_default = 12;// should be ultimate armor code look
 }

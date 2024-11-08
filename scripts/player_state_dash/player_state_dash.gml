@@ -12,6 +12,8 @@ function player_state_dash() {
 		    if (t == 0) {
 		        // Play Audio
 		        audio_play(dash_sound);
+				trail_sprites_enabled = true;
+				trail_sprites_remove = false;
 		
 		        if (dash_air) {
 		            dash_length = dash_air_length;
@@ -186,6 +188,10 @@ function player_state_dash() {
 		dash_spark_inst = player_effect_destroy(dash_spark_inst);
 		dash_tapped = false;
 		y_dir = 1;
+		if(state != states.jump){
+			trail_sprites_enabled = false;
+			trail_sprites_remove = true;
+		}
 		if (key_down && crouch_unlocked)
 			state_hitbox_current = state_hitbox[states.crouch];
 	}
