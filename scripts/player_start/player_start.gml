@@ -88,7 +88,7 @@ function player_start() {
 	in_air = 0;
 	limit_y_death = room_height + sprite_height;
 	trail_init(5);
-	player_trail_set(4, 4);
+	player_trail_set(6, 4);
 	trail_sprites_enabled = false;
 	trail_sprites = ds_list_create();
 	trail_mode = 0;

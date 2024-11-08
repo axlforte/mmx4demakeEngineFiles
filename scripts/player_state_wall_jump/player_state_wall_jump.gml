@@ -6,6 +6,7 @@ function player_state_wall_jump() {
 		with (player_effect_create(wall_jump_spark)) {
 			move_contact_block(0, -48);
 		}
+		
 	}
 	// Play Animation
 	if (t <= 11)
@@ -19,11 +20,16 @@ function player_state_wall_jump() {
 	        if (walk_speed != dash_speed)
 				dash_air_count++;
 	        walk_speed = dash_speed;
+			trail_sprites_enabled = true;
+			trail_sprites_remove = false;
 	    }
 	}
 	// Jump
 	if (t == 5)
 	    v_speed = -wall_jump_strength;
+		if(key_dash){
+			v_speed -= 0.3;
+		} 
 
 	if (t >= 6) {
 		grav = gravity_default;	

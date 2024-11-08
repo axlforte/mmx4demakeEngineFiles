@@ -10,6 +10,10 @@ function player_state_wall_slide() {
 		audio_play(wall_slide_sound);
 		if (move != 0)
 			xscale = move;
+		if(!key_dash){
+			trail_sprites_enabled = false;
+			trail_sprites_remove = true;
+		}
 	}
 	
 	if (wall_slide_animation_enabled) {

@@ -78,6 +78,13 @@ function player_x_animation() {
 		4, 1,
 		6, 2
 	], 6);
+	
+	animation_add("shoot",
+	[ 0,0,
+	 2,1,
+	 4,0,
+	 6,2
+	], 6);
 
 	animation_add("super_shoot",
 	[

@@ -1,7 +1,7 @@
 //if (!G.checkpoint)
 if(global.exitALevelTransition){
-	x = global.levelTransitionX - 16;
-	y = global.levelTransitionY - 8;
+	x = global.levelTransitionX + 32;
+	y = global.levelTransitionY + 8;
 	G.current_camera = global.levelTransitionCameraId;
 }
 

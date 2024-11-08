@@ -1,7 +1,7 @@
 function player_x_armor() {
 	// Default
 	palette_texture_set(plt_x_full);
-	plt_index_default = 0;
+	plt_index_default = 12;
 
 	special_weapons = ds_list_create();
 	weapons_script[weapons.x_buster] = player_x_buster_x2;

@@ -11,6 +11,8 @@ function player_state_fall() {
 		animation_play("land");
 		v_speed = 0;
 		h_speed = 0;
+		trail_sprites_enabled = false;
+		trail_sprites_remove = true;
 		move_down();
 		player_counters_reset();
 		walk_speed = walk_speed_default;
