@@ -76,7 +76,7 @@ function player_states() {
 	}
 
 	state_machine_init();
-	state = states.idle;
+	state = states.intro;
 
 	// State Scripts
 	state_array[states.none]         = noone;

@@ -9,7 +9,20 @@ if(px < x + width && px > x){
 			global.levelTransitionY = loc_y;
 			global.levelTransitionCameraId = cam;
 			//global.TeleportIn = false;
-			room_goto(location);
+			//var tran = transition_create(transition_types.fade_out);
+			//tran.color = c_white;
+			//tran.depth = layer_get_depth(layer_get_id("Camera")) - 400;
+			//tran.transition_limit = 120;
+			//tran.wait_timer = 60;
+			dlay = 5;
 		}
 	}
+}
+
+if(!CANDOOR){
+	room_goto(location);
+} else if (dlay > 0){
+	dlay -= 1;	
+} else if(dlay == 0){
+	CANDOOR = false;
 }
