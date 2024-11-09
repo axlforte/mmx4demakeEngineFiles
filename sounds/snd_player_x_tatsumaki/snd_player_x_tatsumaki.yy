@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.888163,
   "parent": {
     "name": "X3",
     "path": "folders/Sounds/Player/Characters/X/Weapons/X3.yy",

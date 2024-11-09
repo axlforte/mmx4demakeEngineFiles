@@ -20,7 +20,7 @@ if (t >= 35) {
 
 if (t == 83) {
 	if (instance_exists(obj_player_parent)) {
-		obj_player_parent.state = states.intro;	
+		//obj_player_parent.state = states.intro;	
 	}
 	instance_destroy();
 	exit;
