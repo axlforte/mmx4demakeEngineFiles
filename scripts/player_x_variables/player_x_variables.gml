@@ -7,7 +7,7 @@ function player_x_variables() {
 	//player_weapon_set(1, weapons.homing_torpedo);
 	//player_weapon_set(2, weapons.storm_tornado);
 	player_weapon_set(3, weapons.lightning_web);
-	//player_weapon_set(4, weapons.frost_spike);
+	player_weapon_set(4, weapons.frost_spike);
 	player_weapon_set(5, weapons.soul_body);
 	player_weapon_set(6, weapons.rising_fire);
 	player_weapon_set(7, weapons.ground_hunter);
