@@ -71,6 +71,7 @@
     {"name":"ground hunter","order":3,"path":"folders/Sprites/Player/Characters/X/Weapons/X4/ground hunter.yy",},
     {"name":"twin slasher","order":4,"path":"folders/Sprites/Player/Characters/X/Weapons/X4/twin slasher.yy",},
     {"name":"rising fire","order":5,"path":"folders/Sprites/Player/Characters/X/Weapons/X4/rising fire.yy",},
+    {"name":"aiming laser","order":6,"path":"folders/Sprites/Player/Characters/X/Weapons/X4/aiming laser.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_dash_spark","order":1,"path":"sprites/spr_player_dash_spark/spr_player_dash_spark.yy",},
@@ -1050,6 +1051,7 @@
     {"name":"spr_x_walk_icarus_helm","order":1,"path":"sprites/spr_x_walk_icarus_helm/spr_x_walk_icarus_helm.yy",},
     {"name":"spr_stage_snow_mountain","order":1,"path":"sprites/spr_stage_snow_mountain/spr_stage_snow_mountain.yy",},
     {"name":"spr_stage_hq","order":3,"path":"sprites/spr_stage_hq/spr_stage_hq.yy",},
+    {"name":"obj_test_aiming_laser","order":7,"path":"objects/obj_test_aiming_laser/obj_test_aiming_laser.yy",},
     {"name":"spr_7th_airborne_unit","order":5,"path":"sprites/spr_7th_airborne_unit/spr_7th_airborne_unit.yy",},
     {"name":"ts_igloo","order":3,"path":"tilesets/ts_igloo/ts_igloo.yy",},
     {"name":"tile_chill_penguin","order":5,"path":"tilesets/tile_chill_penguin/tile_chill_penguin.yy",},
@@ -1823,6 +1825,7 @@
     {"name":"obj_mobile_btn_shoot","order":9,"path":"objects/obj_mobile_btn_shoot/obj_mobile_btn_shoot.yy",},
     {"name":"obj_mobile_btn_shoot2","order":11,"path":"objects/obj_mobile_btn_shoot2/obj_mobile_btn_shoot2.yy",},
     {"name":"obj_mobile_btn_special","order":13,"path":"objects/obj_mobile_btn_special/obj_mobile_btn_special.yy",},
+    {"name":"spr_aim_laser_reticle","order":1,"path":"sprites/spr_aim_laser_reticle/spr_aim_laser_reticle.yy",},
     {"name":"obj_mobile_btn_weapon1","order":15,"path":"objects/obj_mobile_btn_weapon1/obj_mobile_btn_weapon1.yy",},
     {"name":"spr_jet_stingray_exhaust","order":5,"path":"sprites/spr_jet_stingray_exhaust/spr_jet_stingray_exhaust.yy",},
     {"name":"spr_x_fly_x3_legs","order":38,"path":"sprites/spr_x_fly_x3_legs/spr_x_fly_x3_legs.yy",},

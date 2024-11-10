@@ -3,7 +3,7 @@ event_inherited();
 grounded = false;
 deathTimer = 0;
 
-destroy_if_hit = true;
+destroy_if_hit = false;
 // Grounded
 animation_add("G", 
 [

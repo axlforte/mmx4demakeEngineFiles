@@ -101,7 +101,7 @@ function player_aiming_laser(lvl = -1, t = 0) {
 	switch (lvl) {
 		// Normal shot
 		case 0:
-			player_shoot_projectile(obj_player_x_shot_storm_tornado);
+			player_shoot_projectile(obj_test_aiming_laser);
 		break;
 		// Super-Charged shot
 		default:

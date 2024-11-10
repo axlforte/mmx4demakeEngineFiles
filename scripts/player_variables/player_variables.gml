@@ -33,7 +33,7 @@ function player_variables() {
 
 	// Crouch
 	crouch = false;
-	crouch_unlocked = true;
+	crouch_unlocked = false;
 
 	// Grab
 	grab_wait = -1;
