@@ -11,7 +11,7 @@ function player_x_variables() {
 	player_weapon_set(5, weapons.soul_body);
 	player_weapon_set(6, weapons.rising_fire);
 	player_weapon_set(7, weapons.ground_hunter);
-	//player_weapon_set(8, weapons.aiming_laser);
+	player_weapon_set(8, weapons.aiming_laser);
 	player_weapon_set(9, weapons.double_cyclone);
 	player_weapon_set(10, weapons.twin_slasher);
 
