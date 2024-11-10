@@ -18,6 +18,8 @@ function player_draw_sprite(_x = x, _y = y, xs = xscale, ys = y_dir, index = flo
 				scr_shader_set(shader_palette_light);	
 			}
 			draw_sprite_ext(pl_sprite[i], index, floor(_x), floor(_y), xs, ys, 0, noone, 1);
+			global.player_sprite = pl_sprite[i];
+			global.player_sprite_frame = index;
 			palette_reset();
 		}
 	}

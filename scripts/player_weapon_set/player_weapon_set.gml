@@ -4,8 +4,4 @@ function player_weapon_set() {
 
 	weapon_list[_id] = _weapon;
 
-	if (_weapon == weapons.speed_gear) {
-		double_gear_unlocked = true;	
-	}
-
 }

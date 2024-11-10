@@ -44,6 +44,8 @@ function global_values() {
 	global.levelTransitionCameraId = 0;
 	global.DialougeSpeed = 2;
 	global.TeleportIn = false;
+	global.player_sprite = 0;
+	global.player_sprite_frame = 0;
 	
 	enum diff_modes {
 		easy,

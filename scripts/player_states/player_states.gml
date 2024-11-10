@@ -50,6 +50,7 @@ function player_states() {
 		z_saber,
 		shoot_pistol,
 		open_arms,
+		punch_up,
 		screen_cleaner,
 		giga_crush,
 		// Saber
@@ -126,6 +127,7 @@ function player_states() {
 	state_array[states.x3_saber]		= player_state_x3_saber;
 	state_array[states.shoot_pistol]    = player_state_shoot_pistol;
 	state_array[states.open_arms]       = player_state_open_arms;
+	state_array[states.punch_up]       = player_state_punch_up;
 	state_array[states.screen_cleaner]  = player_state_screen_cleaner;
 	state_array[states.giga_crush]	    = player_state_giga_crush;
 

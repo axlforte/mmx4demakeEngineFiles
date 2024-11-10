@@ -1,3 +1,3 @@
-location = rm_HQ;
+location = rm_road_to_stingray;
 loc_x = 48;
-loc_y = 2560;
+loc_y = 144;

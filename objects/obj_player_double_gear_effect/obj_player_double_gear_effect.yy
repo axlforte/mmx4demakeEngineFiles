@@ -32,10 +32,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_speed_gear_effect",
-    "path": "sprites/spr_speed_gear_effect/spr_speed_gear_effect.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

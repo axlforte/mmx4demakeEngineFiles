@@ -83,8 +83,24 @@ function player_x_animation() {
 	[ 0,0,
 	 2,1,
 	 4,0,
-	 6,2
-	], 6);
+	 6,2,
+	 12,0
+	], 14);
+
+	// Open Arms
+	animation_add("open_arms|giga",
+	[
+		0, 0,
+		4, 1,
+		8, 2
+	], 8);
+
+	animation_add("open_arms_air|giga",
+	[
+		0, 0,
+		4, 1,
+		8, 2
+	], 8);
 
 	animation_add("super_shoot",
 	[

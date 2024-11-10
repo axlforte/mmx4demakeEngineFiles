@@ -341,6 +341,20 @@ function player_animations() {
 		4, 4,
 		8, 6
 	], 8);
+	
+	animation_add("punch_up|punch",
+	[
+		0, 1,
+		2, 2,
+		8, 1
+	], 8);
+	
+	animation_add("punch_up_air|punch",
+	[
+		0, 0
+	], 8);
+	
+	
 	animation_add("ride_armor");
 	
 	animation_add("dive_kick", keyframes_generate(5, 1/2, false, 0));
