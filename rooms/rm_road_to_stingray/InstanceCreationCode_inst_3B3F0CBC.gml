@@ -1,3 +1,3 @@
-loc_x = 272;
-loc_y = 2560;
-location = rm_HQ;
+loc_x = 2512;
+loc_y = 144;
+location = rm_suburbs;

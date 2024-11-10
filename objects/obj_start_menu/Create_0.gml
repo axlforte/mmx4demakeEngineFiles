@@ -133,7 +133,7 @@ gamepad_movement_mode_text[1] = "Joystick";
 page[alength + 1] = [_("BACK"), [128, 32 + 14*(alength + 1), 128, 24]];
 page_items[menu_states.key_config] = page;
 #endregion
-#region Stage Select
+#region Stage Selectf
 /// Stage Select
 page_items[menu_states.stage_select] = [
 
@@ -261,11 +261,7 @@ if (global.start_menu_force_state) {
 // Character Select Sprites
 global.char_select_sprites = [
 	spr_player_x,
-	spr_player_zero,
-	spr_player_axl,
-	spr_player_iris,
-	spr_player_vile,
-	spr_player_megaman
+	spr_player_zero
 ];
 background_index = 0;
 // Animation

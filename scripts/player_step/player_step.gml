@@ -39,22 +39,6 @@ function player_step() {
 		player_pause_check();
 	if (G.paused && G.pause_type != pause_types.normal)
 		player_charge();
-	if (!speed_gear) {
-		if (global.tile_shader_multiplier < 1) {
-			global.tile_shader_multiplier += 0.05;
-		} else {
-			global.tile_shader_multiplier = 1;	
-		}
-	}
-	if (double_gear_unlocked) {
-		if (speed_gear || power_gear) {
-			double_gear_icon_i += 0.25;
-		} else if (!speed_gear_enabled) {
-			double_gear_icon_i += 0.5;	
-		} else {
-			double_gear_icon_i = 0;	
-		}
-	}
 	if (G.paused && G.pause_type != pause_types.special_attack)
 		exit;
 	if (!local_game_run_step) {
@@ -155,7 +139,6 @@ function player_step() {
 		player_check_dolor();
 	} else {
 		script_try(state_array[state]);
-		player_disable_speed_gear();
 		player_charge_reset();
 		player_charge();	
 	}

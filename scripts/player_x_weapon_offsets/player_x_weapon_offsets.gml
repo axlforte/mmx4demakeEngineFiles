@@ -22,6 +22,7 @@ function player_x_weapon_offsets() {
 
 	player_weapon_offset("shooting", 0, 12, -3);
 	player_weapon_offset("shooting", 1, 12, -3);
+	player_weapon_offset("shooting", 2, 12, -3);
 
 	player_weapon_offset("jump", 0, 20, -3);
 	player_weapon_offset("jump", 1, 21, -4);
@@ -46,6 +47,7 @@ function player_x_weapon_offsets() {
 	player_weapon_offset("wall", 2, 15, -2);
 	player_weapon_offset("wall", 3, 18, -8);
 	player_weapon_offset("wall", 4, 21, -9);
+	player_weapon_offset("wall", 3, 21, -9);
 
 	player_weapon_offset("hadouken", 0, 20, -3);
 	/*

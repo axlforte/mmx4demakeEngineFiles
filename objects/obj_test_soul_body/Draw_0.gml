@@ -1,0 +1,1 @@
+draw_sprite(global.player_sprite, global.player_sprite_frame,x,y)

@@ -5,7 +5,7 @@ function palette_init() {
 	plt_index_default = 0;
 	plt_source_index = 0;
 
-	plt_width = 32;
+	plt_width = 64;
 	plt_texture = noone;
 
 	if (!global.support_shaders) exit;

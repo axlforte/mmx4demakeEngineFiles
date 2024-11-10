@@ -40,17 +40,6 @@ function player_special_weapons_variables() {
 	double_gear_t = 0;
 	double_gear_unlocked = false;
 	
-	// Speed Gear
-	speed_gear = false;
-	speed_gear_enabled = true;
-	speed_gear_speed = 1/4;
-	normal_gear_effect = player_effect_new(obj_player_double_gear_effect, 0, 0, layer_up);
-	speed_gear_sprite = spr_speed_gear_effect;
-	
-	// Power Gear
-	power_gear = false;
-	power_gear_sprite = spr_power_gear_effect;
-	
 	// Shin Messenko
 	shin_messenko_interval = 8;
 	shin_messenko_distance = 48;

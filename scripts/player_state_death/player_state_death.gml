@@ -5,7 +5,6 @@ function player_state_death() {
 	if (t == 0) {
 		breath_enabled = false;
 		pause_enabled = false;
-		player_disable_speed_gear();
 		animation_play("death");
 		audio_stop(hover_sound);
 		voice_play();

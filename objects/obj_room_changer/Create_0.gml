@@ -6,10 +6,10 @@ location = rm_frost_walrus;
 cam = 0;
 loc_x = 0;
 loc_y = 0;
-CANDOOR = true;
-dlay = -1;
+candoor = false;
+alarm[0] = 15;
 scr_keys_reset();
-
+/*
 animation_init();
 animations_init();
 
@@ -49,4 +49,4 @@ animation_add("close|open",[
 18,0
 ],18,18);
 
-animation_play("open");
+animation_play("open");*/
