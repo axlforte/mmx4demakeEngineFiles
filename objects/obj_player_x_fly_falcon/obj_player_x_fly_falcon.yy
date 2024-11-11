@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_fly_effect_top_falcon",
-    "path": "sprites/spr_x_fly_effect_top_falcon/spr_x_fly_effect_top_falcon.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": false,
 }

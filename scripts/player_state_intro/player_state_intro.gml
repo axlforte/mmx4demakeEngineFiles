@@ -29,17 +29,17 @@ function player_state_intro() {
 				}
 			} else {
 				while (substates[0] != 1) {
-				if (y + 8 >= y_start) {
-					move_down(8);
+					if (y + 8 >= y_start) {
+						move_down(8);
 		
-					if (is_on_floor()) {
-						state_timer = 0;
-						substates[0] = 1;
+						if (is_on_floor()) {
+							state_timer = 0;
+							substates[0] = 1;
+						}
+					} else {
+						y += 8;	
 					}
-				} else {
-					y += 8;	
 				}
-			}
 			}
 		break;
 		case 1:

@@ -4,6 +4,7 @@ alarm[0] = 2;
 doReverseShot = true;
 
 destroy_if_hit = true;
+atk = 3;
 // Destroy Animation
 animation_add("D",
 [

@@ -105,6 +105,8 @@ function player_x_armor() {
 			dash_air_unlocked = true;
 			// Hover
 			state_unlocked[states.hover] = true;
+			hover_length = [420, 120];
+			hover_vertical = true;
 		}
 		
 		if (BODY == "x4") {

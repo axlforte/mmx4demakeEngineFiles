@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_shot_falcon",
-    "path": "sprites/spr_x_shot_falcon/spr_x_shot_falcon.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
