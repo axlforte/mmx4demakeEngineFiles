@@ -1,1 +1,1 @@
-camera_id = 4;
+camera_id = 6;

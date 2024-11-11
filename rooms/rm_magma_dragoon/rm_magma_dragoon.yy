@@ -135,7 +135,6 @@
     {"name":"inst_4933C371","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
     {"name":"inst_7E809DC7","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
     {"name":"inst_21E62C41","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
-    {"name":"inst_58995BA6","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
     {"name":"inst_687BCEFD","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
     {"name":"inst_7802C04C","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
     {"name":"inst_3E8DBA75","path":"rooms/rm_magma_dragoon/rm_magma_dragoon.yy",},
@@ -174,7 +173,6 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"player","depth":-700,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7E1CBEE4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player_default","path":"objects/obj_player_default/obj_player_default.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":264.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_738A96AB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ride_armor_x1","path":"objects/obj_ride_armor_x1/obj_ride_armor_x1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":840.0,"y":416.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_58995BA6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_test_aiming_laser","path":"objects/obj_test_aiming_laser/obj_test_aiming_laser.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":176.0,"y":256.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_687BCEFD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_drill","path":"objects/p_drill/p_drill.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":392.0,"y":288.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"triggers","depth":-600,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
