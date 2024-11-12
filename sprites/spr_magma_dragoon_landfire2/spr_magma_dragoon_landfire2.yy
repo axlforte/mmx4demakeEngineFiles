@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5450ea6e-2cd5-4cd3-90ef-fb17bc916019","path":"sprites/spr_magma_dragoon_landfire2/spr_magma_dragoon_landfire2.yy",},},},"Disabled":false,"id":"5435c44b-e50f-4822-9fb8-875725e56a0e","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 47,
     "yorigin": 7,

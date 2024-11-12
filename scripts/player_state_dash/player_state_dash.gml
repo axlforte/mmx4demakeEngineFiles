@@ -41,9 +41,20 @@ function player_state_dash() {
 		        dash_spark_inst = player_effect_create(dash_spark);
 		    }
 		    // Dash Movement
-		    if (t >= 1 && t <= dash_length) {
-		        if (!move_x(dash_speed * dash_dir) || (!is_on_floor() && !dash_air))
-					condition = true;
+		    if (t >= 0 && t <= dash_length) {
+				if(t <= 2){
+					if (!move_x(dash_speed * dash_dir * 1.75) || (!is_on_floor() && !dash_air))
+						condition = true;
+				} else if(t <= 4){
+					if (!move_x(dash_speed * dash_dir * 1.35) || (!is_on_floor() && !dash_air))
+						condition = true;
+				} else if(t <= 8){
+					if (!move_x(dash_speed * dash_dir * 1.1) || (!is_on_floor() && !dash_air))
+						condition = true;
+				} else {
+					if (!move_x(dash_speed * dash_dir) || (!is_on_floor() && !dash_air))
+						condition = true;
+				}
         
 				// Dash Dust
 				if (instance_exists(dash_dust) && dash_dust.script != noone)

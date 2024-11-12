@@ -65,7 +65,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ebdc597e-b6eb-4bc9-99df-e5b6c35d06e2","path":"sprites/spr_magma_dragoon_kick/spr_magma_dragoon_kick.yy",},},},"Disabled":false,"id":"897b0ec3-e7f4-41fd-a364-17638a99e032","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 46,
     "yorigin": 2,

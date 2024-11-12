@@ -17,3 +17,139 @@ web spider
 16, 112
 
 1664, 1328
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+network_create_server(type, port, max_client);
+type = network_socket_tcp
+port = 2099
+max_client = 4?
+
+ex.
+server_socket = network_create_server(network_socket_tcp, 6510, 4);
+if server_socket < 0
+    {
+    //Connection error! Add failsafe codes here
+    }
+
+
+this is clientside
+network_create_socket(type);
+this prepares the client to send data
+
+this actually connects to the server
+network_connect(socket, url, port);
+
+ex.
+client_socket = network_create_socket(network_socket_tcp);
+var server = network_connect(client_socket , ”127.0.0.1”, 6510);
+if server < 0
+    {
+    //No connection! Failsafe codes here...
+    }
+else
+    {
+    //Connected!
+    }
+
+
+var n_id = ds_map_find_value(async_load, "id");         //get the ID of the socket receiving the data
+if n_id == server_socket                                //check ID to make sure it is that of the server socket
+    {
+    var t = ds_map_find_value(async_load, "type");          //get the type of network event
+    if t == network_type_connect                            //if it is a connect event 
+        {                                                   //get the socket ID of the connection
+        var sock = ds_map_find_value(async_load, "socket"); //and store it in a variable
+        ds_list_add(socketlist, sock);                      //then write it to a DS list for future reference
+        }
+    }
+	
+	
+this is the same as above but it handles disconnects
+var n_id = ds_map_find_value(async_load, "id");
+if n_id == server_socket
+    {
+    var t = ds_map_find_value(async_load, "type");
+    switch(t)
+        {
+        case network_type_connect:
+            var sock = ds_map_find_value(async_load, "socket");
+            ds_list_add(socketlist, sock);
+            break;
+        case network_type_disconnect:
+            var sock = ds_map_find_value(async_load, "socket");
+            ds_list_delete(socketlist, sock);
+            break;
+        }
+    
+
+this client to server
+var n_id = ds_map_find_value(async_load, "id");
+if n_id == client_socket
+    {
+    //We have a new packet from the server
+    } 
+
+
+packet sending shit, server to client
+var t_buffer = buffer_create(256, buffer_grow, 1);
+buffer_seek(t_buffer, buffer_seek_start, 0);
+buffer_write(t_buffer , buffer_u16, IDENTIFIER_CONSTANT);
+buffer_write(t_buffer , buffer_string,”Hello”);
+//More data here...
+for (var i = 0; i < ds_list_size(socketlist); ++i;)
+    {
+    network_send_packet(ds_list_find_value(socket_list, i), t_buffer, buffer_tell(t_buffer));
+    }
+buffer_delete(t_buffer);
+
+
+client to server
+var t_buffer = buffer_create(256, buffer_grow, 1);
+buffer_seek(t_buffer, buffer_seek_start, 0);
+buffer_write(t_buffer , buffer_u16, IDENTIFIER_CONSTANT);
+buffer_write(t_buffer , buffer_string,”Hello”);
+//More data here...
+network_send_packet(client_socket, t_buffer, buffer_tell(t_buffer));
+buffer_delete(t_buffer);
+
+
+recieving data, client to server
+var n_id = ds_map_find_value(async_load, "id");
+if server_socket == n_id
+    {
+    var t_buffer = ds_map_find_value(async_load, "buffer"); 
+    var cmd_type = buffer_read(t_buffer, buffer_u16 );
+    var inst = ds_map_find_value(socket_list, sock );
+    switch (cmd_type)
+        {
+        case KEY:
+            //A key has been pressed so read the keypress data from the buffer
+            break;
+        case HEALTH:
+            //The player has taken a hit so remove health from them
+            break;
+        //etc...
+        }
+    }

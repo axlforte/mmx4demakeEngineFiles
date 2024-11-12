@@ -67,7 +67,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"707068ce-e78e-492b-bccf-c7e9cbf9e695","path":"sprites/spr_magma_dragoon_raging_effect2/spr_magma_dragoon_raging_effect2.yy",},},},"Disabled":false,"id":"4fa52576-3454-467c-b4e1-c24c5db211ba","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 22,

@@ -63,7 +63,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ebffa7ad-fc44-461b-bcdc-9daa116f3ebe","path":"sprites/spr_magma_dragoon_shoryuken/spr_magma_dragoon_shoryuken.yy",},},},"Disabled":false,"id":"297ab878-e0d9-4ef9-b3c8-478155a427b9","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 48,
     "yorigin": 62,

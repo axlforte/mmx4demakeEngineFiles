@@ -3,3 +3,7 @@ state = 0;
 dilog = noone;
 ltrNum = 94;
 foundLetter = false;
+_x = 0;
+_y = 0;
+px = 0;
+py = 0;

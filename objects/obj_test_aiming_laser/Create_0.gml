@@ -7,7 +7,7 @@ l = 0;
 t = 0;
 
 angle_dist = 96;
-keys_init();
+scr_keys_reset()
 
 enum lockon {
 	unlocked,

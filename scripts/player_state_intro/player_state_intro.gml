@@ -7,8 +7,10 @@ function player_state_intro() {
 	
 			if (t == 0) {
 				x = x_start;
-				if (cam != noone)
+				if (cam != noone){
+					if(global.TeleportIn){
 					y = __view_get(e__VW.YView, cam.view_id);
+					} else {y = global.levelTransitionY}}
 				visible = true;
 				animation_play("tp");
 				if(global.TeleportIn){
@@ -28,17 +30,19 @@ function player_state_intro() {
 					y += 8;	
 				}
 			} else {
+				var loopBreaker = 0;
 				while (substates[0] != 1) {
 					if (y + 8 >= y_start) {
 						move_down(8);
 		
-						if (is_on_floor()) {
+						if (is_on_floor() || loopBreaker > 32) {
 							state_timer = 0;
 							substates[0] = 1;
 						}
 					} else {
 						y += 8;	
 					}
+					loopBreaker += 1;
 				}
 			}
 		break;
