@@ -5,6 +5,7 @@ if(px < x + width && px > x){
 	if(py > y && py < y + height){
 		if(key_p_up && candoor){
 			global.exitALevelTransition = true;
+			global.TeleportIn = false;
 			global.levelTransitionX = loc_x;
 			global.levelTransitionY = loc_y;
 			//global.levelTransitionCameraId = cam;

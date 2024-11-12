@@ -29,6 +29,9 @@ else
 		gravity_default = 0;
 		h_speed = 0;
 		abs_hspeed = 0;
+	} else {
+		angle = arctan(h_speed/v_speed)
+		if(v_speed <= 0) angle += pi	
 	}
 }
 

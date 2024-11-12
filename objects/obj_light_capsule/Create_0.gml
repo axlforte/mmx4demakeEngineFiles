@@ -40,3 +40,9 @@ Alpha = 0;
 //sprites settings:
 column_sprite = spr_light_capsule_column;
 hologram_sprite = spr_light_capsule_hologram;
+
+
+keys_init();
+keys_apply();
+scr_keys_reset();
+dia = noone;

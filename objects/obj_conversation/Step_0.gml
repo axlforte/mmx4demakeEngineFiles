@@ -1,13 +1,14 @@
 scr_keys_update();
-
+x = __view_get(e__VW.XView, 0);
+y = __view_get(e__VW.YView, 0);
 if(!activate){ 
-	
-} else if(key_p_jump || key_p_shoot||index < 0){
+} else if(key_p_jump || key_p_shoot||index < 0 || ping){
 	dilog.die = true;
+	ping = false;
 	index++;
 	if(index > array_length(conversation) - 1){
 		if(global.paused){
-			pause_set(!global.paused, pause_types.dialouge);
+			//pause_set(!global.paused, pause_types.dialouge);
 		}
 		instance_destroy();
 	} else {
@@ -26,3 +27,4 @@ if(image_xscale < 1){
 	image_xscale = 1;
 	image_yscale = 1;
 }
+

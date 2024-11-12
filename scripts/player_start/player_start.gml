@@ -83,8 +83,8 @@ function player_start() {
 	y_start = y;
 	x_previous = x;
 	y_previous = y;
-	x_door_check = x;
-	y_door_check = y;
+	x_door_check = x * 2;
+	y_door_check = y * 2;
 	in_air = 0;
 	limit_y_death = room_height + sprite_height;
 	trail_init(5);

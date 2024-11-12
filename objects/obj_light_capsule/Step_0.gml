@@ -70,15 +70,26 @@ else if state == 2 {
     if timer == 0 {
         //music plays here
         
-       //dioluge box is made here
+       //dia = instance_create_depth( __view_get(e__VW.XView, 0), __view_get(e__VW.YView, 0),600,obj_dialouge);
+	   /*dia.conversation = [
+	   "000Hello again, son.",
+	   "000With this module you can jump twice in/nthe air and you can float for a few/nmoments.",
+	   "000Be careful to know where you are going/ntowards so you can land more safely.",
+	   "000Take care, X…"];*/
     }
     
     if timer == 0 {
         timer++;
     }
     
-    //if !instance_exists(obj_dialogue) if diologue box no longer exists, continue operations
+    if (!instance_exists(obj_dialouge))
         timer++;
+	else {
+		scr_keys_update();
+		if(key_p_shoot || key_p_jump){
+			dia.ping = true;	
+		}
+	}
             
     if timer >= 2 {
         hologramIndex = max(hologramIndex-1/6,0);

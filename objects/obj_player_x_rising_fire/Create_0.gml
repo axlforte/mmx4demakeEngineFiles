@@ -11,3 +11,4 @@ animation_add("F",[
 animation_play("F");
 abs_hspeed = 0;
 v_speed = -4;
+atk = 4;

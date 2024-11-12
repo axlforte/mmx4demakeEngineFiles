@@ -3,6 +3,9 @@ armor_check = 0;
 player_start();
 limit_x = [floor((bbox_right - bbox_left) / 2), room_width - floor((bbox_right - bbox_left) / 2)];
 limit_y = floor((bbox_bottom - bbox_top) / 2);
+show_debug_message(x);
+show_debug_message(y);
+show_debug_message(G.levelTransitionY);
 function player_draw_event() {
 	var size = ds_list_size(trail_sprites);
 	if (size > 0) {
@@ -19,6 +22,12 @@ function player_draw_event() {
 		gpu_set_fog(false, c_black, 0, 0);
 	}
 	var _x = x, _y = y;
+	
+	show_debug_message(x);
+	show_debug_message(y);
+	show_debug_message(G.temp);
+	show_debug_message(G.levelTransitionY);
+	
 	if (state == states.ride) {
 		_x = ride_char_pos.x;
 		_y = ride_char_pos.y;	

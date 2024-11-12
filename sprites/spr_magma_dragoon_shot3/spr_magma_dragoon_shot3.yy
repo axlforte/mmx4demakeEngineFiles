@@ -61,7 +61,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4151e030-7f13-40f0-a102-545778998f80","path":"sprites/spr_magma_dragoon_shot3/spr_magma_dragoon_shot3.yy",},},},"Disabled":false,"id":"fa4c3f0f-bc9b-41a7-9e7a-e6befb049d2f","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 23,
     "yorigin": 23,

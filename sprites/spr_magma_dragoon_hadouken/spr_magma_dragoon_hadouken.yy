@@ -73,7 +73,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8386b4d4-6c96-4a1b-8403-aef2629ca0c3","path":"sprites/spr_magma_dragoon_hadouken/spr_magma_dragoon_hadouken.yy",},},},"Disabled":false,"id":"c0a33cfc-a7f7-4405-8b35-74d04f646dbc","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 23,
     "yorigin": 25,

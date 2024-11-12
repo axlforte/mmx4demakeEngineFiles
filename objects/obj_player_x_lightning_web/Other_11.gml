@@ -25,8 +25,10 @@ else
 	else if (t >= 17 && t <= 19) animation_play("L");
 	else if(t >= 19 && t <= 180){
 		abs_hspeed = 0;
-		coll.x = x - 8;
-		coll.y = y;
+		if (coll != noone){
+			coll.x = x - 8;
+			coll.y = y;
+		}
 	} else {
 		instance_destroy(coll);
 		instance_destroy();

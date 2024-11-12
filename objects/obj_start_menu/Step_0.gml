@@ -160,12 +160,18 @@ switch (state) {
 		menu_update_item_click();
 		if (enter) {
 			switch(selected_item) {
-				case 0: state_next = menu_states.difficulty_mode; break;
-				case 1: state_next = menu_states.option; break;
-				case 2: game_end(); exit; break;
+				case 0: state_next = menu_states.multiplayer; global.mp = true; break;
+				case 2: state_next = menu_states.difficulty_mode; break; 
+				case 3: state_next = menu_states.option; break;
+				case 4: game_end(); exit; break;
 			}
 			menu_set_state(state_next);
 		}
+		break;
+	#endregion
+	#region multiplayer
+	case menu_states.multiplayer:
+		room = rm_lobby;
 		break;
 	#endregion
 	#region Game Mode

@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ba90a0fb-2624-4516-b71e-0a137728e4e4","path":"sprites/spr_magma_dragoon_trail/spr_magma_dragoon_trail.yy",},},},"Disabled":false,"id":"62668542-1220-4806-9100-d263bc710c5a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 64,
     "yorigin": 67,

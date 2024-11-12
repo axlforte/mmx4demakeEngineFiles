@@ -57,8 +57,9 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 #region Main
 /// Main
 page_items[menu_states.main] = [
-	[_("GAME START"), [92, 136, 144, 20]],
-	[_("OPTIONS"),    [92, 160, 144, 20]],
+	[_("MULTIPLAYER"), [100, 136, 144, 20]],
+	[_("SINGLEPLAYER"),       [92, 160, 144, 20]],
+	[_("OPTIONS"),    [92, 172, 144, 20]],
 	[_("EXIT"),       [92, 184, 144, 20]]
 ];
 #endregion
@@ -109,7 +110,7 @@ settings_apply();
 #region Player Select
 
 page_items[menu_states.player_select] = [
-	"X", "ZERO", "AXL", "IRIS", "VILE", "MEGAMAN"
+	"X", "ZERO"
 ];
 global.golden_armor_enabled = false;
 

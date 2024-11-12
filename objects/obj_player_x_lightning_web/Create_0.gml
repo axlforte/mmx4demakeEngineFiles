@@ -3,6 +3,7 @@ event_inherited();
 coll = instance_create_depth(x,y  + 1000,600,obj_lightning_web_collision);
 
 destroy_if_hit = true;
+atk = 3;
 // Destroy Animation
 animation_add("D",
 [

@@ -46,6 +46,9 @@ function global_values() {
 	global.TeleportIn = false;
 	global.player_sprite = 0;
 	global.player_sprite_frame = 0;
+	global.temp = 0;
+	global.playersOnline = [[]];
+	global.mp = false;
 	
 	enum diff_modes {
 		easy,
