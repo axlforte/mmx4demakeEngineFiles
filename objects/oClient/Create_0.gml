@@ -16,6 +16,9 @@ global.NetworkState = NETWORK_PLAY;
 allsprites = ds_list_create();
 sprites = 0;
 
+//rate of checking. the rate is in frames, ie 60 means it will check every second, and 1 will check every frame
+pingrate = 2;
+
 // Connect to our server
 var err = network_connect(client, global.connectip, 6510);
 if err != 0
@@ -27,6 +30,6 @@ game_restart();
 
 // Client has connected to the server, so send our "player name"
 SendName(PlayerName);
-alarm[0] = 120;
+alarm[0] = pingrate;
 
 

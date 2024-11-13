@@ -18,47 +18,48 @@ function ServerRecievedData() {
 	// Is this a KEY command?
 	if cmd==KEY_CMD    
 	{
-	// Read the key that was sent
-	var key = buffer_read(buff, buffer_s16);
-
-	// And it's up/down state
-	var updown = buffer_read(buff, buffer_s16);
-    
-	// translate keypress into an index for our player array.
-	if key == vk_left
-		{
-		key=LEFT_KEY;
-		}
-	else if key == vk_right
-		{
-		key=RIGHT_KEY;
-		}
-	else if key == vk_space
-		{
-		key=JUMP_KEY;
-		}
-         
-	// translate updown into a bool for the player array       
-	if updown == 0
-		{
-		inst.keys[key] = false;
-		}
-	else
-		{
-		inst.keys[key] = true;
-		}
+	// retooling into how the game checks player x and y coords
+		
+		
+	
 	}
 	// Is this a NAME command?
 	else if cmd == NAME_CMD   
 	{
 	// Set the client "name"
-	inst.PlayerName = buffer_read(buff, buffer_string);    
+	inst.PlayerName = buffer_read(buff, buffer_string);   
+	ds_grid_set(global.playersOnline,global.PlayerTotal,0, inst.PlayerName);
 	}
 	else if cmd == PING_CMD
 	{
-	// keep alive - ignore it
+		var name = buffer_read(buff, buffer_string)
+		var exists = false;
+		for(i = 0; i < 32; i++){
+			if(name == ds_grid_get(global.playersOnline,i,0)){
+				exists = true;
+			}
+		}
+		if(exists){
+			var _x = buffer_read(buff, buffer_s16);
+			var _y = buffer_read(buff, buffer_s16);
+			var _sprite = buffer_read(buff, buffer_s16);
+			var _sprite_index = buffer_read(buff, buffer_s16);
+			var _sprite_dir = buffer_read(buff, buffer_s16);
+			if(_x != 0 && _y != 0){
+				show_debug_message(name+string_format(_x,4,0)+string_format(_y,4,0)+string_format(_sprite,4,0)+string_format(_sprite_index,4,0));
+				show_debug_message("server packet heartbeat over!");
+				for(i = 0; i < 32; i++){
+					if(name == ds_grid_get(G.playersOnline,i,0)){
+						ds_grid_set(global.playersOnline,i,1, _x);
+						ds_grid_set(global.playersOnline,i,2, _y);
+						ds_grid_set(global.playersOnline,i,3, _sprite);
+						ds_grid_set(global.playersOnline,i,4, _sprite_index);
+						ds_grid_set(global.playersOnline,i,5, _sprite_dir);
+					}
+				}
+			}
+		}
 	}
-
 
 
 

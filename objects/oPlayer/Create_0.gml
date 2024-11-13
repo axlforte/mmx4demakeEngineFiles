@@ -1,4 +1,4 @@
 global.PlayerTotal++;  
 PlayerName = "";
-_x = x;
-_y = y;
+x = 32;
+y = 32

@@ -7,5 +7,3 @@ if(myPlayer.state = states.dash || myPlayer.state = states.idle || myPlayer.stat
 } else {
 	image_index = myPlayer.image_index ;
 }
-draw_text(x + 32,y,image_index);
-draw_text(x + 32,y - 12,myPlayer.image_index);

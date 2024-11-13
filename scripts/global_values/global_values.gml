@@ -47,7 +47,9 @@ function global_values() {
 	global.player_sprite = 0;
 	global.player_sprite_frame = 0;
 	global.temp = 0;
-	global.playersOnline = [[]];
+	global.playersOnline = ds_grid_create(34, 10);
+	ds_grid_clear(global.playersOnline,0);
+	global.playersdetectable = 0;
 	global.mp = false;
 	
 	enum diff_modes {

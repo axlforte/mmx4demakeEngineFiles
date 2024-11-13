@@ -57,8 +57,8 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 #region Main
 /// Main
 page_items[menu_states.main] = [
-	[_("MULTIPLAYER"), [100, 136, 144, 20]],
-	[_("SINGLEPLAYER"),       [92, 160, 144, 20]],
+	[_("SINGLEPLAYER"), [100, 136, 144, 20]],
+	[_("MULTIPLAYER"),       [92, 160, 144, 20]],
 	[_("OPTIONS"),    [92, 172, 144, 20]],
 	[_("EXIT"),       [92, 184, 144, 20]]
 ];

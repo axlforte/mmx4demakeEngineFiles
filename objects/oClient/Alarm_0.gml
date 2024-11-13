@@ -1,4 +1,4 @@
 /// @description  Send keep alive "ping" to server
 SendKeepAlive();
-alarm[0] = 120;
+alarm[0] = pingrate;
 

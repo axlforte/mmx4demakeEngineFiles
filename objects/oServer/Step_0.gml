@@ -1,6 +1,6 @@
 /// @description  Send player data to ALL attached clients
 
-// Once a frame, we send ALL attached clients, ALL game sprites (plaeyrs and baddies)
+// Once a frame, we send ALL attached clients, ALL game sprites
 var count = ds_list_size(socketlist);
 if count > 0
 {
@@ -18,21 +18,25 @@ buffer_write(global.player_buffer, buffer_s16, 0);
 buffer_write(global.player_buffer, buffer_s16, 0);
 
 // All attached players
+
+var plength = 0;
+
+for(r = 0; r < 32; r++){
+	if(ds_grid_get(G.playersOnline,r,0) != 0){
+		plength++;
+	}
+}
+
 var count = 0;
+//for(s = 0; s < plength; s++)
 with(oPlayer)
     {
-    buffer_write(global.player_buffer, buffer_s16, x);
-	global.playersOnline[count][0] = x;
-    buffer_write(global.player_buffer, buffer_s16, y);
-	global.playersOnline[count][1] = y;
-    buffer_write(global.player_buffer, buffer_s16, sprite_index);
-	global.playersOnline[count][2] = sprite_index;
-    buffer_write(global.player_buffer, buffer_s16, image_index);
-	global.playersOnline[count][3] = image_index;
-    buffer_write(global.player_buffer, buffer_s32, image_blend);
-	global.playersOnline[count][4] = image_blend;
-    buffer_write(global.player_buffer, buffer_string, PlayerName);
-	global.playersOnline[count][5] = PlayerName;
+    buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,count + 1,1));
+    buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,count + 1,2));
+    buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,count + 1,3));
+    buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,count + 1,4));
+    buffer_write(global.player_buffer, buffer_s32, ds_grid_get(G.playersOnline,count + 1,5));
+    buffer_write(global.player_buffer, buffer_string, ds_grid_get(G.playersOnline,count + 1,0));
 	count++;
     }
 
@@ -47,9 +51,18 @@ for(var i = 0; i < count; ++i;)
     buffer_seek(player_buffer, buffer_seek_start, 4);
 
     // Get the player's instance, so we can get it's X,Y
-    var inst = ds_map_find_value(Clients, sock);
-    buffer_write(global.player_buffer, buffer_s16, inst.x);
-    buffer_write(global.player_buffer, buffer_s16, inst.y);
+	if(i == 0){
+		buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,1,1));
+		buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,1,2));
+	} else {
+	    var inst = ds_map_find_value(Clients, sock);
+		for(e = 0; e < 32; e++){
+			if(inst.PlayerName == ds_grid_get(G.playersOnline,i,0)){
+				buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,i,1));
+				buffer_write(global.player_buffer, buffer_s16, ds_grid_get(G.playersOnline,i,2));
+			}
+		}
+	}
 
     // Send data to client
     network_send_packet(sock,player_buffer, buffer_size);
