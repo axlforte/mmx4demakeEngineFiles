@@ -5,9 +5,15 @@ function scr_keys_update() {
 		if (global.settings[1] == input_types.keyboard) {
 			key_p_left = (!key_left && keyboard_check(global.key_left));
 			key_left = keyboard_check(global.key_left);
+			if(key_left && G.mp){
+				//SendKey(vk_left, 1);
+			}
 
 			key_p_right = (!key_right && keyboard_check(global.key_right));
 			key_right = keyboard_check(global.key_right);
+			if(key_right && G.mp){
+				//SendKey(vk_right, 1);
+			}
 
 			key_p_up = (!key_up && keyboard_check(global.key_up));
 			key_up = keyboard_check(global.key_up);

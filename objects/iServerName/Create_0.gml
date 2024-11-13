@@ -1,3 +1,6 @@
 /// @description  VERY simple text box....
-Text = "YoYo Games"
+Text = ""
+focus = false;
+tlen = 0;
 
+Caption = "Player Name";

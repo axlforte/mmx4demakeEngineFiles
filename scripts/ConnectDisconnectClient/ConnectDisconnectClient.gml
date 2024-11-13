@@ -24,6 +24,7 @@ function ConnectDisconnectClient() {
 
 		// put this instance into a map, using the socket ID as the lookup
 		ds_map_add(Clients, sock, inst);
+		
 		}
 	else
 		{

@@ -105,7 +105,7 @@ function player_x_armor() {
 			dash_air_unlocked = true;
 			// Hover
 			state_unlocked[states.hover] = true;
-			hover_length = [420, 120];
+			hover_length = [210, 120];
 			hover_vertical = true;
 		}
 		
@@ -119,12 +119,12 @@ function player_x_armor() {
 			// X-Buster
 			charge_level_max = 3;
 			charge_limits[3] = charge_limits[2];
-			weapons_script[weapons.x_buster] = player_x_buster_x4;	
+			//weapons_script[weapons.x_buster] = player_x_buster_x4;	
 		}
 		
 		if (HELM == "x4") {
 			//hit things with more things
-			weapon_cost_reduce_rate = 0.5;	
+			weapon_cost_reduce_rate = 0.25;	
 		}
 		if(FULL == "x4"){
 			hover_vertical = true;

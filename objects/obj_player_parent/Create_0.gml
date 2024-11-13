@@ -23,11 +23,6 @@ function player_draw_event() {
 	}
 	var _x = x, _y = y;
 	
-	show_debug_message(x);
-	show_debug_message(y);
-	show_debug_message(G.temp);
-	show_debug_message(G.levelTransitionY);
-	
 	if (state == states.ride) {
 		_x = ride_char_pos.x;
 		_y = ride_char_pos.y;	

@@ -14,6 +14,6 @@ global.broadcast_server = -1;
 show_debug_message("#######################################");
 show_debug_message("Start game");
 show_debug_message("#######################################");
-room_goto(rm_road_to_stingray);
+room_goto(rm_warehouse_lounge);
 }
 
