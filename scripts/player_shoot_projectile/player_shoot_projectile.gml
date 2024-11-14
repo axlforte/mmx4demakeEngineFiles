@@ -1,24 +1,7 @@
 function player_shoot_projectile(_object, _affect_direction = false) {
 	if(G.mp){
-		var bluff = buffer_create(256, buffer_grow, 1);
-		buffer_seek(bluff, buffer_seek_start, 0);
-
-		// Write the command, and the name into the buffer.
-		buffer_write(bluff, buffer_s16, KEY_CMD);
-		
-		// is this a new projectile? yes!
-		buffer_write(bluff, buffer_bool, true);
-		
-		//send projectile data
-		buffer_write(bluff, buffer_string, _object); // object name
-		buffer_write(bluff, buffer_string, x); // x
-		buffer_write(bluff, buffer_string, y); // y
-		buffer_write(bluff, buffer_string, dir); // dir
-		buffer_write(bluff, buffer_string, G.ServerName); // owner
-
-		// Send this to the server
-		network_send_packet(client, bluff, buffer_tell(bluff));
-		buffer_delete(bluff);
+		//your momma gay
+		shoot = true;
 	} else {
 		var inst = instance_create_depth(x, y, depth - 10, _object);
 		inst.image_xscale = dir;
