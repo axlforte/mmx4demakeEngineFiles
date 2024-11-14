@@ -1,0 +1,1 @@
+global.client = new GameClient(global.ip, 1997);

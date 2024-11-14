@@ -49,8 +49,11 @@ function global_values() {
 	global.temp = 0;
 	global.playersOnline = ds_grid_create(34, 10);
 	ds_grid_clear(global.playersOnline,0);
-	global.playersdetectable = 0;
+	global.playersdetectable = -1;
+	global.player_name = "ROCKMAN X NO." + string(random_range(0,35565));
+	global.player_num = 1;
 	global.mp = false;
+	global.ip = "127.0.0.1";
 	
 	enum diff_modes {
 		easy,

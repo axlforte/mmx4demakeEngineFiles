@@ -1,0 +1,1 @@
+global.server = new GameServer(1997);
