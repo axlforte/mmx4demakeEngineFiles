@@ -14,6 +14,7 @@ global.NetworkState = NETWORK_PLAY;
 
 // Create a list to hold ALL sprites sent from the server
 allsprites = ds_list_create();
+allprojs = ds_list_create();
 sprites = 0;
 
 //rate of checking. the rate is in frames, ie 60 means it will check every second, and 1 will check every frame

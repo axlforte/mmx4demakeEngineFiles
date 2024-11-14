@@ -9,6 +9,9 @@ global.player_buffer = player_buffer;
     
 // Reset buffer to start - Networking ALWAYS reads from the START of the buffer
 buffer_seek(player_buffer, buffer_seek_start, 0);
+
+// what kind of message is this? a player render call
+buffer_write(player_buffer, buffer_s16, 0);
     
 // Total number of sprites 
 buffer_write(player_buffer, buffer_u32, global.PlayerTotal);
