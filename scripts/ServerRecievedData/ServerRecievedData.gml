@@ -18,7 +18,7 @@ function ServerRecievedData() {
 	// Is this a KEY command?
 	if cmd==KEY_CMD    
 	{
-	// retooling into how the game checks player x and y coords
+	// not needed, but i bet i can turn this into the projectile spawn code
 		
 		
 	
@@ -59,6 +59,8 @@ function ServerRecievedData() {
 				}
 			}
 		}
+	} else if(cmd == ){
+		
 	}
 
 

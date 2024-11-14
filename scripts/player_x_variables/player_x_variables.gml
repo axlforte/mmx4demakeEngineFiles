@@ -14,6 +14,9 @@ function player_x_variables() {
 	player_weapon_set(8, weapons.aiming_laser);
 	player_weapon_set(9, weapons.double_cyclone);
 	player_weapon_set(10, weapons.twin_slasher);
+	
+	weapon[2] = weapons.x_buster;
+	weapon[1] = weapons.x_buster;
 
 	// Charge
 	charge_unlocked = true;
@@ -26,7 +29,7 @@ function player_x_variables() {
 		{alpha: 1, radius: 30 }
 	];
 	
-	trail_mode = 1;
-	trail_color = c_blue;
-	plt_index_default = 12;// should be ultimate armor code look
+	//trail_mode = 1;
+	trail_color = #0047b3;
+	plt_index_default = 12;// this is needed it changes the player to have psx teal underarmor
 }
