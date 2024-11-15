@@ -14,12 +14,11 @@ function GameClient(_ip, _port) : TCPSocket(_ip, _port) constructor {
 			
 		rpc.sendRequest("getPlayerId", current_time)
             .onCallback(function(_num) {
-                // Show ping
+                // get unique player id, might not need in the future
                global.player_num = _num;
 			   if(_num == -1){
                 show_debug_message("You got unlucky and I havent coded retrying on this yet!");      
 			   }
-                //show_debug_message($"{_ping} ms");
             })
             .onError(function(_error) {
                 // Show error message
@@ -36,23 +35,8 @@ function GameClient(_ip, _port) : TCPSocket(_ip, _port) constructor {
             });  
     });
 	
-	/*rpc.registerHandler("create_ball", function(_pos) {
-        // Create the ball instance
-        instance_create_depth(_pos.x, _pos.y, 0, obj_ball);
-    });
-	
-	static step = function() {
-        if (mouse_check_button_pressed(mb_left)) {
-            // This will send a "create_ball" notification to the server
-            rpc.sendNotification("create_ball", {
-                x: mouse_x,
-                y: mouse_y
-            });
-        }
-    }*/
-	
 	//send out my info!
-	static step = function() {
+	static alrm = function() {
         // send 
 		if(G.playersdetectable != -1) {
 	        rpc.sendNotification("pingPlayerPos", {
@@ -62,7 +46,9 @@ function GameClient(_ip, _port) : TCPSocket(_ip, _port) constructor {
 	            y: G.player_y,
 				spr: G.player_sprite,
 				spr_frame: G.player_sprite_frame
+				
 	        });
+			show_debug_message("pinged player position!");
 		} else {
 			rpc.sendRequest("pingPlayerCount", 0)
             .onCallback(function(_count) {
@@ -75,6 +61,10 @@ function GameClient(_ip, _port) : TCPSocket(_ip, _port) constructor {
             });  
 		}
     }
+	
+	static step = function() {
+		show_debug_message("step");
+	}
 	
 	//recieve other ppl's info
 	rpc.registerHandler("pingPlayerPos", function(_pos) {

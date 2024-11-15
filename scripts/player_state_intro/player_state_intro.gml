@@ -76,6 +76,7 @@ function player_state_intro() {
 				weapon_can_change = true;	
 				breath_enabled = true;
 				pause_enabled = true;	
+				G.player_spawned = true;
 			}
 		break;
 	}

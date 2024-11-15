@@ -58,7 +58,7 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 /// Main
 page_items[menu_states.main] = [
 	[_("SINGLEPLAYER"), [100, 136, 144, 20]],
-	[_("MULTIPLAYER"),       [92, 160, 144, 20]],
+	//[_("MULTIPLAYER"),       [92, 160, 144, 20]],
 	[_("OPTIONS"),    [92, 172, 144, 20]],
 	[_("EXIT"),       [92, 184, 144, 20]]
 ];
@@ -73,7 +73,8 @@ page_items[menu_states.game_mode] = [
 page_items[menu_states.difficulty_mode] = [
 	[_("EASY"),			 [92, 88, 144, 20]],
 	[_("NORMAL"),		 [92, 112, 144, 20]],
-	[_("HARD"),		     [92, 136, 144, 20]]
+	[_("HARD"),		     [92, 136, 144, 20]],
+	[_("ZERO"),		     [92, 136, 144, 20]]
 ];
 #endregion
 #region Settings

@@ -1,0 +1,1 @@
+global.client.triggerEvent("step");

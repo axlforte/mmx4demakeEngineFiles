@@ -23,7 +23,11 @@ switch(state) {
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 112, _y = 92 + 24*i;
-			draw_string(_x, _y, item[0], (selected_item == i ? colors.orange : colors.blue));
+			if(selected_item == i && item[0] == "ZERO"){
+				draw_string(_x, _y, "BECAUSE SCYTHER SAID SO", (selected_item == i ? colors.orange : colors.blue));
+			} else {
+				draw_string(_x, _y, item[0], (selected_item == i ? colors.orange : colors.blue));
+			}
 			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.orange);
 		}
 		break;

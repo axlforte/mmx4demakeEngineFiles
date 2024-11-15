@@ -23,7 +23,7 @@ function enemy_init() {
 	max_hp = 1;
 	max_bar_hp = 32;
 
-	collide_damage = 1; // How much damage the enemy does on contact
+	collide_damage = array_get([1, 1, 2, 20 * x * x], global.difficulty); // How much damage the enemy does on contact
 	blocking = false; // Nullify damage
 	damageable = true;
 	grab_player = false; // Can grab the player

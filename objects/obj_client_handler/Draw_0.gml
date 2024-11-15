@@ -1,5 +1,6 @@
 for(i = 0; i < 32; i++){
 	if(ds_grid_get(G.playersOnline,i,0) != 0){
+		show_debug_message("there was a detected player! its number " + string(i));
 		var _x = ds_grid_get(G.playersOnline,i,1);
 		var _y = ds_grid_get(G.playersOnline,i,2);
 		var _spr = ds_grid_get(G.playersOnline,i,3);
