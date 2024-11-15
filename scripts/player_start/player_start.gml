@@ -234,7 +234,7 @@ function player_start() {
 	
 	for (var i = 80; i >= 0; i--) weapon_list[i] = noone;
 	weapon[0] = weapons.x_buster; // Primary weapon
-	weapon[1] = noone; // Secondary weapon (Disabled in Snes Style)
+	weapon[1] = weapons.x_buster; // Secondary weapon (Disabled in Snes Style)
 	weapon[2] = noone;
 	
 	weapon_name = "";

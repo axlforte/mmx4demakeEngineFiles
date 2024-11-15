@@ -161,9 +161,9 @@ switch (state) {
 		if (enter) {
 			switch(selected_item) {
 				case 0: state_next = menu_states.difficulty_mode; break;
-				case 1: state_next = menu_states.multiplayer; global.mp = true; break; 
-				case 2: state_next = menu_states.option; break;
-				case 3: game_end(); exit; break;
+				//case 1: state_next = menu_states.multiplayer; global.mp = true; break; 
+				case 1: state_next = menu_states.option; break;
+				case 2: game_end(); exit; break;
 			}
 			menu_set_state(state_next);
 		}

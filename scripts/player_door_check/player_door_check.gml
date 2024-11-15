@@ -1,12 +1,18 @@
 function player_door_check() {
 	if (state == states.outro) exit;
 	var door_inst = doors_get_first_collision([
-		{ x:  1, y:  0 },
-		{ x: -1, y:  0 },
-		{ x:  0, y:  1 },
-		{ x:  0, y: -1 },
+		{ x:  32, y:  0 },
+		{ x: -32, y:  0 },
+		{ x:  0, y:  2 },
+		{ x:  0, y: -16 },
 		{ x: sign(x - x_door_check), y : 0 }
 	]);
+	
+	show_debug_message(x - instance_nearest(x,y,obj_door_parent).x);
+	show_debug_message(y - instance_nearest(x,y,obj_door_parent).y);
+	
+	//todo: rewrite because this shit isnt working
+	
 	if (door_inst != noone && door_inst.state == door_states.none) {
 		var d = door_inst.dir;
 		var used_door = noone;
