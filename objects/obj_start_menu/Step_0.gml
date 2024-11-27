@@ -174,19 +174,6 @@ switch (state) {
 		room = rm_lobby;
 		break;
 	#endregion
-	#region Game Mode
-	case menu_states.game_mode:
-		menu_update_item_v();
-		menu_update_item_click();
-		if (enter) {
-			switch(selected_item) {
-				case 0:
-					menu_set_state(menu_states.difficulty_mode);
-					break;
-			}
-		}
-		break;
-	#endregion
 	#region Difficulty Mode
 	case menu_states.difficulty_mode:
 		menu_update_item_v();
@@ -230,13 +217,6 @@ switch (state) {
 			}
 			buttons[| i] = b;
 		}
-		
-		if (vinput_p == -1) {
-			menu_set_state(menu_states.armor_select);
-			tmp_armor = armor;
-			tmp_armor_index = armor_index;
-			break;
-		}
 		menu_update_item_h();
 		global.character_selected_index[0] = selected_item;
 		if (selected_item < array_length(global.player_character_armor)) {
@@ -257,127 +237,15 @@ switch (state) {
 			var tran = transition_create(transition_types.blink);
 			tran.color = c_white;
 			tran.transition_limit = 16;
-			menu_set_state(menu_states.boss_intro, 16, 60);
+			//menu_set_state(menu_states.boss_intro, 16, 60);
+			room = rm_skill_tree;
 			music_stop(1000);
 			audio_play(snd_player_success);
 			global.character_selected[0] = global.character_object[selected_item];
 		}
 		break;
 	#endregion
-	#region Armor Select
-	case menu_states.armor_select:
-		var c = G.character_selected_index[0];
-		if (substates[0] == 0) {
-			var t_dir = -1, next_item = -1;
-			if (vinput_p == -1)	t_dir = e_dir.up;
-			else if (vinput_p == 1) t_dir = e_dir.down;
-			else if (hinput_p == -1) t_dir = e_dir.left;
-			else if (hinput_p == 1) t_dir = e_dir.right;
-			if (t_dir != -1)
-				next_item = menu_edges[selected_item, t_dir];
-			for (var i = 0; i <= pl_btn.confirm; i++) {
-				if (item_show[i]) {
-					var r = item_rect[i];
-					if (mouse_check_button_pressed(mb_left)) {
-						if (point_in_rectangle(mouse_x, mouse_y, r[0], r[1], r[2], r[3])) {
-							next_item = i;
-							enter = true;
-						}
-					}
-				}
-			}
-			if (next_item != -1) {
-				selected_item = next_item;
-				menu_armor_update_colors();
-			}
-
-			if (enter) {
-				switch (selected_item) {
-					case pl_btn.back:
-						menu_set_state(menu_states.player_select);
-						tmp_armor = armor;
-						tmp_armor_index = armor_index;
-						selected_item_next = c;
-						break;
-					case pl_btn.confirm:
-						armor = tmp_armor;
-						armor_index = tmp_armor_index;
-						selected_item_next = c;
-						G.player_character_armor[c] = armor;
-						G.player_character_armor_index[c] = armor_index;
-						menu_set_state(menu_states.player_select);
-						break;
-					case pl_btn.helmet:
-					case pl_btn.body:
-					case pl_btn.arms:
-					case pl_btn.legs:
-					case pl_btn.armors:
-						substates[0] = 1; // Selecting an armor part
-						item_show[selected_item] = false;
-						var part_index = menu_get_armor_part_index(selected_item);
-						var index = tmp_armor_index[part_index];
-						var armor_names = G.character_armor_name[c];
-						item_string[selected_item] = string_ucfirst(armor_names[index]);
-						break;
-				}
-			}
-		} else {
-			var b = buttons[| 0];
-			var pos = item_scroll_pos[selected_item];
-			var ww = sprite_get_width(sprite_scroll_arrows);
-			var hh = sprite_get_height(sprite_scroll_arrows);
-			var xx = floor((pos[0] + sprite_get_width(sprite_scroll) / 2));
-			var yy = floor((pos[1] + sprite_get_height(sprite_scroll) / 2));
-			b[2] = xx;
-			b[3] = yy;
-			var inside = (abs(mouse_x - xx) <= ww / 2) && (abs(mouse_y - yy) <= hh / 2);
-			if (inside) {
-				if (mouse_check_button(mb_left))
-					vinput = (mouse_y > yy) ? 1 : -1;
-				if (mouse_check_button_pressed(mb_left))
-					vinput_p = vinput;
-			} else {
-				enter |= mouse_check_button_pressed(mb_left);
-			}
-			b[1] = 1 + vinput;
-			buttons[| 0] = b;
-			if (vinput_p != 0) {
-				var unlocked = false;
-				var part_index = menu_get_armor_part_index(selected_item);
-				var new_index = tmp_armor_index[part_index];
-				var armors_length = array_length(global.character_armor[c]);
-				do { 
-					new_index += vinput_p;
-					if (new_index < 0)
-						new_index += armors_length;
-					if (new_index >= armors_length)
-						new_index = 0;
-					var array_unlocked = global.character_armor_unlocked[c][new_index];
-					unlocked = array_unlocked[part_index];
-				} until (unlocked);
-				var armors = G.character_armor[c];
-				if (part_index == P_FULL) {
-					for (var i = 0; i < P_FULL; i++) {
-						tmp_armor_index[i] = 0;  
-						tmp_armor[i] = "";
-					}
-					menu_armor_update_colors();
-				} else {
-					tmp_armor[P_FULL] = "";
-					tmp_armor_index[P_FULL] = 0;
-				}
-				tmp_armor_index[part_index] = new_index;
-				tmp_armor[part_index] = armors[new_index];
-				var armor_names = G.character_armor_name[c];
-				item_string[selected_item] = string_ucfirst(armor_names[new_index]);
-			}
-			if (enter) {
-				substates[0] = 0;
-				item_show[selected_item] = true;
-			}
-		}
-		break;
-	#endregion
+	
 	#region Option
 	case menu_states.option:
 		menu_update_item_v();
@@ -531,85 +399,6 @@ switch (state) {
 						sound = true;
 					}
 				}
-			}
-		}
-		break;
-	#endregion
-	#region Stage Select
-	case menu_states.stage_select:
-		if (selected_item < 10) {
-			if (vinput_p != 0) {
-				if (selected_item < 5) selected_item += 5;
-				else selected_item -= 5;
-			}
-			// Select Stage by Click
-			for (var i = 0; i < 10; i++) {
-				var pos = stage_select_positions[i];
-				if (mouse_check_button_pressed(mb_left) &&
-				point_in_rectangle(mouse_x, mouse_y, pos[0], pos[1], pos[0] + 40, pos[1] + 40)) {
-					selected_item = i;
-				}
-			}
-			// Select Stage by Key
-			if (selected_item < 5)
-				selected_item = menu_update_subitem(selected_item, hinput_p, [0, 4], true);
-			else
-				selected_item = menu_update_subitem(selected_item, hinput_p, [5, 9], true);
-			// Confirm Stage by Click
-			var pos = [176, 85];
-			var _boss = global.boss_slot[selected_item];
-			var w = 69, h = 69;
-			if (_boss != noone)
-				enter |= (mouse_check_button_pressed(mb_left) &&
-				point_in_rectangle(mouse_x, mouse_y, pos[0], pos[1], pos[0] + w, pos[1] + h))
-			if (enter) {
-				var _boss = global.boss_slot[selected_item];
-				if (_boss != noone) {
-					var info = global.boss_info[_boss];
-					boss_room = info[3];
-					boss_object = info[4];
-					boss_name = info[0];
-					boss_defeated = global.boss_defeated[_boss];
-					if (room_exists(boss_room)) {
-						var tran = transition_create(transition_types.blink);
-						tran.color = c_white;
-						tran.transition_limit = 16;
-						menu_set_state(menu_states.player_select, 16, 60);
-						audio_play(snd_player_success);
-					}
-				}
-			}
-		}
-		break;
-	#endregion
-	#region Boss Intro
-	case menu_states.boss_intro:
-		script_try(boss_intro[0]);
-//		boss_intro_eclipse();
-		break;
-	#endregion
-	#region Audio Settings
-	case menu_states.audio_settings:
-		menu_update_item_v();
-		menu_update_item_click();
-		if (enter) {
-			switch (selected_item) {
-				// Voice Language
-				case 0:
-					menu_set_state(menu_states.voice_language);
-					break;
-				// Volume Settings
-				case 1:
-					menu_set_state(menu_states.volume);
-					break;
-				// Visuals (dialouge, charge effects, bloom, etc)
-				case 2:
-					menu_set_state(menu_states.visuals);
-					break;
-				// Back
-				case 3:
-					menu_set_state(menu_states.option);
-					break;
 			}
 		}
 		break;

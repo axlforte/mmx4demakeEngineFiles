@@ -58,7 +58,8 @@ function global_values() {
 	enum diff_modes {
 		easy,
 		normal,
-		hard
+		hard,
+		zero
 	}
 	enum pause_types {
 		none,
@@ -67,7 +68,8 @@ function global_values() {
 		pickup,
 		boss_death,
 		special_attack,
-		dialouge
+		dialouge,
+		pause_menu
 	};
 	global.background_list = ds_list_create();
 	global.start_menu_force_state = false;
@@ -114,4 +116,30 @@ function global_values() {
 	global.replay_fname = "";
 	replay_init();
 	dialouge_activation();
+	upgrade_values();
+}
+
+function upgrade_values(){
+	global.super_dash = false;
+	global.hyper_dash = false;
+	global.buster_specialist = false;
+	global.wall_cling = false;
+	global.auto_charge = false;
+	global.super_charge = false;
+	global.hyper_charge = false;
+	global.energy_expert = false;
+	global.weapons_specialist = false;
+	global.untouchable = false;
+	global.yoga = false;
+	global.overcharged_systems = false;
+	global.undershirt = false;
+	global.energy_infusion = false;
+	global.regenerative_capacitors = false;
+	global.energy_converter = false;
+	global.cardio_training = false;
+	global.grip_training = false;
+	global.explorers_instinct = false;
+	global.travelers_companion = false;
+	global.concussive_redirectors = false;
+	global.sense_of_duty = false;
 }

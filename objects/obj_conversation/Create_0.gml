@@ -1,4 +1,4 @@
-conversation = [//you must have a /n between every 40 characters. 
+oconversation = [//you must have a /n between every 40 characters. 
 "000you seem to have forgotten to add any/ndialouge to this conversation!",
 "001go to the object that initiated this/nconversation object and fix it!",
 "000until then make /sabsolute/d sure that/n this works /oproperly/d!"];
