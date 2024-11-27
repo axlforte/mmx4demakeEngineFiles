@@ -8,8 +8,8 @@ function player_door_check() {
 		{ x: sign(x - x_door_check), y : 0 }
 	]);
 	
-	show_debug_message(x - instance_nearest(x,y,obj_door_parent).x);
-	show_debug_message(y - instance_nearest(x,y,obj_door_parent).y);
+	//show_debug_message(x - instance_nearest(x,y,obj_door_parent).x);
+	//show_debug_message(y - instance_nearest(x,y,obj_door_parent).y);
 	
 	//todo: rewrite because this shit isnt working
 	

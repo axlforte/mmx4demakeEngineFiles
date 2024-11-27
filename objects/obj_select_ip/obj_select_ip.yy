@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Netcode",
-    "path": "folders/Objects/Netcode.yy",
+    "name": "Netcode(dep)",
+    "path": "folders/Objects/Netcode(dep).yy",
   },
   "parentObjectId": null,
   "persistent": false,
