@@ -13,7 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6b90413-5958-4522-8414-e019fcecc78a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a227651-d43f-4372-9b13-4f85e756ac13",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e46b51ec-9407-4812-86de-dd1154027057",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d6b90413-5958-4522-8414-e019fcecc78a","path":"sprites/spr_upgrade_screen_background/spr_upgrade_screen_background.yy",},},},"Disabled":false,"id":"8ba4f88d-47e8-4462-9c79-e1d18ad60d70","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6a227651-d43f-4372-9b13-4f85e756ac13","path":"sprites/spr_upgrade_screen_background/spr_upgrade_screen_background.yy",},},},"Disabled":false,"id":"81b910e8-f687-4ebc-9b26-b546cb554de9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e46b51ec-9407-4812-86de-dd1154027057","path":"sprites/spr_upgrade_screen_background/spr_upgrade_screen_background.yy",},},},"Disabled":false,"id":"768c59ed-14db-4699-add6-90c978462e11","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

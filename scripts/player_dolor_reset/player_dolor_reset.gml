@@ -1,5 +1,8 @@
 function player_dolor_reset() {
 	// Shoot
+	if(global.sense_of_duty){
+		return;
+	}
 	shoot = false;
 	shoot_t = 0;
 	shoot_animation = "";

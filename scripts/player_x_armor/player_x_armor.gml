@@ -94,7 +94,6 @@ function player_x_armor() {
 			defense_shield_sprite = spr_player_shield_orange;
 			defense_shield_damage_reduction = 0.75;
 			player_weapon_set(8, weapons.hyper_charge)
-			auto_regen = true;
 			tatsumaki_animation = "tatsumaki2";
 			tatsumaki_sprite = spr_x_tatsumaki2_mask;
 		}
@@ -309,5 +308,15 @@ function player_x_armor() {
 			dolor_animation = "dolor";
 		}
 	#endregion
-
+	state_unlocked[states.crouch] = global.yoga;
+	auto_regen = global.regenerative_capacitors;
+	if(global.cardio_training){
+		walk_speed += 0.5;
+	}
+	if(global.super_dash){
+		dash_speed += 0.5;
+	}
+	if(global.hyper_dash){
+		dash_speed += 0.5;
+	}
 }

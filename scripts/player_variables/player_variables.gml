@@ -341,7 +341,11 @@ function player_immunity_variables() {
 	immunity = false;
 	immunity_list = ds_list_create();
 	immunity_t = 0;
-	immunity_length = 60;
+	if(global.untouchable){
+		immunity_length = 75;
+	} else {
+		immunity_length = 60;
+	}
 	immunity_type = immunity_types.dolor;
 	immortal = false;
 	enum immunity_types

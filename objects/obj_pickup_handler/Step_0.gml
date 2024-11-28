@@ -53,6 +53,7 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 			audio_play(fill_sound);
 			break;
 		case pickup_types.hp:
+		
 			var hp_add = 1;
 			if (instant_fill) {
 				hp_add = amount;

@@ -154,7 +154,7 @@ function player_start() {
 	shoot = false; // Is the player shooting
 	shoot_t = 0; // Timer
 	shoot_animation = ""; // Animation
-	shoot_limit = 15; // Timer Limit
+	shoot_limit = 10; // Timer Limit
 	shoot_enabled = false; // Is shot enabled?
 	shoot_unlocked = true; // Does this player shoot?
 	shoot_next_animation = ""; // Next Animation
@@ -197,7 +197,15 @@ function player_start() {
 	charge_level = -1; // Current Charge Level
 	previous_charge_level = -1;
 	charge_level_max = 2; // Max Charge Level
-	charge_limits = [0, 4, 63, 123, 183]; // Time for each level
+	if(global.auto_charge){
+		charge_limits = [0, 2, 33, 83, 123]; // Time for each level
+	} else if(global.hyper_charge){
+		charge_limits = [0, 4, 43, 93, 143]; // Time for each level
+	} else if(global.super_charge){
+		charge_limits = [0, 4, 53, 108, 168]; // Time for each level
+	} else {
+		charge_limits = [0, 4, 63, 123, 183]; // Time for each level
+	}
 	charge_sprite = noone; // Current Charge Sprite
 	charge_sprites = // All Charge Sprites
 	[
@@ -263,6 +271,14 @@ function player_start() {
 	using_world_speed = false;
 	
 	pause_enabled = false;
+	
+	if(instance_exists(obj_pickup_heart)){
+		audio_play(snd_ride_armor_activated);
+	}
+	
+	if(global.travelers_companion){
+		instance_create_depth(x,y,0,obj_giro_navi);
+	}
 }
 
 function player_trail_set(interval, amount) {

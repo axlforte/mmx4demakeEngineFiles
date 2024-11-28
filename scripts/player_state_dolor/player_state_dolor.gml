@@ -2,15 +2,20 @@ function player_state_dolor() {
 	var t = state_timer++;
 	
 	if (t == 0) {
-		//if we were actually hit, and not debugging
+		if(global.concussive_redirectors && !is_on_floor() && dolor_damage > 1.5){
+			dolor_damage -= 1;
+		}
 		hp -= dolor_damage;
+		if(hp > 1 && global.undershirt){
+			hp = 1;
+		}
 		animation = "";
 		animation_play(dolor_animation);
 		audio_play(dolor_sound);
 		if (hp > 0)
 			voice_play();
 		audio_stop(hover_sound);
-		using_special_weapon = false;
+		//using_special_weapon = false;
 		v_speed = 0;
 		h_speed = 0;
 		grav = 0;
