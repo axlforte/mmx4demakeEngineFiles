@@ -1,5 +1,6 @@
 function player_door_check() {
-	//new code that should work. im gonna start by defining when the door code should trigger.
+	//new code that should work.
+	//as it turns out you could activate doors from the wrong side. fixed!
 	
 	if (state == states.outro) exit;
 	
@@ -13,6 +14,10 @@ function player_door_check() {
 		var footsies = instance_place(x,y + 32,obj_door_parent);
 		if(lefty || righto || footsies){
 			var door = instance_nearest(x,y,obj_door_parent);
+			
+			if((door.dir == 1 && lefty) || (door.dir == -1 && righto)){
+				return;
+			}
 			with (door) {
 				target = other;
 				state_set(door_states.open);
