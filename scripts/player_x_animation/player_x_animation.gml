@@ -83,10 +83,10 @@ function player_x_animation() {
 	[ 
 	 0,0,
 	 2,1,
-	 4,0,
-	 6,2,
-	 9,3
-	], 10);
+	 6,0,
+	 11,2,
+	 13,3
+	], 14);
 
 	// Open Arms
 	animation_add("open_arms|giga",
