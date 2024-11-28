@@ -1,6 +1,6 @@
 event_inherited();
 // Damage
-atk = 4;
+atk = 1;
 shot_level = 1;
 hit_if_shot_level_is_equal = true;
 boss_damage[? noone] = 3; // Default damage on bosses

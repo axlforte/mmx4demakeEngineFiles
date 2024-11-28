@@ -80,13 +80,7 @@ switch(state) {
 				if (instance_exists(boss_inst)) {
 					boss_inst.spawn = true;
 				} else {
-					with (target) {
-						//state_set(states.idle, 0, [-1]); // Set idle but wait for the next state
-						substates[0] = -1;
-						wait_state = states.outro;
-						wait_state_limit = 60;
-						immortal = true;
-					}
+					//room_restart();
 				}
 			}
 		}

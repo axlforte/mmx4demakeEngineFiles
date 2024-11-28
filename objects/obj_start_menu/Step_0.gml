@@ -238,7 +238,7 @@ switch (state) {
 			tran.color = c_white;
 			tran.transition_limit = 16;
 			//menu_set_state(menu_states.boss_intro, 16, 60);
-			room = rm_web_spider;
+			room = rm_jet_stingray_remake;
 			music_stop(1000);
 			audio_play(snd_player_success);
 			global.character_selected[0] = global.character_object[selected_item];
