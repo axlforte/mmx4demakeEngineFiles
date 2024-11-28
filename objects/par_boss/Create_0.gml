@@ -7,6 +7,7 @@ phy_type = phy_types.NEW;
 gravity_default = 0.25;
 hp = 0; // Initial Health
 max_hp = 32; // Max Health
+xp = 20;
 t = 0; // Timer
 enum boss_states {
 	intro = 100,

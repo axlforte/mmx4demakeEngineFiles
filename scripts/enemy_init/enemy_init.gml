@@ -22,6 +22,7 @@ function enemy_init() {
 	hp = 1;
 	max_hp = 1;
 	max_bar_hp = 32;
+	xp = 1;
 
 	collide_damage = array_get([1, 1, 2, 20 * x * x], global.difficulty); // How much damage the enemy does on contact
 	blocking = false; // Nullify damage

@@ -33,7 +33,7 @@ function player_x_variables() {
 	trail_color = #0047b3;
 	player_trail_set(8,3);
 	plt_index_default = 12;// this is needed it changes the player to have psx teal underarmor
-	dash_speed = 8;
-	jump_strength = 10;
-	vspeed_max = 2;
+	//dash_speed = 8;
+	//jump_strength = 10; // for debugging purposes
+	//vspeed_max = 2;
 }

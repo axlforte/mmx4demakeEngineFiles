@@ -1,7 +1,7 @@
 /// @description Step
 event_inherited();
 
-if (dash) {
+if (dash && global.buster_specialist) {
 	if (global.dash_lemon_visible)
 		sprite_index = spr_x_shot_11;
 	else sprite_index = spr_x_shot_1;

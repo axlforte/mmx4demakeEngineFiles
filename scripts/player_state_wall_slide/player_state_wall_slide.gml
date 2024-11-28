@@ -34,7 +34,17 @@ function player_state_wall_slide() {
 			script_try(wall_slide_dust.script);
 	}
 	if (t >= 7)
-		v_speed = wall_slide_vspeed;
+		if(global.wall_cling && key_up){
+			v_speed = 0;
+		} else if(global.grip_training){
+			if(key_down){
+				v_speed = wall_slide_vspeed * 1.5;
+			} else {
+				v_speed = wall_slide_vspeed * 0.75;
+			}
+		} else {
+			v_speed = wall_slide_vspeed;
+		}
 	else
 		v_speed = 0;
 

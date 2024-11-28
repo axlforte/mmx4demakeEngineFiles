@@ -1,0 +1,1 @@
+draw_sprite(spr_giro_navi, index, x + sin(spin)*radius, y + cos(spin)*radius);

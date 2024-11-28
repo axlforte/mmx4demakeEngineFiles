@@ -1,0 +1,1 @@
+draw_sprite_ext(x4_double_cyclone1, x + y, x,y, ((floor(x + y)) % 1)*2-1, 1, x+y, c_white, 0.9);

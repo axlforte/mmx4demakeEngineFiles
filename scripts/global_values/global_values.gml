@@ -47,13 +47,8 @@ function global_values() {
 	global.player_sprite = 0;
 	global.player_sprite_frame = 0;
 	global.temp = 0;
-	global.playersOnline = ds_grid_create(34, 10);
-	ds_grid_clear(global.playersOnline,0);
-	global.playersdetectable = -1;
-	global.player_name = "ROCKMAN X NO." + string(random_range(0,35565));
-	global.player_num = 1;
-	global.mp = false;
-	global.ip = "127.0.0.1";
+	global.player_health = 28;
+	global.player_exp = 100;//a little hand holding for the devs but you still should test it out
 	
 	enum diff_modes {
 		easy,
@@ -142,4 +137,54 @@ function upgrade_values(){
 	global.travelers_companion = false;
 	global.concussive_redirectors = false;
 	global.sense_of_duty = false;
+	
+	global.upgrade_names = [
+	"super dash",//sd
+	"hyper dash",
+	"buster specialist",//bs
+	"wall cling",
+	"ultra charge",//ac
+	"super charge",
+	"hyper charge",//hc
+	"energy expert",
+	"weapons specailist",//ws
+	"untouchable",
+	"yoga",//ya
+	"overcharged systems",
+	"undershirt",//us
+	"energy infusion",
+	"regenerative capacitors",//rc
+	"energy converter",
+	"cardio training",//ct
+	"grip training",
+	"explorers instinct",//ei
+	"travelers companion",
+	"concussive redirectors",//cr
+	"sense of duty",
+	];
+	
+	global.upgrade_description = [
+	"dash slightly faster",//sd
+	"dash much faster",
+	"dashing puts extra force\ninto base shots",//bs
+	"press up to stop sliding\ndown walls",
+	"charge time near instant",//ac
+	"charge time down slightly",
+	"charge time down a lot",//hc
+	"get extra health per pickup",
+	"get extra energy per weapon\npickup",//ws
+	"extra invulnerability\nframes",
+	"crouch by pressing down\nwhile not moving",
+	"collect 3 extra health per pickup",
+	"cannot die if above 1\nhealth",//us
+	"supercharged buster shot",
+	"slowly heal damage back if\nnot moving",//rc
+	"turn health into weapon\nenergy and vice versa",
+	"walk slightly faster",//ct
+	"slide down walls slower.\npress down to slide faster",
+	"get notified if area has\ncollectibles in it",//ei
+	"small friend floats towards\nitems not yet collected",
+	"take less damage in the air",//cr
+	"shoot while stunned",
+	];
 }
