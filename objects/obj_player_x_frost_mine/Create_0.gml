@@ -8,8 +8,9 @@ destroy_if_hit = true;
 alarm[0] = 1
 doReverseShot = true;
 atk = 5;
-
-sound = snd_player_x_shot_1;
+boss_damage[? noone] = 1;
+boss_damage[? obj_jet_stingray] = 3;
+sound = snd_player_zero_saber_hyouretsuzan;
 abs_hspeed = 2;
 angle = 0;
 v_speed = -3;

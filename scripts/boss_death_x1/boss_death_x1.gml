@@ -10,7 +10,6 @@ function boss_death_x1() {
 		with (obj_player_parent) {
 			auto_regen = false;
 			pause_enabled = false;
-			player_disable_speed_gear();
 		}
 		if (grab_player_inst != noone) {
 			with (grab_player_inst) {
@@ -82,7 +81,7 @@ function boss_death_x1() {
 	}
 	// Explosions
 	if (t >= 62 && t <= 371) {
-	    if (((t - 62) mod 4) == 0) {
+	    if (((t - 62) mod 3) == 0) {
 			var index = (t - 62) / 4;
 			instance_create_depth(x + irandom_range(-30, 30), y + irandom_range(-30, 30), depth - index, explode_FX);
 		}
@@ -92,10 +91,11 @@ function boss_death_x1() {
 			walking_to_x = !other.skip_complete_walk;
 			dest_x = obj_camera_rds.mid_x;
 			boss_complete_music = "BossDefeated";
-			teleport_outro = true;
-			if (other.skip_complete_walk)
-				player_complete_outro();
 		}
+	}
+	
+	if(t == 700){
+		room_restart();	
 	}
 
 
