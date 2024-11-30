@@ -108,14 +108,14 @@ function player_weapon_settings() {
 	weapon_color[weapons.homing_torpedo] = 3;
 	weapon_color[weapons.messenko] = 2;
 	// Shots Limit
-	weapon_shots_limit[weapons.x_buster] = 3;
+	weapon_shots_limit[weapons.x_buster] = 10;
 	weapon_shots_limit[weapons.z_buster] = 3;
 	weapon_shots_limit[weapons.hyper_charge] = 2;
 	weapon_shots_limit[weapons.homing_torpedo] = 2;
 	weapon_shots_limit[weapons.storm_tornado] = 1;
 	weapon_shots_limit[weapons.ground_hunter] = 3;
 	weapon_shots_limit[weapons.double_cyclone] = 2;
-	weapon_shots_limit[weapons.twin_slasher] = 2;
+	weapon_shots_limit[weapons.twin_slasher] = 4;
 	// Show
 	weapon_show[weapons.z_buster] = false;
 	weapon_show[weapons.z_saber] = false;

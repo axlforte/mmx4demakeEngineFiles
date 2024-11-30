@@ -1,4 +1,4 @@
-oconversation = [//you must have a /n between every 40 characters. 
+conversation = [//you must have a /n between every 40 characters. 
 "000you seem to have forgotten to add any/ndialouge to this conversation!",
 "001go to the object that initiated this/nconversation object and fix it!",
 "000until then make /sabsolute/d sure that/n this works /oproperly/d!"];
@@ -12,12 +12,14 @@ oconversation = [//you must have a /n between every 40 characters.
 //pause_set(!global.paused, pause_types.dialouge);
 dspeed = global.DialougeSpeed;
 index = -1;
-dilog = instance_create_depth(x - 140,y - 28,-100, obj_dialouge);
+dilog = instance_create_depth(x - 140,y - 28,-1000, obj_dialouge);
 dilog.delay = 30;
 dilog.line = "";
 activate = false;
 dindex = 0;
 ping = false;
+intro_frame = 0;
+intr_time = 10;
 keys_init();
 keys_apply();
 scr_keys_reset();

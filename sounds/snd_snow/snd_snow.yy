@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 2.774785,
   "parent": {
     "name": "Chill Penguin",
     "path": "folders/Sounds/Chill Penguin.yy",

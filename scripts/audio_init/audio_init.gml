@@ -7,7 +7,7 @@ function audio_init() {
 
 	// Audios Loop
 	audio_config(snd_player_charge, 1.585, 4.450);
-	audio_config(snd_megaman_charge ,56064/48000, 105367/48000);
+	//audio_config(snd_megaman_charge ,56064/48000, 105367/48000);
 
 	global.music_stream_list = ds_list_create();
 	global.music_streamed_map = ds_map_create();

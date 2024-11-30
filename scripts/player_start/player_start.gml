@@ -273,7 +273,7 @@ function player_start() {
 	pause_enabled = false;
 	
 	if(instance_exists(obj_pickup_heart)){
-		audio_play(snd_ride_armor_activated);
+		audio_play(snd_ice_destroy);
 	}
 	
 	if(global.travelers_companion){

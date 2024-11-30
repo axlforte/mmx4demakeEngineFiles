@@ -15,5 +15,5 @@ function music_load() {
 	ds_list_add(global.music_playing, [global.music_hidden, snd]);
 	log(audio_sound_get_track_position(global.music_hidden));*/
 
-
+	//damn its fully fuckin depreciated
 }

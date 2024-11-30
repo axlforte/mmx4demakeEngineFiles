@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "X4",
-    "path": "folders/Objects/Enemies/Entity/X4.yy",
+    "name": "mad bull",
+    "path": "folders/Objects/Enemies/Entity/X4/mad bull.yy",
   },
   "parentObjectId": null,
   "persistent": false,

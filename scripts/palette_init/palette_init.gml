@@ -1,4 +1,7 @@
 // Needs refactoring and put all palette functions in one script called Palette
+// HAHAHAHA dont do that. its hard enough to find the pallete scripts already, dont bunch up scripts
+// unless they are like 3 lines long
+
 function palette_init() {
 	// Offset uniform
 	plt_index = 0;

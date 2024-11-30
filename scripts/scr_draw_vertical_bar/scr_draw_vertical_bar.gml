@@ -12,6 +12,10 @@
 function scr_draw_vertical_bar(_x, _y, icon, index, amount, max_amount, max_bar, unit, area, limit, unit_color = -1) {
 
 	var hh = sprite_get_height(area);
+	
+	if(global.one_px_tall_health_bar){
+		hh = hh / 2;
+	}
 
 	// Draw Icon
 	draw_sprite(icon, index, _x - 6, _y);

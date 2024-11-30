@@ -7,13 +7,15 @@ cam = 0;
 loc_x = 0;
 loc_y = 0;
 candoor = false;
+dp = depth;
+tran_timer = 0;
+
 alarm[0] = 15;
 scr_keys_reset();
-/*
 animation_init();
 animations_init();
 
-animation_add("open",[
+animation_add("opening|open",[
 0,0,
 2,1,
 4,2,
@@ -23,18 +25,9 @@ animation_add("open",[
 12,6,
 14,7,
 16,8,
-18,9
-],18,18);
-
-animation_add("closed|open",[
-0,0,
-1,0
-],0);
-
-animation_add("opened|open",[
-0,9,
-1,9
-],0);
+18,9,
+20,9
+],18,20);
 
 animation_add("close|open",[
 0,9,
@@ -46,7 +39,8 @@ animation_add("close|open",[
 12,3,
 14,2,
 16,1,
-18,0
-],18,18);
+18,0,
+20,0
+],18,20);
 
-animation_play("open");*/
+animation_play("close");
