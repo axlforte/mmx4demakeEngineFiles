@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 1.067778,
   "parent": {
     "name": "X2",
     "path": "folders/Sounds/Player/Characters/X/Armors/X2.yy",

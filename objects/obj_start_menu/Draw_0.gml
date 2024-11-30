@@ -79,6 +79,9 @@ switch(state) {
 					txt = subitem[index];
 				}
 				draw_string_center(_x + 176, _y, txt, colors.orange);
+				if(i == 3){
+					draw_string_center(_x + 280, _y, string(global.one_px_tall_health_bar), colors.orange);
+				}
 				menu_item_draw_arrows(_x + 176, _y, index, subitem, colors.orange);
 				
 			}

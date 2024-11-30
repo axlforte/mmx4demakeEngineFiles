@@ -48,7 +48,8 @@ function global_values() {
 	global.player_sprite_frame = 0;
 	global.temp = 0;
 	global.player_health = 28;
-	global.player_exp = 100;//a little hand holding for the devs but you still should test it out
+	global.player_exp = 0;
+	global.one_px_tall_health_bar = true;
 	
 	enum diff_modes {
 		easy,
@@ -99,12 +100,24 @@ function global_values() {
 	global.run_from_ide = true;
 	instance_create_depth(0, 0, 0, obj_window_center);
 	global.game_world_speed = 1;
-	global.chill_penguin_defeat = 0;
-	global.launch_octopus_defeat = 0;
-	global.magma_dragoon_defeat = 0;
+	
+	//boss deaths
+	global.chill_penguin_defeat = 0;//dep but keeping to prevent errors
+	global.launch_octopus_defeat = 0;//same as above
+	global.magma_dragoon_defeat = 0;//funnily enough we WILL use this one
+	global.jet_stingray_defeat = 0;
+	global.web_spider_defeat = 0;
+	global.frost_walrus_defeat = 0;
+	global.slash_beast_defeat = 0;
+	global.cyber_pea_cock_defeat = 0;//wont need til post demo
+	global.storm_owl_defeat = 0;//above
+	global.split_mushroom_defeat = 0;//also above
+	global.beat_colonel = 0;//maaaayyyyyybeeeeeeee in the demo. maybe. no promises.
+	
 	global.unarmored_x_defeat = 0;
 	global.unarmored_axl_defeat = 0;
-	global.show_fps = true;
+	global.show_fps = false;
+	
 	// Replay
 	global.recording_replay = false;
 	global.running_replay = false;
@@ -112,6 +125,14 @@ function global_values() {
 	replay_init();
 	dialouge_activation();
 	upgrade_values();
+}
+
+function overworld_goodies(){
+	global.heart_tanks = [false,false,false,false,false,false,false,false];
+	global.sub_tank_1 = false;
+	global.sub_tank_2 = false;
+	global.weap_tank_1 = false;
+	global.weap_tank_2 = false;
 }
 
 function upgrade_values(){

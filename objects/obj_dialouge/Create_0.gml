@@ -7,3 +7,6 @@ die = false;
 xoff = 0;
 yoff = 0;
 delay = 0;
+convo = noone;
+pal = 0;
+depth = -10000;

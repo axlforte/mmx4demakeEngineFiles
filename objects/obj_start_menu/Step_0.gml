@@ -284,8 +284,13 @@ switch (state) {
 				if (enter)
 					menu_set_state(menu_states.audio_settings);
 				break;
-			// Back
+			// one pixel tall healthbar
 			case 3:
+				if (enter)
+					global.one_px_tall_health_bar = !global.one_px_tall_health_bar;
+				break;
+			// Back
+			case 4:
 				if (enter) {
 					menu_set_state(menu_states.main);
 					settings_save();

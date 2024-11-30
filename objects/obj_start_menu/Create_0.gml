@@ -101,7 +101,8 @@ page_items[menu_states.option] = [
 	[_("WINDOW SIZE"), [64, 64, 200, 20], wsize_options],
 	[_("KEY CONFIG"), [64, 88, 144, 20]],
 	[_("AUDIO SETTINGS"), [64, 112, 144, 20]],
-	[_("BACK"), [64, 136, 144, 20]]
+	[_("ONE PX TALL HP BAR"),[64, 136, 144, 20]],
+	[_("BACK"), [64, 160, 144, 20]]
 ];
 
 #endregion

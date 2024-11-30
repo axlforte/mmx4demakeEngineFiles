@@ -7,3 +7,6 @@ _x = 0;
 _y = 0;
 px = 0;
 py = 0;
+depth = -100000;
+palette_init(); 
+palette_texture_set(plt_text_font_normal);
