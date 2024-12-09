@@ -1,7 +1,12 @@
 event_inherited();
 
+palette_init();
+palette_texture_set(plt_x_full);
+plt_index = 37;
+
 grounded = false;
 deathTimer = 0;
+anti_destroy = true;
 
 atk = 3;
 destroy_if_hit = false;
@@ -47,3 +52,7 @@ execute_step_in_first_frame = true;
 physics_ignore_frame = 1;
 blocked_reflect = true;
 destroy_reset_speed = false;
+
+player_dist = 42;
+dist_catchup_speed = 3;
+player_dist_time = 500;

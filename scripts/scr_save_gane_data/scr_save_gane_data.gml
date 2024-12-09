@@ -1,5 +1,5 @@
-function scr_save_gane_data(){
-	ini_open("Settings/gamesave.ini");
+function scr_save_game_data(){
+	ini_open("gamesave.ini");
 
 	// boss defeat info
 	// we can use this for unlocking the weapons too

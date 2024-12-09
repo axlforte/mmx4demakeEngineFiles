@@ -1,5 +1,5 @@
 function player_x_weapon_offsets() {
-	player_weapon_offset("shoot", 0, 12, -3);
+	player_weapon_offset("shoot", 0, 12, -8);
 
 	player_weapon_offset("super_shoot", 0, 14, -5);
 	player_weapon_offset("super_shoot_c", 0, 19, 2);
@@ -20,9 +20,9 @@ function player_x_weapon_offsets() {
 	player_weapon_offset("walk", 13, 22, -4);
 
 
-	player_weapon_offset("shooting", 0, 12, -3);
-	player_weapon_offset("shooting", 1, 12, -3);
-	player_weapon_offset("shooting", 2, 12, -3);
+	player_weapon_offset("shooting", 0, 12, -8);
+	player_weapon_offset("shooting", 1, 12, -8);
+	player_weapon_offset("shooting", 2, 12, -8);
 
 	player_weapon_offset("jump", 0, 20, -3);
 	player_weapon_offset("jump", 1, 21, -4);

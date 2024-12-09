@@ -130,6 +130,16 @@ function player_weapon_settings() {
 	weapon_costs[weapons.nova_strike] = [0];
 	weapon_costs[weapons.falcon_giga] = [-1];
 	weapon_costs[weapons.x2_giga_crush] = [-1];
+	weapon_costs[weapons.ground_hunter] = [0.25];
+	weapon_costs[weapons.twin_slasher] = [2];
+	weapon_costs[weapons.rising_fire] = [3];
+	weapon_costs[weapons.soul_body] = [4];
+	weapon_costs[weapons.aiming_laser] = [2];
+	weapon_costs[weapons.double_cyclone] = [0.5];
+	weapon_costs[weapons.frost_spike] = [3];
+	weapon_costs[weapons.lightning_web] = [2];
+	
+	weapon_costs[weapons.ground_hunter] = [0.25];
 	// Max Level
 	weapon_max_level[weapons.x_buster] = infinity;
 	weapon_max_level[weapons.z_buster] = infinity;

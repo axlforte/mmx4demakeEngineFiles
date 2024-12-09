@@ -98,6 +98,8 @@ function boss_death_x1() {
 		with (obj_player_parent) {
 			x = x_start;
 			y = y_start;
+			camera_set_view_pos(global.current_camera, x,y);
+			locked = false;
 		}
 	}
 

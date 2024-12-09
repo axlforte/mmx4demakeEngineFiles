@@ -41,3 +41,4 @@ animation_add("B",
 ]);
 
 animation_play("S");
+x += 32 * image_xscale;

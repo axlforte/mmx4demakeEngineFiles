@@ -18,6 +18,11 @@ if(state == lockon.unlocked){
 	x += sin((angle + 90) * myPlayer.dir * pi / 180) * angle_dist;
 	y += cos((angle + 90) * myPlayer.dir * pi / 180) * angle_dist;
 
+	if(myPlayer.dash){
+		l += 2;
+	} else if (myPlayer.walk){
+		l += 1;
+	}
 	l += 1;
 
 	if(l > 360){

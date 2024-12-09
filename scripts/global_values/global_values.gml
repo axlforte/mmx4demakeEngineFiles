@@ -48,7 +48,7 @@ function global_values() {
 	global.player_sprite_frame = 0;
 	global.temp = 0;
 	global.player_health = 28;
-	global.player_exp = 0;
+	global.player_exp = 600;
 	global.one_px_tall_health_bar = true;
 	
 	enum diff_modes {

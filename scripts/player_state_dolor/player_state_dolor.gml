@@ -2,6 +2,10 @@ function player_state_dolor() {
 	var t = state_timer++;
 	
 	if (t == 0) {
+		//hide dash trail
+		trail_sprites_enabled = false;
+		trail_sprites_remove = true;
+		
 		if(global.concussive_redirectors && !is_on_floor() && dolor_damage > 1.5){
 			dolor_damage -= 1;
 		}
