@@ -23,15 +23,17 @@ else
 	h_speed = 0;
 	
 	var myPlayer = instance_nearest(x, y, obj_player_parent);
-	if(t < 16){
-		x = G.player_x + t * myPlayer.dir * 4;
-	} else if(t > 16 && t < 344){
-		x = G.player_x + 64 * myPlayer.dir;
-	}  else if(t > 344 && t < 360){
-		x = G.player_x + (360 - t) * myPlayer.dir * 4;
-	} else if(t > 360){
+	if(t < player_dist / dist_catchup_speed){
+		x = G.player_x + t * myPlayer.dir * dist_catchup_speed;
+	} else if(t > player_dist / dist_catchup_speed && t < player_dist_time - (player_dist / dist_catchup_speed)){
+		x = G.player_x + player_dist * myPlayer.dir;
+	}  else if(t > player_dist_time - (player_dist / dist_catchup_speed) && t < player_dist_time){
+		x = G.player_x + (player_dist_time - t) * myPlayer.dir * dist_catchup_speed;
+	} else if(t > player_dist_time){
 		instance_destroy();
 	}
+	
+	plt_index = random_range(0,37);
 	
 	y = G.player_y;
 }

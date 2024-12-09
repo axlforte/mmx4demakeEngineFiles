@@ -30,6 +30,8 @@
     {"name":"inst_22B9E1C0","path":"rooms/rm_wreckage/rm_wreckage.yy",},
     {"name":"inst_5E9239B7","path":"rooms/rm_wreckage/rm_wreckage.yy",},
     {"name":"inst_2D8D3BCA","path":"rooms/rm_wreckage/rm_wreckage.yy",},
+    {"name":"inst_125427B7","path":"rooms/rm_wreckage/rm_wreckage.yy",},
+    {"name":"inst_5214A6AB","path":"rooms/rm_wreckage/rm_wreckage.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -68,6 +70,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22B9E1C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_beret","path":"objects/p_beret/p_beret.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":952.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5E9239B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_beret","path":"objects/p_beret/p_beret.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1592.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2D8D3BCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_beret","path":"objects/p_beret/p_beret.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1904.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_125427B7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_beret","path":"objects/p_beret/p_beret.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1248.0,"y":64.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5214A6AB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"p_beret","path":"objects/p_beret/p_beret.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":560.0,"y":64.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"tileset_layer_1_1","depth":300,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FFF6E5FF",},

@@ -4,7 +4,7 @@
   "name": "plt_x_full",
   "bbox_bottom": 63,
   "bbox_left": 0,
-  "bbox_right": 16,
+  "bbox_right": 21,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,

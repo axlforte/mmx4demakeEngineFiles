@@ -39,14 +39,24 @@ function player_x_animation() {
 		5, 2,
 		7, 3,
 	], 7);
+	
+	animation_add("dash_end|dash",
+	[
+		0, 3,
+		2,2,
+		5,1,
+		8,4,
+		15,0
+	], 19);
 
 	animation_add("jump",
 	[
 		0, 7,
-		3, 0,
-		5, 1,
-		8, 2,
-	], 8);
+		1, 6,
+		2, 0,
+		4, 1,
+		6, 2,
+	], 7);
 	
 	animation_add("fall|jump",
 	[
@@ -102,6 +112,25 @@ function player_x_animation() {
 		4, 1,
 		8, 2
 	], 8);
+
+	animation_add("dolor",
+	[
+		0, 0,
+		3, 1,
+		5, 2,
+		7, 3,
+		9, 4,
+		11, 5,
+		13, 1,
+		17,2,
+		19,1,
+		23,2,
+		25,1,
+		29,2,
+		31,1,
+		32, 0,
+		33, 0
+	]);
 
 	animation_add("super_shoot",
 	[

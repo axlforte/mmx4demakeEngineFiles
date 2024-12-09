@@ -6,20 +6,12 @@ face_x = false;
 #endregion
 
 #region animations
-// hola
+// slowly pulsate eyes ig
 animation_add("SA", [
-	2, 0,
-	6, 1,
-	8, 2,
-	9, 3
-]);
-// hello
-animation_add("BA", [
-    2, 0,
-	6, 1,
-	8, 2,
-	9, 3
-]);
-// oi
+	0, 0,
+	5, 1,
+	10, 2,
+	15, 1,
+], 20);
 animation_play("SA");
 #endregion

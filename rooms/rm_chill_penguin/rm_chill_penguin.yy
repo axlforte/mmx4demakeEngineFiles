@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_chill_penguin",
-  "creationCodeFile": "${project_dir}/rooms/rm_chill_penguin/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_chill_penguin/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

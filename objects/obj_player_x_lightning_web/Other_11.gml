@@ -1,6 +1,8 @@
 /// @description Step
 event_inherited();
 
+var myPlayer = instance_nearest(x, y, obj_player_parent);
+
 if (destroy)
 {
 	var t = destroy_t - 1;
@@ -23,7 +25,7 @@ else
 	else if (t >= 3 && t <= 5) abs_hspeed = 5;
 	else if (t >= 6 && t <= 18) abs_hspeed = 6;
 	else if (t >= 17 && t <= 19) animation_play("L");
-	else if(t >= 19 && t <= 180){
+	else if(t >= 19 && t <= 500){
 		abs_hspeed = 0;
 		if (coll != noone){
 			coll.x = x - 8;
@@ -34,4 +36,8 @@ else
 		instance_destroy();
 	}
 	h_speed = abs_hspeed * dir;
+}
+
+if(myPlayer.current_weapon != weapons.lightning_web){
+	instance_destroy();
 }
