@@ -22,13 +22,10 @@ animation_add("intro",
 	40, 6
 ], 40);
 animation_add("death", [
-	0, 12
+	0, 13
 ], 0);
 animation_add("death_chop", [
-	0, 2,
-	5, 10,
-	9, 11,
-	14, 12
+	0, 13
 ], 14);
 animation_add("energy_drain",
 [
@@ -76,7 +73,8 @@ animation_add("shoot", [
 animation_add("shoot_air", [
 	0,2,
 	4,10,
-	10,11
+	8,11,
+	10,12
 ],10);
 
 animation_add("thunder",[
@@ -98,7 +96,7 @@ animation_add("thunder",[
 jump_strength = 6.5;
 
 #region Difficulty
-damage_set(3, 5, 7);// this is where difficulty values are set.
+damage_set(3, 5, 7, 256);// this is where difficulty values are set.
 switch (global.difficulty) {
 	case diff_modes.easy:
 		idle_limit = 40;
@@ -129,6 +127,18 @@ switch (global.difficulty) {
 		jump_strength = 11;
 		grav_magnitude = 3;
 		break;
+	case diff_modes.zero:
+		jump_wait = 1;
+		idle_limit = 1;
+		idle_desperate_limit = 1;
+		hp_desperate = 32;
+		whirlpool_length = 130;
+		whirlpool_speed = 2;
+		grab_move_limit = 30;
+		missile_speed_multiplier = { hsp: 1.25, vsp: 1.25 };
+		jump_strength = 22;
+		grav_magnitude = 6;
+		break;
 }
 whirlpool_length = 180;
 whirlpool_speed = 1.5;
@@ -139,9 +149,6 @@ ds_list_add(desperate_attacks, [STINGRAY.ELECTROCUTE, [1, 1/2]]);
 // Attack Settings
 attack_properties[? boss_states.jump] = [2, 0];
 attack_properties[? boss_states.dash] = [2, 0];
-attack_properties[? OCTOPUS.JUMP_WHIRLPOOL] = [1/2, 1/3];
-attack_properties[? OCTOPUS.JUMP_MISSILE] = [1/3, 1/3];
-attack_properties[? OCTOPUS.PIRANHA] = [1/2, 1/2];
 // Desperate attacks [state, chances]
 shielded_states[? OCTOPUS.WHIRLPOOL] = 0;
 face_x = false;

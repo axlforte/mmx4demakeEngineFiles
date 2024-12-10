@@ -31,7 +31,22 @@ function player_state_dolor() {
 		player_saber_reset();
 		player_dolor_reset();
 		visible = true;
-	
+		
+		var dand = random_range(0,5);
+		var sound_index = voice_x_hurt;
+		if(dand > 4){
+			sound_index = voice_x_hurt_2;	
+		} else if(dand > 3){
+			sound_index = voice_x_hurt_3;	
+		} else if(dand > 2){
+			sound_index = voice_x_hurt_4;	
+		} else if(dand > 1){
+			sound_index = voice_x_hurt_5;	
+		}
+			
+		audio_play_sound(sound_index, 0, 0);
+		audio_sound_gain(sound_index, global.sfx_volume, 0);
+
 		if (instance_exists(special_inst)) {
 			instance_destroy(special_inst);
 			special_inst = noone;

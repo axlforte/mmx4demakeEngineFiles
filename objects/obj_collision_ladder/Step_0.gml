@@ -16,8 +16,8 @@ if (instance_exists(obj_player_parent))
 	   {mask_index = spr_semisolid_square;sprite_index = spr_semisolid_square;}*/
 	   
 	   
-	   if((obj_player_parent.bbox_left) < x + 32 && (obj_player_parent.bbox_right) > x && !global.grounded && (key_up != 0 || key_down != 0)){
-			if(obj_player_parent.y > y){
+	   if((obj_player_parent.bbox_left) < x + 32 && (obj_player_parent.bbox_right) > x && !global.grounded && (key_p_up != 0 || key_p_down != 0)){
+			if(obj_player_parent.y > y && obj_player_parent.y < y + image_yscale*16){
 			   obj_player_parent.state = states.ladder;
 			   obj_player_parent.x = x + 16;
 			   obj_player_parent.top_of_ladder = y;

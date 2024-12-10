@@ -50,6 +50,21 @@ function player_check_dash() {
 			((is_on_floor() && state != states.jump) || (dash_air_unlocked && dash_air_count < dash_air_limit)) &&
 			(!dash_tapped || (result != dash_dir && key_p_dash)) &&
 			(!start_dash || (new_dash_dir != dash_dir || state != states.dash))) {
+				
+				/*var dand = random_range(0,3);
+				var sound_index = voice_x_jump_1;
+				if(dand > 2){
+					sound_index = voice_x_jump_2;	
+				} else if(dand > 1){
+					sound_index = voice_x_jump_3;	
+				}
+				
+				audio_play_sound(sound_index, 0, 0);
+				audio_sound_gain(sound_index, global.sfx_volume * 0.75, 0);*/
+				
+				//i thought the jump noise being made when you dash would be neat but nope
+				//it makes dash jumping sound weird
+				
 				state = states.dash;
 				state_timer = 0;
 				dir = new_dash_dir;

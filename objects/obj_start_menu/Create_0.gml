@@ -57,7 +57,7 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 #region Main
 /// Main
 page_items[menu_states.main] = [
-	[_("SINGLEPLAYER"), [100, 136, 144, 20]],
+	[_("PLAY"), [100, 136, 144, 20]],
 	//[_("MULTIPLAYER"),       [92, 160, 144, 20]],
 	[_("OPTIONS"),    [92, 172, 144, 20]],
 	[_("EXIT"),       [92, 184, 144, 20]]
@@ -102,7 +102,9 @@ page_items[menu_states.option] = [
 	[_("KEY CONFIG"), [64, 88, 144, 20]],
 	[_("AUDIO SETTINGS"), [64, 112, 144, 20]],
 	[_("ONE PX TALL HP BAR"),[64, 136, 144, 20]],
-	[_("BACK"), [64, 160, 144, 20]]
+	[_("SFX"),[64, 160, 144, 20]],
+	[_("BGM"),[64, 184, 144, 20]],
+	[_("BACK"), [64, 208, 144, 20]]
 ];
 
 #endregion
@@ -158,7 +160,7 @@ stage_select_positions = [
 #endregion
 #region Audio Settings
 page_items[menu_states.audio_settings] = [
-	[_("VOICE LANGUAGE"),  [64, 64, 144, 20]],
+	//[_("VOICE LANGUAGE"),  [64, 64, 144, 20]],
 	[_("VOLUME SETTINGS"), [64, 88, 144, 20]],
 	[_("BACK"),            [64, 112, 144, 20]]
 ];

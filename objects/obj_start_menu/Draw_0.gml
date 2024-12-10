@@ -63,6 +63,8 @@ switch(state) {
 	#region Options
 	case menu_states.option:
 		draw_string_center(160, 8, titles[state], colors.gray);
+		draw_string(176,160,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
+		draw_string(176,184,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 64, _y = 64 + 24*i;

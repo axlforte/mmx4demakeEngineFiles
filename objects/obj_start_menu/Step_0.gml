@@ -282,15 +282,29 @@ switch (state) {
 			// Audio Settings
 			case 2:
 				if (enter)
-					menu_set_state(menu_states.audio_settings);
+					//menu_set_state(menu_states.audio_settings);
 				break;
 			// one pixel tall healthbar
 			case 3:
 				if (enter)
 					global.one_px_tall_health_bar = !global.one_px_tall_health_bar;
 				break;
-			// Back
+			//sfx
 			case 4:
+				global.sfx_volume = clamp(global.sfx_volume+hinput*0.01,0,1);
+	            audio_group_set_gain(audiogroup_default,global.sfx_volume,0);
+				if (global.sfx_volume <= 0.9){
+					audio_play(snd_item_changed);
+			        sound = false;
+				}
+			break;
+			//bgm
+			case 5:
+					global.bgm_volume = clamp(global.bgm_volume+hinput*0.01,0,1);
+	                audio_sound_gain(global.music_playing_index,global.bgm_volume,0);
+				break;
+			// Back
+			case 6:
 				if (enter) {
 					menu_set_state(menu_states.main);
 					settings_save();
@@ -424,18 +438,18 @@ switch (state) {
 			switch (selected_item) {
 				// SFX
 				case 0:
-				global.sfx_volume = clamp(global.sfx_volume+hinput*0.01,0,1);
-                audio_group_set_gain(audiogroup_default,global.sfx_volume,0);
-				if (global.sfx_volume <= 0.9){
-				audio_play(snd_item_changed);
-	            sound = false;
-				}
+					global.sfx_volume = clamp(global.sfx_volume+hinput*0.01,0,1);
+	                audio_group_set_gain(audiogroup_default,global.sfx_volume,0);
+					if (global.sfx_volume <= 0.9){
+						audio_play(snd_item_changed);
+			            sound = false;
+					}
 				break;
 				
 				// BGM   global.music_playing_index
 				case 1:
-				global.bgm_volume = clamp(global.bgm_volume+hinput*0.01,0,1);
-                audio_sound_gain(global.music_playing_index,global.bgm_volume,0);
+					global.bgm_volume = clamp(global.bgm_volume+hinput*0.01,0,1);
+	                audio_sound_gain(global.music_playing_index,global.bgm_volume,0);
 				break;
 			}
 		}
@@ -482,8 +496,9 @@ switch (state) {
 			var item = items[selected_item];
 			G.voice_language = item[0];
 			G.voice_enabled = (G.voice_language != "NONE");
-			menu_set_state(menu_states.audio_settings);
+			
 		}
+		menu_set_state(menu_states.audio_settings);
 		break;
 	#endregion
 	#region Weapon Get

@@ -3,7 +3,6 @@ enum STINGRAY {
 	STINGER,
 	CRUNCH,
 	CHARBLARGE,
-	LAND,
 	LAND_STINGER,
 	ELECTROCUTE,
 	LENGTH
@@ -54,7 +53,7 @@ switch (state) {
 		}
 	
 		if(t >= 15){//wait a bit
-			y -= 8; // move up half a tile
+			y -= 32; // move up half a tile
 			state_set(STINGRAY.DASH);// dash
 		}
 	break;
