@@ -107,7 +107,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b6158480-b22d-405f-b4c9-b6327ac5e0e5","path":"sprites/spr_player_charge_hyper/spr_player_charge_hyper.yy",},},},"Disabled":false,"id":"f6713d02-9cf8-44e0-91fc-42c4a20dcbd7","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 32,

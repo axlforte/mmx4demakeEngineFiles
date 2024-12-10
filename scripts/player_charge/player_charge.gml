@@ -4,6 +4,7 @@ function player_charge() {
 		// Play Audio
 		if (charge_level > 0 && !audio_is_playing(charge_sound)) {
 			audio_play(charge_sound);
+			instance_create_depth(x,y,depth,obj_charge_particle_area);
 		}
 		charge_level = 0;
 		// Get correct Charge Level/Sprite/Palette 
@@ -11,7 +12,7 @@ function player_charge() {
 			if (charge_t >= charge_limits[i]) {
 				if (i >= charge_level && i <= charge_level_max && (weapon[0] == noone || i <= weapon_max_level[weapon[0]])) {
 					charge_level = i;
-					charge_sprite = charge_sprites[i];
+					//charge_sprite = charge_sprites[i];
 					charge_palette = charge_palettes[i];
 				}
 			}
@@ -37,10 +38,10 @@ function player_charge() {
 	} else if (auto_charge) {
 		player_charge_image_index_update();	
 		charge_palette = auto_charge_palette;
-		charge_sprite = auto_charge_sprite;
+		//charge_sprite = auto_charge_sprite;
 		charge_blink = true;
 		if (weapon[0] != noone && !player_weapon_can_spend(weapon[0], charge_level)) {
-			charge_sprite = noone;
+			//charge_sprite = noone;
 			charge_blink = false;
 		}
 	} else {

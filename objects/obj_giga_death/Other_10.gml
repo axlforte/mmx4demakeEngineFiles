@@ -13,8 +13,9 @@ switch(state) {
     
     #region pew
     case giga_death.shoot:
-			var p = instance_create_depth(x + 19*dir, y - 6, depth - 1, obj_giga_death_missile);
+			var p = instance_create_depth(x + 40*dir, y, depth - 1, obj_giga_death_missile);
 			p.h_speed = 3 * dir;
+			p.dir = dir;
 			p.xscale = dir * -1;
 			p.owner = id;
 			state_set(giga_death.idle);

@@ -17,5 +17,7 @@ animation_add("fwoom", [
 8,4,
 10,5,
 12,6,
-14,7
+14,4
 ],8, 16)
+
+animation_play("fwoom");

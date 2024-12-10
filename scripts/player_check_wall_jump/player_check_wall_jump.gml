@@ -2,6 +2,8 @@ function player_check_wall_jump() {
 	if (key_p_jump) {
 	    var condition = false;
 	    var dir_new = dir;
+		
+		
     
 	    if (!is_on_floor() && !is_on_ceil()) {
 			var check_dir = jumpable_wall_dir();
@@ -14,12 +16,24 @@ function player_check_wall_jump() {
 				}
 				condition = true;
 				dir_new = check_dir;
+				
+				var dand = random_range(0,3);
+				var sound_index = voice_x_jump_1;
+				if(dand > 2){
+					sound_index = voice_x_jump_2;	
+				} else if(dand > 1){
+					sound_index = voice_x_jump_3;	
+				}
+				
+				audio_play_sound(sound_index, 0, 0);
+				audio_sound_gain(sound_index, global.sfx_volume, 0);
 			}
 	    }
     
 	    if (condition) {
 	        dir = dir_new;
 	        xscale = dir;
+			
 			state_set(states.wall_jump, 1);
 			voice_play();
 			animation = "";

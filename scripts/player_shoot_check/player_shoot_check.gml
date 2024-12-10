@@ -1,4 +1,4 @@
-function player_shoot_check() {
+	function player_shoot_check() {
 	var _state = state;
 	if (shoot_unlocked) {
 

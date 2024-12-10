@@ -99,7 +99,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b034178e-b70a-43e7-b86a-f6fa512a8bb8","path":"sprites/spr_player_charge_2/spr_player_charge_2.yy",},},},"Disabled":false,"id":"faadc91f-f0a6-449d-822d-64588beba05b","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 32,

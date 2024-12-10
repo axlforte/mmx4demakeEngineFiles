@@ -95,10 +95,10 @@ function player_weapon_settings() {
 	weapon_icon[weapons.homing_torpedo] = 1
 	weapon_icon[weapons.messenko] = 1;
 	weapon_icon[weapons.nova_strike] = 2;
-	weapon_icon[weapons.lightning_web] = 8; // done, needs snes graphics
-	weapon_icon[weapons.double_cyclone] = 6; // done, needs snes graphics
+	weapon_icon[weapons.lightning_web] = 8; 
+	weapon_icon[weapons.double_cyclone] = 6; 
 	weapon_icon[weapons.frost_spike] = 3;
-	weapon_icon[weapons.ground_hunter] = 4; // done, might need graphical improvements
+	weapon_icon[weapons.ground_hunter] = 4;
 	weapon_icon[weapons.soul_body] = 8;
 	weapon_icon[weapons.twin_slasher] = 4;
 	weapon_icon[weapons.aiming_laser] = 6;
