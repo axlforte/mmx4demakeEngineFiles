@@ -45,7 +45,6 @@ function player_draw_weaponbar(p) {
 		spr_bar1_unit,
 		spr_bar1_area,
 		spr_bar1_limit,
-		p.weapon_color[wp],
-		2
+		p.weapon_color[wp]
 	);
 }

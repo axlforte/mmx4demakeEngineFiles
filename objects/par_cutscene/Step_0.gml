@@ -26,4 +26,21 @@ if((tl || bl || tr || br || tm || mm || ml || mr || bm) && !in_cutscene){
 			}
 		}
 	}
+	with(obj_player_parent){
+		locked = true;
+	}
+	if(instance_exists(obj_conversation)){
+		if(next_line && convo.index < array_length(lines)){
+			var temp_audio = lines[clamp(convo.index, 0, array_length(lines))];
+			audio_play_sound(temp_audio, 0, 0);
+			audio_sound_gain(temp_audio, global.sfx_volume, 0);
+			next_line = false;
+		} else {
+			if(prev_index != convo.index){
+				next_line = true;
+			}
+		}
+		prev_index = convo.index;
+	}
 }
+

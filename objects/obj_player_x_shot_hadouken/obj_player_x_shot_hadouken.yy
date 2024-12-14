@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_shot_hadouken",
-    "path": "sprites/spr_x_shot_hadouken/spr_x_shot_hadouken.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

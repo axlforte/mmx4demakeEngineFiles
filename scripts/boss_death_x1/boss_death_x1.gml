@@ -19,8 +19,8 @@ function boss_death_x1() {
 		}
 		with (obj_player_parent) {
 			if (armor_is_full("") && FULL == "") {
-				if (other.object_index == obj_chill_penguin) {
-					global.chill_penguin_defeat = 1;	
+				if (other.object_index == obj_jet_stingray) {
+					global.jet_stingray_defeat = 1;	
 				} else if (other.object_index == obj_launch_octopus) {
 					global.launch_octopus_defeat = 1;			
 				} else {
@@ -96,10 +96,8 @@ function boss_death_x1() {
 	
 	if(t == 700){
 		with (obj_player_parent) {
-			x = x_start;
-			y = y_start;
-			camera_set_view_pos(global.current_camera, x,y);
 			locked = false;
+			pause_enabled = true;
 		}
 	}
 

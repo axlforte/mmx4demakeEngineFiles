@@ -1,6 +1,5 @@
 background_list_set(1, [new BGInfo(bg_test)]);
 room_shader_init();
-global.current_music = music_play("openingStageX");
-global.music_volume = 1;
-global.music_target_volume = 1;
-global.music_fade_step = 0.05;
+music_play("jetStingray");
+audio_play_sound(openingStageX, 0, 0);
+audio_sound_gain(openingStageX, global.bgm_volume, 0);

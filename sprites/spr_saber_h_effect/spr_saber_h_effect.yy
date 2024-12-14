@@ -65,7 +65,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51219085-2133-4406-8784-cc53fd68a033","path":"sprites/spr_saber_h_effect/spr_saber_h_effect.yy",},},},"Disabled":false,"id":"af2a911c-fce8-4bba-b65a-f2ed43a1a150","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 41,
     "yorigin": 38,

@@ -149,7 +149,9 @@ ds_list_add(desperate_attacks, [STINGRAY.ELECTROCUTE, [1, 1/2]]);
 // Attack Settings
 attack_properties[? boss_states.jump] = [2, 0];
 attack_properties[? boss_states.dash] = [2, 0];
+attack_properties[? STINGRAY.CRUNCH] = [1, 1/2];
 // Desperate attacks [state, chances]
+floor_state = STINGRAY.CRUNCH;
 shielded_states[? OCTOPUS.WHIRLPOOL] = 0;
 face_x = false;
 activate_collision_limit = 70;

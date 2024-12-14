@@ -1,9 +1,9 @@
 for(k = 0; k < array_length(particles); k++){
 	particles[k,3] += 1;
-	if(particles[k,3] == particle_life){
+	if(particles[k,3] >= particle_life){
 		var pos = random_range(0,360);
-		particles[k,0] = sin(pos) * particle_dist;
-		particles[k,1] = cos(pos) * particle_dist;
+		particles[k,0] = sin(pos) * (particle_dist + random_range(0,5));
+		particles[k,1] = cos(pos) * (particle_dist + random_range(0,5));
 		particles[k,2] = 0;
 		particles[k,3] = 0;
 		particles[k,4] = pos;
@@ -17,7 +17,10 @@ for(k = 0; k < array_length(particles); k++){
 var myPlayer = instance_nearest(x, y, obj_player_parent);
 
 x = myPlayer.x;
-y = myPlayer.y;
+y = myPlayer.y - 8;
+if(myPlayer.dir == -1){
+	x -= 8;
+}
 
 if(myPlayer.charge_level == 2){
 	particle_image = spr_charge_particle_l2;

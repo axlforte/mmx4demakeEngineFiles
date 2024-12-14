@@ -42,6 +42,8 @@ function global_values() {
 	global.levelTransitionX = 0;
 	global.levelTransitionY = 0;
 	global.levelTransitionCameraId = 0;
+	global.level_transition_use_door_locs = false;
+	global.door_id = 0;
 	global.DialougeSpeed = 2;
 	global.TeleportIn = false;
 	global.player_sprite = 0;

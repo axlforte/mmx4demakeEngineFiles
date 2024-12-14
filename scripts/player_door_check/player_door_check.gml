@@ -5,13 +5,13 @@ function player_door_check() {
 	if (state == states.outro) exit;
 	
 	if(instance_exists(obj_door_parent)){
-		var lefty = instance_place(x - 17,y,obj_door_parent);
+		var lefty = instance_place(x - 9,y,obj_door_parent);
 		if(dir == 1) 
 			lefty = false;
-		var righto = instance_place(x + 17,y,obj_door_parent);
+		var righto = instance_place(x + 9,y,obj_door_parent);
 		if(dir == -1)
 			righto = false;
-		var footsies = instance_place(x,y + 32,obj_door_parent);
+		var footsies = instance_place(x,y + 16,obj_door_parent);
 		if(lefty || righto || footsies){
 			var door = instance_nearest(x,y,obj_door_parent);
 			

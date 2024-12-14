@@ -39,7 +39,7 @@ switch(state) {
 			p.xscale = dir;
 			p.owner = id;
 		}
-		if (t >= 16)
+		if (t >= 40)
 			state_set(beret.stand);
 		break;
 	#endregion

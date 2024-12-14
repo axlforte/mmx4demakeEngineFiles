@@ -1,10 +1,12 @@
 scr_keys_update();
 if(!activate){ 
+	sound_activated = false;
 } else if(key_p_jump || key_p_shoot||index < 0 || ping){
 	if(string_length(dilog.line) > dilog.index){
 		dilog.spd = 0;
 	} else {
 		dilog.die = true;
+		sound_activated = true;
 		ping = false;
 		index++;
 		if(index > array_length(conversation) - 1){

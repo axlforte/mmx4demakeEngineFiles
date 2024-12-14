@@ -1,1 +1,0 @@
-animations_destroy();

@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_dash_fire",
-    "path": "sprites/spr_x_dash_fire/spr_x_dash_fire.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

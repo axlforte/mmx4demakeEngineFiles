@@ -10,7 +10,7 @@
   "bitRate": 16,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 0.884422,
+  "duration": 1.122834,
   "parent": {
     "name": "Voices",
     "path": "folders/Sounds/Voices.yy",

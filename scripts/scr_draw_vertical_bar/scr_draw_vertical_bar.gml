@@ -14,7 +14,7 @@ function scr_draw_vertical_bar(_x, _y, icon, index, amount, max_amount, max_bar,
 	var hh = sprite_get_height(area);
 	
 	if(global.one_px_tall_health_bar){
-		hh = hh / 2;
+		hh = hh - 1;
 	}
 
 	// Draw Icon

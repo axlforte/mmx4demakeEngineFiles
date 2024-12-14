@@ -9,6 +9,13 @@ loc_y = 0;
 candoor = false;
 dp = depth;
 tran_timer = 0;
+auto_door = false;
+door_id = 0;
+id_to_go_to = 0;
+use_location_over_door_id = false;
+door_tran_effect_limit = 30;
+
+interactible = true;
 
 alarm[0] = 15;
 scr_keys_reset();

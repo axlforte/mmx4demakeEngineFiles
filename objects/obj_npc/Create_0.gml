@@ -1,6 +1,9 @@
-convo = [// 40 character limit!
-"000you idiot!/nyou forgot my dialouge!"];
-
+convo = [
+"you idiot! you forgot my dialouge!"];
+spr = spr_magma_dragoon;
 keys_init();
 keys_apply();
 scr_keys_reset();
+interactible = false;
+convo_active = false;
+converse = noone;

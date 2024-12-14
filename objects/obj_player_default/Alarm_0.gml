@@ -1,8 +1,21 @@
 //if (!G.checkpoint)
 if(global.exitALevelTransition){
+	if(!global.level_transition_use_door_locs){
+		var _c = 0;
+		var _v = 0;
+		with(obj_room_changer){
+			if(door_id = global.door_id){
+				_c = x;
+				_v = y;
+			}
+		}
+		x = _c + 32;
+		y = _v;
+	} else {
 	x = global.levelTransitionX + 32;
 	y = global.levelTransitionY + 8;
 	G.current_camera = global.levelTransitionCameraId;
+	}
 }
 
 var _x = x, _y = y - 10;

@@ -8,24 +8,22 @@ sound = snd_player_x_shot_x2_3;
 abs_hspeed_max = 7.5;
 animation_add("S",
 [
-	0, 0,
-	1, 1,
+	0, 0
 ], 4);
 
 animation_add("L",
 [
-	0, 2,
-	2, 3,
-	4, 4,
-	5, 4
+	0, 1,
+	2, 2,
+	4, 3,
 ], 0, 5);
 
 animation_add("D",
 [
-	0, 5,
-	2, 6,
-	6, 5,
-	9, 5
+	0, 4,
+	2, 5,
+	6, 6,
+	9, 7
 ]);
 animation_add("B",
 [
