@@ -27,5 +27,7 @@ scr_keys_reset();
 alarm[0] = 1;
 visible = false;
 
+global.bgm_volume = global.bgm_volume / 2;
+
 x = __view_get(e__VW.XView, 0);
 y = __view_get(e__VW.YView, 0);

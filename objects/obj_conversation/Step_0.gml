@@ -13,6 +13,7 @@ if(!activate){
 			if(global.paused){
 				//pause_set(!global.paused, pause_types.dialouge);
 			}
+			global.bgm_volume = global.bgm_volume * 2;
 			instance_destroy();
 		} else {
 			dilog = instance_create_depth(x - 140,y - 28,-100, obj_dialouge);
