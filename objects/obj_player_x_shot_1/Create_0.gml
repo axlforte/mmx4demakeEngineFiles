@@ -4,17 +4,18 @@ destroy_if_hit = true;
 // Destroy Animation
 animation_add("D",
 [
-	0, 1,
-	2, 2,
-	4, 3,
-	5, 3
+	0, 1
 ]);
 
 // Blocked Animation
 animation_add("B",
 [
-	0, 0
-], 0, 0);
+	0, 0,
+	2,1,
+	4,2,
+	6,3,
+	8,4
+], 0, 10);
 
 animation_play("B");
 sound = snd_player_x_shot_1;

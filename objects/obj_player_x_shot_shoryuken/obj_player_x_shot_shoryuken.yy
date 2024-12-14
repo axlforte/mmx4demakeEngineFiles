@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_shot_shoryuken",
-    "path": "sprites/spr_x_shot_shoryuken/spr_x_shot_shoryuken.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": false,
 }

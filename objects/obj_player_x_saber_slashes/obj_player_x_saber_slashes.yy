@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_saber_x3_slashes",
-    "path": "sprites/spr_x_saber_x3_slashes/spr_x_saber_x3_slashes.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

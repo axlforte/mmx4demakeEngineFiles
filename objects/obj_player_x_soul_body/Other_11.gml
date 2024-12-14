@@ -1,6 +1,6 @@
 /// @description Step
 event_inherited();
-
+var myPlayer = instance_nearest(x, y, obj_player_parent);
 if (destroy)
 {
 	var t = destroy_t - 1;
@@ -22,18 +22,18 @@ else
 	v_speed = 0;
 	h_speed = 0;
 	
-	var myPlayer = instance_nearest(x, y, obj_player_parent);
+
 	if(t < player_dist / dist_catchup_speed){
 		x = G.player_x + t * myPlayer.dir * dist_catchup_speed;
-	} else if(t > player_dist / dist_catchup_speed && t < player_dist_time - (player_dist / dist_catchup_speed)){
+	} else {
 		x = G.player_x + player_dist * myPlayer.dir;
-	}  else if(t > player_dist_time - (player_dist / dist_catchup_speed) && t < player_dist_time){
-		x = G.player_x + (player_dist_time - t) * myPlayer.dir * dist_catchup_speed;
-	} else if(t > player_dist_time){
-		instance_destroy();
 	}
 	
-	plt_index = random_range(0,37);
+	plt_index = random_range(39,46);
 	
 	y = G.player_y;
+}
+
+if(myPlayer.current_weapon != weapons.soul_body){
+	instance_destroy();
 }

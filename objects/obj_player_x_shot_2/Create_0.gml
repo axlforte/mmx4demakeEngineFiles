@@ -7,28 +7,23 @@ atk = 2;
 // Start
 animation_add("S",
 [
-	0, 0,
-	2, 1,
-	4, 2,
-	6, 3
+	0, 0
 ], 6);
 // Loop
 animation_add("L", 
 [
-	0, 4,
-	1, 5,
-	2, 6,
-	3, 6,
-	4, 5,
-	5, 4
-], 0, 5);
+	0, 1,
+	1, 2,
+	2, 3,
+	3, 4,
+], 0, 4);
 // Destroy
 animation_add("D", 
 [
-	0, 7,
-	2, 8,
+	0, 5,
+	2, 6,
 	6, 7,
-	9, 7
+	9, 8
 ]);
 // Blocked
 animation_add("B",

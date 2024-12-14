@@ -6,6 +6,8 @@ function player_x_buster_x2() {
 	shoot_limit = 16;
 	shoot_type = shoot_types.normal;
 
+	show_debug_message(string(lvl))
+
 	switch(lvl)
 	{
 		// Normal shot

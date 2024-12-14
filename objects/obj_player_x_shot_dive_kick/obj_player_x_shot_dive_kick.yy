@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_zero_dive_kick_x1",
-    "path": "sprites/spr_zero_dive_kick_x1/spr_zero_dive_kick_x1.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": false,
 }

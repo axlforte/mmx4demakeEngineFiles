@@ -47,16 +47,16 @@ function player_state_death() {
 			audio_play(death_sound);
 			break;
 		case 45:
-			audio_play_sound(voice_x_death, 0, 0);
-			audio_sound_gain(voice_x_death, global.sfx_volume * 0.8, 0);
+			audio_play_sound(voice_x_death_old, 0, 0);
+			audio_sound_gain(voice_x_death_old, global.sfx_volume * 0.8, 0);
 			break;
 		case 90:
-			audio_play_sound(voice_x_death, 0, 0);
-			audio_sound_gain(voice_x_death, global.sfx_volume * 0.55, 0);
+			audio_play_sound(voice_x_death_old, 0, 0);
+			audio_sound_gain(voice_x_death_old, global.sfx_volume * 0.55, 0);
 			break;
 		case 135:
-			audio_play_sound(voice_x_death, 0, 0);
-			audio_sound_gain(voice_x_death, global.sfx_volume * 0.2, 0);
+			audio_play_sound(voice_x_death_old, 0, 0);
+			audio_sound_gain(voice_x_death_old, global.sfx_volume * 0.2, 0);
 			break;
 		// Stop Sound
 		case 199:

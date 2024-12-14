@@ -16,3 +16,5 @@ if(ice_slope > 0)
 	slewpe.x = x + (ice_slope-1)*8;
 	slewpe.y = y - 28;
 }
+
+apha = 0;

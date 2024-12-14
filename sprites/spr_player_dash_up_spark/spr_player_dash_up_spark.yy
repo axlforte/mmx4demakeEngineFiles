@@ -77,7 +77,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b58bd35d-a965-43b5-a57a-b314a5a5ae2f","path":"sprites/spr_player_dash_up_spark/spr_player_dash_up_spark.yy",},},},"Disabled":false,"id":"609a7c4f-2713-4ec1-a9b1-31f39eea4b83","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 25,
     "yorigin": 12,

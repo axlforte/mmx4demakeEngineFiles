@@ -69,7 +69,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22680349-1e8b-4dc7-a18b-83af5197adce","path":"sprites/spr_player_giga_crush/spr_player_giga_crush.yy",},},},"Disabled":false,"id":"43811a7e-1e43-4ac3-be9c-aa44bf778549","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 175,
     "yorigin": 166,

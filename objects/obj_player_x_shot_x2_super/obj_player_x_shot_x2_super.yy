@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_shot_x2_super",
-    "path": "sprites/spr_x_shot_x2_super/spr_x_shot_x2_super.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

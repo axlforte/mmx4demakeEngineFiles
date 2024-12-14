@@ -30,7 +30,7 @@ if(shoto){
 	
 	instance_create_depth(x + random_range(-effect_dist,effect_dist),
 	y + random_range(-effect_dist,effect_dist),
-	0,obj_ice_smoke);
+	0,obj_player_dash_dust);
 } else {
 	dir = myPlayer.dir;
 	angle = pi/2 * dir;

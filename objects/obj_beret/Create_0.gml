@@ -20,13 +20,13 @@ animation_add("T",
 // Laugh
 animation_add("L", [
 	0, 0,
-	2, 3,
-	4, 4,
-	6, 5,
-	8, 6,
-	10, 7,
-	13, 6
-], 0, 15)
+	3, 3,
+	6, 4,
+	9, 5,
+	12, 6,
+	15, 7,
+	33, 6
+], 0, 35)
 
 animation_play("S");
 #endregion

@@ -18,6 +18,7 @@ dilog.line = "";
 activate = false;
 dindex = 0;
 ping = false;
+sound_activated = false;
 intro_frame = 0;
 intr_time = 10;
 keys_init();

@@ -3,11 +3,17 @@
 event_inherited();
 
 dialouge = [
-"000Youre /c9Magma Dragoon/c0, from the 14th/nunit!",
-"000Bad news /c1X/c0! A /c3maverick/c0 got here/nbefore me and destroyed the /c2reactor/c0!",
-"000What? Then /c2Sky Lagoon/c0... its gonna/ncome crashing down! Thousands will/ndie!",
-"000Too bad we can do nothing to stop/nthe fall! I suggest we get out of here/nbefore we become part of that thousands!",
-"000/c1Damn/c0! The city below is about to/nbecome a hellscape. I have to retreat/nand see if there are any surviors!"
+"Youre /c9Magma Dragoon/c0, from the 14th unit!",
+"Bad news /c1X/c0! A /s1/c9maverick/c0/s0 got here before me and /w1destroyed/w0 the /c2reactor/c0!",
+"What? Then /c2Sky Lagoon/c0... /w1its gonna come crashing down!/w2 Thousands /w0will /w2die!",
+"Too bad we can do /s1nothing/s0 to stop the fall! I suggest we get out of here before we join those /s2thousands!",
+"/c1Damn/c0! The city below is about to become a hellscape. I have to retreat and see if there are any surviors!"
 ];
-
+lines = [
+x_dragoon_1,
+underacted_dragoon_1,
+x_dragoon_2,
+underacted_dragoon_2,
+x_dragoon_3
+];
 rm_next = rm_wreckage;

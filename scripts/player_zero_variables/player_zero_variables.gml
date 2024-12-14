@@ -43,7 +43,7 @@ function player_zero_variables() {
 	weapon_allow_pallete = false;
 
 	// Mobile Buttons
-	mobile_buttons_set_sprite(spr_zero_mobile_buttons);
+	mobile_buttons_set_sprite(spr_charge_particle);
 	mobile_weapon_swap_set_sprites(spr_mobile_weapon1, spr_mobile_weapon2);
 
 	// Saber color

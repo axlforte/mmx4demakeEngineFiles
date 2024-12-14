@@ -69,9 +69,8 @@ function player_x_animation() {
 	animation_add("land|jump",
 	[
 		0, 5,
-		2, 6,
-		3, 7,
-		4, 6
+		1, 6,
+		2, 7
 	]);
 	
 	animation_add("wall_jump|wall",

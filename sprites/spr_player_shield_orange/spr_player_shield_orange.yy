@@ -73,7 +73,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ded82a6b-e40f-46b0-8ddd-7d1163d3b922","path":"sprites/spr_player_shield_orange/spr_player_shield_orange.yy",},},},"Disabled":false,"id":"86a1e059-ea34-4104-9edc-761f4f271c24","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 35,
     "yorigin": 33,

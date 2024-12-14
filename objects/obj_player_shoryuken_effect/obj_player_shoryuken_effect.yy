@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_x_shoryuken_effect",
-    "path": "sprites/spr_x_shoryuken_effect/spr_x_shoryuken_effect.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

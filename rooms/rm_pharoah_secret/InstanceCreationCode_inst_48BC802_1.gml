@@ -1,0 +1,1 @@
+boss_object = obj_jet_stingray;

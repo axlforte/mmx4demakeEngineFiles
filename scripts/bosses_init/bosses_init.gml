@@ -45,7 +45,7 @@ function bosses_init() {
 	//["WAIT YOU ARE NOT FLAME STAG", spr_flame_stag_icon, spr_stage_snow_mountain, rm_sky_lagoon, obj_chill_penguin_intro];
 
 	global.boss_info[e_boss.neon_tiger] = 
-	["NEON TIGER", spr_neon_tiger_icon, -1, rm_jet_stingray_remake, obj_magma_dragoon];
+	["NEON TIGER", spr_neon_tiger_icon, -1, rm_jet_stingray, obj_magma_dragoon];
 
 	global.boss_info[e_boss.magma_dragoon] = 
 	["MAGMA DRAGOON", spr_magma_dragoon_icon, -1, rm_magma_dragoon, obj_magma_dragoon_intro];

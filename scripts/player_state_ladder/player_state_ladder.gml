@@ -1,6 +1,11 @@
 function player_state_ladder() {
 	var t = state_timer;
 	
+	if(t == 0){
+		trail_sprites_enabled = false;
+		trail_sprites_remove = true;
+	}
+	
 	v_speed = 0;
 	grav = 0;
 	var outtro = 0;
@@ -48,7 +53,7 @@ function player_state_ladder() {
 		audio_play(land_sound);
 	}
 	
-	if(key_jump){
+	if(key_p_jump){
 		player_state_set(states.fall, 1);
 		v_speed = 0;
 		h_speed = 0;

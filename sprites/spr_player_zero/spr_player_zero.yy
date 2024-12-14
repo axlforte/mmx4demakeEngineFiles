@@ -4,7 +4,7 @@
   "name": "spr_player_zero",
   "bbox_bottom": 235,
   "bbox_left": 35,
-  "bbox_right": 266,
+  "bbox_right": 265,
   "bbox_top": 14,
   "bboxMode": 0,
   "collisionKind": 1,

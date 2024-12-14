@@ -158,7 +158,7 @@ function player_weapon_settings() {
 	weapon_selectable[weapons.nova_strike] = false;
 	weapon_selectable[weapons.falcon_giga] = false;
 	// Scripts
-	weapons_script[weapons.x_buster] = player_x_buster_x4;
+	weapons_script[weapons.x_buster] = player_x_buster_x2;
 	weapons_script[weapons.z_buster] = player_zero_buster_x1;
 	weapons_script[weapons.storm_tornado] = player_x_storm_tornado;
 	weapons_script[weapons.homing_torpedo] = player_x_homing_torpedo;

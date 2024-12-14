@@ -8,13 +8,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "X3",
-    "path": "folders/Objects/Players/Characters/X/Shots/X Buster/X3.yy",
+    "name": "X2",
+    "path": "folders/Objects/Players/Characters/X/Shots/X Buster/X2.yy",
   },
-  "parentObjectId": {
-    "name": "obj_player_shot_particles",
-    "path": "objects/obj_player_shot_particles/obj_player_shot_particles.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

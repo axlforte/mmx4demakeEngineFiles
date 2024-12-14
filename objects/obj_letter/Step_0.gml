@@ -10,3 +10,7 @@ if(!foundLetter){
 	foundLetter = true;
 	event_user(0);
 }
+sine_time++;
+if(sine_time > sine_speed){
+	sine_time = 0;
+}

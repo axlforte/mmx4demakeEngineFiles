@@ -23,28 +23,6 @@ function player_special_weapons_variables() {
 	nova_strike_sound = snd_player_x_nova_strike;
 	nova_strike_object = obj_player_x_shot_nova_strike;
 	nova_strike_move = true;
-
-	// Tatsumaki
-	tatsumaki_input_left = special_input_new([DOWN, DOWN_RIGHT, RIGHT, SHOOT_2]);
-	tatsumaki_input_right = special_input_new([DOWN, DOWN_LEFT, LEFT, SHOOT_2]);
-
-	tatsumaki_limit = 52;
-	tatsumaki_hspeed = 2;
-	tatsumaki_animation = "tatsumaki";
-	tatsumaki_object = obj_player_x_shot_tatsumaki;
-	tatsumaki_sprite = spr_x_tatsumaki_mask;
-	tatsumaki_sound = snd_player_x_tatsumaki;
-
-	// Double Gear
-	double_gear_icon_i = 0;
-	double_gear_t = 0;
-	double_gear_unlocked = false;
-	
-	// Shin Messenko
-	shin_messenko_interval = 8;
-	shin_messenko_distance = 48;
-	shin_messenko_limit = 5;
-	shin_messenko_y_offset = 20;
 	
 	// Dive Kick
 	dive_kick_hspeed = 4;
