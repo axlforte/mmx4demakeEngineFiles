@@ -20,8 +20,7 @@ function player_state_wall_jump() {
 	        if (walk_speed != dash_speed)
 				dash_air_count++;
 	        walk_speed = dash_speed;
-			trail_sprites_enabled = true;
-			trail_sprites_remove = false;
+			player_trail_maximize();
 	    }
 	}
 	// Jump

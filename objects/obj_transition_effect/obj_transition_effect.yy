@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Screen Effects",
-    "path": "folders/Objects/Screen Effects.yy",
+    "path": "folders/Objects/Scenery/Nature/Screen Effects.yy",
   },
   "parentObjectId": null,
   "persistent": true,

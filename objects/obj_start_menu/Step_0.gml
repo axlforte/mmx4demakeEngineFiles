@@ -161,17 +161,24 @@ switch (state) {
 		if (enter) {
 			switch(selected_item) {
 				case 0: state_next = menu_states.difficulty_mode; break;
-				//case 1: state_next = menu_states.multiplayer; global.mp = true; break; 
-				case 1: state_next = menu_states.option; break;
-				case 2: game_end(); exit; break;
+				case 1: menu_set_state(menu_states.load); return; break; 
+				case 2: state_next = menu_states.option; break;
+				case 3: game_end(); exit; break;
 			}
 			menu_set_state(state_next);
 		}
 		break;
 	#endregion
-	#region multiplayer
-	case menu_states.multiplayer:
-		room = rm_lobby;
+	#region loading
+	case menu_states.load:
+		menu_update_item_v();
+		menu_update_item_click();
+		if(state_timer == 0){
+			state_timer++;
+			items_next = noone;
+			instance_create_depth(x + 160,y + 128,-128,obj_save_and_load);
+		}
+		//room = rm_skill_tree;
 		break;
 	#endregion
 	#region Difficulty Mode
@@ -193,7 +200,17 @@ switch (state) {
 			boss_name = info[0];
 			boss_defeated = global.boss_defeated[_boss];
 			}
-			menu_set_state(menu_states.player_select, 16, 60);
+			//menu_set_state(menu_states.player_select, 16, 60);
+			
+			// we want to skip the player selection because the testers keep getting confused
+			
+			var tran = transition_create(transition_types.blink);
+			tran.color = c_white;
+			tran.transition_limit = 16;
+			settings_apply();//i T H I N K this is going to fix controls related issues
+			room = rm_music_unfucker;
+			music_stop(1000);
+			global.character_selected[0] = global.character_object[global.character_selected_index[0]];
 			//original
 			audio_play(snd_player_success);
 			global.difficulty = selected_item;
@@ -274,23 +291,28 @@ switch (state) {
 				}
 				// Android
 				break;
-			// Key Config
+			// 16 by 9 aspect ratio (if streched or widened)
 			case 1:
+				if(enter)
+					global.camera_16_by_9 = !global.camera_16_by_9;
+				break;
+			// Key Config
+			case 2:
 				if (enter)
 					menu_set_state(menu_states.key_config);
 				break;
 			// Audio Settings
-			case 2:
+			case 3:
 				if (enter)
 					//menu_set_state(menu_states.audio_settings);
 				break;
 			// one pixel tall healthbar
-			case 3:
+			case 4:
 				if (enter)
 					global.one_px_tall_health_bar = !global.one_px_tall_health_bar;
 				break;
 			//sfx
-			case 4:
+			case 5:
 				global.sfx_volume = clamp(global.sfx_volume+hinput*0.01,0,1);
 	            audio_group_set_gain(audiogroup_default,global.sfx_volume,0);
 				if (global.sfx_volume <= 0.9){
@@ -299,12 +321,12 @@ switch (state) {
 				}
 			break;
 			//bgm
-			case 5:
+			case 6:
 					global.bgm_volume = clamp(global.bgm_volume+hinput*0.01,0,1);
 	                audio_sound_gain(global.music_playing_index,global.bgm_volume,0);
 				break;
 			// Back
-			case 6:
+			case 7:
 				if (enter) {
 					menu_set_state(menu_states.main);
 					settings_save();
@@ -547,7 +569,6 @@ switch (state) {
 			if (weapon_get_props.player.palette_swap == false) {
 				weapon_get_props.player.palette_sprite = noone;	
 			}
-			show_debug_message(weapon_get_props.player.palette_array);
 		}
 		else if (t == weapon_get_props.dark_limit) {
 			

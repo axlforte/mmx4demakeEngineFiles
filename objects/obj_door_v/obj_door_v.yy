@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactable",
-    "path": "folders/Objects/Scenery/Interactable.yy",
+    "name": "Doors",
+    "path": "folders/Objects/Scenery/Interactable/Doors.yy",
   },
   "parentObjectId": {
     "name": "obj_door_parent",

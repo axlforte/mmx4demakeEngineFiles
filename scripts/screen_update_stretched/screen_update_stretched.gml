@@ -1,6 +1,11 @@
 function screen_update_stretched() {
 	var base_w = 320;
+	
 	var base_h = 240;
+	if(global.camera_16_by_9){
+		base_w = 427 * global.camera_scale;
+		base_h = base_h * global.camera_scale;
+	}
 	var ww = base_w, hh = base_h;
 
 	// Stretched

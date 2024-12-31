@@ -6,6 +6,9 @@ function player_check_dolor() {
 		state_hitbox_current = noone;
 	}
 	var enemy = instance_place(x, y, par_enemy);
+	if(enemy == noone){
+		enemy = instance_place(x,y,par_enemy_projectile);
+	}
 	mask_index = previous_mask;
 	if (state == states.death || state == states.grabbed || weapon_demo) exit;
 	if (!immortal) {

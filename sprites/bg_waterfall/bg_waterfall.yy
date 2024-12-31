@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "bg_waterfall",
-  "bbox_bottom": 63,
+  "bbox_bottom": 31,
   "bbox_left": 0,
   "bbox_right": 63,
   "bbox_top": 0,
@@ -25,7 +25,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 32,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0c055dc8-6380-4467-9d08-b3f0a566e78f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

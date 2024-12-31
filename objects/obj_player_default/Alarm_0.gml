@@ -34,6 +34,7 @@ if (global.checkpoint) {
 	__view_set(e__VW.YView, 0, clamp(_y - 120, G.camera_min_y, G.camera_max_y - global.view_height));
 	
 }
+show_debug_message(string(_x) + " " + string(_y) + " is this object's starting pos")
 	global.temp = _y;
 var inst = instance_create_depth(_x, _y, depth, global.character_selected[0]);
 inst.armor = G.player_character_armor[G.character_selected_index[0]];

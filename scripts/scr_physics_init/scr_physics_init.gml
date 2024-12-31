@@ -25,11 +25,16 @@ function scr_physics_init() {
 	vspeed_max = vspeed_max_normal;
 	
 	gravity_normal = grav;
-	gravity_water = grav / 2;
+	gravity_water = grav / 2.5;
 	gravity_default = gravity_normal;
 	
 	water_physics_enabled = false;
 	under_water = false;
 	water_instance = noone;
 	through_walls = false;
+	
+	//funny rotation shit
+	use_rotation = false;
+	rotation = 0;
+	rot_lerp = 0;
 }

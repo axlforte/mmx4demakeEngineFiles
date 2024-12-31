@@ -52,11 +52,6 @@ function player_special_weapon_from_state(wp_state) {
 				check: player_check_giga_crush,
 				scr: player_state_giga_crush
 			};
-		case states.speed_gear:
-			return {
-				check: player_check_speed_gear,
-				scr: noone
-			};
 		case states.dive_kick:
 			return {
 				check: player_check_dive_kick,

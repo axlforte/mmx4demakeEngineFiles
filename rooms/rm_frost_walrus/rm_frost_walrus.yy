@@ -218,6 +218,8 @@
     {"name":"inst_27F8C779","path":"rooms/rm_frost_walrus/rm_frost_walrus.yy",},
     {"name":"inst_5D61714A","path":"rooms/rm_frost_walrus/rm_frost_walrus.yy",},
     {"name":"inst_519B1CB1","path":"rooms/rm_frost_walrus/rm_frost_walrus.yy",},
+    {"name":"inst_56AC1662","path":"rooms/rm_frost_walrus/rm_frost_walrus.yy",},
+    {"name":"inst_50ACA058","path":"rooms/rm_frost_walrus/rm_frost_walrus.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -421,6 +423,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4C08FD73_3","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_pickup_heart","path":"objects/obj_pickup_heart/obj_pickup_heart.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":888.0,"y":220.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2BEC5293","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room_changer","path":"objects/obj_room_changer/obj_room_changer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5D61714A","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room_changer","path":"objects/obj_room_changer/obj_room_changer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1112.0,"y":112.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_56AC1662","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_save_panel","path":"objects/obj_save_panel/obj_save_panel.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":320.0,"y":176.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_50ACA058","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_drop_frost_mine","path":"objects/obj_drop_frost_mine/obj_drop_frost_mine.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1744.0,"y":168.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":true,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"enemy","depth":100,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_31DEB7AC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"des_ice","path":"objects/des_ice/des_ice.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":240.0,},

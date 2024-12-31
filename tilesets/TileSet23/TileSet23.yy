@@ -33,8 +33,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "spr_wreckage",
-    "path": "sprites/spr_wreckage/spr_wreckage.yy",
+    "name": "overdrive_tileset",
+    "path": "sprites/overdrive_tileset/overdrive_tileset.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

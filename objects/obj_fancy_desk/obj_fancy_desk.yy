@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Scenery",
-    "path": "folders/Objects/Scenery.yy",
+    "name": "Nature",
+    "path": "folders/Objects/Scenery/Nature.yy",
   },
   "parentObjectId": null,
   "persistent": false,

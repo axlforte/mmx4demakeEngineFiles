@@ -89,7 +89,7 @@ function player_start() {
 	limit_y_death = room_height + sprite_height;
 	trail_init(5);
 	player_trail_set(6, 4);
-	trail_sprites_enabled = false;
+	trail_sprites_enabled = true;
 	trail_sprites = ds_list_create();
 	trail_mode = 0;
 	trail_color = $f69701;

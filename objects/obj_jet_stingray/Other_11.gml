@@ -11,7 +11,7 @@ switch (state) {
 	#region Jump before DASH Attack
 	case STINGRAY.CRUNCH:
 		if (t == 0) {
-			show_debug_message("what is happening here")
+			//show_debug_message("what is happening here")
 			animation_play("fall");//puts stingray into his falling pose
 			v_speed = -jump_strength * (random_range(13,20) / 20);// randomizes the vertical velocity
 			grav = gravity_default * grav_magnitude;// changes gravity depending on the difficulty
@@ -31,7 +31,7 @@ switch (state) {
 	case STINGRAY.ELECTROCUTE:
 		if(t == 0){
 			animation_play("thunder");// plays an animation where stingray shoots projectiles
-			show_debug_message("foos")
+			//show_debug_message("foos")
 		}
 		
 		if(t == 10 || t == 20 || t == 30){//shoot a projectile at the same time as the animation
@@ -52,7 +52,7 @@ switch (state) {
 	case STINGRAY.CHARBLARGE:
 		if(t == 0){
 			look_at_player();//face the player
-			show_debug_message("ro")
+			//show_debug_message("ro")
 		}
 	
 		if(t >= 15){//wait a bit
@@ -65,7 +65,7 @@ switch (state) {
 	#region Jump to Attack with Missile
 	case STINGRAY.LAND_STINGER:
 		if (t == 0) {
-			show_debug_message("dah")
+			//show_debug_message("dah")
 			h_speed = 0;
 			v_speed = 0;
 			grav = 0;//stop moving at all
@@ -100,7 +100,7 @@ switch (state) {
 	case STINGRAY.DASH:
 		if(t == 0){
 			animation_play("dash");// change animation
-			show_debug_message("brr")
+			//show_debug_message("brr")
 			v_speed = 0;
 			grav = 0;
 			look_at_player();
@@ -144,7 +144,7 @@ switch (state) {
 	case STINGRAY.STINGER:
 		if (t == 0) {// immediately go to the ground version, which 
 			animation_play("fall");
-			show_debug_message("craps out")
+			//show_debug_message("craps out")
 			state_set(STINGRAY.LAND_STINGER);
 		}
 		break;
@@ -153,7 +153,7 @@ switch (state) {
 	#region edited default fall state
 	case boss_states.fall:
 		if(is_on_floor()){// if on ground jump
-			show_debug_message("wrttt")
+			//show_debug_message("wrttt")
 			state_set(STINGRAY.CRUNCH);
 			grav = gravity_default * grav_magnitude;
 			v_speed = -1;

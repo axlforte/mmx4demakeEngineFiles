@@ -67,17 +67,6 @@ function player_weapon_settings() {
 	// Palettes
 	weapon_palettes[weapons.storm_tornado] = 6;
 	weapon_palettes[weapons.homing_torpedo] = 9;
-	weapon_palettes[weapons.hyper_bomb] = 18;
-	weapon_palettes[weapons.quick_boomerang] = 19;
-	weapon_palettes[weapons.hard_knuckle] = 20;
-	weapon_palettes[weapons.pharoah_wave] = 21;
-	weapon_palettes[weapons.gyro_attack] = 22;
-	weapon_palettes[weapons.blizzard_shot] = 23;
-	weapon_palettes[weapons.slash_claw] = 24;
-	weapon_palettes[weapons.thunder_claw] = 25;
-	weapon_palettes[weapons.concrete_shot] = 26;
-	weapon_palettes[weapons.triple_blade] = 27;
-	weapon_palettes[weapons.blazing_torch] = 28;
 	weapon_palettes[weapons.lightning_web] = 29;
 	weapon_palettes[weapons.frost_spike] = 30;
 	weapon_palettes[weapons.soul_body] = 31;
@@ -86,10 +75,6 @@ function player_weapon_settings() {
 	weapon_palettes[weapons.aiming_laser] = 34;
 	weapon_palettes[weapons.double_cyclone] = 35;
 	weapon_palettes[weapons.twin_slasher] = 36;
-	weapon_palettes[weapons.sonic_slicer] = 14;
-	weapon_palettes[weapons.wheel_cutter] = 15;
-	weapon_palettes[weapons.acid_splash] = 17;
-	weapon_palettes[weapons.ray_splasher] = 16;
 	// Bar Icons
 	weapon_icon[weapons.storm_tornado] = 0;
 	weapon_icon[weapons.homing_torpedo] = 1
@@ -169,18 +154,6 @@ function player_weapon_settings() {
 	weapons_script[weapons.hyper_charge] = player_x_hyper_charge;
 	weapons_script[weapons.z_buster_x5] = player_zero_buster_x5;
 	weapons_script[weapons.nightmare_saber] = player_zero_nightmare_saber;
-	weapons_script[weapons.hyper_bomb] = player_x_hyper_bomb;
-	weapons_script[weapons.quick_boomerang] = player_x_quick_boomerang;
-	weapons_script[weapons.hard_knuckle] = player_x_hard_knuckle;
-	weapons_script[weapons.pharoah_wave] = player_x_pharoah_wave;
-	weapons_script[weapons.gyro_attack] = player_x_gyro_attack;
-	weapons_script[weapons.blizzard_shot] = player_x_blizzard_shot;
-	weapons_script[weapons.slash_claw] = player_x_slash_claw;
-	weapons_script[weapons.thunder_claw] = player_x_thunder_claw;
-	weapons_script[weapons.concrete_shot] = player_x_concrete_shot;
-	weapons_script[weapons.triple_blade] = player_x_triple_blade;
-	weapons_script[weapons.blazing_torch] = player_x_blazing_torch;
-	
 	
 	weapons_script[weapons.lightning_web] = player_lightning_web;
 	weapons_script[weapons.rising_fire] = player_rising_fire;

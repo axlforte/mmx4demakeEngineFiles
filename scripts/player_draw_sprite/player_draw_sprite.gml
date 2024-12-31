@@ -4,7 +4,7 @@
 /// @param y
 /// @param xscale
 /// @param yscale
-function player_draw_sprite(_x = x, _y = y, xs = xscale, ys = y_dir, index = floor(image_index)) {
+function player_draw_sprite(_x = x, _y = y, xs = xscale, ys = y_dir, index = floor(image_index), _is_player = is_player) {
 	for (var j = 0; j < array_length(armor_current_order) - 1; j++) {
 		var i = armor_current_order[j];
 		var p = armor_part_parent[i];
@@ -18,8 +18,10 @@ function player_draw_sprite(_x = x, _y = y, xs = xscale, ys = y_dir, index = flo
 				scr_shader_set(shader_palette_light);	
 			}
 			draw_sprite_ext(pl_sprite[i], index, floor(_x), floor(_y), xs, ys, 0, noone, 1);
-			global.player_sprite = pl_sprite[i];
-			global.player_sprite_frame = index;
+			if(_is_player){
+				global.player_sprite = pl_sprite[i];
+				global.player_sprite_frame = index;
+			}
 			palette_reset();
 		}
 	}

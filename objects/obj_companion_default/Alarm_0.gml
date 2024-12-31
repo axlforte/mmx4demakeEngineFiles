@@ -1,0 +1,58 @@
+//if (!G.checkpoint)
+if(global.exitALevelTransition){
+	if(!global.level_transition_use_door_locs){
+		var _c = 0;
+		var _v = 0;
+		with(obj_room_changer){
+			if(door_id = global.door_id){
+				_c = x;
+				_v = y;
+			}
+		}
+		x = _c + 32;
+		y = _v;
+	} else {
+	x = global.levelTransitionX + 32;
+	y = global.levelTransitionY + 8;
+	G.current_camera = global.levelTransitionCameraId;
+	}
+}
+
+var _x = x, _y = y - 10;
+
+if (global.checkpoint) {
+	_x = global.checkpoint_x;
+	_y = global.checkpoint_y;
+	G.current_camera = global.checkpoint_camera;
+	with (obj_camera_set_PC) {
+		if (G.current_camera == camera_id) {
+			event_perform(ev_step, ev_step_normal);
+		}
+	}
+
+	__view_set(e__VW.XView, 0, clamp(_x - 160, G.camera_min_x, G.camera_max_x - global.view_width));
+	__view_set(e__VW.YView, 0, clamp(_y - 120, G.camera_min_y, G.camera_max_y - global.view_height));
+	
+}
+show_debug_message(string(_x) + " " + string(_y) + " is this object's starting pos")
+	global.temp = _y;
+var inst = instance_create_depth(_x, _y, depth, player);
+inst.armor = G.player_character_armor[G.character_selected_index[0]];
+with (inst) {
+	player_load_armor(true);	
+}
+for (var i = 0, len = array_length(global.checkpoint_phase); i < len; i++) {
+	check_phase = global.checkpoint_phase[i];
+	with (obj_background_area) {
+		if (phase == other.check_phase) {
+			var bg_info = global.background_list[| i][| phase];
+			obj_camera_rds.background_object[i] = self;
+			obj_camera_rds.background_far[i] = bg_info.far;
+			layer_background_sprite(
+				layer_background_get_id(layer_get_id("background_" + string(i + 1))), 
+				bg_info.sprite
+			);
+		}
+	}
+}
+instance_destroy();

@@ -8,6 +8,7 @@ function settings_load() {
 	//if (G.mobile && G.settings[0] != 3 && G.settings[0] != 4) G.settings[0] = 3;
 
 	global.settings[1] = ini_read_real("SETTINGS", "Input", input_types.keyboard);
+	global.camera_16_by_9 = ini_read_real("SETTINGS", "scale", false);
 
 	G.voice_language = ini_read_string("AUDIO", "Voice Language", "SNES");
 	global.sfx_volume = ini_read_real("AUDIO", "Sound Volume", 1);

@@ -28,7 +28,7 @@ enum pause_menus{
 	saves,
 	length
 }
-menu = pause_menus.upgrades;
+menu = pause_menus.weapons;
 
 enum upgrade_menu{
 	none,
@@ -58,3 +58,37 @@ title = "";
 prev_title = "";
 desc = "";
 xp = 0;
+oof = 0;
+
+palette_init();
+
+function get_if_weapon_is_unlocked(){
+	if(oof == 0)
+		return global.web_spider_defeat;
+	if(oof == 1)
+		return global.frost_walrus_defeat;
+	if(oof == 2)
+		return global.split_mushroom_defeat;
+	if(oof == 3)
+		return global.magma_dragoon_defeat;
+	if(oof == 4)
+		return global.jet_stingray_defeat;
+	if(oof == 5)
+		return global.storm_owl_defeat;
+	if(oof == 6)
+		return global.slash_beast_defeat;
+	if(oof == 7)
+		return global.cyber_pea_cock_defeat;
+		
+		global.weapon_names = [
+	"Megaman X",
+	"Lightning Web",
+	"Frost Spike",
+	"Soul Body",
+	"Rising Fire",
+	"Ground Chaser",
+	"Double Cyclone",
+	"Twin Slasher",
+	"Nova Strike"
+	];
+}

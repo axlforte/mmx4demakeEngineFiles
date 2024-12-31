@@ -19,13 +19,6 @@ function boss_death_x1() {
 		}
 		with (obj_player_parent) {
 			if (armor_is_full("") && FULL == "") {
-				if (other.object_index == obj_jet_stingray) {
-					global.jet_stingray_defeat = 1;	
-				} else if (other.object_index == obj_launch_octopus) {
-					global.launch_octopus_defeat = 1;			
-				} else {
-					global.magma_dragoon_defeat = 1;	
-				}
 				if (hp == max_hp) {
 					if (my_character == pl_char.x && other.object_index == obj_chill_penguin) {
 						global.unarmored_x_defeat = 1;	
@@ -98,7 +91,9 @@ function boss_death_x1() {
 		with (obj_player_parent) {
 			locked = false;
 			pause_enabled = true;
+			music_play(global.current_music);
 		}
+		instance_destroy();
 	}
 
 

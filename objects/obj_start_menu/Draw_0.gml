@@ -1,6 +1,12 @@
 draw_set_offset(0, 0);
 
 switch(state) {
+	#region load
+	case menu_states.load:
+		//dont do anything, we dont need to draw stuff.
+		draw_sprite_ext(spr_square_16,0,x,y,32,32,0,c_white,1);
+	break;
+	#endregion
 	#region Main
 	case menu_states.main:
 		//draw_sprite(spr_start_menu, 0, 0, 0);
@@ -63,11 +69,13 @@ switch(state) {
 	#region Options
 	case menu_states.option:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		draw_string(176,160,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
-		draw_string(176,184,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
+		draw_string(176,184,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
+		draw_string(176,208,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
+		draw_string(240, 80, string(global.camera_16_by_9), colors.orange);
+		draw_string(220, 160, string(global.one_px_tall_health_bar), colors.orange);
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
-			var _x = 64, _y = 64 + 24*i;
+			var _x = 64, _y = 64 + 16*i;
 			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
 			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.pink);
 			if (array_length(item) > 2) {// Back
@@ -81,9 +89,6 @@ switch(state) {
 					txt = subitem[index];
 				}
 				draw_string_center(_x + 176, _y, txt, colors.orange);
-				if(i == 3){
-					draw_string_center(_x + 280, _y, string(global.one_px_tall_health_bar), colors.orange);
-				}
 				menu_item_draw_arrows(_x + 176, _y, index, subitem, colors.orange);
 				
 			}

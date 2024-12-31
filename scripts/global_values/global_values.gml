@@ -21,6 +21,8 @@ function global_values() {
 	global.camera_vbor_min_y				= -12;
 	global.camera_vbor_max_y				= 12;
 	global.camera_shake						= false;
+	global.camera_16_by_9                   = false;
+	global.camera_scale                     = 1;
 	global.check							= false;
 	global.paused						    = false;
 	global.pause_type					    = pause_types.none;
@@ -52,6 +54,7 @@ function global_values() {
 	global.player_health = 28;
 	global.player_exp = 600;
 	global.one_px_tall_health_bar = true;
+	global.game_save_num = 0;
 	
 	enum diff_modes {
 		easy,
@@ -127,14 +130,16 @@ function global_values() {
 	replay_init();
 	dialouge_activation();
 	upgrade_values();
+	weapon_information_global_vars();
+	overworld_info();
 }
 
-function overworld_goodies(){
+function overworld_info(){
 	global.heart_tanks = [false,false,false,false,false,false,false,false];
 	global.sub_tank_1 = false;
 	global.sub_tank_2 = false;
 	global.weap_tank_1 = false;
-	global.weap_tank_2 = false;
+	global.save_dest = 0;
 }
 
 function upgrade_values(){
@@ -209,5 +214,19 @@ function upgrade_values(){
 	"small friend floats towards\nitems not yet collected",
 	"take less damage in the air",//cr
 	"shoot while stunned",
+	];
+}
+
+function weapon_information_global_vars(){
+	global.weapon_names = [
+	"Megaman X",
+	"Lightning Web",
+	"Frost Spike",
+	"Soul Body",
+	"Rising Fire",
+	"Ground Chaser",
+	"Double Cyclone",
+	"Twin Slasher",
+	"Aiming Laser"
 	];
 }

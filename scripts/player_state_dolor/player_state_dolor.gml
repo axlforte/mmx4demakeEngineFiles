@@ -16,7 +16,7 @@ function player_state_dolor() {
 		animation = "";
 		animation_play(dolor_animation);
 		audio_play(dolor_sound);
-		if (hp > 0)
+		if (hp > 0 && is_player)
 			voice_play();
 		audio_stop(hover_sound);
 		//using_special_weapon = false;

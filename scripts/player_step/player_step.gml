@@ -60,7 +60,7 @@ function player_step() {
 		breath_effect.timer = 0;	
 	}
 	under_water = false;
-	/*
+	
 	var create_item = noone;
 	if (keyboard_check(ord("1"))) create_item = obj_pickup_life_1;
 	if (keyboard_check(ord("2"))) create_item = obj_pickup_life_2;
@@ -75,7 +75,7 @@ function player_step() {
 		if (create_item == obj_pickup_heart) {
 			inst.heart_id = -1;
 		}
-	}*/
+	}
 	move = key_right - key_left;
 	// Walk to the middle of the screen
 	if (walking_to_x) {

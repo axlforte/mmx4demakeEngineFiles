@@ -7,7 +7,7 @@ function player_state_intro() {
 	
 			if (t == 0) {
 				x = x_start;
-				if (cam != noone){
+				if (instance_exists(cam)){
 					if(global.TeleportIn){
 					y = __view_get(e__VW.YView, cam.view_id);
 					} else {y = global.levelTransitionY}}
