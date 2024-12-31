@@ -11,8 +11,7 @@ function player_state_wall_slide() {
 		if (move != 0)
 			xscale = move;
 		if(!key_dash){
-			trail_sprites_enabled = false;
-			trail_sprites_remove = true;
+			player_trail_minimize();
 		}
 	}
 	
@@ -50,8 +49,7 @@ function player_state_wall_slide() {
 
 	if (is_on_floor(2) || move != wall_slide_dir || can_move_x(wall_slide_dir)) {
 		//disable dash trail
-		trail_sprites_enabled = false;
-		trail_sprites_remove = true;
+		player_trail_minimize();
 		
 		player_state_set(states.fall, 0);
 		animation = "";

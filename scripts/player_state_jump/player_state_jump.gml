@@ -8,8 +8,7 @@ function player_state_jump() {
 		v_speed = 0;
 		
 	if(dash){
-		trail_sprites_enabled = true;
-		trail_sprites_remove = false;
+		player_trail_maximize();
 	}
 
 	// High Jump
@@ -28,8 +27,7 @@ function player_state_jump() {
 		player_state_set(states.idle, 0);
 		walk_speed = walk_speed_default;
 		v_speed = 0;
-		trail_sprites_enabled = false;
-		trail_sprites_remove = true;
+		player_trail_minimize();
 		move_down();
 	}
 

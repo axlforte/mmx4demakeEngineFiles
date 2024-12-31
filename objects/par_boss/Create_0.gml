@@ -9,6 +9,7 @@ hp = 0; // Initial Health
 max_hp = 32; // Max Health
 xp = 20;
 t = 0; // Timer
+weapon_to_give = obj_drop_ground_hunter;
 enum boss_states {
 	intro = 100,
 	idle = 101,

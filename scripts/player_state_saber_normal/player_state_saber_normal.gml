@@ -13,7 +13,7 @@ function player_state_saber_normal() {
 			xscale = dir;	
 			audio_play(saber_atk_sound);
 			animation = "";
-			voice_play(state + saber_atk);
+			//voice_play(state + saber_atk);
 		}
 		if (t < 10)
 			animation_play(saber_atk_animation);

@@ -3,18 +3,9 @@ armor_check = 0;
 player_start();
 limit_x = [floor((bbox_right - bbox_left) / 2), room_width - floor((bbox_right - bbox_left) / 2)];
 limit_y = floor((bbox_bottom - bbox_top) / 2);
-show_debug_message(x);
-show_debug_message(y);
-show_debug_message(G.levelTransitionY);
-/*net
-    .resetVariables()
-    .addVariable("x")
-    .addVariable("y")
-    .addVariable("sprite_index")
-    .addVariable("image_index")
-    .addVariable("depth")
-    .addVariable("face");
-	net.setVariable("x",x);*/
+
+rotation = 90;
+
 function player_draw_event() {
 	var size = ds_list_size(trail_sprites);
 	if (size > 0) {

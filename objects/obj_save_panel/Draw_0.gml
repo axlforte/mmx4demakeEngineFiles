@@ -1,0 +1,1 @@
+draw_sprite(save_pad1,save_timer / 2,x,y);

@@ -28,7 +28,7 @@ function enemy_behavior_normal() {
 	}
 
 	if (G.is_using_door && !is_boss && !door_immunity) {
-		if (!v_outside(sprite_width, sprite_height)) {
+		if (v_outside(sprite_width * 2, sprite_height * 2)) {
 			instance_destroy();
 		}
 		else

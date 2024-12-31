@@ -48,3 +48,9 @@ if (!instance_exists(_target) || instance_exists(obj_player_ready)) {
 	y = mid_y;
 }
 shake_t = 0;
+
+
+if(global.camera_16_by_9){
+	__view_set(e__VW.WPort, 0, 427);
+	//view_set_wport(0, 427)
+}

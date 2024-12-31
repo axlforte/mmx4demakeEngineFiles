@@ -3,8 +3,13 @@ function scr_physics_update(ignore_solids = true) {
 		physics_ignore_frame --;
 		exit;
 	}
+	
 	v_speed = min(vspeed_max, v_speed + grav);
 	h_speed += h_acceleration;
+	if(use_rotation){
+		v_speed = v_speed * sin(rotation);
+		h_speed = h_speed * cos(rotation);
+	}
 	if (ignore_solids) {
 		x += h_speed;
 		y += v_speed;
@@ -41,7 +46,8 @@ function scr_physics_update(ignore_solids = true) {
 				}
 			}
 		} else {
-			if (y < water_instance.y) {
+			var test = instance_place(x, y, obj_water);
+			if (test == noone) {
 				water_instance = noone;
 				gravity_default = gravity_normal;
 				vspeed_max = vspeed_max_normal;

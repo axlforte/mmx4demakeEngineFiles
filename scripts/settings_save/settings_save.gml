@@ -3,6 +3,7 @@ function settings_save() {
 	// Settings
 	ini_write_real("SETTINGS", "Window", global.settings[0]);
 	ini_write_real("SETTINGS", "Input", global.settings[1]);
+	ini_write_real("SETTINGS", "scale", global.camera_16_by_9);
 	ini_write_real("SETTINGS", global.gp_name, global.gp_movement);
 	// Audio
 	ini_write_string("AUDIO", "Voice Language", G.voice_language);

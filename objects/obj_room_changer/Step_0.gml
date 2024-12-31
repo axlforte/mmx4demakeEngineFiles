@@ -3,7 +3,7 @@ py = G.player_y;
 scr_keys_update();
 if(px < x + width && px > x){
 	if(py > y && py < y + height){
-		if(((key_p_up && interactible) || auto_door) && candoor){
+		if(((key_p_up && interactible && !global.paused) || auto_door) && candoor){
 			candoor = false;
 			with(obj_player_parent){
 				locked = true;
@@ -19,7 +19,7 @@ if(px < x + width && px > x){
 		}
 	}
 }
-
+//show_debug_message(global.player_y);
 if(tran_timer > 0){
 	if(tran_timer > door_tran_effect_limit){
 		global.exitALevelTransition = true;

@@ -1,0 +1,1 @@
+global.bgm_volume = global.bgm_volume * 2;

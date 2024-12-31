@@ -45,6 +45,7 @@ function player_variables() {
 	//ladder
 	climb_speed = 2;
 	top_of_ladder = 0;
+	ladder_anim = 0;
 
 	// Walk
 	walk = false; // Is the player walking?
@@ -111,7 +112,7 @@ function player_variables() {
 	hover_vertical_t = 0;
 	hover_vertical_dir = -1;
 	hover_vertical_limit = 6;
-	hover_vertical_speed = 0.4;
+	hover_vertical_speed = 0.2;
 	hover_neutral = true;
 	hover_shoot_limit = 95;
 	hover_shoot_inf = false;
@@ -309,7 +310,7 @@ function player_dash_variables() {
 	// Dash - Effects
 	player_effect_clear();
 	/// Spark
-	dash_spark = player_effect_new(obj_player_dash_spark, -6, 16, layer_up);
+	dash_spark = player_effect_new(obj_player_dash_spark_dust, -6, 16, layer_up);
 	dash_spark_inst = noone; // Spark Object Instance
 	/// Dust
 	dash_dust = player_effect_new(obj_player_dash_dust, -7, 20, layer_up, 4, player_dash_dust);

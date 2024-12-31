@@ -1,20 +1,37 @@
-draw_sprite(spr_upgrade_screen_background,0,x,y);
 switch(menu){
 	case(pause_menus.weapons):
-		for(j = 0; j < 10; j++){
-			for(i = 0; i < 28; i++){
-				draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
+		draw_sprite(spr_upgrade_screen_background,0,x,y);
+		for(j = 0; j < 9; j++){
+			oof = j - 1;
+			if(get_if_weapon_is_unlocked()){
+				draw_string(24, 28 + j * 20, global.weapon_names[j], colors.orange)
+				draw_sprite_ext(spr_bar1_limit, 0, x+31, y+32+j*20,1,1,90,c_white,1);
 				if(instance_exists(obj_player_parent)){
 					var plr = instance_nearest(x,y,obj_player_parent);
-					var wplen = plr.weapon_energy[i];
-					for(i = 0; i < wplen; i++){
-						draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+34 + j * 20,1,1,90,c_white,1);
+					var wplen = 0;
+					var wpcap = 28;
+					if(j > 0){
+						var wplenarr = player_get_weapon_energy_array();
+						wplen = wplenarr[j-1];
+					} else {
+						wplen = plr.hp;
+						wpcap = global.player_max_health
+					}
+					show_debug_message(string(j) + " " + string(wplen))
+				}
+				draw_sprite_ext(spr_bar1_limit, 0, x+32 + wpcap*2, y+20+j*20,1,1,270,c_white,1);
+				for(i = 0; i < wpcap; i++){
+					draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
+					if(wplen > i){
+						draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
 					}
 				}
 			}
 		}
+		
 	break;	
 	case(pause_menus.upgrades):
+		draw_sprite(spr_upgrade_screen_background,1,x,y);
 		draw_sprite_ext(spr_upgrade_screen_x,1,x+px,y+py,xsale,ysale,0,c_white,1);
 		draw_text(x + 16, y + 20, string(global.player_exp));
 		var availible = 0;
@@ -271,4 +288,3 @@ switch(menu){
 	
 	break;
 }
-draw_sprite(spr_upgrade_screen_background,1,x,y);

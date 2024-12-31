@@ -9,6 +9,8 @@ conversation = [//you must have a /n between every 40 characters.
 //the 2 numbers at the start determine the mugshots used!
 //the third number determines the talker, 0 for left and 1 for right
 
+global.bgm_volume = global.bgm_volume / 2;
+
 //pause_set(!global.paused, pause_types.dialouge);
 dspeed = global.DialougeSpeed;
 index = -1;

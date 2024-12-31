@@ -31,10 +31,12 @@ if (t == 0 && pickup_type == pickup_types.wp) {
 }
 
 // If the target is dead, ignore this
-if (target.hp <= 0 && !target.intro) {
-	pause_set(false);
-	instance_destroy();
-	exit;
+if(instance_exists(target)){
+	if (target.hp <= 0 && !target.intro) {
+		pause_set(false);
+		instance_destroy();
+		exit;
+	}
 }
 
 // Bar Light Shader

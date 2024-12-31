@@ -6,7 +6,19 @@ enum pickup_types {
 	wp,
 	subtank,
 	energytank,
-	lifeup
+	lifeup,
+	weapon
+}
+
+enum weaps {
+	web,
+	twin,
+	rising,
+	soul,
+	cyclone,
+	frost,
+	aiming,
+	hunter
 }
 wait_timer = 0;
 timer = 0;
@@ -19,3 +31,4 @@ weapon_id = -1;
 weapon_fill_other = false;
 fill_sound = snd_item_health;
 instant_fill = false;
+weapon_to_give = noone;

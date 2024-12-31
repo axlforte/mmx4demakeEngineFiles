@@ -2,7 +2,7 @@ event_inherited();
 idle_time_to_turn = 5;
 intro_limit = 102;
 jump_wait = 20;
-crunch_speed = array_get([4, 5, 6], global.difficulty);//makes stingray faster depending on difficulty
+crunch_speed = array_get([4, 5, 6,8], global.difficulty);//makes stingray faster depending on difficulty
 //whirlpool_length = 130; old octopus code
 //whirlpool_speed = 2; old octopus code
 //grab_move_limit = 10; old octopus code

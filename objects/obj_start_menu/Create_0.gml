@@ -14,7 +14,8 @@ enum menu_states {
 	voice_language,
 	weapon_get,
 	volume,
-	visuals
+	visuals,
+	load
 }
 
 enum background_select { intro, middle, ending }
@@ -57,8 +58,8 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 #region Main
 /// Main
 page_items[menu_states.main] = [
-	[_("PLAY"), [100, 136, 144, 20]],
-	//[_("MULTIPLAYER"),       [92, 160, 144, 20]],
+	[_("NEW GAME"), [100, 136, 144, 20]],
+	[_("LOAD GAME"),       [92, 160, 144, 20]],
 	[_("OPTIONS"),    [92, 172, 144, 20]],
 	[_("EXIT"),       [92, 184, 144, 20]]
 ];
@@ -66,6 +67,12 @@ page_items[menu_states.main] = [
 #region Game Mode
 page_items[menu_states.game_mode] = [
 	[_("SINGLE PLAYER"), [92, 88, 144, 20]]/*,
+	[_("MULTIPLAYER"),   [92, 128, 144, 20]]*/
+];
+#endregion
+#region load
+page_items[menu_states.load] = [
+	[_("   "), [92, 88, 144, 20]]/*,
 	[_("MULTIPLAYER"),   [92, 128, 144, 20]]*/
 ];
 #endregion
@@ -99,12 +106,13 @@ if (G.mobile) {
 
 page_items[menu_states.option] = [
 	[_("WINDOW SIZE"), [64, 64, 200, 20], wsize_options],
-	[_("KEY CONFIG"), [64, 88, 144, 20]],
-	[_("AUDIO SETTINGS"), [64, 112, 144, 20]],
-	[_("ONE PX TALL HP BAR"),[64, 136, 144, 20]],
+	[_("16 BY 9 ASPECT RATIO"), [64, 80, 200, 20]],
+	[_("KEY CONFIG"), [64, 112, 96, 20]],
+	[_("AUDIO SETTINGS"), [64, 128, 144, 20]],
+	[_("ONE PX TALL HP BAR"),[64, 144, 144, 20]],
 	[_("SFX"),[64, 160, 144, 20]],
-	[_("BGM"),[64, 184, 144, 20]],
-	[_("BACK"), [64, 208, 144, 20]]
+	[_("BGM"),[64, 176, 144, 20]],
+	[_("BACK"), [64, 192, 144, 20]]
 ];
 
 #endregion
