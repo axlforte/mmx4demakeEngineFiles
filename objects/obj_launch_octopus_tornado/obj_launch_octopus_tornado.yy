@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Launch Octopus",
-    "path": "folders/Objects/Bosses/Launch Octopus.yy",
+    "path": "folders/Objects/Bosses/Extra/Launch Octopus.yy",
   },
   "parentObjectId": {
     "name": "obj_snow",

@@ -1,0 +1,11 @@
+event_inherited();
+hp = 1;
+damage_set(3, 5, 7, 128);
+abs_hspeed = array_get([4, 5, 7, 10], global.difficulty);
+damageable = false;
+blocking = true;
+shot_type = 0;
+grav = 0;
+//phy_type = phy_types.NEW;
+through_walls = true;
+audio_play(snd_player_x_shot_1);

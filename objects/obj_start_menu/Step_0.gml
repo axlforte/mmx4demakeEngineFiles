@@ -80,7 +80,7 @@ if (activate_sprites) {
 	switch(state) {
 		case menu_states.main:
 			animation2_init();
-			animation2_add(spr_start_menu, 1/4, 0, 0);
+			animation2_add(final_logo, 1/4, 0, 0);
 			break;
 		case menu_states.stage_select:
 			var wlen = array_length(weapon_get_props.instances);
@@ -186,9 +186,6 @@ switch (state) {
 		menu_update_item_v();
 		menu_update_item_click();
 		if (enter) {
-			var tran = transition_create(transition_types.blink);
-			tran.color = c_white;
-			tran.transition_limit = 16;
 			//menu_set_state(menu_states.stage_select, 16, 60);
 			
 			//added
@@ -210,6 +207,7 @@ switch (state) {
 			settings_apply();//i T H I N K this is going to fix controls related issues
 			room = rm_music_unfucker;
 			music_stop(1000);
+			G.player_character_armor[pl_char.x][3] = x_armor.x1;
 			global.character_selected[0] = global.character_object[global.character_selected_index[0]];
 			//original
 			audio_play(snd_player_success);

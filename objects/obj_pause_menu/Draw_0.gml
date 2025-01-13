@@ -1,29 +1,29 @@
 switch(menu){
 	case(pause_menus.weapons):
 		draw_sprite(spr_upgrade_screen_background,0,x,y);
-		for(j = 0; j < 9; j++){
-			oof = j - 1;
-			if(get_if_weapon_is_unlocked()){
-				draw_string(24, 28 + j * 20, global.weapon_names[j], colors.orange)
-				draw_sprite_ext(spr_bar1_limit, 0, x+31, y+32+j*20,1,1,90,c_white,1);
-				if(instance_exists(obj_player_parent)){
-					var plr = instance_nearest(x,y,obj_player_parent);
+		for(j = 0; j < length; j++){
+			show_debug_message(string(j) + " is j. length is " +string(length))
+			if(weps[j] != -4){
+				if(/*weapon_selectable[weps[j]]*/ 1 == 1){
+					draw_string(26, 28 + j * 20, weapon_name[weps[j]], colors.orange)
+					draw_sprite_ext(spr_bar1_limit, 0, x+31, y+32+j*20,1,1,90,c_white,1);
+				
 					var wplen = 0;
 					var wpcap = 28;
 					if(j > 0){
-						var wplenarr = player_get_weapon_energy_array();
-						wplen = wplenarr[j-1];
+						wplen = weapon_energy[j]
 					} else {
-						wplen = plr.hp;
+						wplen = hp;
 						wpcap = global.player_max_health
 					}
-					show_debug_message(string(j) + " " + string(wplen))
-				}
-				draw_sprite_ext(spr_bar1_limit, 0, x+32 + wpcap*2, y+20+j*20,1,1,270,c_white,1);
-				for(i = 0; i < wpcap; i++){
-					draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
-					if(wplen > i){
-						draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
+					show_debug_message(string(j) + " wryyy " + string(wplen))
+				
+					draw_sprite_ext(spr_bar1_limit, 0, x+32 + wpcap*2, y+20+j*20,1,1,270,c_white,1);
+					for(i = 0; i < wpcap; i++){
+						draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
+						if(wplen > i){
+							draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
+						}
 					}
 				}
 			}

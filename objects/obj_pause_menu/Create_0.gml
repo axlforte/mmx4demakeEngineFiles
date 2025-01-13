@@ -19,8 +19,9 @@ scr_keys_reset();
 slerp = 0.25;
 opt = 0;
 y = y - 240;
-y_steps = 8;
-y_step_length = 240 / y_steps;
+y_step_total = 8;
+y_steps = y_step_total;
+y_step_length = 240 / y_step_total;
 //enums
 enum pause_menus{
 	weapons,
@@ -39,6 +40,8 @@ enum upgrade_menu{
 	length
 }
 umenu = upgrade_menu.none;
+
+wep_offset = 0;//offset is how far you have to scroll to get to the weapon
 
 slerp_x = 0;
 slerp_y = 0;
@@ -62,33 +65,15 @@ oof = 0;
 
 palette_init();
 
-function get_if_weapon_is_unlocked(){
-	if(oof == 0)
-		return global.web_spider_defeat;
-	if(oof == 1)
-		return global.frost_walrus_defeat;
-	if(oof == 2)
-		return global.split_mushroom_defeat;
-	if(oof == 3)
-		return global.magma_dragoon_defeat;
-	if(oof == 4)
-		return global.jet_stingray_defeat;
-	if(oof == 5)
-		return global.storm_owl_defeat;
-	if(oof == 6)
-		return global.slash_beast_defeat;
-	if(oof == 7)
-		return global.cyber_pea_cock_defeat;
-		
-		global.weapon_names = [
-	"Megaman X",
-	"Lightning Web",
-	"Frost Spike",
-	"Soul Body",
-	"Rising Fire",
-	"Ground Chaser",
-	"Double Cyclone",
-	"Twin Slasher",
-	"Nova Strike"
-	];
-}
+var p = instance_nearest(x,y,obj_player_parent);
+weapon_selectable = [];
+player_weapon_settings();
+player_x_weapon_reset();
+weps = p.weapon_list;
+nrg = p.weapon_energy;
+hp = p.hp;
+length = array_length(weapon_selectable) - 1;
+show_debug_message(string(array_length(weapon_selectable)));
+show_debug_message(string(array_length(p.weapon_list)));
+
+piss_off = false;

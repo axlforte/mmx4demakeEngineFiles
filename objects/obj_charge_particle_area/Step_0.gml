@@ -25,7 +25,7 @@ if(myPlayer.dir == -1){
 if(myPlayer.charge_level == 2){
 	particle_image = spr_charge_particle_l2;
 } else if(myPlayer.charge_level == 3){
-	color = c_fuchsia;
+	particle_image = spr_charge_particle_l3;
 } else if(myPlayer.charge == false){
 	instance_destroy();
 }

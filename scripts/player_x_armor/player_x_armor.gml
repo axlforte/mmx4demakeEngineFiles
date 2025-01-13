@@ -4,7 +4,7 @@ function player_x_armor() {
 	plt_index_default = 12;
 
 	special_weapons = ds_list_create();
-	weapons_script[weapons.x_buster] = player_x_buster_x2;
+	weapons_script[weapons.x_buster] = player_x_buster_x4;
 	charge_level_max = 2;
 	
 	#region X4 - Force Armor
@@ -54,7 +54,7 @@ function player_x_armor() {
 			intro_end_sound = snd_player_intro_end;
 			// Air Dash
 			dash_air_unlocked = true;
-			dash_up_unlocked = true;
+			//dash_up_unlocked = true;
 			// Hover
 			state_unlocked[states.hover] = true;
 			glow_enabled = true;
@@ -65,7 +65,7 @@ function player_x_armor() {
 			charge_level_max = 3;
 			charge_limits[3] = charge_limits[2];
 			weapons_script[weapons.x_buster] = player_x_buster_x4;
-			dash_speed = 7;
+			dash_speed = 5;
 			charge_speed = 1;
 			walk_speed_default = 4;
 			walk_speed = 4;

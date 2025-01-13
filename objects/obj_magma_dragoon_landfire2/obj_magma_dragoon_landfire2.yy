@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Magma Dragoon",
-    "path": "folders/Objects/Bosses/Magma Dragoon.yy",
+    "path": "folders/Objects/Bosses/X4/Magma Dragoon.yy",
   },
   "parentObjectId": {
     "name": "obj_magma_dragoon_landfire",

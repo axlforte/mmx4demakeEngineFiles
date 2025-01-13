@@ -13,5 +13,10 @@ if(armor_check)
  armor_check = 0;
 }
 
+if(trail_cutoff){
+	var len = ds_list_size(trail_off);
+	ds_list_set(trail_off, len + 1, false);
+}
+
 G.player_x = x;
 G.player_y = y;

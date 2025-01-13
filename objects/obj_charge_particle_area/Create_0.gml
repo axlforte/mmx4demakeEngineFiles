@@ -1,10 +1,13 @@
-particle_delay = 2;
+particle_delay = 1;
 particle_life = 16;
 particle_dist = 36;
 particles = [];//x,y,frame, time alive, direction
 index = 0;
 color = c_white;
 particle_image = spr_charge_particle;
+
+center_loop = 0;
+center_loop_limit = 10;
 for(i = 0; i < particle_life / particle_delay + 1; i++){
 	particles[i,0] = 0;
 	particles[i,1] = 32 + random_range(0,5);

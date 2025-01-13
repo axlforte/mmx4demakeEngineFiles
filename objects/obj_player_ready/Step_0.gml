@@ -26,4 +26,8 @@ if (t == 83) {
 	exit;
 }
 
+if(t == 5){
+	sound_play(snd_ready_mmx4);
+}
+
 animation_t++;

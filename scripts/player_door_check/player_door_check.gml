@@ -15,12 +15,13 @@ function player_door_check() {
 		if(lefty || righto || footsies){
 			var door = instance_nearest(x,y,obj_door_parent);
 			
-			if((door.dir == 1 && lefty) || (door.dir == -1 && righto)){
+			if((door.dir == 1 && lefty) || (door.dir == -1 && righto) || door.has_been_used){
 				return;
 			}
 			with (door) {
 				target = other;
 				state_set(door_states.open);
+				has_been_used = true;
 			}
 			h_speed = 0;
 			v_speed = 0;

@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Boss Weapons",
-    "path": "folders/Objects/Players/Characters/X/Shots/Boss Weapons.yy",
+    "name": "X1",
+    "path": "folders/Objects/Players/Characters/X/Shots/Boss Weapons/X1.yy",
   },
   "parentObjectId": {
     "name": "obj_player_shot_parent",

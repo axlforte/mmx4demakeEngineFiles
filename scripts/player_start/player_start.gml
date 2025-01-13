@@ -88,11 +88,13 @@ function player_start() {
 	in_air = 0;
 	limit_y_death = room_height + sprite_height;
 	trail_init(5);
-	player_trail_set(6, 4);
+	player_trail_set(8, 3);
 	trail_sprites_enabled = true;
 	trail_sprites = ds_list_create();
 	trail_mode = 0;
 	trail_color = $f69701;
+	trail_cutoff = false;
+	trail_off = ds_list_create();
 
 	// Animation
 	animation_init();
@@ -284,7 +286,7 @@ function player_start() {
 function player_trail_set(interval, amount) {
 	trail_speed = 1 / interval;
 	trail_size = (amount + 1) * interval;
-	trail_sprites_enabled = false;
+	trail_sprites_enabled = true;
 	trail_sprites_remove = false;
 }
 

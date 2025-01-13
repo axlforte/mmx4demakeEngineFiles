@@ -3,7 +3,9 @@ function player_pause_check() {
 		if (G.pause_type != pause_types.door) {
 			pause_set(!global.paused, pause_types.normal);
 			if(instance_exists(obj_pause_menu)){
-				instance_destroy(instance_find(obj_pause_menu,0));
+				with(obj_pause_menu){
+					piss_off = true;
+				}
 				player_variables();
 				script_try(variables_script);
 				script_try(armor_script);

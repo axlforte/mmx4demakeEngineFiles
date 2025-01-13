@@ -6,6 +6,9 @@ squish = 0;
 save_timer = 0;
 saved = false;
 
+check_tick = 0;
+check_tick_delay = 5;
+
 players_fat_ass = 23;
 
 save_loc = "intro";

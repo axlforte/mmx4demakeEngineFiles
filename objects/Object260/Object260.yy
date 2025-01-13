@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Slash Beast",
-    "path": "folders/Objects/Bosses/Slash Beast.yy",
+    "path": "folders/Objects/Bosses/X4/Slash Beast.yy",
   },
   "parentObjectId": {
     "name": "par_boss",

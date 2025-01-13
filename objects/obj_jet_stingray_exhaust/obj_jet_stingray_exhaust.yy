@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Jet Stingray",
-    "path": "folders/Objects/Bosses/Jet Stingray.yy",
+    "path": "folders/Objects/Bosses/X4/Jet Stingray.yy",
   },
   "parentObjectId": {
     "name": "obj_player_effect_parent",

@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Sprites",
-    "path": "folders/Objects/Bosses/Launch Octopus/Sprites.yy",
+    "path": "folders/Objects/Bosses/Extra/Launch Octopus/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

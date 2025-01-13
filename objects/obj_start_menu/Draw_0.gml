@@ -9,7 +9,7 @@ switch(state) {
 	#endregion
 	#region Main
 	case menu_states.main:
-		//draw_sprite(spr_start_menu, 0, 0, 0);
+		//draw_sprite(final_logo, 0, 0, 0);
 		animation2_draw();
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];

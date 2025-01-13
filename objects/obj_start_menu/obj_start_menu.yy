@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_start_menu",
-    "path": "sprites/spr_start_menu/spr_start_menu.yy",
+    "name": "final_logo",
+    "path": "sprites/final_logo/final_logo.yy",
   },
   "spriteMaskId": null,
   "visible": true,

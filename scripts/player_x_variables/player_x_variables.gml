@@ -6,6 +6,16 @@ function player_x_variables() {
 	// Weapon Test
 	//player_weapon_set(1, weapons.homing_torpedo);
 	//player_weapon_set(2, weapons.storm_tornado);
+	player_weapon_set(1, weapons.lightning_web);
+		player_weapon_set(2, weapons.frost_spike);
+		player_weapon_set(3, weapons.soul_body);
+		player_weapon_set(4, weapons.rising_fire);
+		player_weapon_set(5, weapons.ground_hunter);
+		player_weapon_set(6, weapons.aiming_laser);
+		player_weapon_set(7, weapons.double_cyclone);
+		player_weapon_set(8, weapons.twin_slasher);
+		player_weapon_set(9, weapons.shotgun_ice);
+	
 	player_x_weapon_reset();
 	
 	weapon[2] = weapons.x_buster;
@@ -34,27 +44,29 @@ function player_x_variables() {
 
 function player_x_weapon_reset(){
 	if(global.web_spider_defeat)
-		player_weapon_set(1, weapons.lightning_web);
+		weapon_selectable[weapons.lightning_web] = true;
 	if(global.frost_walrus_defeat)
-		player_weapon_set(2, weapons.frost_spike);
+		weapon_selectable[weapons.frost_spike] = true;
 	if(global.split_mushroom_defeat)
-		player_weapon_set(3, weapons.soul_body);
+		weapon_selectable[weapons.soul_body] = true;
 	if(global.magma_dragoon_defeat)
-		player_weapon_set(4, weapons.rising_fire);
+		weapon_selectable[weapons.rising_fire] = true;
 	if(global.jet_stingray_defeat)
-		player_weapon_set(5, weapons.ground_hunter);
+		weapon_selectable[weapons.ground_hunter] = true;
 	if(global.cyber_pea_cock_defeat)
-		player_weapon_set(6, weapons.aiming_laser);
+		weapon_selectable[weapons.aiming_laser] = true;
 	if(global.storm_owl_defeat)
-		player_weapon_set(7, weapons.double_cyclone);
+		weapon_selectable[weapons.double_cyclone] = true;
 	if(global.slash_beast_defeat)
-		player_weapon_set(8, weapons.twin_slasher);
+		weapon_selectable[weapons.twin_slasher] = true;
+	dash_up_unlocked = global.pharoah_dash;
 }
 
 function player_trail_minimize(){
-	player_trail_set(0,3);
+	trail_cutoff = true;
 }
 
 function player_trail_maximize(){
-	player_trail_set(8,3);
+	trail_cutoff = false;
+	ds_list_clear(trail_off);
 }

@@ -45,5 +45,8 @@ function scr_save_game_data() {
 	ini_write_real("SKILL", "concussive redirectors", global.concussive_redirectors);
 	ini_write_real("SKILL", "sense of duty", global.sense_of_duty);
 	
+	//secret shit
+	ini_write_real("SECRET", "pharoah dash", global.pharoah_dash);
+	
 	ini_close();
 }

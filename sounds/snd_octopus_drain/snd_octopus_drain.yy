@@ -13,7 +13,7 @@
   "duration": 0.378685,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Objects/Bosses/Launch Octopus/Sounds.yy",
+    "path": "folders/Objects/Bosses/Extra/Launch Octopus/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

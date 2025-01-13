@@ -1,23 +1,27 @@
-if(abs(global.player_x - x) < players_fat_ass && global.player_y > y - 2){
-	if(squish < 4){
-		instance_nearest(x,y,obj_player_parent).y ++;
-		squish++;
-	}
-	save_timer++;
-} else {
-	if(squish > 0){
-		if(abs(global.player_x - x) < players_fat_ass){
-			instance_nearest(x,y,obj_player_parent).y --
+if(check_tick == check_tick_delay){
+	check_tick = 0;
+	if(abs(global.player_x - x) < players_fat_ass && global.player_y > y - 2 && global.player_y < y + 32){
+		if(squish < 4){
+			instance_nearest(x,y,obj_player_parent).y ++;
+			squish++;
 		}
-		save_timer = 0;
-		saved = false;
-		squish--;
+		save_timer++;
+	} else {
+		if(squish > 0){
+			if(abs(global.player_x - x) < players_fat_ass){
+				instance_nearest(x,y,obj_player_parent).y --
+			}
+			save_timer = 0;
+			saved = false;
+			squish--;
+		}
 	}
+
+	coll.y = y + 16 + squish;
+	coll.x = x - 16;
+} else {
+	check_tick++;
 }
-
-coll.y = y + 16 + squish;
-coll.x = x - 16;
-
 if(save_timer > 40 && !saved){
 	save_timer --;
 	global.game_save_num = 1;
