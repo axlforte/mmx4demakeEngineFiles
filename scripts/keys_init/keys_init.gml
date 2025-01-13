@@ -28,17 +28,17 @@ function keys_init() {
 	global.key_text[e_key.weapon2] = "WEAPON2";
 	global.key_text[e_key.start]   = "MENU";
 	// Keyboard
-	global.key_config[e_key.up]      = vk_up;
-	global.key_config[e_key.down]    = vk_down;
-	global.key_config[e_key.left]    = vk_left;
-	global.key_config[e_key.right]   = vk_right;
-	global.key_config[e_key.dash]    = ord("D");
-	global.key_config[e_key.jump]    = ord("V");
-	global.key_config[e_key.shoot]   = ord("X");
-	global.key_config[e_key.shoot2]  = ord("C");
-	global.key_config[e_key.special] = ord("Z");
-	global.key_config[e_key.weapon1] = ord("A");
-	global.key_config[e_key.weapon2] = ord("S");
+	global.key_config[e_key.up]      = ord("W");
+	global.key_config[e_key.down]    = ord("S");
+	global.key_config[e_key.left]    = ord("A");
+	global.key_config[e_key.right]   = ord("D");
+	global.key_config[e_key.dash]    = ord("L");
+	global.key_config[e_key.jump]    = ord("K");
+	global.key_config[e_key.shoot]   = ord("J");
+	global.key_config[e_key.shoot2]  = ord("I");
+	global.key_config[e_key.special] = ord("U");
+	global.key_config[e_key.weapon1] = ord("O");
+	global.key_config[e_key.weapon2] = ord("P");
 	global.key_config[e_key.start]   = vk_enter;
 	// Gamepad
 	global.gamepad_config[e_key.up]      = gp_padu;

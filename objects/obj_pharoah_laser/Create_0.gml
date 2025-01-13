@@ -1,0 +1,13 @@
+event_inherited();
+hp = 1;
+grav = 0;
+h_speed = 0;
+v_speed = 0;
+endo = false;
+damage_set(3, 5, 8, 12);
+//abs_hspeed = array_get([4, 5, 7, 10], global.difficulty);
+damageable = false;
+shot_type = 0;
+//phy_type = phy_types.NEW;
+through_walls = true;
+audio_play(Ride_jump);

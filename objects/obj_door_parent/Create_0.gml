@@ -40,3 +40,4 @@ dir = image_yscale;
 camera_id = -1;
 boss_door = false;
 is_vertical = (abs(sprite_width) > abs(sprite_height));
+has_been_used = false;

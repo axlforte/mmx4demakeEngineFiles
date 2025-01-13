@@ -330,7 +330,7 @@ function player_dash_air_variables() {
 	dash_air_immunity = false; // Does the player Immunity have immunity when using air dash? 
 	dash_air_blink = false; // Does the player blink when using air dash?
 	// Dash Up
-	dash_up = false; // Is the player using Up Air Dash?
+	dash_up = global.pharoah_dash; // Is the player using Up Air Dash?
 	dash_up_length = 32; // Dash Air Length
 	dash_up_unlocked = false; // Set to true when an armor unlocks this feature
 

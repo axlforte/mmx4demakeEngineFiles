@@ -7,7 +7,7 @@ mySolid3 = instance_create_depth(bbox_left+8,y+1,depth+1,obj_square_16);
     mySolid3.image_xscale = 2;
     mySolid3.image_yscale = 1.5;
 
-armor = "x1"; //x1,x2,x3,ult,ult_x8,etc
+armor = "x4"; //x1,x2,x3,ult,ult_x8,etc
 part = 3 //1- head, 2- body, 3- arms, 4- legs
 
 chip = -1;
@@ -41,8 +41,5 @@ Alpha = 0;
 column_sprite = spr_light_capsule_column_psx;
 hologram_sprite = spr_light_capsule_hologram;
 
-
-keys_init();
-keys_apply();
 scr_keys_reset();
 dia = noone;

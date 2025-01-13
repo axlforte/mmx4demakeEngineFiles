@@ -165,6 +165,7 @@ function upgrade_values(){
 	global.travelers_companion = false;
 	global.concussive_redirectors = false;
 	global.sense_of_duty = false;
+	global.pharoah_dash = false;
 	
 	global.upgrade_names = [
 	"super dash",//sd

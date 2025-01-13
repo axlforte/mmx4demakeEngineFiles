@@ -16,7 +16,11 @@ function player_x_buster_x4(lvl = -1, t) {
 		break;
 		// Fully-Charged shot
 		case 2:
-			player_shoot_projectile(obj_player_x_shot_x2_3);
+			if(global.energy_infusion){
+				player_shoot_projectile(obj_player_x_shot_x4);
+			} else {
+				player_shoot_projectile(obj_player_x_shot_x2_3);
+			}
 		break;
 		// Super-Charged shot
 		case 3:

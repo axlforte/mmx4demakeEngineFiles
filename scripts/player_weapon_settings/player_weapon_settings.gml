@@ -5,12 +5,6 @@ function player_weapon_settings() {
 		z_buster,
 		z_saber,
 		// X
-		storm_tornado,
-		homing_torpedo,
-		sonic_slicer,
-		wheel_cutter,
-		acid_splash,
-		ray_splasher,
 		hyper_charge,
 		falcon_giga,
 		x2_giga_crush,
@@ -24,20 +18,15 @@ function player_weapon_settings() {
 		double_cyclone,
 		twin_slasher,
 		ground_hunter,
-		// extra weapons
-		hyper_bomb,
-		quick_boomerang,
-		hard_knuckle,
-		pharoah_wave,
-		gyro_attack,
-		blizzard_shot,
-		slash_claw,
-		thunder_claw,
-		concrete_shot,
-		triple_blade,
-		blazing_torch,
-		kendo_parry,
-		craft_grenade,
+		// X1
+		storm_tornado,
+		homing_torpedo,
+		shotgun_ice,
+		fire_wave,
+		rolling_shield,
+		boomerang_cutter,
+		electric_spark,
+		chameleon_sting,
 		// Zero
 		messenko,
 		z_buster_x5,
@@ -59,8 +48,9 @@ function player_weapon_settings() {
 		weapon_damage_refill[i] = 0;
 		weapon_fill_rate[i] = 0;
 		weapons_script[i] = noone;
-		weapon_selectable[i] = true;
+		weapon_selectable[i] = false;
 		weapon_full_sound[i] = noone;
+		weapon_name[i] = "undefined";
 		weapon_refill_enabled[i] = true;
 		weapon_level_id[i] = 0; // Use this for weapons that use the same script and only changes the shot or its properties
 	}
@@ -123,8 +113,11 @@ function player_weapon_settings() {
 	weapon_costs[weapons.double_cyclone] = [0.5];
 	weapon_costs[weapons.frost_spike] = [3];
 	weapon_costs[weapons.lightning_web] = [2];
-	
 	weapon_costs[weapons.ground_hunter] = [0.25];
+	//selectability
+	weapon_selectable[weapons.x_buster] = true;
+	weapon_selectable[weapons.z_saber] = true;
+	weapon_selectable[weapons.shotgun_ice] = true;
 	// Max Level
 	weapon_max_level[weapons.x_buster] = infinity;
 	weapon_max_level[weapons.z_buster] = infinity;
@@ -147,13 +140,10 @@ function player_weapon_settings() {
 	weapons_script[weapons.z_buster] = player_zero_buster_x1;
 	weapons_script[weapons.storm_tornado] = player_x_storm_tornado;
 	weapons_script[weapons.homing_torpedo] = player_x_homing_torpedo;
-	weapons_script[weapons.sonic_slicer] = player_x_homing_torpedo;
-	weapons_script[weapons.wheel_cutter] = player_x_homing_torpedo;
-	weapons_script[weapons.acid_splash] = player_x_homing_torpedo;
-	weapons_script[weapons.ray_splasher] = player_x_homing_torpedo;
 	weapons_script[weapons.hyper_charge] = player_x_hyper_charge;
 	weapons_script[weapons.z_buster_x5] = player_zero_buster_x5;
 	weapons_script[weapons.nightmare_saber] = player_zero_nightmare_saber;
+	weapons_script[weapons.shotgun_ice] = player_x_shotgun_ice;
 	
 	weapons_script[weapons.lightning_web] = player_lightning_web;
 	weapons_script[weapons.rising_fire] = player_rising_fire;
@@ -163,4 +153,16 @@ function player_weapon_settings() {
 	weapons_script[weapons.aiming_laser] = player_aiming_laser;
 	weapons_script[weapons.ground_hunter] = player_ground_chaser;
 	weapons_script[weapons.frost_spike] = player_frost_spike;
+	
+	//names
+	weapon_name[weapons.x_buster] = "X BUSTER";
+	weapon_name[weapons.lightning_web] = "L. WEB";
+	weapon_name[weapons.rising_fire] = "R. FIRE";
+	weapon_name[weapons.double_cyclone] = "DOUBLE C.";
+	weapon_name[weapons.twin_slasher] = "TWIN S.";
+	weapon_name[weapons.soul_body] = "SOUL B.";
+	weapon_name[weapons.aiming_laser] = "A. LASER";
+	weapon_name[weapons.ground_hunter] = "G. HUNTER";
+	weapon_name[weapons.frost_spike] = "F. SPIKE";
+	weapon_name[weapons.z_saber] = "SABER";
 }

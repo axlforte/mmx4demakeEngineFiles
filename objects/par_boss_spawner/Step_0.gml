@@ -3,6 +3,7 @@ if (spawn) {
 	var t_limit = timer_limit[timer_id];
 	if (timer_id == 0) {
 		if (timer == 0 && boss_object != noone) {
+			global.prev_music = global.current_music
 			music_play(boss_encounter_theme);	
 		}
 		if (timer > t_limit) {

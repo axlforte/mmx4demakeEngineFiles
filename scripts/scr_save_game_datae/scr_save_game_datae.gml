@@ -45,6 +45,9 @@ function scr_load_game_data(){
 	global.concussive_redirectors = ini_read_real("SKILL", "concussive redirectors", false);
 	global.sense_of_duty = ini_read_real("SKILL", "sense of duty", false);
 	
+	//ooh secrets
+	global.pharoah_dash = ini_read_real("SECRET", "pharoah dash", false);
+	
 	ini_close();
 }
 

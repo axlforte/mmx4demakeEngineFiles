@@ -1,4 +1,5 @@
 event_inherited();
+prev_mus = global.prev_music;
 persist = true;
 is_boss = true;
 is_active = false;

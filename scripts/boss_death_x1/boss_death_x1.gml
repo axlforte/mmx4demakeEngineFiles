@@ -17,6 +17,9 @@ function boss_death_x1() {
 				player_check_idle();	
 			}
 		}
+		if(object_index == obj_pharoah_man){
+			global.pharoah_dash = true;
+		}
 		with (obj_player_parent) {
 			if (armor_is_full("") && FULL == "") {
 				if (hp == max_hp) {
@@ -25,6 +28,7 @@ function boss_death_x1() {
 					}
 				}
 			}
+			player_x_weapon_reset();
 		}
 	}
 	// Resume all sounds
@@ -32,7 +36,7 @@ function boss_death_x1() {
 		audio_resume_all();
 		pause_set(false);
 		with (obj_player_parent) {
-			locked = true;	
+			//locked = true;	
 		}
 	}
 	// Create red transparency effect
@@ -81,16 +85,17 @@ function boss_death_x1() {
 	}
 	if (t == 507) {
 		with (obj_player_parent) {
-			walking_to_x = !other.skip_complete_walk;
-			dest_x = obj_camera_rds.mid_x;
 			boss_complete_music = "BossDefeated";
+			music_play(boss_complete_music);
 		}
+		global.current_music = prev_mus;
 	}
 	
-	if(t == 700){
+	if(t == 860){
 		with (obj_player_parent) {
-			locked = false;
+			//locked = false;
 			pause_enabled = true;
+			//music_play(global.current_music);
 			music_play(global.current_music);
 		}
 		instance_destroy();

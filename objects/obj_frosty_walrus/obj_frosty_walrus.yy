@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Frost Walrus",
-    "path": "folders/Objects/Bosses/Frost Walrus.yy",
+    "path": "folders/Objects/Bosses/X4/Frost Walrus.yy",
   },
   "parentObjectId": {
     "name": "par_boss",

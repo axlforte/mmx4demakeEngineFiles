@@ -1,13 +1,13 @@
 event_inherited();
 // Damage
-atk = 1;
+atk = 5;
 shot_level = 1;
 hit_if_shot_level_is_equal = true;
 boss_damage[? noone] = 3; // Default damage on bosses
 sound = snd_player_x_shot_x2_3;
 abs_hspeed_max = 7.5;
-destroy_if_hit = false;
-anti_destroy = true;
+//destroy_if_hit = false;
+//anti_destroy = true;
 animation_add("S",
 [
 	0, 0,
@@ -41,4 +41,4 @@ animation_add("B",
 ]);
 
 animation_play("S");
-x += 32 * image_xscale;
+alarm[0] = 1;

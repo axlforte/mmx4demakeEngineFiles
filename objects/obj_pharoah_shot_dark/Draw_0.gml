@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_pharoah_crescent, 0, x, y, 1, 1, rot++, c_white, 1);

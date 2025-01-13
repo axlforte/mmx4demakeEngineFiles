@@ -15,8 +15,11 @@ function player_draw_event() {
 		}
 		for (var i = size - 2; i > 0; i--) {
 			var tr = trail_sprites[| i];
-			if (i mod trail_limit == 0) {
-				player_draw_trail_sprite(tr.sprite, tr.index, tr.x - x + floor(x), tr.y, tr.xs, tr.ys, lerp(0.2, 1, i / trail_size), (trail_mode == 1 ? trail_color : c_white));
+			if(ds_list_size(trail_off) < i){
+				
+				if (i mod trail_limit == 0) {
+					player_draw_trail_sprite(tr.sprite, tr.index, tr.x - x + floor(x), tr.y, tr.xs, tr.ys, lerp(0.2, 1, (i - ds_list_size(trail_off)) / trail_size), (trail_mode == 1 ? trail_color : c_white));
+				}
 			}
 		}
 		gpu_set_fog(false, c_black, 0, 0);

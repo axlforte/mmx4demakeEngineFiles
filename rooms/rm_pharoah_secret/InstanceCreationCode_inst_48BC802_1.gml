@@ -1,1 +1,1 @@
-boss_object = obj_jet_stingray;
+boss_object = obj_pharoah_man;

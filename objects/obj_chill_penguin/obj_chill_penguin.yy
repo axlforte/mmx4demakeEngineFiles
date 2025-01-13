@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Chill Penguin",
-    "path": "folders/Objects/Bosses/Chill Penguin.yy",
+    "path": "folders/Objects/Bosses/Extra/Chill Penguin.yy",
   },
   "parentObjectId": {
     "name": "par_boss",

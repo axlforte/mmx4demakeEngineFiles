@@ -3,8 +3,8 @@ function player_state_dolor() {
 	
 	if (t == 0) {
 		//hide dash trail
-		trail_sprites_enabled = false;
-		trail_sprites_remove = true;
+		player_trail_minimize();
+		pause_enabled = false;
 		
 		if(global.concussive_redirectors && !is_on_floor() && dolor_damage > 1.5){
 			dolor_damage -= 1;
@@ -66,7 +66,7 @@ function player_state_dolor() {
 		grav = gravity_default;
 	}
 	
-	if (array_contains([3, 5, 7, 8, 10, 12, 14, 16, 18, 20, 21, 23, 25, 27, 29], t)) {
+	if (array_contains([1, 2, 3, 4, 5, 7, 8, 10, 12, 14, 16, 18, 20, 21, 23, 25, 27, 29], t)) {
 		move_x(-dir);
 	}
 	
@@ -79,6 +79,7 @@ function player_state_dolor() {
 			player_state_set(states.idle, 0);
 			animation_play("idle", 0);
 		}
+		pause_enabled = true;
 	
 		player_activate_immunity(immunity_types.dolor);
 		if (defense_shield_unlocked && defense_shield_enabled) {

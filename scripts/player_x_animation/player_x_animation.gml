@@ -40,6 +40,14 @@ function player_x_animation() {
 		7, 3,
 	], 7);
 	
+	animation_add("dash_up",
+	[
+		0, 0,
+		2, 1,
+		5, 2,
+		7, 3,
+	], 7);
+	
 	animation_add("dash_end|dash",
 	[
 		0, 3,

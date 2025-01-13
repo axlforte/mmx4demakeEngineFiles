@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_x_shot_2",
-    "path": "sprites/spr_x_shot_2/spr_x_shot_2.yy",
+    "name": "spr_x_shot_x4",
+    "path": "sprites/spr_x_shot_x4/spr_x_shot_x4.yy",
   },
   "spriteMaskId": null,
   "visible": true,

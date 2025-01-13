@@ -1,5 +1,6 @@
 function music_play(music_name = "") {
 	music_stop();
+	global.current_music = music_name;
 	global.music_played_intro = false;
 	// Stream Audio
 	var snd = noone, snd2 = noone;
