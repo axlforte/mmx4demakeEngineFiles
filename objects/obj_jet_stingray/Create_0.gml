@@ -1,3 +1,6 @@
+
+//MUST REWORK IT DOESNT USE THE PROPER ATTACK SYSTEM
+
 event_inherited();
 idle_time_to_turn = 5;
 intro_limit = 102;

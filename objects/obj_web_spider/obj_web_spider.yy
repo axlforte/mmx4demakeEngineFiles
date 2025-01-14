@@ -5,12 +5,13 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Web Spider",
-    "path": "folders/Objects/Bosses/Web Spider.yy",
+    "name": "web spider",
+    "path": "folders/Objects/Bosses/X4/web spider.yy",
   },
   "parentObjectId": {
     "name": "par_boss",
@@ -35,9 +36,6 @@
     "name": "spr_web_spider",
     "path": "sprites/spr_web_spider/spr_web_spider.yy",
   },
-  "spriteMaskId": {
-    "name": "mask_launch_octopus",
-    "path": "sprites/mask_launch_octopus/mask_launch_octopus.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }
