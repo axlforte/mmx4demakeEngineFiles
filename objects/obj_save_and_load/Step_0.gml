@@ -31,6 +31,7 @@ if(key_p_right){
 
 if(key_p_start){
 	scr_load_game_data();
+	global.door_id = -2;
 	room = get_save_location_in_room_terms();	
 }
 

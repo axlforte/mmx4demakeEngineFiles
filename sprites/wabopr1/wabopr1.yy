@@ -30,10 +30,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3dee92da-a76f-4c57-a6ae-7289343c9e9e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 0,
+  "origin": 4,
   "parent": {
     "name": "web spider",
-    "path": "folders/Sprites/Maverick/Bosses/web spider.yy",
+    "path": "folders/Sprites/Bosses/web spider.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -73,8 +73,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 32,
+    "yorigin": 32,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

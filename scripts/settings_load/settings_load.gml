@@ -9,6 +9,9 @@ function settings_load() {
 
 	global.settings[1] = ini_read_real("SETTINGS", "Input", input_types.keyboard);
 	global.camera_16_by_9 = ini_read_real("SETTINGS", "scale", false);
+	global.notes = ini_read_real("SETTINGS", "notes", true);
+	global.hit_numbers = ini_read_real("SETTINGS", "hitnums", false);
+	global.DialougeSpeed = ini_read_real("SETTINGS", "dialouge speed", 2);
 
 	G.voice_language = ini_read_string("AUDIO", "Voice Language", "SNES");
 	global.sfx_volume = ini_read_real("AUDIO", "Sound Volume", 1);

@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "knot beret",
-    "path": "folders/Sprites/Maverick/Enemy/X4/knot beret.yy",
+    "path": "folders/Sprites/Enemy/X4/knot beret.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -30,7 +30,7 @@
   "origin": 9,
   "parent": {
     "name": "Storm Eagle",
-    "path": "folders/Sprites/Maverick/Bosses/Storm Eagle.yy",
+    "path": "folders/Sprites/Bosses/Storm Eagle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

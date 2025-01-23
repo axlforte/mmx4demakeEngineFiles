@@ -13,7 +13,10 @@
     "name": "weapons",
     "path": "folders/Objects/Players/Items/weapons.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_drop_twin_slasher",
+    "path": "objects/obj_drop_twin_slasher/obj_drop_twin_slasher.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

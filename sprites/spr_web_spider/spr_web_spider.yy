@@ -53,7 +53,7 @@
   "origin": 4,
   "parent": {
     "name": "web spider",
-    "path": "folders/Sprites/Maverick/Bosses/web spider.yy",
+    "path": "folders/Sprites/Bosses/web spider.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

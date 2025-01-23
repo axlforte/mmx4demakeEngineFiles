@@ -80,19 +80,13 @@ animation_add("shoot_air", [
 	10,12
 ],10);
 
+animation_add("headbonk", [
+	0,1
+]);
+
 animation_add("thunder",[
-	0,3,
-	6,7,
-	8,8,
-	10,9,
-	12,8,
-	20,9,
-	22,8,
-	30,9,
-	32,8,
-	34,7,
-	36,3
-],36)
+	0,2
+])
 #endregion
 
 
@@ -148,11 +142,13 @@ whirlpool_speed = 1.5;
 #endregion
 // Specific attacks
 ds_list_clear(attacks_list);
-ds_list_add(desperate_attacks, [STINGRAY.ELECTROCUTE, [1, 1/2]]);
+ds_list_add(desperate_attacks, [STINGRAY.REVERSE_TACKLE, [1, 1/2]]);
 // Attack Settings
 attack_properties[? boss_states.jump] = [2, 0];
 attack_properties[? boss_states.dash] = [2, 0];
-attack_properties[? STINGRAY.CRUNCH] = [1, 1/2];
+attack_properties[? STINGRAY.CRUNCH] = [2/3, 1/2];
+attack_properties[? STINGRAY.CHARBLARGE] = [1, 1/5];
+attack_properties[? STINGRAY.DASH] = [1, 1/4];
 // Desperate attacks [state, chances]
 floor_state = STINGRAY.CRUNCH;
 shielded_states[? OCTOPUS.WHIRLPOOL] = 0;

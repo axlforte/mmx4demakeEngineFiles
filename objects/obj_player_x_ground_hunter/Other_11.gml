@@ -39,6 +39,10 @@ else
 			if(deathTimer > 15){
 				instance_destroy();
 			}
+			if(!is_on_floor(5)){
+				grounded = false;
+				v_speed = 3;
+			}
 		}
 	}
 }

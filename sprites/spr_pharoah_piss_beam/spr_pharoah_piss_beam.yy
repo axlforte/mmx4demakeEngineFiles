@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "Pharoah Man",
-    "path": "folders/Sprites/Maverick/Bosses/Pharoah Man.yy",
+    "path": "folders/Sprites/Bosses/Pharoah Man.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

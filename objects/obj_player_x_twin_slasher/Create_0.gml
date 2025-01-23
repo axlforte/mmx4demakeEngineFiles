@@ -5,6 +5,7 @@ doReverseShot = true;
 
 destroy_if_hit = true;
 atk = 2;
+boss_damage[? obj_web_spider] = 3;
 // Destroy Animation
 animation_add("D",
 [

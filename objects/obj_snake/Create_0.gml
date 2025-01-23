@@ -21,3 +21,5 @@ link_sprites = [
 gravity_default = 0.25;
 
 link_image = spr_snake_segments;
+
+flip_cos_wall = false;

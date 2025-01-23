@@ -19,18 +19,19 @@ switch(state) {
 		}
 		draw_string(252, 224, "v" + GM_version);
 		if (!global.support_shaders)
-			draw_string(4, 224, "NO SHADER SUPPORT");
+			draw_string(4, 224, "NO SHADER SUPPORT KNUCKLEHEAD");
 	break;
 	#endregion
 	#region Game Mode/Difficulty Mode
 	case menu_states.game_mode:
 	case menu_states.difficulty_mode:
+	case menu_states.save_select:
 		draw_string_center(160, 8, titles[state], colors.gray);
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 112, _y = 92 + 24*i;
 			if(selected_item == i && item[0] == "ZERO"){
-				draw_string(_x, _y, "BECAUSE SCYTHER SAID SO", (selected_item == i ? colors.orange : colors.blue));
+				draw_string(_x, _y, "PREPARE TO DIE A LOT", (selected_item == i ? colors.orange : colors.blue));
 			} else {
 				draw_string(_x, _y, item[0], (selected_item == i ? colors.orange : colors.blue));
 			}
@@ -69,10 +70,11 @@ switch(state) {
 	#region Options
 	case menu_states.option:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		draw_string(176,184,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
-		draw_string(176,208,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
-		draw_string(240, 80, string(global.camera_16_by_9), colors.orange);
-		draw_string(220, 160, string(global.one_px_tall_health_bar), colors.orange);
+		draw_string(240, 80, string(global.DialougeSpeed),                     colors.orange);
+		draw_string(220, 112,string(global.notes),                             colors.orange);
+		draw_string(220, 128,string(global.hit_numbers),                       colors.orange);
+		draw_string(176, 144,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
+		draw_string(176, 160,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 64, _y = 64 + 16*i;

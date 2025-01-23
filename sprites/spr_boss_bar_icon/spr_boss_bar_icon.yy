@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Bar",
-    "path": "folders/Sprites/Maverick/Bosses/Bar.yy",
+    "path": "folders/Sprites/Bosses/Bar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -33,7 +33,7 @@
   "origin": 4,
   "parent": {
     "name": "Dig Labour",
-    "path": "folders/Sprites/Maverick/Enemy/X1/Dig Labour.yy",
+    "path": "folders/Sprites/Enemy/X1/Dig Labour.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

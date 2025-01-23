@@ -5,6 +5,7 @@ enum menu_states {
 	difficulty_mode,
 	player_select,
 	armor_select,
+	save_select,
 	multiplayer,
 	option,
 	key_config,
@@ -43,6 +44,7 @@ transition_create(transition_types.fade_in);
 titles[menu_states.main]            = "";
 titles[menu_states.game_mode]       = _("GAME MODE");
 titles[menu_states.difficulty_mode] = _("DIFFICULTY MODE");
+titles[menu_states.save_select]     = _("SAVE SLOT SELECT");
 titles[menu_states.player_select]   = _("PLAYER SELECT");
 titles[menu_states.option]          = _("OPTION MENU");
 titles[menu_states.key_config]      = _("KEY CONFIG");
@@ -58,16 +60,23 @@ titles[menu_states.volume]		    = _("VOLUME CONTROL");
 #region Main
 /// Main
 page_items[menu_states.main] = [
-	[_("NEW GAME"), [100, 136, 144, 20]],
-	[_("LOAD GAME"),       [92, 160, 144, 20]],
-	[_("OPTIONS"),    [92, 172, 144, 20]],
-	[_("EXIT"),       [92, 184, 144, 20]]
+	[_("New Game"), [100, 536, 144, 20]],
+	[_("Load Game"),       [92, 560, 144, 20]],
+	[_("Settings"),    [92, 572, 144, 20]],
+	[_("Quit"),       [92, 584, 144, 20]]
 ];
 #endregion
 #region Game Mode
 page_items[menu_states.game_mode] = [
 	[_("SINGLE PLAYER"), [92, 88, 144, 20]]/*,
 	[_("MULTIPLAYER"),   [92, 128, 144, 20]]*/
+];
+#endregion
+#region Game Mode
+page_items[menu_states.save_select] = [
+	[_("Slot 1"), [92, 88, 144, 20]],
+	[_("Slot 2"), [92, 88, 144, 20]],
+	[_("Slot 3"), [92, 88, 144, 20]]
 ];
 #endregion
 #region load
@@ -105,14 +114,14 @@ if (G.mobile) {
 }
 
 page_items[menu_states.option] = [
-	[_("WINDOW SIZE"), [64, 64, 200, 20], wsize_options],
-	[_("16 BY 9 ASPECT RATIO"), [64, 80, 200, 20]],
-	[_("KEY CONFIG"), [64, 112, 96, 20]],
-	[_("AUDIO SETTINGS"), [64, 128, 144, 20]],
-	[_("ONE PX TALL HP BAR"),[64, 144, 144, 20]],
-	[_("SFX"),[64, 160, 144, 20]],
-	[_("BGM"),[64, 176, 144, 20]],
-	[_("BACK"), [64, 192, 144, 20]]
+	[_("Window Size"), [64, 64, 200, 20], wsize_options],
+	[_("Dialouge Speed"), [64, 80, 200, 20]],
+	[_("Key Configuration"), [64, 112, 96, 20]],
+	[_("Pickup Notifications"), [64, 128, 144, 20]],
+	[_("Hit Numbers"),[64, 144, 144, 20]],
+	[_("Effect Volume"),[64, 160, 144, 20]],
+	[_("Music Volume"),[64, 176, 144, 20]],
+	[_("Back"), [64, 192, 144, 20]]
 ];
 
 #endregion

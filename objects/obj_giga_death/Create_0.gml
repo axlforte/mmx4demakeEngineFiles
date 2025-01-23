@@ -1,6 +1,6 @@
 #region Variables
 event_inherited();
-hp = 10;
+hp = 8;
 collide_damage = 3;
 face_x = false;
 if (nearest_player.x > x)

@@ -281,6 +281,8 @@ function player_start() {
 	if(global.travelers_companion){
 		instance_create_depth(x,y,0,obj_giro_navi);
 	}
+	
+	moved_by_platform = false;
 }
 
 function player_trail_set(interval, amount) {

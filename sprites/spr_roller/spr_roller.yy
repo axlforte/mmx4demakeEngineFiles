@@ -27,7 +27,7 @@
   "origin": 4,
   "parent": {
     "name": "roller drine",
-    "path": "folders/Sprites/Maverick/Enemy/X4/roller drine.yy",
+    "path": "folders/Sprites/Enemy/X4/roller drine.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

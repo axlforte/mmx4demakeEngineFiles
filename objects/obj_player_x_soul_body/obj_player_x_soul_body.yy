@@ -33,8 +33,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "ground_hunter1",
-    "path": "sprites/ground_hunter1/ground_hunter1.yy",
+    "name": "spr_x_complete",
+    "path": "sprites/spr_x_complete/spr_x_complete.yy",
   },
   "spriteMaskId": null,
   "visible": true,

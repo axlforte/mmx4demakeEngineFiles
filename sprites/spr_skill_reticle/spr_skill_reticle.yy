@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64965052-29e7-4b9a-aa2e-bc2c96fc55cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b0a62b2-3f54-4099-be27-90782764e7ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14ba7616-d7e3-425b-b44e-1f7382d398c8",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -25,8 +27,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Skill tree",
-    "path": "folders/Sprites/Player/Skill tree.yy",
+    "name": "Pause Menu",
+    "path": "folders/Sprites/Player/Pause Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"64965052-29e7-4b9a-aa2e-bc2c96fc55cf","path":"sprites/spr_skill_reticle/spr_skill_reticle.yy",},},},"Disabled":false,"id":"793031cb-cf07-423c-9ce9-b93dd4645dfb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2b0a62b2-3f54-4099-be27-90782764e7ea","path":"sprites/spr_skill_reticle/spr_skill_reticle.yy",},},},"Disabled":false,"id":"f315b6ab-6770-4daf-a49f-b1ba7de45413","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14ba7616-d7e3-425b-b44e-1f7382d398c8","path":"sprites/spr_skill_reticle/spr_skill_reticle.yy",},},},"Disabled":false,"id":"16537feb-71b9-4517-a22e-91d23cad51ba","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

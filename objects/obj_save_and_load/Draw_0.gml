@@ -7,13 +7,13 @@ draw_string(x + 24,y - 28, string(shit[12 + (save_length * index)]), colors.purp
 draw_string(x - 64,y + 8, string(shit[13 + (save_length * index)]) , colors.pink)
 draw_string(x - 64,y + 16, string(shit[14 + (save_length * index)]), colors.red)
 draw_sprite(spr_x_idle, 0, x + player_x,y + player_y);
-if(shit[0 + (save_length * index)] == true){
+if(shit[0 + (save_length * index)] == x_armor.x4){
 	draw_sprite(spr_maverickscrap_01, 0, x + player_x,y + player_y);}
-if(shit[14 + (save_length * index)] == true){
+if(shit[14 + (save_length * index)] == x_armor.x4){
 	draw_sprite(spr_maverickscrap_01, 0, x + player_x,y + player_y);}
-if(shit[2 + (save_length * index)] == true){
+if(shit[2 + (save_length * index)] == x_armor.x4){
 	draw_sprite(spr_maverickscrap_01, 0, x + player_x,y + player_y);}
-if(shit[3 + (save_length * index)] == true){
+if(shit[3 + (save_length * index)] == x_armor.x4){
 	draw_sprite(spr_maverickscrap_01, 0, x + player_x,y + player_y);}
 if(shit[4 + (save_length * index)] == true){
 	draw_sprite(spr_maverickscrap_01, 0, x + boss_icon_data[0], y + boss_icon_data[4]);}

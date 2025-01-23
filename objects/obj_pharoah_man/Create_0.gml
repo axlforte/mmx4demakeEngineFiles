@@ -165,3 +165,6 @@ animation_play("fall");
 gravity_default = grav;
 palette_init();
 palette_texture_set(plt_pharoah);
+
+dialouge = scr_get_lines_array("english", dialouge_type.words, line.pharoah_x_1, 6);
+lines = scr_get_lines_array("english", dialouge_type.sounds, line.pharoah_x_1, 6);

@@ -22,15 +22,15 @@ if(piss_off){
 			if(key_p_wp1){
 				menu = pause_menus.upgrades;
 			} else if(key_p_wp2){
-				menu = pause_menus.upgrades;
+				menu = pause_menus.map;
 			}
 		break;
 		case(pause_menus.upgrades):
 			switch(umenu){
 				case(upgrade_menu.none):
-					if(key_p_wp1){
-						menu = pause_menus.weapons;
-					} else if(key_p_wp2){
+					if(key_p_wp1){//left
+						menu = pause_menus.map;
+					} else if(key_p_wp2){//right
 						menu = pause_menus.weapons;
 					}
 					if(key_p_shoot){
@@ -174,6 +174,13 @@ if(piss_off){
 						verify_skill_eligible(xp, title, prev_title);
 					}
 				break;
+			}
+		break;
+		case(pause_menus.map):
+			if(key_p_wp1){
+				menu = pause_menus.weapons;
+			} else if(key_p_wp2){
+				menu = pause_menus.upgrades;
 			}
 		break;
 	}

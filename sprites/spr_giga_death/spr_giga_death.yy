@@ -28,7 +28,7 @@
   "origin": 4,
   "parent": {
     "name": "giga death",
-    "path": "folders/Sprites/Maverick/Enemy/X4/giga death.yy",
+    "path": "folders/Sprites/Enemy/X4/giga death.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

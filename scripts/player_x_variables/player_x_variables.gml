@@ -14,7 +14,6 @@ function player_x_variables() {
 		player_weapon_set(6, weapons.aiming_laser);
 		player_weapon_set(7, weapons.double_cyclone);
 		player_weapon_set(8, weapons.twin_slasher);
-		player_weapon_set(9, weapons.shotgun_ice);
 	
 	player_x_weapon_reset();
 	

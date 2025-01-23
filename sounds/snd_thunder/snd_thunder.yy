@@ -10,7 +10,7 @@
   "bitRate": 172,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 1.516145,
   "parent": {
     "name": "unsorted",
     "path": "folders/Sounds/unsorted.yy",

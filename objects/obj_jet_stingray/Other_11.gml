@@ -4,7 +4,7 @@ enum STINGRAY {
 	CRUNCH,
 	CHARBLARGE,
 	LAND_STINGER,
-	ELECTROCUTE,
+	REVERSE_TACKLE,
 	LENGTH
 }
 switch (state) {
@@ -28,22 +28,25 @@ switch (state) {
 	#endregion
 	
 	#region
-	case STINGRAY.ELECTROCUTE:
+	case STINGRAY.REVERSE_TACKLE://moves under the player then goes straight up
 		if(t == 0){
 			animation_play("thunder");// plays an animation where stingray shoots projectiles
-			//show_debug_message("foos")
 		}
 		
-		if(t == 10 || t == 20 || t == 30){//shoot a projectile at the same time as the animation
-			var inst = instance_create_depth(x, y, depth - 5, obj_jet_stingray_sting);
-			inst.h_speed = array_get([4, 5, 7], global.difficulty) * dir;
-			//these are all the usual projectile information code
-			inst.dir = dir;
-			inst.xscale = -dir;
+		if(t < 45){
+			x -= 9 * dir
+		}else if(t == 45){
+			animation_play("headbonk");
+			x = global.player_x;
+			y = 1904;
+		}else if(t > 45){
+			y -= 6;
 		}
 	
-		if(t >= 36){
-			state_set(STINGRAY.CHARBLARGE);	//immediately try to charge off the ground
+		if(y < 1280){
+			y = 1280;
+			x = 9912;
+			state_set(boss_states.idle);
 		}
 	break;
 	#endregion
@@ -89,7 +92,7 @@ switch (state) {
 			grav = gravity_default * grav_magnitude;//restart gravity
 		}
 		if (t >= jump_wait && is_on_floor()) {// if gravity is on and touching floor
-			state_set(STINGRAY.CRUNCH, 0, [1]);//jump into the air for a dash
+			state_set(boss_states.idle);
 			h_speed = 0;
 			v_speed = 0;
 			grav = 0;
@@ -148,16 +151,5 @@ switch (state) {
 			state_set(STINGRAY.LAND_STINGER);
 		}
 		break;
-	#endregion
-	
-	#region edited default fall state
-	case boss_states.fall:
-		if(is_on_floor()){// if on ground jump
-			//show_debug_message("wrttt")
-			state_set(STINGRAY.CRUNCH);
-			grav = gravity_default * grav_magnitude;
-			v_speed = -1;
-			h_speed = 0;
-		}
 	#endregion
 }

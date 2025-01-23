@@ -21,13 +21,13 @@ function player_state_intro() {
 			if(global.TeleportIn){
 				if (y + 8 >= y_start) {
 					move_down(8);
-		
 					if (is_on_floor()) {
 						state_timer = 0;
 						substates[0] = 1;
+						y -= 8;
 					}
 				} else {
-					y += 8;	
+					y -= 8;	
 				}
 			} else {
 				var loopBreaker = 0;

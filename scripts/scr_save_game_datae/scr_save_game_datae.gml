@@ -3,23 +3,32 @@ function scr_load_game_data(){
 
 	// boss defeat info
 	// we can use this for unlocking the weapons too
-	for (var i = 0; i < e_boss.length; i++) {
-		//ini_write_real("BOSS", "boss " + string(i),global.boss_defeated[i]);
-		global.boss_defeated[i] = ini_read_real("BOSS", "boss" + string(i), false);
-	}
+	global.magma_dragoon_defeat = ini_read_real("BOSS", "dragoon",false);
+	global.web_spider_defeat = ini_read_real("BOSS", "spider",false);
+	global.jet_stingray_defeat = ini_read_real("BOSS", "stingray",false);
+	global.split_mushroom_defeat = ini_read_real("BOSS", "mushroom",false);
+	global.cyber_pea_cock_defeat = ini_read_real("BOSS", "peacock",false);
+	global.frost_walrus_defeat = ini_read_real("BOSS", "walrus",false);
+	global.storm_owl_defeat = ini_read_real("BOSS", "owl",false);
+	global.slash_beast_defeat = ini_read_real("BOSS", "beast",false);
 	
 	//armors
 	//easy to simply set based off of save data. really 
-	global.character_armor_unlocked[pl_char.x][x_armor.x4][4] = ini_read_real("ARMOR", "legs", false);
-	global.character_armor_unlocked[pl_char.x][x_armor.x4][3] = ini_read_real("ARMOR", "arms", false);
-	global.character_armor_unlocked[pl_char.x][x_armor.x4][2] = ini_read_real("ARMOR", "body", false);
-	global.character_armor_unlocked[pl_char.x][x_armor.x4][1] = ini_read_real("ARMOR", "head", false);
+	G.player_character_armor[pl_char.x][4] = ini_read_string("ARMOR", "legs", x_armor.none);
+	show_debug_message(G.player_character_armor[pl_char.x][4]);
+	G.player_character_armor[pl_char.x][3] = ini_read_string("ARMOR", "arms", x_armor.none);
+	G.player_character_armor[pl_char.x][2] = ini_read_string("ARMOR", "body", x_armor.none);
+	G.player_character_armor[pl_char.x][1] = ini_read_string("ARMOR", "head", x_armor.none);
 	
 	//basic info
 	global.player_max_health = ini_read_real("BASIC", "max hp", 12);
 	global.player_health = ini_read_real("BASIC", "hp", global.player_max_health);
 	global.player_exp = ini_read_real("BASIC", "xp", 0);
 	global.save_dest = ini_read_string("BASIC", "location", "stingray");
+	
+	for(var d = 0; d < array_length(global.heart_used);d++){
+		global.heart_used[d] = ini_read_real("BASIC", "heart " + string(d), false)
+	}
 	
 	//skills
 	global.super_dash = ini_read_real("SKILL", "super dash", false);

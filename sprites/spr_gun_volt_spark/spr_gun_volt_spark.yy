@@ -28,7 +28,7 @@
   "origin": 9,
   "parent": {
     "name": "Gun Volt",
-    "path": "folders/Sprites/Maverick/Enemy/X1/Gun Volt.yy",
+    "path": "folders/Sprites/Enemy/X1/Gun Volt.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

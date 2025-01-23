@@ -55,4 +55,10 @@ for (var i = 0, len = array_length(global.checkpoint_phase); i < len; i++) {
 		}
 	}
 }
+
+var note = instance_create_depth(x,y,depth,obj_notification);
+note.text = room_get_name(room);
+note.text = string_copy(note.text,4, string_length(note.text));
+note.text = string_replace_all(note.text,"_", " ");
+
 instance_destroy();

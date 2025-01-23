@@ -13,6 +13,7 @@ function projectile_collision_init() {
 	xscale = 1;
 	yscale = 1;
 	max_slope=3;
+	dies_outside_view = true;
 
 	moved = 0;
 
