@@ -12,6 +12,7 @@ function enemy_init() {
 	hit = 0;
 	max_slope = 3;
 	moved = 0;
+	dies_outside_view = true;
 
 	nearest_player = 0;
 	_p = 0;
@@ -19,10 +20,16 @@ function enemy_init() {
 	pl_x = 0;
 	pl_y = 0;
 
+	xp = 1;
 	hp = 1;
+	hurt = 0;
 	max_hp = 1;
 	max_bar_hp = 32;
-	xp = 1;
+	
+	//combo and hitnum related data
+	comboMax = 60;
+	comboTime = -1;
+	combo = 0;
 
 	collide_damage = array_get([1, 1, 2, 20 * x * x], global.difficulty); // How much damage the enemy does on contact
 	blocking = false; // Nullify damage

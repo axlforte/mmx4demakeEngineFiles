@@ -1,6 +1,8 @@
 switch(menu){
 	case(pause_menus.weapons):
 		draw_sprite(spr_upgrade_screen_background,0,x,y);
+		draw_string(x,y,"upgrades");
+		draw_string(x + 320-24,y,"map");
 		for(j = 0; j < length; j++){
 			show_debug_message(string(j) + " is j. length is " +string(length))
 			if(weps[j] != -4){
@@ -32,8 +34,10 @@ switch(menu){
 	break;	
 	case(pause_menus.upgrades):
 		draw_sprite(spr_upgrade_screen_background,1,x,y);
+		draw_string(x,y,"map");
+		draw_string(x + 320-56,y,"weapons");
 		draw_sprite_ext(spr_upgrade_screen_x,1,x+px,y+py,xsale,ysale,0,c_white,1);
-		draw_text(x + 16, y + 20, string(global.player_exp));
+		draw_string(x + 16, y + 20, string(global.player_exp), colors.pink);
 		var availible = 0;
 		switch(umenu){
 			case(upgrade_menu.none):
@@ -110,8 +114,6 @@ switch(menu){
 					xp = 15;
 					draw_sprite(spr_skill_selected,0,x+99,y+99);
 				}
-				draw_text(x + 60, y + 32, title);
-				draw_text(x + 60, y + 48, desc);
 			break;
 			case(upgrade_menu.body):
 				draw_sprite(spr_skill_straight,0,x+40,y+88);
@@ -167,8 +169,6 @@ switch(menu){
 					xp = 10;
 					draw_sprite(spr_skill_selected,0,x+99,y+99);
 				}
-				draw_text(x + 60, y + 32, title);
-				draw_text(x + 60, y + 48, desc);
 			break;
 			case(upgrade_menu.arms):
 				draw_sprite(spr_skill_straight,0,x+40,y+88);
@@ -233,8 +233,6 @@ switch(menu){
 					draw_sprite(spr_skill_selected,0,x+99,y+99);
 					xp = 15;
 				}
-				draw_text(x + 60, y + 32, title);
-				draw_text(x + 60, y + 48, desc);
 			break;
 			case(upgrade_menu.legs):
 				draw_sprite(spr_skill_straight,0,x+40,y+88);
@@ -279,12 +277,35 @@ switch(menu){
 					draw_sprite(spr_skill_selected,0,x+99,y+99);
 					xp = 10;
 				}
-				draw_text(x + 60, y + 32, title);
-				draw_text(x + 60, y + 48, desc);
 			break;
 		}
+		
+		if(string_length(desc) < desc_cutoff_length){
+			draw_string(x + 112, y + 24 , desc, colors.blue);
+		} else {
+			for(var q = 0; q < string_length(desc)/desc_cutoff_length; q++){
+				draw_string(x + 112, y + 24 + 7*q, string_copy(desc, desc_cutoff_length*q, desc_cutoff_length - 1), colors.blue);
+			}
+		}
+		draw_string(x + 112, y + 8, title, colors.red);
 		break;
-	case(pause_menus.saves):
-	
+	case(pause_menus.map):
+		//draw_sprite(spr_upgrade_screen_background,1,x,y);
+		draw_set_color(#260004);
+		draw_rectangle(x, y, x + 320, y + 240, false);
+		var cam_x = __view_get(e__VW.XView, 0) - 160;
+		var cam_y = __view_get(e__VW.YView, 0) - 120;
+		//draw_sprite_part_ext(map,0, cam_x,cam_y,20,15,100 + x,83 + y,6,6,c_white,0.9);
+		draw_set_color(#c22000);
+		for(var w = 0; w < 40; w++){
+			for(var h = 0; h < 30; h++){
+				tpix = tilemap_get_at_pixel(map_id, cam_x + w * 16,cam_y + h * 16);
+				if(tpix != 0){
+					draw_rectangle(x + w * 8, y + h * 8, x + 8 + w * 8,  y + 8 + h * 8, false);
+				}
+			}
+		}
+		draw_string(x,y,"weapons");
+		draw_string(x + 320-64,y,"upgrades");
 	break;
 }

@@ -1,21 +1,29 @@
 function player_state_ladder() {
-	var t = state_timer;
-	
-	if(t == 0){
-		trail_sprites_enabled = false;
-		trail_sprites_remove = true;
-		
-		player_effects_reset();
-	}
+	var t = state_timer++;
 	
 	v_speed = 0;
 	grav = 0;
 	
-	if(t < 4){
-		animation_play("ladder", 1);
+	if(key_p_left){
+		dir = -1;
+		xscale = 1;
+	} else if(key_p_right){
+		dir = 1;
+		xscale = -1;
+	}
+	
+	if(t <= 7){
+		player_trail_minimize();
+		animation_play("ladder",2);
+	} else if(shoot_t > 10){
+		animation_play("ladder",42);
+	} else if(shoot_t > 4){
+		animation_play("ladder",46);
+	} else if(shoot_t > 2){
+		animation_play("ladder",42);
+		ladder_anim = 30
 	} else if(top_of_ladder < y){
-		animation_play("ladder", ladder_anim % 32 + 4);
-		
+		animation_play("ladder",clamp( ladder_anim % 32 + 4,1,32));
 		
 		if(key_up)
 		{
@@ -24,13 +32,11 @@ function player_state_ladder() {
 		} else if(key_down){
 			v_speed = ladder_speed;
 			ladder_anim --;
+			if(ladder_anim < 0){
+				ladder_anim = 32;
+			}
 		}
-		
-		if(key_p_left){
-			dir = -1;
-		} else if(key_p_right){
-			dir = 1;
-		}
+		animation_t += 1;
 	} else if(top_of_ladder - 16 < y) {
 		animation_play("ladder", 39);
 		y -= 17;
@@ -64,7 +70,6 @@ function player_state_ladder() {
 		walk_speed = walk_speed_default;
 		audio_play(land_sound);
 	}
-	
 	
 	player_check_jump();
 }

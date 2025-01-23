@@ -33,7 +33,7 @@
   "origin": 4,
   "parent": {
     "name": "Bats",
-    "path": "folders/Sprites/Maverick/Enemy/X1/Bats.yy",
+    "path": "folders/Sprites/Enemy/X1/Bats.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

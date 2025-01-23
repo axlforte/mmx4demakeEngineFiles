@@ -1,6 +1,6 @@
 function player_dolor_reset() {
 	// Shoot
-	if(global.sense_of_duty){
+	if(global.sense_of_duty || global.difficulty = diff_modes.easy){
 		return;
 	}
 	shoot = false;

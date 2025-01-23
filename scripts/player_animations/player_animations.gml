@@ -237,8 +237,10 @@ function player_animations() {
 	 24,6,
 	 28,7,
 	 32,8,
-	 36,9
-	], 0, 40);
+	 36,9,
+	 40,10,
+	 44,11
+	], 0, 48);
 	
 	animation_add("ladder_idle|ladder",
 	[

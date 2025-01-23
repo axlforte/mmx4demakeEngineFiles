@@ -38,7 +38,7 @@
   "origin": 4,
   "parent": {
     "name": "Slash Beast",
-    "path": "folders/Sprites/Maverick/Bosses/Slash Beast.yy",
+    "path": "folders/Sprites/Bosses/Slash Beast.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -52,7 +52,7 @@
   "origin": 9,
   "parent": {
     "name": "mad bull",
-    "path": "folders/Sprites/Maverick/Enemy/X4/mad bull.yy",
+    "path": "folders/Sprites/Enemy/X4/mad bull.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

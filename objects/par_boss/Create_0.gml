@@ -90,3 +90,49 @@ plt_index = 0;
 anim[0] = false;
 
 local_game_speed = 1;
+
+dialouge = scr_get_lines_array("english", dialouge_type.words, 0, 2);
+lines = scr_get_lines_array("english", dialouge_type.sounds, 0, 2);
+has_worded = false;
+
+function default_boss_intro_sequence(){
+	if(instance_exists(obj_conversation)){
+		state_timer--;
+	}
+			
+	if(!has_worded){
+		var convo = instance_create_depth(x,y,depth, obj_conversation);
+		convo.conversation = dialouge;
+		convo.lines = lines;
+		has_worded = true;	
+	}
+			
+	if (t == argument[0]) {
+		animation_play("intro");
+		bar = instance_create_depth(0, 0, layer_get_depth(layer_get_id("Camera")) - 300, obj_player_bar);
+		bar.owner = id;
+		bar.bar_icon_sprite = spr_boss_bar_icon;
+		bar.x_off = 295;
+	}
+	if (t == intro_limit + argument[0]) {
+		// Fill health
+		var inst = instance_create_depth(0, 0, depth, obj_pickup_handler);
+		inst.target = id;
+		inst.pickup_pause = false;
+		inst.amount = max_hp;
+		inst.time_per_unit = 1;
+		inst.pickup_type = pickup_types.hp;
+	}
+	// Full Health
+	if (hp == max_hp) {
+		state_set(boss_states.idle);
+		intro = false;
+		play_theme = boss_battle_theme;
+		floor_y = y;
+		with (obj_player_parent) {
+			locked = false;	
+		}
+		global.bgm_volume = global.bgm_volume * 2;
+		is_active = true;
+	}
+}

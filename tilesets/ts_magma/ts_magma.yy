@@ -15,10 +15,7 @@
     "name": "Magma Dragoon",
     "path": "folders/Tile Sets/Magma Dragoon.yy",
   },
-  "spriteId": {
-    "name": "spr_tile_magma",
-    "path": "sprites/spr_tile_magma/spr_tile_magma.yy",
-  },
+  "spriteId": null,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",

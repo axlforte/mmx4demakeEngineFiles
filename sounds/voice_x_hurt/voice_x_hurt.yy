@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.334263,
   "parent": {
-    "name": "Voices",
-    "path": "folders/Sounds/Voices.yy",
+    "name": "x gameplay",
+    "path": "folders/Sounds/Voices/LInes/x gameplay.yy",
   },
   "preload": false,
   "sampleRate": 5512,

@@ -70,7 +70,7 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 			}
 			break;
 		case pickup_types.lifeup:
-			global.player_lives++;
+			global.player_exp += amount;
 			break;
 		case pickup_types.wp:
 			var wp_add = 1; 
@@ -98,5 +98,22 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 // Amount is over, unpause and destroy this instance
 if (amount <= 0) {
 	pause_set(false);
+	var note = instance_create_depth(x,y,depth,obj_notification);
+	if(pickup_type = pickup_types.hp){
+		note.text = "healed by ";
+	} else if(pickup_type = pickup_types.wp){
+		note.text = "charged by ";
+	} else if(pickup_type = pickup_types.heart){
+		note.text = "max health increased by ";
+	} else if(pickup_type = pickup_types.subtank){
+		note.text = "subtanks increased by ";
+	} else if(pickup_type = pickup_types.lifeup){
+		note.text = "skill increased by ";
+	} else  if(pickup_type = pickup_types.energytank){
+		note.text = "energy tanks increased by ";
+	} else {
+		note.text = "gained ";
+	}
+	note.text += string(start_amount);
 	instance_destroy();
 }

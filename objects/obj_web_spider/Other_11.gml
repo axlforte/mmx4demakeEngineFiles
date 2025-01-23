@@ -1,7 +1,7 @@
 enum web_spider {
 	web,
 	sling_intro,
-	birth,
+	thunder,
 	giga_transition,
 	crawl_around
 }
@@ -26,6 +26,7 @@ switch(state) {
 		if(t == 80){
 			already_on_web = true;
 			damageable = true;
+			state_set(web_spider.crawl_around);
 		}
 		
 		if(t < 48){
@@ -38,6 +39,41 @@ switch(state) {
 	case web_spider.crawl_around:
 		if(t == 0){
 			dest = random_range(0,8);
+			web_delay = 0;
+			web_delay_max = clamp(hp / array_get([0.25, 1, 2, 3], global.difficulty), 1, array_get([25, 20, 15, 5], global.difficulty));
+		}
+		
+		if(web_move_positions[dest][0] - web_movement*2 > x){
+			x += web_movement;
+			x_centered = false;
+		} else if(web_move_positions[dest][0] + web_movement*2 < x){
+			x -= web_movement;
+			x_centered = false;
+		} else {
+			x_centered = true;
+		}
+		
+		if(web_move_positions[dest][1] - web_movement*2 > y){
+			y += web_movement;
+			y_centered = false;
+		} else if(web_move_positions[dest][1] + web_movement*2 < y){
+			y -= web_movement;
+			y_centered = false;
+		} else {
+			y_centered = true;
+		}
+		
+		if(y_centered && x_centered){
+			if(web_delay < web_delay_max){
+				web_delay++;
+			} else {
+				var atk = random_range(1,16);
+				if(atk < 9){
+					state_set(web_spider.web);
+				} else {
+					state_set(web_spider.thunder);
+				}
+			}
 		}
 		break;
 	#endregion
@@ -49,8 +85,11 @@ switch(state) {
 			if (t == 0) {
 				animation_play("web");
 			}
-			if(t == 25){
+			if(t == 29){
 				instance_create_depth(x, y, depth - 5, obj_web_spider_web);
+			}
+			if(t == 45){
+				state_set(web_spider.crawl_around);
 			}
 		} else {
 			web_spider_default_web_intro();
@@ -62,7 +101,7 @@ switch(state) {
 			if (t == 50) {
 				animation_play("web");
 			}
-			if (t == 75){
+			if (t == 79){
 				instance_create_depth(x, y, depth - 5, obj_web_spider_web);
 			}
 		}
@@ -70,25 +109,23 @@ switch(state) {
 	#endregion
 	
 	#region the significantly less threatening attack
-	case web_spider.birth://ignore the naming it makes sense
+	case web_spider.thunder://ignore the naming it makes sense
 		// Play animation
 		if(already_on_web){
 			if (t == 0) {
-				animation_play("birth");
+				animation_play("thunder");
 			}
 			if(t == 25){
-				var p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
+				var p = instance_create_depth(center_of_arena[0] - 128, y - 128, depth - 5, obj_thunder_crack);
 				p.dir = 1;
-				p.y += 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
+				p = instance_create_depth(x, y - 128, depth - 5, obj_thunder_crack);
 				p.dir = 1;
-				p.y -= 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
-				p.dir = -1;
-				p.y += 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
-				p.dir = -1;
-				p.y -= 16;
+				p = instance_create_depth(center_of_arena[0] + 144, y - 48, depth - 5, obj_thunder_crack);
+				p.dir = 1;
+			}
+			
+			if(t == 45){
+				state_set(web_spider.crawl_around);
 			}
 		} else {
 			web_spider_default_web_intro();
@@ -98,21 +135,15 @@ switch(state) {
 				animation_play("intro_enter");
 			}
 			if (t == 50) {
-				animation_play("birth");
+				animation_play("thunder");
 			}
 			if (t == 75){
-				var p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
+				var p = instance_create_depth(center_of_arena[0] - 128, y - 128, depth - 5, obj_thunder_crack);
 				p.dir = 1;
-				p.y += 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
+				p = instance_create_depth(x, y - 128, depth - 5, obj_thunder_crack);
 				p.dir = 1;
-				p.y -= 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
-				p.dir = -1;
-				p.y += 16;
-				p = instance_create_depth(x, y, depth - 5, obj_jet_stingray_baby);
-				p.dir = -1;
-				p.y -= 16;
+				p = instance_create_depth(center_of_arena[0] + 144, y - 128, depth - 5, obj_thunder_crack);
+				p.dir = 1;
 			}
 		}
 		break;
@@ -122,7 +153,7 @@ switch(state) {
 	case web_spider.sling_intro:
 		if(t == 0){
 			animation_play("intro");
-			
+			//y = center_of_arena[1] + 96;
 		}
 	
 		if (t <= 47 || !intro) {
@@ -130,36 +161,10 @@ switch(state) {
 		}
 		
 		if(t >= 128 && intro){
-			if (t == 128) {
-				animation_play("intro");
-				bar = instance_create_depth(0, 0, layer_get_depth(layer_get_id("Camera")) - 300, obj_player_bar);
-				bar.owner = id;
-				bar.bar_icon_sprite = spr_boss_bar_icon;
-				bar.x_off = 295;
-			}
-			if (t == intro_limit + 128) {
-				// Fill health
-				var inst = instance_create_depth(0, 0, depth, obj_pickup_handler);
-				inst.target = id;
-				inst.pickup_pause = false;
-				inst.amount = max_hp;
-				inst.time_per_unit = 2;
-				inst.pickup_type = pickup_types.hp;
-			}
-			// Full Health
-			if (hp == max_hp) {
-				intro = false;
-				play_theme = boss_battle_theme;
-				floor_y = y;
-				with (obj_player_parent) {
-					locked = false;	
-				}
-				is_active = true;
-				t = 96;
-			}
+			default_boss_intro_sequence(132);
 		}
 		
-		if(t == 128 && !intro){
+		if(t >= 128 && !intro){
 			state_set(boss_states.idle);
 		}
 		break;

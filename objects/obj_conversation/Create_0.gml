@@ -14,7 +14,7 @@ global.bgm_volume = global.bgm_volume / 2;
 //pause_set(!global.paused, pause_types.dialouge);
 dspeed = global.DialougeSpeed;
 index = -1;
-dilog = instance_create_depth(x - 140,y - 28,-1000, obj_dialouge);
+dilog = instance_create_depth(x - 144,y - 69,-1000, obj_dialouge);
 dilog.delay = 30;
 dilog.line = "";
 activate = false;
@@ -22,12 +22,13 @@ dindex = 0;
 ping = false;
 sound_activated = false;
 intro_frame = 0;
-intr_time = 10;
-keys_init();
-keys_apply();
+intr_time = 4;
 scr_keys_reset();
 alarm[0] = 1;
 visible = false;
+depth = -100000;
+
+lines = [];
 
 global.bgm_volume = global.bgm_volume / 2;
 

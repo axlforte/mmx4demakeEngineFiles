@@ -5,7 +5,7 @@ index = 1;
 ltr = noone;
 die = false;
 xoff = 0;
-yoff = 0;
+yoff = -7;
 delay = 0;
 convo = noone;
 

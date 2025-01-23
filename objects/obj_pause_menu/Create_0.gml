@@ -26,7 +26,7 @@ y_step_length = 240 / y_step_total;
 enum pause_menus{
 	weapons,
 	upgrades,
-	saves,
+	map,
 	length
 }
 menu = pause_menus.weapons;
@@ -63,6 +63,8 @@ desc = "";
 xp = 0;
 oof = 0;
 
+desc_cutoff_length = 25;
+
 palette_init();
 
 var p = instance_nearest(x,y,obj_player_parent);
@@ -77,3 +79,14 @@ show_debug_message(string(array_length(weapon_selectable)));
 show_debug_message(string(array_length(p.weapon_list)));
 
 piss_off = false;
+
+map = web_spider_map;
+
+//simple tilemap fetching code
+var lay_id = layer_get_id("map_reading_tiles");
+map_id = layer_tilemap_get_id(lay_id);
+tpix = noone;
+
+if(global.pause_type == pause_types.none){
+	instance_destroy();
+}

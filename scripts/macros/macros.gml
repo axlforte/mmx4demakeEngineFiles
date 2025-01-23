@@ -25,6 +25,11 @@ function macros() {
 	#macro UP_LEFT 17
 	#macro UP 18
 	#macro UP_RIGHT 19
+	
+	#macro PX global.player_x
+	#macro PY global.player_y
+	#macro DPX global.player_x - x
+	#macro DPY global.player_y - y
 
 	#macro BAR_DEPTH -800
 	#macro G global

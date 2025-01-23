@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Skill tree",
-    "path": "folders/Sprites/Player/Skill tree.yy",
+    "name": "Pause Menu",
+    "path": "folders/Sprites/Player/Pause Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -2,7 +2,7 @@ event_inherited();
 animation_add("L", keyframes_generate(image_number, 1 / 4));
 animation_add_loop("L");
 animation_play("L");
-amount = 1;
+amount = 10;
 pickup_type = pickup_types.lifeup;
 sound = snd_item_lifeup;
 palette_init();

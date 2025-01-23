@@ -11,6 +11,6 @@ wobble = 0;
 sine = 0;
 sine_speed = 32;
 sine_time = x mod sine_speed;
-depth = -100000;
+depth = -100001;
 palette_init(); 
 palette_texture_set(plt_text_font_normal);

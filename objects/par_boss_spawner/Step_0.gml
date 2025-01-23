@@ -4,6 +4,7 @@ if (spawn) {
 	if (timer_id == 0) {
 		if (timer == 0 && boss_object != noone) {
 			global.prev_music = global.current_music
+			global.bgm_volume = global.bgm_volume / 2;
 			music_play(boss_encounter_theme);	
 		}
 		if (timer > t_limit) {
@@ -29,6 +30,9 @@ if (spawn) {
 						event_perform(ev_step, ev_step_normal);	
 					}
 					spawn = false;
+					var coll = instance_create_depth(coll_x, coll_y,depth, obj_square_boss);
+					coll.image_xscale = coll_w;
+					coll.image_yscale = coll_h;
 				}
 			}
 			if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1) {

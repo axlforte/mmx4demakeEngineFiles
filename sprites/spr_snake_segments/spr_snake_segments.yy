@@ -30,7 +30,7 @@
   "origin": 0,
   "parent": {
     "name": "snake",
-    "path": "folders/Sprites/Maverick/Enemy/X4/snake.yy",
+    "path": "folders/Sprites/Enemy/X4/snake.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

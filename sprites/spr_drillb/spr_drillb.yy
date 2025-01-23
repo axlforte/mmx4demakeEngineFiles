@@ -30,7 +30,7 @@
   "origin": 1,
   "parent": {
     "name": "Eclipse",
-    "path": "folders/Sprites/Maverick/Enemy/Eclipse.yy",
+    "path": "folders/Sprites/Enemy/Eclipse.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

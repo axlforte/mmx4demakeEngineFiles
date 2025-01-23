@@ -5,3 +5,4 @@ if(pickup_type == pickup_types.hp && global.overcharged_systems){
 } else if(pickup_type = pickup_types.wp && global.weapons_specialist){
 	amount++;
 }
+start_amount = amount;

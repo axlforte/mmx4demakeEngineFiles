@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "Magma Dragoon",
-    "path": "folders/Sprites/Maverick/Bosses/Magma Dragoon.yy",
+    "path": "folders/Sprites/Bosses/Magma Dragoon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

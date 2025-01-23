@@ -3,6 +3,7 @@ sound = snd_player_x_shot_2;
 
 abs_hspeed = 0;
 atk = 2;
+boss_damage[? obj_eregion] = 2;//because eregion is a pushover
 
 // Start
 animation_add("S",

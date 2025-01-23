@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "X3",
-    "path": "folders/Sprites/Maverick/Enemy/X3.yy",
+    "path": "folders/Sprites/Enemy/X3.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5424d218-2815-42e5-a4a3-6018dcf546cf","path":"sprites/spr_drillwall_head/spr_drillwall_head.yy",},},},"Disabled":false,"id":"17c27f6a-6859-48a5-bba7-0db160126850","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 10,
     "yorigin": 11,

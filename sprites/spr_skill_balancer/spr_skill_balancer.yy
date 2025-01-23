@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "skills",
-    "path": "folders/Sprites/Player/Skill tree/skills.yy",
+    "path": "folders/Sprites/Player/Pause Menu/skills.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

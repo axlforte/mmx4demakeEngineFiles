@@ -1,6 +1,7 @@
 // Needs refactoring...
 function player_step() {
 	local_game_speed_update();
+	moved_by_platform = false;
 	var executed_keys_update = false;
 	if (locked) {
 		key_p_jump = false;

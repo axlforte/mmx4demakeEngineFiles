@@ -4,6 +4,7 @@ atk = 3;
 shot_level = 1;
 hit_if_shot_level_is_equal = true;
 boss_damage[? noone] = 2; // Default damage on bosses
+boss_damage[? obj_eregion] = 3; //because eregion is a pushover
 sound = snd_player_x_shot_x2_3;
 abs_hspeed_max = 7.5;
 animation_add("S",

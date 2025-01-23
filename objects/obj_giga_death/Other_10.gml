@@ -5,7 +5,7 @@ var t = state_timer++;
 switch(state) {
     #region standin around
     case giga_death.idle:
-		if(t > 120){
+		if(t > 80){
 			state_set(giga_death.shoot);
 		}
         break;

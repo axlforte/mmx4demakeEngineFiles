@@ -52,9 +52,12 @@ function global_values() {
 	global.player_sprite_frame = 0;
 	global.temp = 0;
 	global.player_health = 28;
-	global.player_exp = 600;
+	global.player_exp = 0;
 	global.one_px_tall_health_bar = true;
 	global.game_save_num = 0;
+	global.hit_numbers = false;
+	global.notes = true;
+	//global.heart_tanks_taken = 0;//gonna use powers of 2 for this shit
 	
 	enum diff_modes {
 		easy,
@@ -81,7 +84,7 @@ function global_values() {
 	global.gamepad_list_index = 0;
 	global.gp_movement = 0; // Directional
 	global.gp_name = "";
-	for (var i = 0; i < 80; i ++) {
+	for (var i = 0; i < 7; i ++) {
 		global.heart_used[i] = 0;
 		global.checkpointid[i] = 0;
 	}
@@ -128,10 +131,10 @@ function global_values() {
 	global.running_replay = false;
 	global.replay_fname = "";
 	replay_init();
-	dialouge_activation();
 	upgrade_values();
 	weapon_information_global_vars();
 	overworld_info();
+	global_dialouge_load();
 }
 
 function overworld_info(){
@@ -195,24 +198,24 @@ function upgrade_values(){
 	global.upgrade_description = [
 	"dash slightly faster",//sd
 	"dash much faster",
-	"dashing puts extra force\ninto base shots",//bs
-	"press up to stop sliding\ndown walls",
+	"dashing puts extra force into base shots",//bs
+	"press up to stop slidingdown walls",
 	"charge time near instant",//ac
-	"charge time down slightly",
+	"charge time down        slightly",
 	"charge time down a lot",//hc
-	"get extra health per pickup",
-	"get extra energy per weapon\npickup",//ws
-	"extra invulnerability\nframes",
-	"crouch by pressing down\nwhile not moving",
-	"collect 3 extra health per pickup",
-	"cannot die if above 1\nhealth",//us
+	"get extra health per    pickup",
+	"get extra energy per    weapon pickup",//ws
+	"extra invulnerability   frames",
+	"crouch by pressing down while not moving",
+	"collect 3 extra health  per pickup",
+	"cannot die if above 1 health",//us
 	"supercharged buster shot",
-	"slowly heal damage back if\nnot moving",//rc
-	"turn health into weapon\nenergy and vice versa",
+	"slowly heal damage back if not moving",//rc
+	"turn health into weapon energy and vice versa",
 	"walk slightly faster",//ct
-	"slide down walls slower.\npress down to slide faster",
-	"get notified if area has\ncollectibles in it",//ei
-	"small friend floats towards\nitems not yet collected",
+	"slide down walls slower.press down to slide     faster",
+	"get notified if area hascollectibles in it",//ei
+	"small friend floats     towards items not yet   collected",
 	"take less damage in the air",//cr
 	"shoot while stunned",
 	];

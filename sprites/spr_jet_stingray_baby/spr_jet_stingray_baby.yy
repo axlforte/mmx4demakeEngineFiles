@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "Jet Stingray",
-    "path": "folders/Sprites/Maverick/Bosses/Jet Stingray.yy",
+    "path": "folders/Sprites/Bosses/Jet Stingray.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

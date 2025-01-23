@@ -30,7 +30,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_room_changer_open",
     "path": "sprites/spr_room_changer_open/spr_room_changer_open.yy",

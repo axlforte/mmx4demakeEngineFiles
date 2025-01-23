@@ -186,32 +186,8 @@ switch (state) {
 		menu_update_item_v();
 		menu_update_item_click();
 		if (enter) {
-			//menu_set_state(menu_states.stage_select, 16, 60);
-			
-			//added
-			var _boss = global.boss_slot[1];
-			if (_boss != noone) {
-			var info = global.boss_info[_boss];
-			boss_room = info[3];
-			boss_object = info[4];
-			boss_name = info[0];
-			boss_defeated = global.boss_defeated[_boss];
-			}
-			//menu_set_state(menu_states.player_select, 16, 60);
-			
-			// we want to skip the player selection because the testers keep getting confused
-			
-			var tran = transition_create(transition_types.blink);
-			tran.color = c_white;
-			tran.transition_limit = 16;
-			settings_apply();//i T H I N K this is going to fix controls related issues
-			room = rm_music_unfucker;
-			music_stop(1000);
-			G.player_character_armor[pl_char.x][3] = x_armor.x1;
-			global.character_selected[0] = global.character_object[global.character_selected_index[0]];
-			//original
-			audio_play(snd_player_success);
 			global.difficulty = selected_item;
+			menu_set_state(menu_states.save_select);
 			break;
 		}
 		break;
@@ -260,7 +236,34 @@ switch (state) {
 		}
 		break;
 	#endregion
-	
+	#region Difficulty Mode
+	case menu_states.save_select:
+		menu_update_item_v();
+		menu_update_item_click();
+		if (enter) {
+			global.game_save_num = selected_item;
+			var _boss = global.boss_slot[1];
+			if (_boss != noone) {
+			var info = global.boss_info[_boss];
+			boss_room = info[3];
+			boss_object = info[4];
+			boss_name = info[0];
+			boss_defeated = global.boss_defeated[_boss];
+			}
+			var tran = transition_create(transition_types.blink);
+			tran.color = c_white;
+			tran.transition_limit = 16;
+			settings_apply();
+			room = rm_music_unfucker;
+			music_stop(1000);
+			G.player_character_armor[pl_char.x][3] = x_armor.x1;
+			global.character_selected[0] = global.character_object[global.character_selected_index[0]];
+			//original
+			audio_play(snd_player_success);
+			break;
+		}
+		break;
+	#endregion
 	#region Option
 	case menu_states.option:
 		menu_update_item_v();
@@ -292,22 +295,25 @@ switch (state) {
 			// 16 by 9 aspect ratio (if streched or widened)
 			case 1:
 				if(enter)
-					global.camera_16_by_9 = !global.camera_16_by_9;
+					global.DialougeSpeed++;
+					if(global.DialougeSpeed > 5){
+						global.DialougeSpeed = 1;
+					}
 				break;
 			// Key Config
 			case 2:
 				if (enter)
 					menu_set_state(menu_states.key_config);
 				break;
-			// Audio Settings
+			// popup notifications
 			case 3:
 				if (enter)
-					//menu_set_state(menu_states.audio_settings);
+					global.notes = !global.notes;
 				break;
 			// one pixel tall healthbar
 			case 4:
 				if (enter)
-					global.one_px_tall_health_bar = !global.one_px_tall_health_bar;
+					global.hit_numbers = !global.hit_numbers;
 				break;
 			//sfx
 			case 5:

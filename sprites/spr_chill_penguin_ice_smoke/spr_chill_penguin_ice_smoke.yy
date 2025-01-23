@@ -39,7 +39,7 @@
   "origin": 4,
   "parent": {
     "name": "Chill Penguin",
-    "path": "folders/Sprites/Maverick/Bosses/Chill Penguin.yy",
+    "path": "folders/Sprites/Bosses/Chill Penguin.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -11,3 +11,4 @@ animation_play("S");
 amount = 8;
 pickup_pause = true;
 pickup_type = pickup_types.hp;
+name = "nobody cares"

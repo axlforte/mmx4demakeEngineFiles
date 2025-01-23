@@ -22,33 +22,10 @@ if (local_game_run_step || state == boss_states.death) {
 	switch (state) {
 		case boss_states.intro:
 			// Play animation
-			if (t == 0) {
-				animation_play("intro");
-				bar = instance_create_depth(0, 0, layer_get_depth(layer_get_id("Camera")) - 300, obj_player_bar);
-				bar.owner = id;
-				bar.bar_icon_sprite = spr_boss_bar_icon;
-				bar.x_off = 295;
-			}
-			if (t == intro_limit) {
-				// Fill health
-				var inst = instance_create_depth(0, 0, depth, obj_pickup_handler);
-				inst.target = id;
-				inst.pickup_pause = false;
-				inst.amount = max_hp;
-				inst.time_per_unit = 2;
-				inst.pickup_type = pickup_types.hp;
-			}
-			// Full Health
-			if (hp == max_hp) {
-				state_set(boss_states.idle);
-				intro = false;
-				play_theme = boss_battle_theme;
-				floor_y = y;
-				with (obj_player_parent) {
-					locked = false;	
-				}
-				is_active = true;
-			}
+			
+			//check for dialouge
+			
+			default_boss_intro_sequence(3);
 			break;
 		case boss_states.idle:
 			if (t == 0) {

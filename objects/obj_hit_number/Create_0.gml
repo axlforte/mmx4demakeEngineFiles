@@ -1,0 +1,10 @@
+v_speed = -8;
+v_falloff = random_range(1.1,2);
+dam = 0;
+amazing = false;
+spr = spr_font_hitreg;
+ind = 0;
+tim = 0;
+fadeTime = 40;
+x += random_range(-10,10);
+alarm[0] = 1;
