@@ -13,7 +13,7 @@
   "duration": 3.925333,
   "parent": {
     "name": "forte's placeholder lines",
-    "path": "folders/Sounds/Voices/LInes/forte's placeholder lines.yy",
+    "path": "folders/Sounds/LInes/forte's placeholder lines.yy",
   },
   "preload": false,
   "sampleRate": 11025,

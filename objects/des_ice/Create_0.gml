@@ -1,3 +1,3 @@
 event_inherited();
-hp = 8;
+hp = 2;
 grav = false;

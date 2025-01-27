@@ -14,6 +14,11 @@ function player_x_armor() {
 			
 			//zero difficulty doesnt benefit from any of this for whatever reason
 			//so i will make x walk faster
+			
+			if(global.difficulty == diff_modes.zero){
+				state_unlocked[states.dash] = true;
+			}
+			
 			walk_speed = 2.25;
 			//i might also marginally increase jump height
 			jump_strength = 5.5;

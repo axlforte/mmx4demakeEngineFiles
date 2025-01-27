@@ -338,12 +338,15 @@ function ride_armor_dash() {
 					walk_speed = dash_speed;
 			
 		            if (is_on_floor()) {
+						walk_speed = walk_speed_default;
 						state_set(RIDE_ARMOR_STATE.IDLE);
 		            } else {
 						if (move != 0) {
+							walk_speed = walk_speed_default;
 							state_set(RIDE_ARMOR_STATE.FALL);
 							animation_play("fall");
 						} else {
+							walk_speed = walk_speed_default;
 							state_timer = 0;
 							substates[2] = 1;
 						}
@@ -544,6 +547,7 @@ function ride_armor_land() {
 	if (animation_on_end()) {
 		state_set(RIDE_ARMOR_STATE.IDLE);
 	}
+	ride_armor_check_jump();
 	ride_armor_check_dash();
 	ride_armor_check_fall();
 }

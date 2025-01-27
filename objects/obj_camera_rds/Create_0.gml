@@ -6,6 +6,17 @@ _width = global.view_width;
 _height = global.view_height;
 mid_x = __view_get(e__VW.XView, 0) + _width / 2;
 mid_y = __view_get(e__VW.YView, 0) + _height / 2;
+camera_x_offset = 0;
+offset_dir = 1;
+
+enum offset_speed {
+	crawling,
+	slow,
+	medium,
+	fast,
+	turbo,
+	ssj3
+}
 
 instance_create_depth(0, 0, -900, obj_surface);
 x = global.player_x;
@@ -48,7 +59,6 @@ if (!instance_exists(_target) || instance_exists(obj_player_ready)) {
 	y = mid_y;
 }
 shake_t = 0;
-
 
 if(global.camera_16_by_9){
 	__view_set(e__VW.WPort, 0, 427);

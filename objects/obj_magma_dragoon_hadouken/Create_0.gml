@@ -1,6 +1,6 @@
 event_inherited();
 hp = 1;
-damage_set(2, 4, 6);
+damage_set(2, 4, 6, 128);
 damageable = false;
 blocking = false;
 shot_type = 0;

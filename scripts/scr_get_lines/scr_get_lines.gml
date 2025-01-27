@@ -97,9 +97,9 @@ function scr_get_lines_array(){
 function global_dialouge_load(){
 	global.english_dialouge = [
 		"Youre /c9Magma Dragoon/c0, from the 14th unit!",
-		"Bad news /c1X/c0! A /s1/c9maverick/c0/s0 got here before me and /w1destroyed/w0 the /c2reactor/c0!",
-		"What? Then /c2Sky Lagoon/c0... /w1its gonna come crashing down!/w2 Thousands /w0will /w2die!",
-		"Too bad we can do /s1nothing/s0 to stop the fall! I suggest we get out of here before we join those /s2thousands!",
+		"This isn't good, /c1X/c0! That /s1/c9maverick/c0/s0 just /w1destroyed/w0 the /c2power reactor/c0!",
+		"What? Then /c2Sky Lagoon/c0... its gonna come crashing down!/w1 Thousands will die!",
+		"Now understand, /c1X/c0, we can't do /s1anything/s0 to stop the fall! I suggest you escape immediately and don't do anything on the way out, ok?",
 		"/c1Damn/c0! The city below is about to become a hellscape. I have to retreat and see if there are any surviors!",
 		//add the iris/colonel dialouge here
 		//web spider dialouge here
@@ -117,7 +117,7 @@ function global_dialouge_load(){
 		"M...M...Mega...Man! We c...can finish our fi..ight, here an...nd now!",
 		"Megaman? Nobody calls me that anymore! Who are you?",
 		"You dont share his identification number, yet you masqueraded in his name?",
-		"Look, can you just...move your pyramid out of the middle of the ocean? We're in the middle of a way and youre disrupting it",
+		"Look, can you just...move your pyramid out of the middle of the ocean? We're in the middle of a war and youre disrupting it",
 		"Hmph! I only take orders from robots who can back their words with strength! Consider this a warning!",
 		"You fight just like him...are you, perchance, a robot of doctor light's?",
 		"Yes, hes my father. Hold on, why did you call me megaman?",

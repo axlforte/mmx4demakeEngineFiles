@@ -21,10 +21,10 @@ function ene_item() {
 						 obj_pickup_life_1, obj_pickup_life_2, obj_pickup_life_3,
 					     obj_pickup_wp_1, obj_pickup_wp_2, obj_pickup_wp_3,
 						 obj_pickup_lifeup];
-			var chances = [60,
-						   10, 8, 1,
-						   10, 8, 1,
-						   2];
+			var chances = [45,
+						   15, 10, 1,
+						   15, 10, 1,
+						   3];
 			var q = 0;
 			for (var i = 0; i < array_length(items); i++) {
 				var new_q = q + chances[i];
@@ -40,6 +40,7 @@ function ene_item() {
 				if (instance_exists(inst)) {
 			        inst.is_temporary = true;
 					inst.v_speed = -3;
+					inst.has_been_randoed = true;
 				}
 		    }
 		}

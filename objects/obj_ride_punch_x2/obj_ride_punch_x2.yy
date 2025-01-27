@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ride_armor_x2_punch_1",
+    "path": "sprites/spr_ride_armor_x2_punch_1/spr_ride_armor_x2_punch_1.yy",
+  },
   "spriteMaskId": {
     "name": "spr_ride_armor_x2_punch_1",
     "path": "sprites/spr_ride_armor_x2_punch_1/spr_ride_armor_x2_punch_1.yy",

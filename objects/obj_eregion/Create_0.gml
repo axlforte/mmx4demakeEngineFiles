@@ -3,11 +3,16 @@ idle_time_to_turn = 5;
 intro_limit = 0;
 jump_wait = 5;
 activate_collision_limit = 0;
+//has_worded = false;
 
 #region Animations
 animation_add("idle", [
 	0, 0
 ], 0);
+
+animation_add("land", [
+	0, 0
+]);
 
 animation_add("intro", [
 	0, 12
@@ -24,20 +29,20 @@ animation_add("death", [
 
 animation_add("slash",[
 0, 6,
-5, 7,
-7, 8, 
-9, 9,
+10, 7,
+12, 8, 
+15, 9,
 45, 8,
 50, 0
 ]);
 
 animation_add("pew",[
 0, 4,
-2, 1, 
-4, 4, 
-8, 5,
-40, 4, 
-44, 0
+8, 1, 
+16, 4, 
+24, 5,
+60, 4, 
+64, 0
 ]);
 #endregion
 // Specific attacks
@@ -85,5 +90,5 @@ face_x = false;
 state_set(boss_states.fall);
 gravity_default = 0;
 grav = 0;
-v_speed = 0.5;
+v_speed = 1;
 h_speed = 0;

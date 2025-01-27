@@ -21,13 +21,6 @@ function boss_death_x1() {
 			global.pharoah_dash = true;
 		}
 		with (obj_player_parent) {
-			if (armor_is_full("") && FULL == "") {
-				if (hp == max_hp) {
-					if (my_character == pl_char.x && other.object_index == obj_chill_penguin) {
-						global.unarmored_x_defeat = 1;	
-					}
-				}
-			}
 			player_x_weapon_reset();
 		}
 	}
@@ -91,12 +84,12 @@ function boss_death_x1() {
 		global.current_music = prev_mus;
 	}
 	
-	if(t == 860){
+	if(t == 900){
 		with (obj_player_parent) {
-			//locked = false;
+			auto_regen = true;
 			pause_enabled = true;
-			//music_play(global.current_music);
 			music_play(global.current_music);
+			immunity = false;
 		}
 		instance_destroy();
 	}

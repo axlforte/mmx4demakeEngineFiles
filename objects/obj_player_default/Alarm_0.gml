@@ -3,16 +3,18 @@ if(global.exitALevelTransition){
 	if(!global.level_transition_use_door_locs){
 		var _c = 0;
 		var _v = 0;
+		var _d = 1;
 		with(obj_room_changer){
 			if(door_id = global.door_id){
-				_c = x;
+				_c = x + door_dropoff_offset;
 				_v = y;
+				_d = image_xscale;
 			}
 		}
-		x = _c + 32;
+		x = _c + 48 * _d;
 		y = _v;
 	} else {
-	x = global.levelTransitionX + 32;
+	x = global.levelTransitionX + 48;
 	y = global.levelTransitionY + 8;
 	G.current_camera = global.levelTransitionCameraId;
 	}
@@ -60,5 +62,7 @@ var note = instance_create_depth(x,y,depth,obj_notification);
 note.text = room_get_name(room);
 note.text = string_copy(note.text,4, string_length(note.text));
 note.text = string_replace_all(note.text,"_", " ");
+
+instance_create_depth(0,0,0,_Control);
 
 instance_destroy();

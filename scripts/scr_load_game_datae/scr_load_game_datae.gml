@@ -23,6 +23,9 @@ function scr_save_game_data() {
 	ini_write_real("BASIC", "hp", global.player_health);
 	ini_write_real("BASIC", "xp", global.player_exp);
 	ini_write_string("BASIC", "location", global.save_dest);
+	ini_write_string("BASIC", "tank 1", global.sub_tank_1);
+	ini_write_string("BASIC", "tank 2", global.sub_tank_2);
+	ini_write_string("BASIC", "tank 3", global.weap_tank_1);
 	
 	for(var d = 0; d < array_length(global.heart_used);d++){
 		ini_write_real("BASIC", "heart " + string(d), global.heart_used[d])

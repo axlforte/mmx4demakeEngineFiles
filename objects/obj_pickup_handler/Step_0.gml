@@ -66,7 +66,13 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 				target.hp = min(target.max_hp, target.hp + hp_add);
 				audio_play(fill_sound);
 			} else {
-				amount = 0;
+				if(global.tank_storage[0] < 32 && global.sub_tank_1){
+					global.tank_storage[0] += hp_add;
+				} else if(global.tank_storage[1] < 32 && global.sub_tank_2){
+					global.tank_storage[1] += hp_add;
+				} else {
+					amount = 0;
+				}
 			}
 			break;
 		case pickup_types.lifeup:
@@ -75,7 +81,11 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 		case pickup_types.wp:
 			var wp_add = 1; 
 			if (weapon_id == -1) {
-				amount = 0;
+				if(global.tank_storage[2] < 32 && global.weap_tank_1){
+					global.tank_storage[2] += wp_add;
+				} else {
+					amount = 0;
+				}
 				break;
 			}
 			// If it's filling a different weapon, it's using the instant fill
@@ -88,7 +98,11 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 			}
 			target.weapon_energy[weapon_id] = min(target.weapon_energy_max[weapon_id], target.weapon_energy[weapon_id] + wp_add);
 			if (target.weapon_energy[weapon_id] >= target.weapon_energy_max[weapon_id]) {
-				amount = 0;
+				if(global.tank_storage[2] < 32 && global.weap_tank_1){
+					global.tank_storage[2] += wp_add;
+				} else {
+					amount = 0;
+				}
 			}
 			break;
 	}

@@ -111,7 +111,7 @@ function player_step() {
 		}
 		glow_timer++;
 	}
-	player_check_weapon_change();
+	player_check_weapon_change(key_p_wp1, key_p_wp2);
 	if (state != states.ride) {
 		player_gravity();
 		script_try(state_array[state]);

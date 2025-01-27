@@ -22,12 +22,48 @@ y = y - 240;
 y_step_total = 8;
 y_steps = y_step_total;
 y_step_length = 240 / y_step_total;
+
+selected_item = 0;
+
+var wsize_options = [];
+var k = 0;
+while((k+1)*global.view_height + 40 <= global.screen_height) {
+	wsize_options[k] = "x" + string(k+1);
+	k++;
+}
+wsize_options[k] = "FULLSCREEN";
+wsize_options[k + 1] = "STRETCHED";
+global.fullscreen_index = k + 1;
+// Mobile
+if (G.mobile) {
+	wsize_options = ["NORMAL", "STRETCHED"];
+	global.fullscreen_index = 1;
+}
+
+subitem = 0;
+hinput_p = 0;
+hinput = 0;
+enter = 0;
+page_items = [
+	[_("Window Size"), [64, 64, 200, 20], wsize_options],//0
+	[_("Dialouge Speed"), [64, 80, 200, 20]],//1
+	[_("Key Configuration"), [64, 112, 96, 20]],//2
+	[_("Pickup Notifications"), [64, 128, 144, 20]],//3
+	[_("CRT Filter"), [64, 128, 144, 20]],//4
+	[_("Hit Numbers"),[64, 144, 144, 20]],//5
+	[_("Camera Offset"),[64, 144, 144, 20]],//6
+	[_("Camera Offset Apply Speed"),[64, 144, 144, 20]],//7
+	[_("Effect Volume"),[64, 160, 144, 20]],//8
+	[_("Music Volume"),[64, 176, 144, 20]],//9
+	[_("Back"), [64, 192, 144, 20]]//10
+];
+
 //enums
 enum pause_menus{
 	weapons,
 	upgrades,
 	map,
-	length
+	settings
 }
 menu = pause_menus.weapons;
 
@@ -74,13 +110,20 @@ player_x_weapon_reset();
 weps = p.weapon_list;
 nrg = p.weapon_energy;
 hp = p.hp;
-length = array_length(weapon_selectable) - 1;
-show_debug_message(string(array_length(weapon_selectable)));
-show_debug_message(string(array_length(p.weapon_list)));
+weapon_id = p.weapon_id;
+starting_weapon_id = weapon_id;
+
+avail_weps = ds_list_create();
+
+for(var w = 0; w < array_length(weapon_palettes); w++){
+	if(weapon_selectable[w] == true){
+		ds_list_add(avail_weps,w);
+	}
+}
 
 piss_off = false;
 
-map = web_spider_map;
+selecting_sub_tanks = false;
 
 //simple tilemap fetching code
 var lay_id = layer_get_id("map_reading_tiles");

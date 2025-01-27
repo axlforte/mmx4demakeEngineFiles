@@ -31,12 +31,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ride_armor_x1_activated_1",
-    "path": "sprites/spr_ride_armor_x1_activated_1/spr_ride_armor_x1_activated_1.yy",
+    "name": "spr_ride_armor_x1_activated_1_old",
+    "path": "sprites/spr_ride_armor_x1_activated_1_old/spr_ride_armor_x1_activated_1_old.yy",
   },
   "spriteMaskId": {
-    "name": "spr_ride_armor_x1_activated_1",
-    "path": "sprites/spr_ride_armor_x1_activated_1/spr_ride_armor_x1_activated_1.yy",
+    "name": "spr_ride_armor_x1_activated_1_old",
+    "path": "sprites/spr_ride_armor_x1_activated_1_old/spr_ride_armor_x1_activated_1_old.yy",
   },
   "visible": true,
 }

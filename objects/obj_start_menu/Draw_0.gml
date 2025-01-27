@@ -11,6 +11,8 @@ switch(state) {
 	case menu_states.main:
 		//draw_sprite(final_logo, 0, 0, 0);
 		animation2_draw();
+		draw_sprite(_1X4Logo, funny++, x + 20, y + 14);
+		funny -= 0.75;
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 128, _y = 140 + 24*i;
@@ -70,11 +72,14 @@ switch(state) {
 	#region Options
 	case menu_states.option:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		draw_string(240, 80, string(global.DialougeSpeed),                     colors.orange);
-		draw_string(220, 112,string(global.notes),                             colors.orange);
-		draw_string(220, 128,string(global.hit_numbers),                       colors.orange);
-		draw_string(176, 144,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
-		draw_string(176, 160,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
+		draw_string(240, 64+16*1, string(global.DialougeSpeed),                    colors.orange);
+		draw_string(240, 64+16*3,string(global.notes),                             colors.orange);
+		draw_string(240, 64+16*4,array_get(["Off", "Light", "Heavy"], global.crt), colors.orange);
+		draw_string(240, 64+16*5,string(global.hit_numbers),                       colors.orange);
+		draw_string(260, 64+16*6,string(global.camera_shift_distance),             colors.orange);
+		draw_string(260, 64+16*7,string(global.camera_shift_speed),                colors.orange);
+		draw_string(176, 64+16*8,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
+		draw_string(176, 64+16*9,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
 		for (var i = 0; i < items_length; i++) {
 			var item = items[i];
 			var _x = 64, _y = 64 + 16*i;

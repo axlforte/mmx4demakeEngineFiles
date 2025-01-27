@@ -2,7 +2,7 @@
 /// @description	Initialize Ride Armor or Ride Chaser
 function ride_init() {
 	state_machine_init();
-	gravity_default = 0.25;
+	gravity_default = 0.3;
 	scr_physics_init(gravity_default);
 	animations_init();
 	animation_init();
@@ -13,7 +13,7 @@ function ride_init() {
 	sprite = [noone, noone];
 	undefined_sprite_origin = { x: 0, y: 0 };
 	default_sprite_origin = { x: 0, y: 0 };
-	character_origin_offset = { x: 0, y: -20 };
+	character_origin_offset = { x: 0, y: -16 };
 	character_pos = { x: 0, y: 0, i: 0 };
 	character_map_offset = ds_map_create();
 	outside = !is_inside_view();
@@ -206,7 +206,9 @@ function ride_check_punch() {
 		punch_animation = "";
 		switch (state) {
 			case RIDE_ARMOR_STATE.IDLE:
+			case RIDE_ARMOR_STATE.LAND:
 			case RIDE_ARMOR_STATE.WALK:
+			case RIDE_ARMOR_STATE.DASH:
 				state_set(RIDE_ARMOR_STATE.IDLE);
 				punch_animation = "punch";
 				break;
@@ -214,9 +216,6 @@ function ride_check_punch() {
 			case RIDE_ARMOR_STATE.FALL:
 			case RIDE_ARMOR_STATE.HOVER:
 				punch_animation = "jump_punch";
-				break;
-			case RIDE_ARMOR_STATE.DASH:
-				punch_animation = "dash_punch";
 				break;
 		}
 		if (punch_animation != "") {
@@ -237,6 +236,7 @@ function ride_check_punch() {
 		}
 		if (punch_t == punch_object_frame) {
 			punch_inst = instance_create_layer(x, y, layer_up, punch_object);
+			show_debug_message(string(punch_object) + " was made")
 			punch_inst.image_xscale = xscale;
 			punch_inst.local_game_speed = local_game_speed;
 		}
