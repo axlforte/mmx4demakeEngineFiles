@@ -2,7 +2,7 @@ function player_check_weapon_change() {
 	if (state == states.death || !weapon_can_change) exit;
 
 	var old_id = weapon_id;
-	var change_dir = key_p_wp1 - key_p_wp2;
+	var change_dir = argument[0] - argument[1];
 	if (change_dir != 0) {
 		do {
 			weapon_id = (weapon_id + change_dir + 81) mod 81;

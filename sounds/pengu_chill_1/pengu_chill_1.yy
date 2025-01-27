@@ -13,7 +13,7 @@
   "duration": 6.571,
   "parent": {
     "name": "penguin in hq",
-    "path": "folders/Sounds/Voices/LInes/penguin in hq.yy",
+    "path": "folders/Sounds/LInes/penguin in hq.yy",
   },
   "preload": false,
   "sampleRate": 11025,

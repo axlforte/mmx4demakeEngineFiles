@@ -29,7 +29,7 @@ function scr_letter_apply(){
 					found = true;
 				}
 				if(string_char_at(line, index + ind) == " "){
-					if(xoff + ind * 7 > 224){
+					if(xoff + ind * 7 > 216){
 						x -= xoff + 6;
 						xoff = -6;
 						y += 9;

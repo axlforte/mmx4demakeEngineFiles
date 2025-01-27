@@ -23,41 +23,44 @@ function global_values() {
 	global.camera_shake						= false;
 	global.camera_16_by_9                   = false;
 	global.camera_scale                     = 1;
+	global.camera_shift_distance            = 96;
+	global.camera_shift_speed               = offset_speed.slow;
 	global.check							= false;
 	global.paused						    = false;
 	global.pause_type					    = pause_types.none;
 	global.is_using_door					= 0;
 	global.bgm_volume			        	= 0;
 	global.sfx_volume			        	= 0;
-	global.center_screen = true;
-	global.player_lives = 2;
-	global.items_count = 0;
-	global.difficulty = diff_modes.normal;
-	global.dash_lemon_visible = false;
-	global.unlocked_points = 0;
-	global.golden_armor_enabled = false;
-	global.tile_shader_multiplier = 1;
-	global.anyone_can_get_armors = 1;
-	global.grounded = false; // purely for ladders
-	global.under_water = false; // debug
-	global.exitALevelTransition = false;
-	global.levelTransitionX = 0;
-	global.levelTransitionY = 0;
-	global.levelTransitionCameraId = 0;
-	global.level_transition_use_door_locs = false;
-	global.door_id = 0;
-	global.DialougeSpeed = 2;
-	global.TeleportIn = false;
-	global.player_sprite = 0;
-	global.player_sprite_frame = 0;
-	global.temp = 0;
-	global.player_health = 28;
-	global.player_exp = 0;
-	global.one_px_tall_health_bar = true;
-	global.game_save_num = 0;
-	global.hit_numbers = false;
-	global.notes = true;
-	//global.heart_tanks_taken = 0;//gonna use powers of 2 for this shit
+	global.center_screen                    = true;
+	global.player_lives                     = 2;
+	global.items_count                      = 0;
+	global.difficulty                       = diff_modes.normal;
+	global.dash_lemon_visible               = false;
+	global.unlocked_points                  = 0;
+	global.golden_armor_enabled             = false;
+	global.tile_shader_multiplier           = 1;
+	global.anyone_can_get_armors            = 1;
+	global.grounded                         = false; // purely for ladders
+	global.under_water                      = false; // debug
+	global.exitALevelTransition             = false;
+	global.levelTransitionX                 = 0;
+	global.levelTransitionY                 = 0;
+	global.levelTransitionCameraId          = 0;
+	global.level_transition_use_door_locs   = false;
+	global.door_id                          = 0;
+	global.DialougeSpeed                    = 2;
+	global.TeleportIn                       = false;
+	global.player_sprite                    = 0;
+	global.player_sprite_frame              = 0;
+	global.temp                             = 0;
+	global.player_health                    = 28;
+	global.player_exp                       = 0;
+	global.one_px_tall_health_bar           = true;
+	global.game_save_num                    = 0;
+	global.hit_numbers                      = false;
+	global.notes                            = true;
+	global.rando                            = false;
+	global.crt                              = 0;
 	
 	enum diff_modes {
 		easy,
@@ -110,20 +113,16 @@ function global_values() {
 	global.game_world_speed = 1;
 	
 	//boss deaths
-	global.chill_penguin_defeat = 0;//dep but keeping to prevent errors
-	global.launch_octopus_defeat = 0;//same as above
 	global.magma_dragoon_defeat = 0;//funnily enough we WILL use this one
 	global.jet_stingray_defeat = 0;
 	global.web_spider_defeat = 0;
-	global.frost_walrus_defeat = 0;
+	global.frost_walrus_defeat = 0;//not in demo, not enough time
 	global.slash_beast_defeat = 0;
 	global.cyber_pea_cock_defeat = 0;//wont need til post demo
 	global.storm_owl_defeat = 0;//above
 	global.split_mushroom_defeat = 0;//also above
-	global.beat_colonel = 0;//maaaayyyyyybeeeeeeee in the demo. maybe. no promises.
+	global.beat_colonel = 0;// hell to the no!
 	
-	global.unarmored_x_defeat = 0;
-	global.unarmored_axl_defeat = 0;
 	global.show_fps = false;
 	
 	// Replay
@@ -138,7 +137,7 @@ function global_values() {
 }
 
 function overworld_info(){
-	global.heart_tanks = [false,false,false,false,false,false,false,false];
+	global.tank_storage = [0,0,0]
 	global.sub_tank_1 = false;
 	global.sub_tank_2 = false;
 	global.weap_tank_1 = false;

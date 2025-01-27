@@ -26,6 +26,10 @@ function scr_load_game_data(){
 	global.player_exp = ini_read_real("BASIC", "xp", 0);
 	global.save_dest = ini_read_string("BASIC", "location", "stingray");
 	
+	global.sub_tank_1 = ini_write_string("BASIC", "tank 1", false);
+	global.sub_tank_2 = ini_write_string("BASIC", "tank 2", false);
+	global.weap_tank_1 = ini_write_string("BASIC", "tank 3", false);
+	
 	for(var d = 0; d < array_length(global.heart_used);d++){
 		global.heart_used[d] = ini_read_real("BASIC", "heart " + string(d), false)
 	}

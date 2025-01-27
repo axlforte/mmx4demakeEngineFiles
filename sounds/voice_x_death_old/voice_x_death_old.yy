@@ -13,7 +13,7 @@
   "duration": 0.884422,
   "parent": {
     "name": "x gameplay",
-    "path": "folders/Sounds/Voices/LInes/x gameplay.yy",
+    "path": "folders/Sounds/LInes/x gameplay.yy",
   },
   "preload": false,
   "sampleRate": 5512,

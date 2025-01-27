@@ -7,6 +7,7 @@ raging_wait = 90;
 hook_inst = noone;
 face_x = false;
 persist = true;
+
 jump_strength = 5;
 skip_complete_walk = true;
 // Depths
@@ -157,7 +158,7 @@ attack_properties[? magma_dragoon.jump_edge] = [1, 1/2];
 attack_properties[? magma_dragoon.vomit_fire] = [1, 1/2];
 attack_properties[? magma_dragoon.flame_pillar] = [1, 1/6];
 #region Difficulty
-damage_set(3, 5, 7);
+damage_set(3, 5, 7, 128);
 switch (global.difficulty) {
 	case diff_modes.easy:
 		idle_limit = 30;
@@ -175,6 +176,13 @@ switch (global.difficulty) {
 		idle_limit = 4;
 		idle_desperate_limit = 4;
 		hp_desperate = 32;
+		attack_properties[? magma_dragoon.flame_bullet] = [2, 0];
+		ds_list_add(desperate_attacks, [magma_dragoon.flame_bullet, [1, 1/3]]);
+		break;
+	case diff_modes.zero:
+		idle_limit = 2;
+		idle_desperate_limit = 1;
+		hp_desperate = 36;
 		attack_properties[? magma_dragoon.flame_bullet] = [2, 0];
 		ds_list_add(desperate_attacks, [magma_dragoon.flame_bullet, [1, 1/3]]);
 		break;

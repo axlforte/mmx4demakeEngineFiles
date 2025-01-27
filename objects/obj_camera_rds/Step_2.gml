@@ -35,9 +35,29 @@ if (!instance_exists(obj_player_parent) || instance_exists(obj_player_ready) || 
 }
 
 
-if (instance_exists(obj_player_parent))
+if (instance_exists(obj_player_parent)){
     ground_mode = obj_player_parent.in_air;
-x = floor(global.player_x);
+	offset_dir = obj_player_parent.dir;
+	//show_debug_message(offset_dir);
+}
+
+//shift offset properly
+var _shift_speed = ((global.camera_shift_speed + 1) / 3);
+if(offset_dir == -1){
+	if(camera_x_offset >= -global.camera_shift_distance){
+		camera_x_offset -= sqrt(abs(camera_x_offset + global.camera_shift_distance)) * _shift_speed;
+	}  else {
+		camera_x_offset = -global.camera_shift_distance;
+	}
+}else {
+	if(camera_x_offset <= global.camera_shift_distance){
+		camera_x_offset += sqrt(abs((camera_x_offset - global.camera_shift_distance) * -1)) * _shift_speed;
+	} else {
+		camera_x_offset = global.camera_shift_distance;
+	}
+}
+
+x = floor(global.player_x) + camera_x_offset;
 y = floor(global.player_y);
 
 // I don't know who wrote this part of the code and I don't understand it well.

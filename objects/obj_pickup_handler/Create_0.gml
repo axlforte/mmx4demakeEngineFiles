@@ -1,3 +1,11 @@
+//rando information
+
+if(global.rando){
+	rando_id = -1;
+	has_been_randoed = false;
+}
+
+//regular information
 amount = 1;
 name = "none"
 enum pickup_types {

@@ -21,6 +21,8 @@ enum menu_states {
 
 enum background_select { intro, middle, ending }
 
+funny = 0;
+
 // State
 state = menu_states.main;
 state_timer = 0;
@@ -114,14 +116,17 @@ if (G.mobile) {
 }
 
 page_items[menu_states.option] = [
-	[_("Window Size"), [64, 64, 200, 20], wsize_options],
-	[_("Dialouge Speed"), [64, 80, 200, 20]],
-	[_("Key Configuration"), [64, 112, 96, 20]],
-	[_("Pickup Notifications"), [64, 128, 144, 20]],
-	[_("Hit Numbers"),[64, 144, 144, 20]],
-	[_("Effect Volume"),[64, 160, 144, 20]],
-	[_("Music Volume"),[64, 176, 144, 20]],
-	[_("Back"), [64, 192, 144, 20]]
+	[_("Window Size"), [64, 64, 200, 20], wsize_options],//0
+	[_("Dialouge Speed"), [64, 80, 200, 20]],//1
+	[_("Key Configuration"), [64, 112, 96, 20]],//2
+	[_("Pickup Notifications"), [64, 128, 144, 20]],//3
+	[_("CRT Filter"), [64, 128, 144, 20]],//3
+	[_("Hit Numbers"),[64, 144, 144, 20]],//4
+	[_("Camera Offset"),[64, 144, 144, 20]],//5
+	[_("Camera Offset Apply Speed"),[64, 144, 144, 20]],//6
+	[_("Effect Volume"),[64, 160, 144, 20]],//7
+	[_("Music Volume"),[64, 176, 144, 20]],//8
+	[_("Back"), [64, 192, 144, 20]]//9
 ];
 
 #endregion

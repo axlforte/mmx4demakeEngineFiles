@@ -40,7 +40,8 @@ function player_check_dolor() {
 				dy = 1;
 			if (death_by_spike) {
 				if (spikes_meeting(x + dx, ceil(y + dy)) || (is_on_floor() && spikes_meeting(x + dx, ceil(y)))) {
-					hp = 0;	
+					hp -= array_get([8, global.player_max_health, 128, 256], global.difficulty);
+					player_activate_immunity(immunity_types.dolor);
 				}
 			}
 			if (!is_inside_view() ) {

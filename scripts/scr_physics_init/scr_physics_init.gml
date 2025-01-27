@@ -21,7 +21,7 @@ function scr_physics_init() {
 	physics_ignore_frame = 0;
 
 	vspeed_max_normal = 5.75;
-	vspeed_max_water = vspeed_max_normal / 1.5;
+	vspeed_max_water = vspeed_max_normal / 2;
 	vspeed_max = vspeed_max_normal;
 	
 	gravity_normal = grav;

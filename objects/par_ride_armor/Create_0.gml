@@ -75,7 +75,9 @@ animation_add("punch", [
 	7, 2
 ], 7);
 animation_add("punch_end|punch", [
-	0, 1,
+	0, 3,
+	2, 4,
+	3, 5,
 	4, 0,
 	5, 0
 ]);
@@ -120,31 +122,34 @@ character_map_offset[? "dash_punch"] = [
 	{ i: 4, x: 6, y: 4 }
 ];
 character_map_offset[? "jump"] =  [
-	{ x: 0, y: -7 },
-	{ x: 0, y: -7 },
-	{ x: 0, y: -2 },
-	{ x: 0, y: 0 },
-	{ x: 0, y: 1 },
-	{ x: 0, y: 2 }
+	{ x: 3, y: -6 },
+	{ x: 3, y: -6 },
+	{ x: 3, y: 0 },
+	{ x: 4, y: 1 },
+	{ x: 5, y: 2 },
+	{ x: 5, y: 2 }
 ];
 character_map_offset[? "jump_punch"] = [
-	{ i: 3, x: -1, y: -7 },
-	{ i: 4, x: 0, y: -7 },
-	{ i: 4, x: 1, y: -7 }
+	{ i: 3, x: 4, y: -6 },
+	{ i: 4, x: 6, y: -6 },
+	{ i: 4, x: 6, y: -6 }
 ];
 character_map_offset[? "punch"] = [
-	{ i: 3, x: 0, y: 0 },
-	{ i: 4, x: 1, y: 0 },
-	{ i: 4, x: 2, y: 0 }
+	{ i: 3, x: 2, y: 0 },
+	{ i: 4, x: 6, y: 0 },
+	{ i: 4, x: 6, y: 0 },
+	{ i: 4, x: 6, y: 0 },
+	{ i: 4, x: 6, y: 0 },
+	{ i: 4, x: 6, y: 0 }
 ];
 character_map_offset[? "walk"] = [
-	{ i: 1, x: 1, y: -4 },
-	{ i: 2, x: 1, y: -3 },
-	{ i: 1, x: 1, y: -1 },
-	{ i: 0, x: 1, y: -3 },
-	{ i: 1, x: 1, y: -4 },
-	{ i: 2, x: 1, y: -3 },
-	{ i: 1, x: 1, y: -1 },
-	{ i: 0, x: 1, y: -3 }
+	{ i: 1, x: -1, y: -2 },
+	{ i: 2, x: -1, y: -2 },
+	{ i: 1, x: -1, y: -1 },
+	{ i: 0, x: -1, y: 0 },
+	{ i: 1, x: -1, y: -1 },
+	{ i: 2, x: -1, y: -2 },
+	{ i: 1, x: -1, y: -1 },
+	{ i: 0, x: -1, y: -1 }
 ];
 #endregion

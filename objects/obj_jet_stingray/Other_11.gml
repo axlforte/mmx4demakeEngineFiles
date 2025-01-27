@@ -35,7 +35,7 @@ switch (state) {
 		
 		if(t < 45){
 			x -= 9 * dir
-		}else if(t == 45){
+		}else if(t == 60){
 			animation_play("headbonk");
 			x = global.player_x;
 			y = 1904;

@@ -1,7 +1,7 @@
 event_inherited();
 persist = true;
 hp = 1;
-damage_set(3, 4, 6);
+damage_set(3, 4, 6, 128);
 damageable = false;
 blocking = false;
 shot_type = 0;

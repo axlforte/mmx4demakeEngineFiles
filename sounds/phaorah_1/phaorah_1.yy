@@ -13,7 +13,7 @@
   "duration": 19.656,
   "parent": {
     "name": "pharoah man encounter",
-    "path": "folders/Sounds/Voices/LInes/pharoah man encounter.yy",
+    "path": "folders/Sounds/LInes/pharoah man encounter.yy",
   },
   "preload": false,
   "sampleRate": 11025,

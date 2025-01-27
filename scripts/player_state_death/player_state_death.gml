@@ -80,7 +80,7 @@ function player_state_death() {
 	}
 	if (t == 327) {
 		audio_stop_all();
-		audio_group_set_gain(audiogroup_default, 1, 0);
+		audio_group_set_gain(audiogroup_default, global.sfx_volume, 0);
 		//global.player_lives--;
 		global.camera_shake = false;
 		if (global.player_lives >= 0) {

@@ -23,6 +23,10 @@ break;
 case(weapons.aiming_laser):
 	sprite = pause_menu_icons8;
 break;
+case(-24):
+case(-25):
+	sprite = spr_sub_tank;
+break;
 }
 
 draw_sprite(sprite,0,x,y);

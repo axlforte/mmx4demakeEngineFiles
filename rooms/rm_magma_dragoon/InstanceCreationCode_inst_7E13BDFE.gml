@@ -1,1 +1,0 @@
-bg_changer_update(0, 1);

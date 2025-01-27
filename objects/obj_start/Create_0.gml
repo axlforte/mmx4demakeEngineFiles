@@ -9,8 +9,9 @@ mobile_start();
 bosses_init();
 instance_create_depth(0, 0, 0, obj_gamepad_manager);
 
-global.screen_width = display_get_width();
+global.screen_width =  display_get_width();
 global.screen_height = display_get_height();
+global.GameState = new GameStateCreate();
 
 if (os_type == os_android)
 {

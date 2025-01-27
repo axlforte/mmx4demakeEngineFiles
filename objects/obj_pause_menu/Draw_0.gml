@@ -1,43 +1,75 @@
 switch(menu){
+	case(pause_menus.settings):
+		draw_sprite(spr_upgrade_screen_background,2,x,y);
+		draw_string(0,0,"Upgrades");
+		draw_string(320-56,0,"Weapons");
+		draw_string(240, 64+12*1, string(global.DialougeSpeed),                    colors.orange);
+		draw_string(240, 64+12*3,string(global.notes),                             colors.orange);
+		draw_string(240, 64+12*4,array_get(["Off", "Light", "Heavy"], global.crt), colors.orange);
+		draw_string(240, 64+12*5,string(global.hit_numbers),                       colors.orange);
+		draw_string(260, 64+12*6,string(global.camera_shift_distance),             colors.orange);
+		draw_string(260, 64+12*7,string(global.camera_shift_speed),                colors.orange);
+		draw_string(176, 64+12*8,string_hash_to_newline(string(global.sfx_volume)),colors.dark_blue);
+		draw_string(176, 64+12*9,string_hash_to_newline(string(global.bgm_volume)),colors.dark_blue);
+		for (var i = 0; i < array_length(page_items); i++) {
+			var item = page_items[i];
+			var _x = 64, _y = 64 + 12*i;
+			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
+			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.pink);
+			
+		}
+	break;
 	case(pause_menus.weapons):
 		draw_sprite(spr_upgrade_screen_background,0,x,y);
-		draw_string(x,y,"upgrades");
-		draw_string(x + 320-24,y,"map");
-		for(j = 0; j < length; j++){
-			show_debug_message(string(j) + " is j. length is " +string(length))
-			if(weps[j] != -4){
-				if(/*weapon_selectable[weps[j]]*/ 1 == 1){
-					draw_string(26, 28 + j * 20, weapon_name[weps[j]], colors.orange)
-					draw_sprite_ext(spr_bar1_limit, 0, x+31, y+32+j*20,1,1,90,c_white,1);
+		draw_string(0,0,"Settings");
+		draw_string(320-24,0,"Map");
+		for(var j = 0; j < ds_list_size(avail_weps) - 1; j++){
+			draw_string(26, 28 + j * 20 - y_step_length * y_steps, weapon_name[ds_list_find_value(avail_weps,j)], colors.orange)
+			draw_sprite_ext(spr_bar1_limit, 0, x+31, y+32+j*20,1,1,90,c_white,1);
 				
-					var wplen = 0;
-					var wpcap = 28;
-					if(j > 0){
-						wplen = weapon_energy[j]
+			var wplen = 0;
+			var wpcap = 28;
+			if(ds_list_find_value(avail_weps,j) != weapons.x_buster){
+				wplen = nrg[ds_list_find_value(avail_weps,j)]
+			} else {
+				wplen = hp;
+				wpcap = global.player_max_health;
+			}
+				
+			draw_sprite_ext(spr_bar1_limit, 0, x+32 + wpcap*2, y+20+j*20,1,1,270,c_white,1);
+			for(i = 0; i < wpcap; i++){
+				draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
+				if(wplen > i){
+					if(j == weapon_id && !selecting_sub_tanks){
+						draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
 					} else {
-						wplen = hp;
-						wpcap = global.player_max_health
-					}
-					show_debug_message(string(j) + " wryyy " + string(wplen))
-				
-					draw_sprite_ext(spr_bar1_limit, 0, x+32 + wpcap*2, y+20+j*20,1,1,270,c_white,1);
-					for(i = 0; i < wpcap; i++){
-						draw_sprite_ext(spr_bar1_area,0,x + 32 + i*2,y+32 + j * 20,1,1,90,c_white,1);
-						if(wplen > i){
-							draw_sprite_ext(spr_bar1_unit,0,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
-						}
+						draw_sprite_ext(spr_bar1_unit,2,x + 32 + i*2,y+30 + j * 20,1,1,90,c_white,1);
 					}
 				}
 			}
+		}
+		if(selecting_sub_tanks){
+			draw_set_color(#9cfff8);
+			draw_rectangle(x + 174,y + 174,x + 194,y + 210,true);
+		}
+		if(global.sub_tank_1){
+			
+			draw_sprite(tank_in_menu, 0, x + 176, y + 176);
+			draw_set_color(#e87917);
+			draw_rectangle(x + 182, y + 176, x + 186, y + 176 + (global.tank_storage[0]/2), true);
+		} 
+		if(global.sub_tank_2){
+			draw_sprite(tank_in_menu, 0, x + 192, y + 176);
+			draw_rectangle(x + 182, y + 176, x + 186, y + 176 + (global.tank_storage[1]/2), true);
 		}
 		
 	break;	
 	case(pause_menus.upgrades):
 		draw_sprite(spr_upgrade_screen_background,1,x,y);
-		draw_string(x,y,"map");
-		draw_string(x + 320-56,y,"weapons");
+		draw_string(0,0,"Map");
+		draw_string(320-64,0,"Settings");
 		draw_sprite_ext(spr_upgrade_screen_x,1,x+px,y+py,xsale,ysale,0,c_white,1);
-		draw_string(x + 16, y + 20, string(global.player_exp), colors.pink);
+		draw_string(16,20, string(global.player_exp), colors.pink);
 		var availible = 0;
 		switch(umenu){
 			case(upgrade_menu.none):
@@ -281,13 +313,13 @@ switch(menu){
 		}
 		
 		if(string_length(desc) < desc_cutoff_length){
-			draw_string(x + 112, y + 24 , desc, colors.blue);
+			draw_string(112,24 , desc, colors.blue);
 		} else {
 			for(var q = 0; q < string_length(desc)/desc_cutoff_length; q++){
-				draw_string(x + 112, y + 24 + 7*q, string_copy(desc, desc_cutoff_length*q, desc_cutoff_length - 1), colors.blue);
+				draw_string(112,24 + 7*q, string_copy(desc, desc_cutoff_length*q, desc_cutoff_length - 1), colors.blue);
 			}
 		}
-		draw_string(x + 112, y + 8, title, colors.red);
+		draw_string(112,8, title, colors.red);
 		break;
 	case(pause_menus.map):
 		//draw_sprite(spr_upgrade_screen_background,1,x,y);
@@ -297,15 +329,35 @@ switch(menu){
 		var cam_y = __view_get(e__VW.YView, 0) - 120;
 		//draw_sprite_part_ext(map,0, cam_x,cam_y,20,15,100 + x,83 + y,6,6,c_white,0.9);
 		draw_set_color(#c22000);
+		var suc = false;
 		for(var w = 0; w < 40; w++){
 			for(var h = 0; h < 30; h++){
 				tpix = tilemap_get_at_pixel(map_id, cam_x + w * 16,cam_y + h * 16);
+				if(tpix != 0)
+					tpix = tilemap_get_at_pixel(map_id, cam_x + w * 16 + 8,cam_y + h * 16);
+				if(tpix != 0)
+					tpix = tilemap_get_at_pixel(map_id, cam_x + w * 16,cam_y + h * 16 + 8);
+				if(tpix != 0)
+					tpix = tilemap_get_at_pixel(map_id, cam_x + w * 16 + 8,cam_y + h * 16 + 8);
+					
 				if(tpix != 0){
+					suc = true;
+				}
+					
+				if(suc){
 					draw_rectangle(x + w * 8, y + h * 8, x + 8 + w * 8,  y + 8 + h * 8, false);
 				}
+				
+				suc = false;
 			}
 		}
-		draw_string(x,y,"weapons");
-		draw_string(x + 320-64,y,"upgrades");
+		draw_set_color(#021fb3);
+		var _mpx = (global.player_x - cam_x)/2;
+		var _mpy = (global.player_y - cam_y)/2;
+		draw_rectangle(x + _mpx - 2,y + _mpy - 4,
+		x + _mpx + 6, y + _mpy + 12, false);
+		draw_sprite(spr_upgrade_screen_background, 3, x, y);
+		draw_string(0,0,"Weapons");
+		draw_string(320-64,0,"Upgrades");
 	break;
 }

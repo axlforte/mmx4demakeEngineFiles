@@ -6,7 +6,9 @@ if(piss_off){
 	switch(y_steps){
 		case(1):
 			with(obj_player_parent){
-				state_set(states.idle);
+				if(!instance_place(x,y,par_ride_armor)){//maybe fixes the issue?
+					state_set(states.idle);
+				}
 			}
 		break;
 		case(8):
@@ -18,11 +20,64 @@ if(piss_off){
 	y_steps--;
 } else {
 	switch(menu){
-		case(pause_menus.weapons):
+		case(pause_menus.settings):
 			if(key_p_wp1){
 				menu = pause_menus.upgrades;
 			} else if(key_p_wp2){
+				menu = pause_menus.weapons;
+			}
+			
+			if(key_p_up){
+				selected_item--;
+				if(selected_item < 0){
+					selected_item = array_length(page_items) - 1;
+				}
+			}
+			if(key_p_down){
+				selected_item++;
+				if(selected_item > array_length(page_items) - 1){
+					selected_item = 0;
+				}
+			}
+			subitem = (selected_item > 2 ? page_items[0][2] : 0);
+			hinput_p = key_p_right - key_p_left;
+			hinput = key_right - key_left;
+			enter = key_p_shoot;
+			scr_settings();
+		break;
+		case(pause_menus.weapons):
+			if(key_p_wp1){
+				menu = pause_menus.settings;
+			} else if(key_p_wp2){
 				menu = pause_menus.map;
+			}
+			
+			if(selecting_sub_tanks){
+				if(key_p_shoot){
+					if(global.difficulty == diff_modes.easy){
+						var p = instance_nearest(x,y,obj_player_parent);
+						var heal = p.max_hp - p.hp;
+						if(heal > global.tank_storage[0]){
+							p.hp += global.tank_storage[0];
+							global.tank_storage[0] = 0;
+						} else {
+							global.tank_storage[0] -= heal;
+							p.hp += heal;
+						}
+					}
+				}
+			} else {
+				if(key_p_down){
+					with(obj_player_parent){
+						player_check_weapon_change(1,0);
+					}
+					weapon_id = instance_nearest(x,y,obj_player_parent).weapon_id;
+				} else if(key_p_up){
+					with(obj_player_parent){
+						player_check_weapon_change(0,1);
+					}
+					weapon_id = instance_nearest(x,y,obj_player_parent).weapon_id;
+				}
 			}
 		break;
 		case(pause_menus.upgrades):
@@ -31,7 +86,7 @@ if(piss_off){
 					if(key_p_wp1){//left
 						menu = pause_menus.map;
 					} else if(key_p_wp2){//right
-						menu = pause_menus.weapons;
+						menu = pause_menus.settings;
 					}
 					if(key_p_shoot){
 						alt_path = false;

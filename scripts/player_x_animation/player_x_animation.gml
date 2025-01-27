@@ -21,16 +21,16 @@ function player_x_animation() {
 		7, 3,
 		9, 4,
 		11, 5,
-		14, 6,//strech frame
-		19, 7,
-		23, 8,
-		25, 9,
-		28, 10,
-		30, 11,
-		33, 12,// strech frame
-		38, 13,
-		41, 2
-	], 5, 41);
+		13, 6,//strech frame
+		17, 7,
+		21, 8,
+		23, 9,
+		25, 10,
+		27, 11,
+		30, 12,// strech frame
+		33, 13,
+		36, 2
+	], 5, 36);
 	
 	animation_add("dash",
 	[
@@ -43,9 +43,8 @@ function player_x_animation() {
 	animation_add("dash_up",
 	[
 		0, 0,
-		2, 1,
-		5, 2,
-		7, 3,
+		4, 1,
+		9, 2
 	], 7);
 	
 	animation_add("dash_end|dash",

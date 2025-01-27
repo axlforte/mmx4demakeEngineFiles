@@ -9,7 +9,7 @@ saved = false;
 check_tick = 0;
 check_tick_delay = 0;
 
-players_fat_ass = 23;
+players_fat_ass = 24;
 
 save_loc = "intro";
 scr_keys_reset();

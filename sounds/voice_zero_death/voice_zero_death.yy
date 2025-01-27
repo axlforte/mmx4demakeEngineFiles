@@ -13,7 +13,7 @@
   "duration": 2.11225,
   "parent": {
     "name": "zero gameplay",
-    "path": "folders/Sounds/Voices/LInes/zero gameplay.yy",
+    "path": "folders/Sounds/LInes/zero gameplay.yy",
   },
   "preload": true,
   "sampleRate": 44100,

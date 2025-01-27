@@ -13,7 +13,7 @@
   "duration": 2.826213,
   "parent": {
     "name": "Dragoon with x",
-    "path": "folders/Sounds/Voices/LInes/Dragoon with x.yy",
+    "path": "folders/Sounds/LInes/Dragoon with x.yy",
   },
   "preload": false,
   "sampleRate": 11025,

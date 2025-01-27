@@ -4,6 +4,18 @@ if(player == noone){
 	var note = instance_create_depth(x,y,depth,obj_notification);
 	note.text = "Got "
 	switch(weapon){
+		case(-24):
+			global.sub_tank_1 = true;
+			note.text += "a sub tank"
+		break;
+		case(-25):
+			global.sub_tank_2 = true;
+			note.text += "a sub tank"
+		break;
+		case(-26):
+			global.weap_tank_1 = true;
+			note.text += "a weapon tank"
+		break;
 		case(weapons.ground_hunter):
 			global.jet_stingray_defeat = true;
 			note.text += "ground hunter"
