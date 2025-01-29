@@ -99,35 +99,8 @@ page_items[menu_states.difficulty_mode] = [
 enum e_settings {
 	window_size
 }
-// PC
-var wsize_options = [];
-var k = 0;
-while((k+1)*global.view_height + 40 <= global.screen_height) {
-	wsize_options[k] = "x" + string(k+1);
-	k++;
-}
-wsize_options[k] = "FULLSCREEN";
-wsize_options[k + 1] = "STRETCHED";
-global.fullscreen_index = k + 1;
-// Mobile
-if (G.mobile) {
-	wsize_options = ["NORMAL", "STRETCHED"];
-	global.fullscreen_index = 1;
-}
 
-page_items[menu_states.option] = [
-	[_("Window Size"), [64, 64, 200, 20], wsize_options],//0
-	[_("Dialouge Speed"), [64, 80, 200, 20]],//1
-	[_("Key Configuration"), [64, 112, 96, 20]],//2
-	[_("Pickup Notifications"), [64, 128, 144, 20]],//3
-	[_("CRT Filter"), [64, 128, 144, 20]],//3
-	[_("Hit Numbers"),[64, 144, 144, 20]],//4
-	[_("Camera Offset"),[64, 144, 144, 20]],//5
-	[_("Camera Offset Apply Speed"),[64, 144, 144, 20]],//6
-	[_("Effect Volume"),[64, 160, 144, 20]],//7
-	[_("Music Volume"),[64, 176, 144, 20]],//8
-	[_("Back"), [64, 192, 144, 20]]//9
-];
+page_items[menu_states.option] = scr_settings_init();
 
 #endregion
 // Settings
@@ -143,24 +116,9 @@ global.golden_armor_enabled = false;
 #endregion
 #region Key Config
 /// Key Config
-page = [
-	["", []]
-];
-alength = array_length(global.key_text)
-for(var i = 0; i < alength; i++)
-{
-	page[i + 1] = [_(global.key_text[i]),
-					[],
-					[key_to_string(global.key_config[i]), gamepad_to_string(global.gamepad_config[i])]
-	];
-	
-}
-gamepad_movement_mode_text[0] = "Directional";
-gamepad_movement_mode_text[1] = "Joystick";
-page[alength + 1] = [_("BACK"), [128, 32 + 14*(alength + 1), 128, 24]];
-page_items[menu_states.key_config] = page;
+page_items[menu_states.key_config] = scr_keys_rebind_init();
 #endregion
-#region Stage Selectf
+#region Stage Select
 /// Stage Select
 page_items[menu_states.stage_select] = [
 
@@ -247,10 +205,6 @@ hinput_p = false;
 vinput_p = false;
 enter = false;
 scr_keys_reset();
-
-// Buttons
-buttons = ds_list_create();
-btn_length = 0;
 
 // Palette
 palette_init();

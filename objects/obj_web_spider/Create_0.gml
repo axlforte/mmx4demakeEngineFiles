@@ -10,6 +10,10 @@ he needs to be able to crawl around after doing an attack. make sure that when h
 
 
 event_inherited();
+
+dialouge = scr_get_lines_array("english", dialouge_type.words, line.spider_1, 3);
+lines =    scr_get_lines_array("english", dialouge_type.sounds, line.spider_1, 3);
+
 idle_time_to_turn = 5;
 intro_limit = 0;
 jump_wait = 5;

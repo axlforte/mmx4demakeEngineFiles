@@ -5,11 +5,11 @@ function player_state_ladder() {
 	grav = 0;
 	
 	if(key_p_left){
-		dir = -1;
+		dir = 1;
 		xscale = 1;
 	} else if(key_p_right){
 		dir = 1;
-		xscale = -1;
+		xscale = 1;
 	}
 	
 	if(t <= 7){
@@ -21,7 +21,7 @@ function player_state_ladder() {
 		animation_play("ladder",46);
 	} else if(shoot_t > 2){
 		animation_play("ladder",42);
-		ladder_anim = 30
+		ladder_anim = 14;
 	} else if(top_of_ladder < y){
 		animation_play("ladder",clamp( ladder_anim % 32 + 4,1,32));
 		

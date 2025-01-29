@@ -26,3 +26,6 @@ auto_rotate = false;
 
 persist = true;
 dir = 1;
+struggle_amount = 0;
+
+scr_keys_reset();

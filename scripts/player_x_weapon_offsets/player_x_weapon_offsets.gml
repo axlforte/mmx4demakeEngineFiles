@@ -24,6 +24,19 @@ function player_x_weapon_offsets() {
 	player_weapon_offset("shooting", 0, 12, -8);
 	player_weapon_offset("shooting", 1, 12, -8);
 	player_weapon_offset("shooting", 2, 12, -8);
+	
+	player_weapon_offset("ladder", 0, 12, -8);
+	player_weapon_offset("ladder", 1, 12, -8);
+	player_weapon_offset("ladder", 2, 12, -8);
+	player_weapon_offset("ladder", 3, 12, -8);
+	player_weapon_offset("ladder", 4, 12, -8);
+	player_weapon_offset("ladder", 5, 12, -8);
+	player_weapon_offset("ladder", 6, 12, -8);
+	player_weapon_offset("ladder", 7, 12, -8);
+	player_weapon_offset("ladder", 8, 12, -8);
+	player_weapon_offset("ladder", 9, 12, -8);
+	player_weapon_offset("ladder", 10, 12, -8);
+	player_weapon_offset("ladder", 11, 12, -8);
 
 	player_weapon_offset("jump", 0, 20, -9);
 	player_weapon_offset("jump", 1, 21, -11);

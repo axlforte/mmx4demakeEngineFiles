@@ -7,9 +7,13 @@ function boss_death_x1() {
 	// Play animation
 	if (t == 0) {
 		animation_play(death_animation);
+		if(object_index == obj_pharoah_man){
+			global.pharoah_dash = true;
+		}
 		with (obj_player_parent) {
 			auto_regen = false;
 			pause_enabled = false;
+			player_x_weapon_reset();
 		}
 		if (grab_player_inst != noone) {
 			with (grab_player_inst) {
@@ -17,27 +21,29 @@ function boss_death_x1() {
 				player_check_idle();	
 			}
 		}
-		if(object_index == obj_pharoah_man){
-			global.pharoah_dash = true;
-		}
-		with (obj_player_parent) {
-			player_x_weapon_reset();
-		}
 	}
 	// Resume all sounds
 	if (t == 59) {
 		audio_resume_all();
 		pause_set(false);
-		with (obj_player_parent) {
-			//locked = true;	
+		if(self == obj_magma_dragoon){
+			var convo = instance_create_depth(x,y,depth, obj_conversation);
+			convo.conversation = death_convo;
+			convo.lines = death_lines;
+		} else if(death_line != nooe){
+			audio_play(death_line);
 		}
 	}
 	// Create red transparency effect
 	if (t == 60) {
+		if(instance_exists(obj_conversation)){
+			state_timer--;
+		} else {
 		var transp = transition_create(transition_types.transparency, obj_player_parent.depth + 10);
 		transp.color = c_red;
 		transp.transition_limit = 200;
 		transp.alpha = 0.1;
+		}
 	}
 	// Explosion Sound
 	if (t == 62) {
@@ -86,13 +92,10 @@ function boss_death_x1() {
 	
 	if(t == 900){
 		with (obj_player_parent) {
-			auto_regen = true;
 			pause_enabled = true;
 			music_play(global.current_music);
-			immunity = false;
+			immortal = false;
 		}
 		instance_destroy();
 	}
-
-
 }

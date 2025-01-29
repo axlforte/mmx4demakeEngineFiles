@@ -13,6 +13,10 @@ skip_complete_walk = true;
 // Depths
 player_depth = layer_get_depth(layer_get_id("player"));
 camera_depth = layer_get_depth(layer_get_id("Camera"));
+
+death_convo = [];
+death_lines = [];
+
 trail_init(8);
 trail_sprite = spr_magma_dragoon_trail;
 #region Animations

@@ -1,7 +1,8 @@
-
-//MUST REWORK IT DOESNT USE THE PROPER ATTACK SYSTEM
-
 event_inherited();
+
+dialouge = scr_get_lines_array("english", dialouge_type.words, line.stingray_1, 3);
+lines =    scr_get_lines_array("english", dialouge_type.sounds, line.stingray_1, 3);
+
 idle_time_to_turn = 5;
 intro_limit = 102;
 jump_wait = 20;

@@ -16,8 +16,8 @@ switch(state) {
 	#region Throw Pickaxe
 	case poseidon.yeet:
 		if(t == 1){
-			grav = -1;
-			v_speed = 0;
+			grav = 0;
+			v_speed = 6;
 			animation_play("T");
 			y -= 8;
 		}
