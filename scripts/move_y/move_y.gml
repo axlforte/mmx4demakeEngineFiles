@@ -28,7 +28,7 @@ function move_y_normal(dist, down_on_slope = true) {
 			var is_slope = is_on_slope(_vspeed, 0);
 			var xx = x;
 			move_contact_block(0, -8);
-			var no_wall = is_place_free(x + _vspeed, y);
+			var no_wall = is_place_free(x, y + _vspeed);
 			if (is_slope && no_wall) {
 		        y += _vspeed;
 		        result = true;
