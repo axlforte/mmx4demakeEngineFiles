@@ -1,4 +1,5 @@
 var t = timer++;
+scr_keys_update();
 if (t == 0) {
 	h_speed = dir * abs_speed;
 	if (dir == -1)
@@ -15,6 +16,15 @@ if(got_got) {
 	} else if(t == 120){
 		instance_destroy();
 	} else {	
+		
+		if(struggle_amount > array_get([15, 30, 35, 55], global.difficulty))
+			instance_destroy();
+		else {
+			if(key_p_dash || key_p_down || key_p_shoot || key_p_shoot2 || key_p_up || key_p_left || 
+			key_p_right || key_p_jump || key_p_special)
+				struggle_amount++;
+		}
+			
 		var _wryyy_x = x;
 		var _wryyy_y = y;
 		with(obj_player_parent){

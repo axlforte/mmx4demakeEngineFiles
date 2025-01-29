@@ -18,8 +18,8 @@ function CRTParameters() constructor
 	// Some default values that look decent       Scale  Scan  Pixel  WarpX  WarpY  Dark  Light  SRGB
 	harsh = false;
 	Params = [];
-	Params_harsh = [320, 480,1,-16.0,-2.0,24.0,26.0,0.3,1.7,1];
-	Params_light = [320, 240,1,-9.0,-3.5,32.0,34.0,0.5,1.7,1];
+	Params_harsh = [320, 480,0.5,-14.0,-0.0001,24.0,26.0,0.1,1.9,1];
+	Params_light = [320, 240,0.25,-14.0,-0.01,32.0,34.0,2,1.3,1];
 	if(global.crt == 1){
 		Params=Params_light;
 	} else if(global.crt == 2){
@@ -34,12 +34,12 @@ function CRTParameters() constructor
 			_resX,
 			_resY,
 			_resScale,
-			clamp(_scan, -8, -16),
-			clamp(_pixel,-2, -4),
-			clamp(_warpX, 0, 32),
-			clamp(_warpY, 0, 24),
-			clamp(_dark,  0.2, 2),
-			clamp(_light, 0.2, 2),
+			//clamp(_scan, -8, -16),
+			//clamp(_pixel,-2, -4),
+			//clamp(_warpX, 0, 32),
+			//clamp(_warpY, 0, 24),
+			//clamp(_dark,  0.2, 2),
+			//clamp(_light, 0.2, 2),
 			_srgb
 		];
 	}

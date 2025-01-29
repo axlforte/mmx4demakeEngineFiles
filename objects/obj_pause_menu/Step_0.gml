@@ -45,6 +45,25 @@ if(piss_off){
 			enter = key_p_shoot;
 			scr_settings();
 		break;
+		case(pause_menus.key_config):
+			if(key_p_up){
+				selected_item--;
+				if(selected_item < 0){
+					selected_item = array_length(page_items) - 1;
+				}
+			}
+			if(key_p_down){
+				selected_item++;
+				if(selected_item > array_length(page_items) - 1){
+					selected_item = 0;
+				}
+			}
+			subitem = (selected_item > 2 ? page_items[0][2] : 0);
+			hinput_p = key_p_right - key_p_left;
+			hinput = key_right - key_left;
+			enter = key_p_shoot;
+			scr_settings();
+		break;
 		case(pause_menus.weapons):
 			if(key_p_wp1){
 				menu = pause_menus.settings;

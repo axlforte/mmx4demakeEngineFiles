@@ -93,6 +93,9 @@ local_game_speed = 1;
 
 dialouge = scr_get_lines_array("english", dialouge_type.words, 0, 2);
 lines = scr_get_lines_array("english", dialouge_type.sounds, 0, 2);
+
+death_line = noone;
+
 has_worded = false;
 
 function default_boss_intro_sequence(){

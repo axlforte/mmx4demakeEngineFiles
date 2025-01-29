@@ -93,7 +93,7 @@ function player_start() {
 	trail_sprites = ds_list_create();
 	trail_mode = 0;
 	trail_color = $f69701;
-	trail_cutoff = false;
+	trail_cutoff = true;
 	trail_off = ds_list_create();
 
 	// Animation
@@ -270,7 +270,7 @@ function player_start() {
 	glow_init();
 	local_game_speed_init();
 	local_game_speed = 1;
-	using_world_speed = false;
+	using_world_speed = true;
 	
 	pause_enabled = false;
 	

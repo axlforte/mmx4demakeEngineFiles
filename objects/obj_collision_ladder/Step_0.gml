@@ -21,7 +21,7 @@ if (instance_exists(obj_player_parent))
 			   obj_player_parent.state = states.ladder;
 			   obj_player_parent.x = x + 16;
 			   obj_player_parent.top_of_ladder = y;
-			   obj_player_parent.xscale = obj_player_parent.xscale * -1;
+			   //obj_player_parent.xscale = obj_player_parent.xscale * -1;
 			   obj_player_parent.state_timer = -1;
 		   }
 	   }

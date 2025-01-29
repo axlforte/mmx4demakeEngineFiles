@@ -110,7 +110,7 @@ function global_values() {
 	//global.run_from_ide = !global.mobile && parameter_count() == 3 && string_count("GMS2TEMP", parameter_string(2));
 	global.run_from_ide = true;
 	instance_create_depth(0, 0, 0, obj_window_center);
-	global.game_world_speed = 1;
+	global.game_world_speed = 15;
 	
 	//boss deaths
 	global.magma_dragoon_defeat = 0;//funnily enough we WILL use this one

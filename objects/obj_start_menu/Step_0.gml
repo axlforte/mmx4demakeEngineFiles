@@ -187,7 +187,7 @@ switch (state) {
 		menu_update_item_click();
 		if (enter) {
 			
-			if(key_wp2){
+			if(key_wp2 && 1 == 0){
 				global.rando = true;
 				scr_rando_settings();
 				audio_play(snd_player_x_shot_2);
@@ -285,110 +285,8 @@ switch (state) {
 	#region Key Config
 	case menu_states.key_config:
 		state_timer++;
-		menu_update_item_click();
-		for (var i = 0; i < btn_length; i++) {
-			var b = buttons[| i];
-			if (menu_button_pressed(b)) {
-				global.settings[settings_types.input] = input_types.keyboard;	
-				if (i == input_types.gamepad) {
-					global.gp_id = -1;
-					if (!ds_list_empty(global.gamepad_list)) {
-						global.settings[settings_types.input] = input_types.gamepad;
-						global.gamepad_list_index = (global.gamepad_list_index + 1) mod ds_list_size(global.gamepad_list);
-						global.gp_id = global.gamepad_list[| global.gamepad_list_index];		
-						global.gp_name = gamepad_get_description(global.gp_id);
-					} 
-				}
-			}
-		}
-		for (var i = 0; i < btn_length; i++) {
-			var b = buttons[| i];
-			b[1] = (global.settings[1] == i); // Image Index
-			buttons[| i] = b;
-		}
-		if (substates[0] == 0)
-			menu_update_item_v(true);
-		if (substates[0] == 1) {
-			item_blink_t = ((item_blink_t + 1) mod 30);
-			var item = items[selected_item];
-			var subitem = item[2];
-			var update_items = false;
-			if (keyboard_check_pressed(vk_escape)) {
-				update_items = true;	
-			}
-			else if (global.settings[1] == input_types.keyboard) {
-				if (keyboard_lastkey != -1) {
-					var key_str = key_to_string(keyboard_lastkey);
-					if (key_str != "") {
-						global.key_config[selected_item - 1] = keyboard_lastkey;
-						subitem[0] = key_str;
-						update_items = true;
-						state_timer = -1;
-					}
-				}
-			}
-			else {
-				var k = gamepad_key(global.gp_id);
-				if (global.gp_id != -1 && k != -1)
-				{
-					global.gamepad_config[selected_item - 1] = k;
-					subitem[1] = gamepad_to_string(k);
-					update_items = true;
-				}
-			}
-			
-			if (update_items) {
-				item[2] = subitem;
-				items[selected_item] = item;
-				page_items[state] = items;
-				substates[0] = 0;
-				if (global.gp_id == -1)
-					global.settings[1] = input_types.keyboard;
-				keys_apply();
-			}
-		}
-		else if (enter && state_timer > 0) {
-			if (selected_item > 0 && selected_item < items_length - 1) {
-				// Wait for the key
-				if (substates[0] == 0)
-				{
-					if (global.settings[1] == input_types.keyboard
-					|| (global.settings[1] == input_types.gamepad && global.gp_id != -1 && selected_item > 4)) {
-						substates[0] = 1;
-						keyboard_lastkey = -1;
-					}
-					if (global.settings[1] == input_types.gamepad) {
-						if (selected_item == 3) { // Directional / Joystick
-							global.gp_movement = !global.gp_movement;	
-						}
-					}
-				}
-			}
-			else if (selected_item != 0) {
-				menu_set_state(menu_states.option);
-				settings_save();
-			}
-		}
-		else {
-			if (selected_item == 0) {
-				if (hinput_p != 0) {
-					var new_value = clamp(global.settings[1] + hinput_p, 0, 1);
-					if (new_value == input_types.gamepad) {
-						if (!ds_list_empty(global.gamepad_list)) {
-							global.gamepad_list_index = (global.gamepad_list_index + 1) mod ds_list_size(global.gamepad_list);
-							global.gp_id = global.gamepad_list[| global.gamepad_list_index];
-							global.gp_name = gamepad_get_description(global.gp_id);
-						} else {
-							new_value = global.settings[1];	
-						}
-					}
-					if (global.settings[1] != new_value) {
-						global.settings[1] = new_value;
-						sound = true;
-					}
-				}
-			}
-		}
+			menu_update_item_click();
+			scr_keys_rebind();
 		break;
 	#endregion
 	#region Volume Settings

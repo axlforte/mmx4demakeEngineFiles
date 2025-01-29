@@ -37,5 +37,5 @@
     "path": "sprites/spr_death_square_16/spr_death_square_16.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

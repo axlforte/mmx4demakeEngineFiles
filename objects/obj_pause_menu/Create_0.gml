@@ -44,26 +44,16 @@ subitem = 0;
 hinput_p = 0;
 hinput = 0;
 enter = 0;
-page_items = [
-	[_("Window Size"), [64, 64, 200, 20], wsize_options],//0
-	[_("Dialouge Speed"), [64, 80, 200, 20]],//1
-	[_("Key Configuration"), [64, 112, 96, 20]],//2
-	[_("Pickup Notifications"), [64, 128, 144, 20]],//3
-	[_("CRT Filter"), [64, 128, 144, 20]],//4
-	[_("Hit Numbers"),[64, 144, 144, 20]],//5
-	[_("Camera Offset"),[64, 144, 144, 20]],//6
-	[_("Camera Offset Apply Speed"),[64, 144, 144, 20]],//7
-	[_("Effect Volume"),[64, 160, 144, 20]],//8
-	[_("Music Volume"),[64, 176, 144, 20]],//9
-	[_("Back"), [64, 192, 144, 20]]//10
-];
+page_items = scr_settings_init();
+key_items = scr_keys_rebind_init();
 
 //enums
 enum pause_menus{
 	weapons,
 	upgrades,
 	map,
-	settings
+	settings,
+	key_config
 }
 menu = pause_menus.weapons;
 
