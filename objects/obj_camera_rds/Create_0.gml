@@ -41,6 +41,7 @@ while (tmp_id != -1) {
 		background_object[k] = noone;
 		background_far[k] = global.background_list[| k][| 0].far;
 		k++;
+		show_debug_message("background_"+string(k-1)+" set")
 	}
 }
 // setup view

@@ -21,16 +21,16 @@ if(global.magma_dragoon_defeat){
 	ds_list_add(possible_locations, rm_magma_dragoon);
 ds_list_add(loc_names, "Volcano");
 }
-if(global.frost_walrus_defeat){
+if(global.frost_walrus_defeat && 1 == 0){
 	ds_list_add(possible_locations, rm_frost_walrus);
 ds_list_add(loc_names, "Frozen Mountain");
 }
 //cyber peacock can be easily accessed via the hq save station
-if(global.slash_beast_defeat){
+if(global.slash_beast_defeat && 1 == 0){
 	ds_list_add(possible_locations, rm_train_station);
 ds_list_add(loc_names, "Train Station");
 }
-if(global.split_mushroom_defeat){
+if(global.split_mushroom_defeat && 1 == 0){
 	ds_list_add(possible_locations, noone);
 ds_list_add(loc_names, "Abandoned Lab");
 }

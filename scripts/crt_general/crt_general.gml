@@ -18,8 +18,8 @@ function CRTParameters() constructor
 	// Some default values that look decent       Scale  Scan  Pixel  WarpX  WarpY  Dark  Light  SRGB
 	harsh = false;
 	Params = [];
-	Params_harsh = [320, 480,0.5,-14.0,-0.0001,24.0,26.0,0.1,1.9,1];
-	Params_light = [320, 240,0.25,-14.0,-0.01,32.0,34.0,2,1.3,1];
+	Params_harsh = [320, 480,0.5,-14.0,-0.0001,24.0,26.0,0.1,1.9,1, 2];
+	Params_light = [320, 240,0.25,-14.0,-128,32.0,34.0,2,1.3,1, 256];
 	if(global.crt == 1){
 		Params=Params_light;
 	} else if(global.crt == 2){

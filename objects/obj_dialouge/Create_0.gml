@@ -1,7 +1,7 @@
 line = "you forgor";
 spd = 2;
 time = 0;
-index = 1;
+index = 4;
 ltr = noone;
 die = false;
 xoff = 0;

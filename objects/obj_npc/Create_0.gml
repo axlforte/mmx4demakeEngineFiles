@@ -5,3 +5,5 @@ scr_keys_reset();
 interactible = false;
 convo_active = false;
 converse = noone;
+
+sprite_frame = 0;

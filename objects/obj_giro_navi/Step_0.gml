@@ -47,10 +47,10 @@ if(player != noone){
 	}
 }
 		
-spin += 0.2;
+spinny += 0.2;
 
-if(spin > 720){
-	spin = 0;
+if(spinny > 720){
+	spinny = 0;
 }
 
 ind_flip++;

@@ -12,6 +12,9 @@ function scr_load_game_data(){
 	global.storm_owl_defeat = ini_read_real("BOSS", "owl",false);
 	global.slash_beast_defeat = ini_read_real("BOSS", "beast",false);
 	
+	//cutscene triggers
+	global.met_colonel = ini_read_real("CUT", "colonel in wreckage",false);
+	
 	//armors
 	//easy to simply set based off of save data. really 
 	G.player_character_armor[pl_char.x][4] = ini_read_string("ARMOR", "legs", x_armor.none);

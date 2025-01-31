@@ -45,22 +45,7 @@ switch(menu){
 		draw_sprite(spr_upgrade_screen_background,2,x,y);
 		draw_string(0,0,"Upgrades");
 		draw_string(320-56,0,"Weapons");
-		draw_string(240, 64+12*1, string(global.DialougeSpeed),                          colors.orange);
-		draw_string(240, 64+12*3,string(global.notes),                                   colors.orange);
-		draw_string(240, 64+12*4,array_get(["Off", "Light", "Heavy"], global.crt),       colors.orange);
-		draw_string(240, 64+12*5,string(global.hit_numbers),                             colors.orange);
-		draw_string(260, 64+12*6,string(global.camera_shift_distance),                   colors.orange);
-		draw_string(260, 64+12*7,string(global.camera_shift_speed),                      colors.orange);
-		draw_string(176, 64+12*8,string_hash_to_newline(string(global.game_world_speed)),colors.dark_blue);
-		draw_string(176, 64+12*9,string_hash_to_newline(string(global.sfx_volume)),      colors.dark_blue);
-		draw_string(176, 64+12*10,string_hash_to_newline(string(global.bgm_volume)),     colors.dark_blue);
-		for (var i = 0; i < array_length(page_items); i++) {
-			var item = page_items[i];
-			var _x = 64, _y = 64 + 12*i;
-			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
-			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.pink);
-			
-		}
+		scr_draw_settings();
 	break;
 	case(pause_menus.weapons):
 		draw_sprite(spr_upgrade_screen_background,0,x,y);

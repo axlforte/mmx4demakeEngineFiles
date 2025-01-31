@@ -10,6 +10,21 @@ enum line {
 	lagoon_x_2,
 	lagoon_dragoon_2,
 	lagoon_x_3,
+	dragoon_1,
+	dragoon_2,
+	dragoon_3,
+	dragoon_4,
+	dragoon_5,
+	dragoon_6,
+	dragoon_7,
+	dragoon_8,
+	dragoon_9,
+	dragoon_10,
+	dragoon_11,
+	dragoon_12,
+	dragoon_13,
+	dragoon_14,
+	dragoon_15,
 	stingray_1,
 	x_stingray_1,
 	stingray_2,
@@ -65,7 +80,7 @@ function scr_get_lines_array(){
 				case "spanish": 
 					var ret = [argument[3]];
 					for(var e = 0; e < argument[3]; e++){
-						ret[e] = global.spanish_dialouge[argument[2] + e];
+						ret[e] = global.spanish_dialouge[argument[2] + e][0];
 					}
 					return ret;
 					break;		
@@ -76,14 +91,14 @@ function scr_get_lines_array(){
 				case "english": 
 					var ret = [argument[3]];
 					for(var e = 0; e < argument[3]; e++){
-						ret[e] = global.english_lines[argument[2] + e];
+						ret[e] = global.english_dialouge[argument[2] + e][1];
 					}
 					return ret;
 					break;	
 				case "spanish": 
 					var ret = [argument[3]];
 					for(var e = 0; e < argument[3]; e++){
-						ret[e] = global.spanish_lines[argument[2] + e];
+						ret[e] = global.spanish_lines[argument[2] + e][1];
 					}
 					return ret;
 					break;		
@@ -100,9 +115,23 @@ function global_dialouge_load(){
 		["Now understand, /c1X/c0, we can't do /s1anything/s0 to stop the fall! I suggest you escape immediately and don't do anything on the way out, ok?",dragoon_lagoon_2],
 		["/c1Damn/c0! The city below is about to become a hellscape. I have to retreat and see if there are any surviors!",x_dragoon_3],
 		//add the iris/colonel dialouge here
-		//web spider dialouge here
 		//dragoon fight dialouge here
-		//dragoon post dialouge here
+		["I knew you'd come for me. I've been waiting for you, X.", dragoon_fight_1],
+		["Magma dragoon. I was informed you became a traitor, but... why?", xmagma],
+		["Pfffthahaha, you really thought you could get information out of me that easily?", dragoon_fight_2],
+		["Dammit Dragoon! We were allies", xmagma2],
+		["That was in the past. You're so naive. Do you remember that I mention the other maverick that destroyed the core? I was that maverick, and i'll do it again!", dragoon_fight_3],
+		["Why? There were innocent civilians in that area! Do you not care about the losses you've caused?", xmagma4],
+		["Those losses will only increase the strength of our resolution, X. Show me what you are, and do not hold back. let the fury control you!", dragoon_fight_4],
+		//dragoon gets his ass kicked
+		["Damnit, you're pretty strong... even as a maverick, I couldnt!...", dragoon_fight_5],
+		["Why did you do such a horrible act, Dragoon? Please, answer me!", xmagma5],
+		["I always ... wanted to ... fight you ... then ... he appeared ...", dragoon_fight_6],
+		["HE appeared? Who are you talking about?", xmagma6],
+		["I think you know who I'm ... talking about...", dragoon_fight_7],
+		["...Did you do it, just so you could fight me?", xmagma7],
+		["It was worth it ... for our final duel!", dragoon_fight_8],
+		["/w1DRAGOON!/w0", xmagma8],
 		//jet stingray dialouge here
 		["Wow, you can match my speed after all! /s1Too bad you're the only slow one here!/s0", stingray_1],
 		["I cant just ignore what you've done in this city! Do you not see the blood on your hands?", xstingray],
@@ -151,66 +180,7 @@ function global_dialouge_load(){
 		["", noone]
 	];
 	
-	/*
-	used for easy line transfer. not occupied at the moment
-*/
-	
-	global.english_lines = [
-		x_dragoon_1,
-		dragoon_lagoon_1,
-		x_dragoon_2,
-		dragoon_lagoon_2,
-		x_dragoon_3,
-		noone,
-		noone,
-		noone,
-		noone,
-		noone,
-		noone,
-		noone,
-		noone,
-		penguin_x_0,
-		pengu_chill_1,
-		penguin_x_1,
-		pengu_chill_2,
-		x_pharoah_1,
-		pharoah_1_removed_effects,
-		x_pharoah_2,
-		pharoah_2,
-		x_pharoah_3,
-		pharoah_3,
-		pharoah_4,
-		x_pharoah_4,
-		pharoah_5,
-		credits_line_1,
-		credits_demo_destu,
-		credits_demo_me,
-		credits_demo_alex,
-		credits_demo_speedy,
-		credits_demo_galen,
-		credits_demo_scyther,
-		credits_demo_quantom,
-		credits_demo_berro,
-		credits_demo_rex,
-		credits_demo_knapko,
-		credits_demo_woodworth,
-		credits_demo_hedgie,
-		credits_demo_kingcobra,
-		credits_demo_master_roshi,
-		credits_demo_mystic_robert,
-		credits_demo_saito_and_badea,
-		credits_demo_mmxe
-	];
-	
 	global.spanish_dialouge = [
 
-	];
-	
-	global.spanish_lines = [
-	
-	];
-	
-	global.english_chat = [
-	["Youre /c9Magma Dragoon/c0, from the 14th unit!",x_dragoon_1],
 	];
 }

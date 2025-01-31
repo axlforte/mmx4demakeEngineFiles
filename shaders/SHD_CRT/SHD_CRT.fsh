@@ -1,6 +1,6 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;	
-uniform float params[10];
+uniform float params[11];
 vec2 size = vec2(params[0], params[1]);
 #define res (size.xy/params[2])
 float hardScan = params[3]; //-8.0;
@@ -9,6 +9,7 @@ vec2  warp = vec2(1.0/params[5], 1.0/params[6]);
 float maskDark = params[7];
 float maskLight = params[8];
 bool SRGB = bool(params[9] == 1.0);
+float blurMagnitude = params[10];
 
 //---------------------- FUNCTIONS ----------------------------
 
@@ -101,14 +102,14 @@ float Scan(vec2 pos, float off)
 // Allow nearest three lines to effect pixel.
 vec3 Tri(vec2 pos)
 {
-	vec3 a = Horz3(pos,  -1.0);
+	vec3 a = Horz3(pos,   blurMagnitude * -1.0);
 	vec3 b = Horz5(pos,   0.0);
-	vec3 c = Horz3(pos,   1.0);
-	float wa = Scan(pos, -1.0);
+	vec3 c = Horz3(pos,   blurMagnitude);
+	float wa = Scan(pos,  (blurMagnitude * -1.0));
 	float wb = Scan(pos,  0.0);
-	float wc = Scan(pos,  1.0);
+	float wc = Scan(pos,  blurMagnitude);
 	
-	return a * wa + b * wb + c * wc;
+	return a * wa + b * wb + c * wc ;
 }
 
 // Distortion of scanlines, and end of screen alpha.

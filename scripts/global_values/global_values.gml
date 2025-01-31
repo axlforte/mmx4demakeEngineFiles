@@ -47,7 +47,7 @@ function global_values() {
 	global.levelTransitionY                 = 0;
 	global.levelTransitionCameraId          = 0;
 	global.level_transition_use_door_locs   = false;
-	global.door_id                          = 0;
+	global.door_id                          = 2;
 	global.DialougeSpeed                    = 2;
 	global.TeleportIn                       = false;
 	global.player_sprite                    = 0;
@@ -61,6 +61,7 @@ function global_values() {
 	global.notes                            = true;
 	global.rando                            = false;
 	global.crt                              = 0;
+	global.met_colonel = false;
 	
 	enum diff_modes {
 		easy,
@@ -110,7 +111,7 @@ function global_values() {
 	//global.run_from_ide = !global.mobile && parameter_count() == 3 && string_count("GMS2TEMP", parameter_string(2));
 	global.run_from_ide = true;
 	instance_create_depth(0, 0, 0, obj_window_center);
-	global.game_world_speed = 15;
+	global.game_world_speed = 1;
 	
 	//boss deaths
 	global.magma_dragoon_defeat = 0;//funnily enough we WILL use this one

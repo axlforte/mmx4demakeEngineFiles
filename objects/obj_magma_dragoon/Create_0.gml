@@ -14,8 +14,10 @@ skip_complete_walk = true;
 player_depth = layer_get_depth(layer_get_id("player"));
 camera_depth = layer_get_depth(layer_get_id("Camera"));
 
-death_convo = [];
-death_lines = [];
+death_convo = scr_get_lines_array("english", dialouge_type.words, line.dragoon_8, 8);
+dialouge = scr_get_lines_array("english", dialouge_type.words, line.dragoon_1, 8);
+lines = scr_get_lines_array("english", dialouge_type.sounds, line.dragoon_1, 8);
+death_lines = scr_get_lines_array("english", dialouge_type.sounds, line.dragoon_8, 8);
 
 trail_init(8);
 trail_sprite = spr_magma_dragoon_trail;

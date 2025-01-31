@@ -72,78 +72,13 @@ switch(state) {
 	#region Options
 	case menu_states.option:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		draw_string(240, 64+12*1, string(global.DialougeSpeed),                          colors.orange);
-		draw_string(240, 64+12*3,string(global.notes),                                   colors.orange);
-		draw_string(240, 64+12*4,array_get(["Off", "Light", "Heavy"], global.crt),       colors.orange);
-		draw_string(240, 64+12*5,string(global.hit_numbers),                             colors.orange);
-		draw_string(260, 64+12*6,string(global.camera_shift_distance),                   colors.orange);
-		draw_string(260, 64+12*7,string(global.camera_shift_speed),                      colors.orange);
-		draw_string(176, 64+12*8,string_hash_to_newline(string(global.game_world_speed)),colors.dark_blue);
-		draw_string(176, 64+12*9,string_hash_to_newline(string(global.sfx_volume)),      colors.dark_blue);
-		draw_string(176, 64+12*10,string_hash_to_newline(string(global.bgm_volume)),     colors.dark_blue);
-		for (var i = 0; i < items_length; i++) {
-			var item = items[i];
-			var _x = 64, _y = 64 + 16*i;
-			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
-			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.pink);
-			if (array_length(item) > 2) {// Back
-				var subitem = item[2];
-				var txt = "";
-				var index = global.settings[i];
-				/*if (i == 0 && G.mobile) {
-					index -= 3;
-				}*/
-				if (index < array_length(subitem)) {
-					txt = subitem[index];
-				}
-				draw_string_center(_x + 176, _y, txt, colors.orange);
-				menu_item_draw_arrows(_x + 176, _y, index, subitem, colors.orange);
-				
-			}
-		}
+		scr_draw_settings();
 	break;
 	#endregion
 	#region Key Config
 	case menu_states.key_config:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		for (var i = 1; i < items_length; i++) {
-			var item = items[i];
-			var _x = 64, _y = 32 + 14*i;
-			// BACK
-			if (i == items_length - 1) _x = 144;
-			var item_name = item[0];
-			// Gamepad
-			var _color = (selected_item == i ? colors.pink : colors.dark_blue);
-			var show_subitem = array_length(item) > 2;
-			var sub_text = "";
-			if (i >= 1 && i <= 4 && global.settings[1] == 1) {
-				sub_text = " ";
-				switch(i) {
-					case 1: item_name = "GAMEPAD INDEX "; sub_text = global.gamepad_list_index break;
-					case 2: item_name = global.gp_name; _color = colors.orange; break;
-					case 3: item_name = "MOVEMENT"; sub_text = gamepad_movement_mode_text[global.gp_movement]; break;
-					case 4: item_name = "----------------"; break;
-				}
-			}
-			draw_string(_x, _y, item_name, _color);
-			if (selected_item == i) {
-				draw_string(_x - 16, _y, "▶", colors.pink);
-			}
-			if (show_subitem) {
-				
-				var subitems = item[2];
-				var txt = "";
-				if (sub_text == "")
-					txt = ((global.settings[1] == input_types.keyboard) ? subitems[0] : subitems[1])
-				else
-					txt = sub_text;
-				if (selected_item == i && substates[0] == 1) {
-					txt = " ";
-					if (item_blink_t < 15) txt = "-";
-				}
-				draw_string(_x + 144, _y, txt, colors.orange);
-			}
-		}
+		scr_draw_rebind();
 		menu_draw_buttons();
 		break;
 	#endregion

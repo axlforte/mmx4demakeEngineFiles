@@ -1,1 +1,1 @@
-phase = 2;
+bg_area_update(0,3);

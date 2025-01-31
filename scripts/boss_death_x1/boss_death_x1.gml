@@ -26,11 +26,11 @@ function boss_death_x1() {
 	if (t == 59) {
 		audio_resume_all();
 		pause_set(false);
-		if(self == obj_magma_dragoon){
+		if(self == obj_magma_dragoon || self == obj_pharoah_man){
 			var convo = instance_create_depth(x,y,depth, obj_conversation);
 			convo.conversation = death_convo;
 			convo.lines = death_lines;
-		} else if(death_line != nooe){
+		} else if(death_line != noone){
 			audio_play(death_line);
 		}
 	}

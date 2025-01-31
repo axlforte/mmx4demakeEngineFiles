@@ -11,6 +11,9 @@ function scr_save_game_data() {
 	ini_write_real("BOSS", "owl",global.storm_owl_defeat);
 	ini_write_real("BOSS", "beast",global.slash_beast_defeat);
 	
+	//cutscene info
+	ini_write_real("CUT", "colonel in wreckage",global.met_colonel);
+	
 	//armors
 	//easy to simply set based off of save data. really 
 	ini_write_string("ARMOR", "legs", G.player_character_armor[pl_char.x][4]);

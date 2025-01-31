@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_block_centered",
-    "path": "sprites/spr_block_centered/spr_block_centered.yy",
+    "name": "log_roll1",
+    "path": "sprites/log_roll1/log_roll1.yy",
   },
   "spriteMaskId": null,
   "visible": true,
