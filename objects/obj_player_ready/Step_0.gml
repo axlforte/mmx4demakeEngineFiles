@@ -14,8 +14,12 @@ if (t >= 0 && t <= 25) {
 	visible = true;
 }
 
-if (t >= 35) {
-    visible = (((t - 35) mod 8) > 3);
+if (t >= 70) {
+    visible = (((t - 35) mod 2) > 0);
+} else if (t >= 47) {
+    visible = (((t - 35) mod 3) > 0);
+} else if (t >= 35) {
+    visible = (((t - 35) mod 4) > 0);
 }
 
 if (t == 83) {
@@ -27,7 +31,7 @@ if (t == 83) {
 }
 
 if(t == 5){
-	sound_play(snd_ready_mmx4);
+	audio_play(snd_ready_mmx4);
 }
 
 animation_t++;

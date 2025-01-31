@@ -106,7 +106,21 @@ function scr_settings_init(){
 		global.fullscreen_index = 1;
 	}
 	
-	return [
+	settings_tooltips = [
+	"Changes the integer scale of the game  window. if the scale is bigger than yourscreen can handle, it goes into        fullscreen.",
+	"Makes dialouge move faster so you can  read it better.",
+	"Edit what keys are bound to, and wetheryou are using keyboard or controller.",
+	"Wether you get notified when certain   things happen. A popup note will appear in the top left corner.",
+	"Applies a CRT filter to the game. Thereare 3 options; none, light, and heavy.",
+	"Creates a number representing the      amount of damage done to an enemy.",
+	"Moves the camera a certain amount of   pixels in front of X to allow for       better visibility.",
+	"Makes the camera shift to it's correct position in front of x either faster or slower.",
+	"Decreases the speed the game runs at.  Good for new players who cannot react   fast enough.",
+	"Volume of most interactible objects in the game.",
+	"Volume of the background music.",
+	" "
+	];
+	var _tmp = [
 		[_("Window Size"), [64, 64, 200, 20], wsize_options],//0
 		[_("Dialouge Speed"), [64, 80, 200, 20]],//1
 		[_("Key Configuration"), [64, 112, 96, 20]],//2
@@ -120,6 +134,51 @@ function scr_settings_init(){
 		[_("Music Volume"),[64, 176, 144, 20]],//9
 		[_("Back"), [64, 192, 144, 20]]//10
 	];
+	
+	longth = array_length(_tmp);
+	
+	return _tmp;
+}
+
+function scr_draw_settings(){
+	draw_string(300, 64+12*1, string(global.DialougeSpeed),                          colors.orange);
+	draw_string(300, 64+12*3,string(global.notes),                                   colors.orange);
+	draw_string(300, 64+12*4,array_get(["Off", "Light", "Heavy"], global.crt),       colors.orange);
+	draw_string(300, 64+12*5,string(global.hit_numbers),                             colors.orange);
+	draw_string(300, 64+12*6,string(global.camera_shift_distance),                   colors.orange);
+	draw_string(300, 64+12*7,string(global.camera_shift_speed),                      colors.orange);
+	draw_string(300, 64+12*8,string_hash_to_newline(string(global.game_world_speed)),colors.dark_blue);
+	draw_string(300, 64+12*9,string_hash_to_newline(string(global.sfx_volume)),      colors.dark_blue);
+	draw_string(300, 64+12*10,string_hash_to_newline(string(global.bgm_volume)),     colors.dark_blue);
+	for (var i = 0; i < longth; i++) {
+			var item = items[i];
+			var _x = 96, _y = 64 + 11*i;
+			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
+			
+			var _len = 40;
+			
+			if(selected_item == i){
+				for(var q = -1; q < string_length(settings_tooltips[i]) / _len; q++){
+						draw_string(2, 32 + 10 * q, string_copy(settings_tooltips[i], _len * (q + 1), _len - 1), colors.red)
+				}
+			}
+			
+			if (selected_item == i) draw_string(_x - 16, _y, "▶", colors.pink);
+			if (array_length(item) > 2 && room == rm_start_menu) {// Back
+				var subitem = item[2];
+				var txt = "";
+				var index = global.settings[i];
+				/*if (i == 0 && G.mobile) {
+					index -= 3;
+				}*/
+				if (index < array_length(subitem)) {
+					txt = subitem[index];
+				}
+				draw_string_center(_x + 176, _y, txt, colors.orange);
+				menu_item_draw_arrows(_x + 176, _y, index, subitem, colors.orange);
+				
+			}
+		}
 }
 
 function scr_keys_rebind(){
@@ -254,4 +313,45 @@ function scr_keys_rebind_init(){
 	btn_length = 0;
 	
 	return page;
+}
+
+function scr_draw_rebind(){
+	for (var i = 1; i < items_length; i++) {
+			var item = items[i];
+			var _x = 64, _y = 32 + 14*i;
+			// BACK
+			if (i == items_length - 1) _x = 144;
+			var item_name = item[0];
+			// Gamepad
+			var _color = (selected_item == i ? colors.pink : colors.dark_blue);
+			var show_subitem = array_length(item) > 2;
+			var sub_text = "";
+			if (i >= 1 && i <= 4 && global.settings[1] == 1) {
+				sub_text = " ";
+				switch(i) {
+					case 1: item_name = "GAMEPAD INDEX "; sub_text = global.gamepad_list_index break;
+					case 2: item_name = global.gp_name; _color = colors.orange; break;
+					case 3: item_name = "MOVEMENT"; sub_text = gamepad_movement_mode_text[global.gp_movement]; break;
+					case 4: item_name = "----------------"; break;
+				}
+			}
+			draw_string(_x, _y, item_name, _color);
+			if (selected_item == i) {
+				draw_string(_x - 16, _y, "▶", colors.pink);
+			}
+			if (show_subitem) {
+				
+				var subitems = item[2];
+				var txt = "";
+				if (sub_text == "")
+					txt = ((global.settings[1] == input_types.keyboard) ? subitems[0] : subitems[1])
+				else
+					txt = sub_text;
+				if (selected_item == i && substates[0] == 1) {
+					txt = " ";
+					if (item_blink_t < 15) txt = "-";
+				}
+				draw_string(_x + 144, _y, txt, colors.orange);
+			}
+		}
 }

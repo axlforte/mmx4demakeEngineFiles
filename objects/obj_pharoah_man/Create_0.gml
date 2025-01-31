@@ -168,3 +168,6 @@ palette_texture_set(plt_pharoah);
 
 dialouge = scr_get_lines_array("english", dialouge_type.words, line.pharoah_x_1, 6);
 lines = scr_get_lines_array("english", dialouge_type.sounds, line.pharoah_x_1, 6);
+
+death_convo = scr_get_lines_array("english", dialouge_type.words, line.pharoah_man_4, 8);
+death_lines = scr_get_lines_array("english", dialouge_type.sounds, line.pharoah_man_4, 8);

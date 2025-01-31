@@ -6,7 +6,7 @@ var _y = DPY;
 
 var close = _x + _y;
 
-if(key_p_up && interactible && abs(close) < 64 && !convo_active){
+if(key_p_up && interactible && abs(close) < 64 && !convo_active && global.paused = pause_types.none){
 	converse = instance_create_depth(x + 4,y + 4,-100, obj_conversation);
 	converse.conversation = convo;
 	converse.lines = lines;

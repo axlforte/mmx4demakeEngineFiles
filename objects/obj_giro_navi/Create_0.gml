@@ -12,7 +12,7 @@ obj_pickup_handler
 wish_x = 0;
 wish_y = 0;
 can_find_goodie = false;
-spin = 0;
+spinny = 0;
 radius = 12;
 spd = 3;
 index = 0;

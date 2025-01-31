@@ -36,8 +36,8 @@ function player_x_animation() {
 	[
 		0, 0,
 		2, 1,
-		5, 2,
-		7, 3,
+		4, 2,
+		5, 3,
 	], 7);
 	
 	animation_add("dash_up",

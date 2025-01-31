@@ -19,6 +19,8 @@ door_tran_effect_limit = 30;
 
 interactible = true;
 
+auto_door_image_index = 0;
+
 alarm[0] = 15;
 scr_keys_reset();
 animation_init();

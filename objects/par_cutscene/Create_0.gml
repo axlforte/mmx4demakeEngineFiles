@@ -5,5 +5,6 @@ pl_new_room = true;
 rm_next = rm_intro;
 dialouge = ["000nothing here!"];
 lines = [snd_X1_explode];
+player_actions = noone;
 next_line = true;
 prev_index = 0;

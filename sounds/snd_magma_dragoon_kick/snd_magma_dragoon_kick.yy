@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.707515,
   "parent": {
     "name": "Magma Dragoon",
     "path": "folders/Sounds/Magma Dragoon.yy",

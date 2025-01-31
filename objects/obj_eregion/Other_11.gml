@@ -24,7 +24,7 @@ switch(state) {
 			if(hp < max_hp / 2){
 				if(t mod 3 == 1){//this one carpet bombs the ground
 					var p = instance_create_depth(x + 19*dir, y - 6, depth - 1, obj_eregion_barf);
-					p.h_speed = t * dir / 2;
+					p.h_speed = t * dir / 4;
 					p.v_speed = 6;
 					p.xscale = dir;
 					p.owner = id;

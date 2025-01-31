@@ -44,7 +44,7 @@ subitem = 0;
 hinput_p = 0;
 hinput = 0;
 enter = 0;
-page_items = scr_settings_init();
+items = scr_settings_init();
 key_items = scr_keys_rebind_init();
 
 //enums

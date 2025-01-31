@@ -1,0 +1,1 @@
+draw_sprite(_1Conolel1, (colonel_lerp > 0 ? (colonel_lerp mod 3) + 1 : 0), x + colonel_speed * colonel_lerp + colonel_offset, 146);

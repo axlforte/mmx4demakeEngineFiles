@@ -10,17 +10,12 @@ var t = timer++;
 if(t > 120 || (key_p_shoot && t > 4)){
 	shoto = true;
 }
+	
+
 		
 if(shoto){
 	h_speed = sin(angle) * move_speed;	
 	v_speed = cos(angle) * move_speed;
-	//y += 2;
-	/*if(is_on_floor()){
-		v_speed = 0;
-		gravity_default = 0;
-		h_speed = 0;
-		abs_hspeed = 0;
-	} */
 	
 	if(key_up){
 		angle += rot_speed / 180 * pi;
@@ -32,6 +27,10 @@ if(shoto){
 	y + random_range(-effect_dist,effect_dist),
 	0,obj_player_dash_dust);
 } else {
+	with(obj_player_parent){
+	shoot_t = 3;
+	shoot = true;
+}
 	dir = myPlayer.dir;
 	angle = pi/2 * dir;
 	x =  myPlayer.x + 32 * dir;
