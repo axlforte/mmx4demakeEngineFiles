@@ -17,6 +17,7 @@ if(left_facing){
 				fun.transition_limit = door_tran_effect_limit;
 				fun.alpha_start = 0;
 				tran_timer++;
+				global.checkpoint = false;
 				animation_play("opening", 0);
 			}
 		}
@@ -36,6 +37,7 @@ if(left_facing){
 				fun.transition_limit = door_tran_effect_limit;
 				fun.alpha_start = 0;
 				tran_timer++;
+				global.checkpoint = false;
 				animation_play("opening", 0);
 			}
 		}

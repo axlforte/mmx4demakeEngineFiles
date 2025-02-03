@@ -1,44 +1,7 @@
 switch(menu){
 	case(pause_menus.key_config):
 		draw_sprite(spr_upgrade_screen_background,2,x,y);
-		for (var i = 1; i < items_length; i++) {
-			var item = items[i];
-			var _x = 64, _y = 32 + 14*i;
-			// BACK
-			if (i == items_length - 1) _x = 144;
-			var item_name = item[0];
-			// Gamepad
-			var _color = (selected_item == i ? colors.pink : colors.dark_blue);
-			var show_subitem = array_length(item) > 2;
-			var sub_text = "";
-			if (i >= 1 && i <= 4 && global.settings[1] == 1) {
-				sub_text = " ";
-				switch(i) {
-					case 1: item_name = "GAMEPAD INDEX "; sub_text = global.gamepad_list_index break;
-					case 2: item_name = global.gp_name; _color = colors.orange; break;
-					case 3: item_name = "MOVEMENT"; sub_text = gamepad_movement_mode_text[global.gp_movement]; break;
-					case 4: item_name = "----------------"; break;
-				}
-			}
-			draw_string(_x, _y, item_name, _color);
-			if (selected_item == i) {
-				draw_string(_x - 16, _y, "▶", colors.pink);
-			}
-			if (show_subitem) {
-				
-				var subitems = item[2];
-				var txt = "";
-				if (sub_text == "")
-					txt = ((global.settings[1] == input_types.keyboard) ? subitems[0] : subitems[1])
-				else
-					txt = sub_text;
-				if (selected_item == i && substates[0] == 1) {
-					txt = " ";
-					if (item_blink_t < 15) txt = "-";
-				}
-				draw_string(_x + 144, _y, txt, colors.orange);
-			}
-		}
+		scr_draw_rebind(key_items);
 		menu_draw_buttons();
 	break;
 	case(pause_menus.settings):
@@ -98,6 +61,7 @@ switch(menu){
 		draw_string(320-64,0,"Settings");
 		draw_sprite_ext(spr_upgrade_screen_x,1,x+px,y+py,xsale,ysale,0,c_white,1);
 		draw_string(16,20, string(global.player_exp), colors.pink);
+		draw_string(16,32, string(xp), colors.red);
 		var availible = 0;
 		switch(umenu){
 			case(upgrade_menu.none):

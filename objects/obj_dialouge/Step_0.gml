@@ -1,11 +1,11 @@
 if (spd = 0) {
 	scr_letter_apply_repeated();
 } else if(time >= spd){
-	if(string_length(line) + 1 > index){
+	if(string_length(linone) + 1 > index){
 		scr_letter_apply();
 	}
 } else {
-	if(string_length(line) + 1 > index){
+	if(string_length(linone) + 1 > index){
 		time += 1;
 	}
 	if (delay > 0){

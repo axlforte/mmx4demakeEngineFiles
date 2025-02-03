@@ -3,7 +3,7 @@ enum death_types {
 	normal, blink	
 }
 face_x = false;
-hp = 4;
+hp = array_get([2,3,3,4], global.difficulty);
 collide_damage = 1;
 hit = 0;
 grav = 0;

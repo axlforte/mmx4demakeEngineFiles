@@ -30,5 +30,3 @@ break;
 }
 
 draw_sprite(sprite,0,x,y);
-
-draw_point(x,y-poffset);

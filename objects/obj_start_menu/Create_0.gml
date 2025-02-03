@@ -16,7 +16,9 @@ enum menu_states {
 	weapon_get,
 	volume,
 	visuals,
-	load
+	load,
+	notice,
+	logo
 }
 
 enum background_select { intro, middle, ending }
@@ -24,7 +26,7 @@ enum background_select { intro, middle, ending }
 funny = 0;
 
 // State
-state = menu_states.main;
+state = menu_states.notice;
 state_timer = 0;
 substates = [0, 0, 0, 0];
 changed_state = false;
@@ -53,7 +55,9 @@ titles[menu_states.key_config]      = _("KEY CONFIG");
 titles[menu_states.audio_settings]  = _("AUDIO SETTINGS");
 titles[menu_states.voice_language]  = _("VOICE LANGUAGE");
 titles[menu_states.weapon_get]		= "";
+titles[menu_states.logo]		= "";
 titles[menu_states.volume]		    = _("VOLUME CONTROL");
+titles[menu_states.notice]		    = _("DEMO NOTICE");
 
 // Pages
 // Needs a lot of refactoring:

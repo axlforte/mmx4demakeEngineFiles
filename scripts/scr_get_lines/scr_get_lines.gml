@@ -10,6 +10,17 @@ enum line {
 	lagoon_x_2,
 	lagoon_dragoon_2,
 	lagoon_x_3,
+	colonel_1,
+	colonel_2,
+	colonel_3,
+	colonel_4,
+	colonel_5,
+	colonel_6,
+	colonel_7,
+	colonel_8,
+	colonel_9,
+	colonel_10,
+	colonel_11,
 	dragoon_1,
 	dragoon_2,
 	dragoon_3,
@@ -74,6 +85,8 @@ function scr_get_lines_array(){
 					var ret = [argument[3]];
 					for(var e = 0; e < argument[3]; e++){
 						ret[e] = global.english_dialouge[argument[2] + e];
+						var turn = string_copy(ret[e], 1, string_length(ret[e]) - 6);
+						ret[e] = turn;
 					}
 					return ret;
 					break;	
@@ -115,6 +128,17 @@ function global_dialouge_load(){
 		["Now understand, /c1X/c0, we can't do /s1anything/s0 to stop the fall! I suggest you escape immediately and don't do anything on the way out, ok?",dragoon_lagoon_2],
 		["/c1Damn/c0! The city below is about to become a hellscape. I have to retreat and see if there are any surviors!",x_dragoon_3],
 		//add the iris/colonel dialouge here
+		["Wait, I remember seeing you somewhere. Arent you...", xcolonel1],
+		["I'm the colonel of Repliforce.", colonel_1],
+		["Are the Repliforce aware of what happened here, colonel?", xcolonel2],
+		["I was given the situation report, and I came as soon as possible because my sister was here. The Repliforce is not involved in this horrible case!", colonel_2],
+		["If the Repliforce wasnt involved, why would they leave so many civilians to die? Arent their men supposed to be guarding this area?", xcolonel3],
+		["It all happened before out eyes. We couldnt prevent this catastrophe either.", colonel_3],
+		["Look, just come with me to maverick hunter HQ so Repliforce doesnt get falsely labeled as a group of mavericks.", xcolonel4],
+		["The Repliforce would rather fight and die than discard our pride!", colonel_4],
+		["Colonel, please, accompany to maverick hunter HQ.", xcolonel5],
+		["...", noone],
+		["Shit! If colonel keeps this up, the world is gonna consider the Repliforce as mavericks!", xcolonel6],
 		//dragoon fight dialouge here
 		["I knew you'd come for me. I've been waiting for you, X.", dragoon_fight_1],
 		["Magma dragoon. I was informed you became a traitor, but... why?", xmagma],

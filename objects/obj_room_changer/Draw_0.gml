@@ -1,8 +1,8 @@
 if(interactible){
-	if(auto_door)
+	if(auto_door){
 		if(global.difficulty < diff_modes.hard)
-			draw_sprite_ext(spr_skill_selected, auto_door_image_index, floor(x), floor(y), 1, 1, 0, c_white, 1);
-	else
+			draw_sprite_ext(spr_skill_selected, auto_door_image_index, floor(x) + (image_xscale - 1) * 16, floor(y), 1, 1, 0, c_white, 1);
+	}else
 		draw_sprite_ext(sprite_index, floor(image_index), floor(x), floor(y), 1, 1, 0, c_white, 1);
 }
 

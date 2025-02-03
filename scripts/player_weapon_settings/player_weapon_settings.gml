@@ -72,12 +72,12 @@ function player_weapon_settings() {
 	weapon_icon[weapons.nova_strike] = 2;
 	weapon_icon[weapons.lightning_web] = 8; 
 	weapon_icon[weapons.double_cyclone] = 6; 
-	weapon_icon[weapons.frost_spike] = 3;
+	weapon_icon[weapons.frost_spike] = 2;
 	weapon_icon[weapons.ground_hunter] = 4;
-	weapon_icon[weapons.soul_body] = 8;
-	weapon_icon[weapons.twin_slasher] = 4;
-	weapon_icon[weapons.aiming_laser] = 6;
-	weapon_icon[weapons.rising_fire] = 10;
+	weapon_icon[weapons.soul_body] = 7;
+	weapon_icon[weapons.twin_slasher] = 3;
+	weapon_icon[weapons.aiming_laser] = 5;
+	weapon_icon[weapons.rising_fire] = 9;
 	// Bar color (Image Index)
 	weapon_color[weapons.storm_tornado] = 1;
 	weapon_color[weapons.homing_torpedo] = 3;

@@ -8,3 +8,4 @@ lines = [snd_X1_explode];
 player_actions = noone;
 next_line = true;
 prev_index = 0;
+convo_start_delay = 0;

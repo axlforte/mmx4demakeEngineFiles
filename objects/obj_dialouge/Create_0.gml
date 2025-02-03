@@ -1,4 +1,4 @@
-line = "you forgor";
+linone = "you forgor";
 spd = 2;
 time = 0;
 index = 4;

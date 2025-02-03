@@ -21,48 +21,53 @@ if(piss_off){
 } else {
 	switch(menu){
 		case(pause_menus.settings):
+			state_timer++;
+			hinput_p = key_p_right - key_p_left;
+			vinput_p = key_p_up - key_p_down;
+			vinput = key_up - key_down;
+			hinput = key_right - key_left;
+			enter = key_p_shoot;
 			if(key_p_wp1){
 				menu = pause_menus.upgrades;
 			} else if(key_p_wp2){
 				menu = pause_menus.weapons;
 			}
 			
-			if(key_p_up){
+			if(vinput_p > 0){
 				selected_item--;
 				if(selected_item < 0){
 					selected_item = array_length(items) - 1;
 				}
 			}
-			if(key_p_down){
+			if(vinput_p < 0){
 				selected_item++;
 				if(selected_item > array_length(items) - 1){
 					selected_item = 0;
 				}
 			}
 			subitem = (selected_item > 2 ? items[0][2] : 0);
-			hinput_p = key_p_right - key_p_left;
-			hinput = key_right - key_left;
-			enter = key_p_shoot;
 			scr_settings();
 		break;
 		case(pause_menus.key_config):
-			if(key_p_up){
+			hinput_p = key_p_right - key_p_left;
+			vinput_p = key_p_up - key_p_down;
+			vinput = key_up - key_down;
+			hinput = key_right - key_left;
+			enter = key_p_shoot;
+			if(vinput_p > 0){
 				selected_item--;
 				if(selected_item < 0){
-					selected_item = array_length(page_items) - 1;
+					selected_item = array_length(key_items) - 1;
 				}
 			}
-			if(key_p_down){
+			if(vinput_p < 0){
 				selected_item++;
-				if(selected_item > array_length(page_items) - 1){
+				if(selected_item > array_length(key_items) - 1){
 					selected_item = 0;
 				}
 			}
-			subitem = (selected_item > 2 ? page_items[0][2] : 0);
-			hinput_p = key_p_right - key_p_left;
-			hinput = key_right - key_left;
-			enter = key_p_shoot;
-			scr_settings();
+			subitem =/* (selected_item > 2 ? key_items[0][] : 0)8*/0;
+			scr_keys_rebind(key_items);
 		break;
 		case(pause_menus.weapons):
 			if(key_p_wp1){

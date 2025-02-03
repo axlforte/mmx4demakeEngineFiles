@@ -1,1 +1,0 @@
-bg_area_update(0,2);

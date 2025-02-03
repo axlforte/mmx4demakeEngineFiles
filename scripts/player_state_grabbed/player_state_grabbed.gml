@@ -4,7 +4,6 @@ function player_state_grabbed() {
 	v_speed = 0;
 	grav = 0;
 	if (t == 0) {
-		player_disable_speed_gear();
 		grab_count = 0;
 		player_charge_reset();
 		player_effects_reset();

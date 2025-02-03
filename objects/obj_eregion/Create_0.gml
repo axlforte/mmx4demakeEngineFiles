@@ -3,7 +3,7 @@ idle_time_to_turn = 5;
 intro_limit = 0;
 jump_wait = 5;
 activate_collision_limit = 0;
-//has_worded = false;
+has_worded = true;
 
 #region Animations
 animation_add("idle", [

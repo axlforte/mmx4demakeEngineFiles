@@ -7,16 +7,13 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"GUI_GraphicalUserInterface","path":"objects/GUI_GraphicalUserInterface/GUI_GraphicalUserInterface.yy",},"propertyId":{"name":"Anchor","path":"objects/GUI_GraphicalUserInterface/GUI_GraphicalUserInterface.yy",},"value":"EGUIAnchor.MiddleLeft",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":null,"propertyId":null,"value":"EGUIAnchor.MiddleLeft",},
   ],
   "parent": {
     "name": "GUI",
     "path": "folders/GUI.yy",
   },
-  "parentObjectId": {
-    "name": "GUI_GraphicalUserInterface",
-    "path": "objects/GUI_GraphicalUserInterface/GUI_GraphicalUserInterface.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

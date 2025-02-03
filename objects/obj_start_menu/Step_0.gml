@@ -131,6 +131,7 @@ if (changed_state) {
 		case menu_states.stage_select:
 			music_play("StageSelect");
 			break;
+			
 		case menu_states.voice_language:
 			var voice_languages = player_voice_languages_get();
 			alength = array_length(voice_languages)
@@ -155,9 +156,36 @@ if (changed_state) {
 #endregion
 switch (state) {
 	#region Main
+	case menu_states.notice:
+		if(state_timer > 700 || enter){
+			items_next = noone;
+			menu_set_state(menu_states.logo);
+		} else
+			state_timer++;
+		break;
+	#endregion
+	#region Main
+	case menu_states.logo:
+		if(state_timer > 120 || enter){
+			items_next = noone;
+			state_timer = 0;
+			menu_set_state(menu_states.main);
+		} else {
+			state_timer++;
+			if(state_timer == 35){
+				audio_play(snd_player_success)
+			}
+		}
+		break;
+	#endregion
+	#region Main
 	case menu_states.main:
 		menu_update_item_v();
 		menu_update_item_click();
+		if(state_timer == 0){
+			music_play("TitleTheme");
+			state_timer++;
+		}
 		if (enter) {
 			switch(selected_item) {
 				case 0: state_next = menu_states.difficulty_mode; break;
@@ -286,7 +314,7 @@ switch (state) {
 	case menu_states.key_config:
 		state_timer++;
 			menu_update_item_click();
-			scr_keys_rebind();
+			scr_keys_rebind(items[selected_item]);
 		break;
 	#endregion
 	#region Volume Settings

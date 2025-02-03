@@ -42,10 +42,17 @@ if (G.mobile) {
 
 subitem = 0;
 hinput_p = 0;
+vinput_p = 0;
 hinput = 0;
+vinput = 0;
 enter = 0;
+
+item_blink_t = 0;
+
 items = scr_settings_init();
 key_items = scr_keys_rebind_init();
+substates[0] = 0;
+state_timer = 0;
 
 //enums
 enum pause_menus{

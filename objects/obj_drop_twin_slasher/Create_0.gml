@@ -5,6 +5,7 @@ poffset = 16;
 spr_width = 8;
 pickup_pause = false;
 amount = 1;
+touching_player = false;
 
 if(global.rando){
 	rando_id = 0;

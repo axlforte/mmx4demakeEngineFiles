@@ -10,7 +10,7 @@
   "bitRate": 172,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 1.998186,
   "parent": {
     "name": "TP",
     "path": "folders/Sounds/Player/Base/TP.yy",

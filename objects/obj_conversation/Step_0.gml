@@ -2,7 +2,7 @@ scr_keys_update();
 if(!activate){ 
 	sound_activated = false;
 } else if(key_p_jump || key_p_shoot||index < 0 || ping){
-	if(string_length(dilog.line) > dilog.index){
+	if(string_length(dilog.linone) > dilog.index){
 		dilog.spd = 0;
 	} else {
 		dilog.die = true;
@@ -19,7 +19,7 @@ if(!activate){
 		} else {
 			dilog = instance_create_depth(x - 144,y - 34,-100, obj_dialouge);
 			dilog.convo = self;
-			dilog.line = array_get(conversation, index);
+			dilog.linone = array_get(conversation, index);
 			if (index <= 0){
 				dilog.delay = 30;	
 			}

@@ -2,6 +2,25 @@ draw_set_offset(0, 0);
 
 switch(state) {
 	#region load
+	case menu_states.notice:
+		draw_string_center(160, 8, titles[state], colors.gray);
+		draw_string_center(160, 32, "This game is actively being worked on.", colors.red);
+		draw_string_center(160, 42, "Any bugs you may encounter should be ", colors.red);
+		draw_string_center(160, 52, "recorded and posted in the Repliforce", colors.red);
+		draw_string_center(160, 62, "discord server.", colors.red);
+		draw_string_center(160, 82, "This also does not include the entire", colors.red);
+		draw_string_center(160, 92, " game, it only includes 3 hand picked", colors.red);
+		draw_string_center(160, 102, "stages to show offthe gameplay features ", colors.red);
+		draw_string_center(160, 112, "you can expect.", colors.red);
+	break;
+	#endregion
+	#region load
+	case menu_states.logo:
+		draw_string_center(160, 8, titles[state], colors.gray);
+		draw_sprite_ext(capcom_nt, 0, 160, 120, 1, 1, 0, c_white, (state_timer > 60 ? state_timer / 60 : clamp(sqrt(state_timer / 9), 0, 1)))
+	break;
+	#endregion
+	#region load
 	case menu_states.load:
 		//dont do anything, we dont need to draw stuff.
 		draw_sprite_ext(spr_square_16,0,x,y,32,32,0,c_white,1);
@@ -78,7 +97,7 @@ switch(state) {
 	#region Key Config
 	case menu_states.key_config:
 		draw_string_center(160, 8, titles[state], colors.gray);
-		scr_draw_rebind();
+		scr_draw_rebind(page_items[menu_states.key_config]);
 		menu_draw_buttons();
 		break;
 	#endregion

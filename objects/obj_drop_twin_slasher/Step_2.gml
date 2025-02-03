@@ -1,6 +1,4 @@
-if(player == noone){
-	player = instance_nearest(x,y,obj_player_parent);
-} else if(abs(x - player.x) < spr_width && abs(y-poffset - player.y) < spr_width && !pickup_pause){
+if(touching_player && !pickup_pause){
 	var note = instance_create_depth(x,y,depth,obj_notification);
 	note.text = "Got "
 	switch(weapon){
@@ -54,3 +52,5 @@ if(player == noone){
 	}
 	instance_destroy();
 }
+
+touching_player = false;

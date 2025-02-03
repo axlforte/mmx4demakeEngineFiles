@@ -32,8 +32,10 @@ function scr_settings(){
 			if (enter)
 				if(room == rm_start_menu)
 					menu_set_state(menu_states.key_config);
-				else
+				else{
 					menu = pause_menus.key_config;
+					key_items = scr_keys_rebind_init();
+				}
 			break;
 		// popup notifications
 		case 3:
@@ -107,13 +109,13 @@ function scr_settings_init(){
 	}
 	
 	settings_tooltips = [
-	"Changes the integer scale of the game  window. if the scale is bigger than yourscreen can handle, it goes into        fullscreen.",
+	"Changes the integer scale of the game  window.if the scale is bigger than your screen can handle, it goes into         fullscreen.",
 	"Makes dialouge move faster so you can  read it better.",
 	"Edit what keys are bound to, and wetheryou are using keyboard or controller.",
 	"Wether you get notified when certain   things happen. A popup note will appear in the top left corner.",
 	"Applies a CRT filter to the game. Thereare 3 options; none, light, and heavy.",
 	"Creates a number representing the      amount of damage done to an enemy.",
-	"Moves the camera a certain amount of   pixels in front of X to allow for       better visibility.",
+	"Moves the camera a certain amount of   pixels in front of you to allow for     better visibility.",
 	"Makes the camera shift to it's correct position in front of x either faster or slower.",
 	"Decreases the speed the game runs at.  Good for new players who cannot react   fast enough.",
 	"Volume of most interactible objects in the game.",
@@ -141,18 +143,18 @@ function scr_settings_init(){
 }
 
 function scr_draw_settings(){
-	draw_string(300, 64+12*1, string(global.DialougeSpeed),                          colors.orange);
-	draw_string(300, 64+12*3,string(global.notes),                                   colors.orange);
-	draw_string(300, 64+12*4,array_get(["Off", "Light", "Heavy"], global.crt),       colors.orange);
-	draw_string(300, 64+12*5,string(global.hit_numbers),                             colors.orange);
-	draw_string(300, 64+12*6,string(global.camera_shift_distance),                   colors.orange);
-	draw_string(300, 64+12*7,string(global.camera_shift_speed),                      colors.orange);
-	draw_string(300, 64+12*8,string_hash_to_newline(string(global.game_world_speed)),colors.dark_blue);
-	draw_string(300, 64+12*9,string_hash_to_newline(string(global.sfx_volume)),      colors.dark_blue);
-	draw_string(300, 64+12*10,string_hash_to_newline(string(global.bgm_volume)),     colors.dark_blue);
+	draw_string(240, 64+11*1, string(global.DialougeSpeed),                          colors.orange);
+	draw_string(240, 64+11*3,string(global.notes),                                   colors.orange);
+	draw_string(240, 64+11*4,array_get(["Off", "Light", "Heavy"], global.crt),       colors.orange);
+	draw_string(240, 64+11*5,string(global.hit_numbers),                             colors.orange);
+	draw_string(240, 64+11*6,string(global.camera_shift_distance),                   colors.orange);
+	draw_string(240, 64+11*7,string(global.camera_shift_speed),                      colors.orange);
+	draw_string(240, 64+11*8,string_hash_to_newline(string(global.game_world_speed)),colors.orange);
+	draw_string(200, 64+11*9,string_hash_to_newline(string(global.sfx_volume)),      colors.dark_blue);
+	draw_string(200, 64+11*10,string_hash_to_newline(string(global.bgm_volume)),     colors.dark_blue);
 	for (var i = 0; i < longth; i++) {
 			var item = items[i];
-			var _x = 96, _y = 64 + 11*i;
+			var _x = 32, _y = 64 + 11*i;
 			draw_string(_x, _y, item[0], (selected_item == i ? colors.pink : colors.dark_blue));
 			
 			var _len = 40;
@@ -202,11 +204,11 @@ function scr_keys_rebind(){
 		b[1] = (global.settings[1] == i); // Image Index
 		buttons[| i] = b;
 	}
-	if (substates[0] == 0)
+	if (substates[0] == 0 && room = rm_start_menu)
 		menu_update_item_v(true);
 	if (substates[0] == 1) {
 		item_blink_t = ((item_blink_t + 1) mod 30);
-		var item = items[selected_item];
+		var item = argument[0];
 		var subitem = item[2];
 		var update_items = false;
 		if (keyboard_check_pressed(vk_escape)) {
@@ -235,8 +237,14 @@ function scr_keys_rebind(){
 			
 		if (update_items) {
 			item[2] = subitem;
-			items[selected_item] = item;
-			page_items[state] = items;
+			if(room == rm_start_menu){
+				items[selected_item] = item;
+				page_items[state] = items;
+			} else {
+				key_items = item;
+				selected_item = 2;
+				menu = pause_menus.settings;//its jank but a fix is a fix
+			}
 			substates[0] = 0;
 			if (global.gp_id == -1)
 				global.settings[1] = input_types.keyboard;
@@ -304,9 +312,12 @@ function scr_keys_rebind_init(){
 		];
 	
 	}
+	
 	gamepad_movement_mode_text[0] = "Directional";
 	gamepad_movement_mode_text[1] = "Joystick";
 	page[alength + 1] = [_("BACK"), [128, 32 + 14*(alength + 1), 128, 24]];
+	
+	items_length = array_length(page);
 	
 	// Buttons
 	buttons = ds_list_create();
@@ -317,7 +328,7 @@ function scr_keys_rebind_init(){
 
 function scr_draw_rebind(){
 	for (var i = 1; i < items_length; i++) {
-			var item = items[i];
+			var item = argument[0][i];
 			var _x = 64, _y = 32 + 14*i;
 			// BACK
 			if (i == items_length - 1) _x = 144;

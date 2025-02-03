@@ -8,7 +8,7 @@ grounded = false;
 deathTimer = 0;
 anti_destroy = true;
 
-atk = 3;
+atk = 2;
 destroy_if_hit = false;
 // Grounded
 animation_add("G", 

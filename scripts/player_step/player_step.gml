@@ -71,6 +71,25 @@ function player_step() {
 	if (keyboard_check(ord("6"))) create_item = obj_pickup_wp_3;
 	if (keyboard_check(ord("7"))) create_item = obj_pickup_heart;
 	if (keyboard_check(ord("8"))) create_item = obj_pickup_lifeup;
+	if (keyboard_check(ord("9"))) {
+			var _rand = irandom_range(0,7);
+			if(_rand == 0)
+				create_item = obj_drop_soul_body;
+			if(_rand == 1)
+				create_item = obj_drop_aiming_laser;
+			if(_rand == 2)
+				create_item = obj_drop_twin_slasher;
+			if(_rand == 3)
+				create_item = obj_drop_double_cyclone;
+			if(_rand == 4)
+				create_item = obj_drop_rising_fire;
+			if(_rand == 5)
+				create_item = obj_drop_lightning_web;
+			if(_rand == 6)
+				create_item = obj_drop_ground_hunter;
+			if(_rand == 7)
+				create_item = obj_drop_frost_mine;
+		}
 	if (create_item != noone) {
 		var inst = instance_create_depth(mouse_x, mouse_y, depth - 1, create_item);
 		if (create_item == obj_pickup_heart) {
