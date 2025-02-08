@@ -56,3 +56,11 @@ destroy_reset_speed = false;
 player_dist = 42;
 dist_catchup_speed = 3;
 player_dist_time = 500;
+
+soul_legs = false;
+
+scr_keys_reset();
+scr_keys_update();
+
+if(key_p_down || key_down)
+	soul_legs = true;

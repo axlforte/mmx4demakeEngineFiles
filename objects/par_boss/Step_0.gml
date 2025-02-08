@@ -25,7 +25,7 @@ if (local_game_run_step || state == boss_states.death) {
 			
 			//check for dialouge
 			
-			default_boss_intro_sequence(3);
+			default_boss_intro_sequence(boss_intro_start_time);
 			break;
 		case boss_states.idle:
 			if (t == 0) {
@@ -68,6 +68,7 @@ if (local_game_run_step || state == boss_states.death) {
 			// Start land state
 			if (!activate_collision && is_on_floor() && !is_on_ceil()) {
 				state_set(boss_states.land);	
+				state_timer = -1;
 				h_speed = 0;
 			}
 			break;

@@ -95,12 +95,15 @@ dialouge = scr_get_lines_array("english", dialouge_type.words, 0, 2);
 lines = scr_get_lines_array("english", dialouge_type.sounds, 0, 2);
 
 death_line = noone;
-
+boss_intro_start_time = 3;
 has_worded = false;
 
 function default_boss_intro_sequence(){
 	if(instance_exists(obj_conversation)){
-		state_timer--;
+		if(instance_exists(obj_jet_stingray))
+			state_timer = boss_intro_start_time / 2;
+		else
+			state_timer = boss_intro_start_time - 1;
 	}
 			
 	if(!has_worded){

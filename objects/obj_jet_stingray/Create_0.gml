@@ -1,10 +1,7 @@
 event_inherited();
 
-dialouge = scr_get_lines_array("english", dialouge_type.words, line.stingray_1, 3);
-lines =    scr_get_lines_array("english", dialouge_type.sounds, line.stingray_1, 3);
-
 idle_time_to_turn = 5;
-intro_limit = 102;
+intro_limit = 12;
 jump_wait = 20;
 crunch_speed = array_get([4, 5, 6,8], global.difficulty);//makes stingray faster depending on difficulty
 //whirlpool_length = 130; old octopus code
@@ -44,11 +41,6 @@ animation_add_loop("fall");
 
 animation_add("dash", keyframes_generate(1, 1/8));
 animation_add_loop("dash");
-animation_add("whirlpool", keyframes_generate(8, 1/8,, 38));
-animation_add_loop("whirlpool");
-animation_add("missile_1", [0, 24], 0);
-animation_add("missile_2", [0, 25], 0);
-animation_add("missile_3", [0, 26], 0);
 animation_add("piranha", [
 	0, 6,
 	1, 20,
@@ -159,3 +151,7 @@ state_set(boss_states.fall);
 animation_play("fall");
 grav = 0;
 v_speed = 2;
+boss_intro_start_time = 30;
+
+dialouge = scr_get_lines_array("english", dialouge_type.words, line.stingray_1, 3);
+lines =    scr_get_lines_array("english", dialouge_type.sounds, line.stingray_1, 3);
