@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_inside_view",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Views",
-    "path": "folders/Scripts/Utils/Views.yy",
+  "$GMScript":"",
+  "%Name":"is_inside_view",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_inside_view",
+  "parent":{
+    "name":"Views",
+    "path":"folders/Scripts/Utils/Views.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

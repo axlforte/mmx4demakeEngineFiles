@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_x_weapon_offsets",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Offsets",
-    "path": "folders/Scripts/Player/Characters/X/Weapons/Offsets.yy",
+  "$GMScript":"",
+  "%Name":"player_x_weapon_offsets",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_x_weapon_offsets",
+  "parent":{
+    "name":"Offsets",
+    "path":"folders/Scripts/Player/Characters/X/Weapons/Offsets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Replay",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Replay",
-    "path": "folders/Scripts/Replay.yy",
+  "$GMScript":"",
+  "%Name":"Replay",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Replay",
+  "parent":{
+    "name":"Replay",
+    "path":"folders/Scripts/Replay.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

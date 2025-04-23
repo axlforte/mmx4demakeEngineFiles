@@ -12,6 +12,8 @@ if(in_cutscene){
 	} else {
 		with(obj_player_parent){
 			locked = true;
+			dash = false;
+			key_dash = false;
 		}
 	}
 }

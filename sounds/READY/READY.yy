@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"READY",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "bitRate":32,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.600812,
+  "name":"READY",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"READY.mp3",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "enemy_behavior_normal",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Step",
-    "path": "folders/Scripts/Enemy/Step.yy",
+  "$GMScript":"",
+  "%Name":"enemy_behavior_normal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enemy_behavior_normal",
+  "parent":{
+    "name":"Step",
+    "path":"folders/Scripts/Enemy/Step.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

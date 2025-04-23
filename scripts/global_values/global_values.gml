@@ -142,7 +142,7 @@ function overworld_info(){
 	global.sub_tank_1 = false;
 	global.sub_tank_2 = false;
 	global.weap_tank_1 = false;
-	global.save_dest = 0;
+	global.save_dest = rm_intro;
 }
 
 function upgrade_values(){

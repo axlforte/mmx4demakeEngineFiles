@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_saber_select",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Functions",
-    "path": "folders/Scripts/Player/Base/Saber/Functions.yy",
+  "$GMScript":"",
+  "%Name":"player_saber_select",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_saber_select",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Scripts/Player/Base/Saber/Functions.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

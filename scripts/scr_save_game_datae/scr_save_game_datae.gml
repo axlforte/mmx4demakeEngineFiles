@@ -27,11 +27,11 @@ function scr_load_game_data(){
 	global.player_max_health = ini_read_real("BASIC", "max hp", 12);
 	global.player_health = ini_read_real("BASIC", "hp", global.player_max_health);
 	global.player_exp = ini_read_real("BASIC", "xp", 0);
-	global.save_dest = ini_read_string("BASIC", "location", "intro");
+	global.save_dest = ini_read_real("BASIC", "location", rm_intro);
 	
-	global.sub_tank_1 = ini_write_string("BASIC", "tank 1", false);
-	global.sub_tank_2 = ini_write_string("BASIC", "tank 2", false);
-	global.weap_tank_1 = ini_write_string("BASIC", "tank 3", false);
+	global.sub_tank_1 = ini_read_real("BASIC", "tank 1", false);
+	global.sub_tank_2 = ini_read_real("BASIC", "tank 2", false);
+	global.weap_tank_1 = ini_read_real("BASIC", "tank 3", false);
 	
 	for(var d = 0; d < array_length(global.heart_used);d++){
 		global.heart_used[d] = ini_read_real("BASIC", "heart " + string(d), false)

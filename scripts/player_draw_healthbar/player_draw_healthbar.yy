@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_draw_healthbar",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bars",
-    "path": "folders/Scripts/Bars.yy",
+  "$GMScript":"",
+  "%Name":"player_draw_healthbar",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_draw_healthbar",
+  "parent":{
+    "name":"Bars",
+    "path":"folders/Scripts/Bars.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

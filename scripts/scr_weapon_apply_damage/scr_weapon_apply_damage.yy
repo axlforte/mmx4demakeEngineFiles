@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_weapon_apply_damage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Base",
-    "path": "folders/Scripts/Player/Weapons/Base.yy",
+  "$GMScript":"",
+  "%Name":"scr_weapon_apply_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_weapon_apply_damage",
+  "parent":{
+    "name":"Base",
+    "path":"folders/Scripts/Player/Weapons/Base.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

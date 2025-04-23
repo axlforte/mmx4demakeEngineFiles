@@ -7,6 +7,11 @@ function player_x_armor() {
 	weapons_script[weapons.x_buster] = player_x_buster_x4;
 	charge_level_max = 2;
 	
+	if(ARMS == "1" || ARMS == 1 || G.player_character_armor[pl_char.x][3] == "1"){
+		charge_level_max = 3;
+		grav = 0.01;
+	}
+	show_debug_message(ARMS + " is the arms, and so is " + G.player_character_armor[pl_char.x][3]);
 	#region X4 - Force Armor
 		if (LEGS == "x4") {
 			// Air Dash

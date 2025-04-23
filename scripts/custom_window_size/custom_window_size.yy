@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "custom_window_size",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Screen",
-    "path": "folders/Scripts/Utils/Screen.yy",
+  "$GMScript":"",
+  "%Name":"custom_window_size",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"custom_window_size",
+  "parent":{
+    "name":"Screen",
+    "path":"folders/Scripts/Utils/Screen.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

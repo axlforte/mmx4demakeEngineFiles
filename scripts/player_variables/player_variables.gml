@@ -49,7 +49,7 @@ function player_variables() {
 
 	// Walk
 	walk = false; // Is the player walking?
-	walk_speed_default = 1.5; // Speed (pixels / frame)
+	walk_speed_default = 376/256; // Speed (pixels / frame)
 	walk_speed = walk_speed_default; // Current Walk Speed
 	
 	// Dash
@@ -60,7 +60,7 @@ function player_variables() {
 	
 	// Jump
 	jump = false; // Is the player jumping?
-	jump_strength = 5; // Initial Vertical Speed
+	jump_strength = 1363/256; // Initial Vertical Speed
 	jump_sound = snd_player_jump; // Jump Sound
 	jump_animation_enabled = true; // Is the jump animation enabled?
 
@@ -292,7 +292,7 @@ function player_variables() {
 function player_dash_variables() {
 	// Dash
 	dash = false; // Is the player dashing?
-	dash_speed = 3.5; // Speed (pixels / frame)
+	dash_speed = 885/256; // Speed (pixels / frame)
 	dash_dir = 1; // Direction
 	dash_normal_length = 32; // Dash Normal Length
 	dash_length = dash_normal_length; // Current Dash Length

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_x_animation",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Animation",
-    "path": "folders/Scripts/Player/Characters/X/Animation.yy",
+  "$GMScript":"",
+  "%Name":"player_x_animation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_x_animation",
+  "parent":{
+    "name":"Animation",
+    "path":"folders/Scripts/Player/Characters/X/Animation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

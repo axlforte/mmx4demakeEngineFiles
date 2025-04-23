@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "trail_update",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Trail",
-    "path": "folders/Scripts/Utils/Trail.yy",
+  "$GMScript":"",
+  "%Name":"trail_update",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"trail_update",
+  "parent":{
+    "name":"Trail",
+    "path":"folders/Scripts/Utils/Trail.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

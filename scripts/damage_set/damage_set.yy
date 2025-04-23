@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "damage_set",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Methods",
-    "path": "folders/Scripts/Enemy/Methods.yy",
+  "$GMScript":"",
+  "%Name":"damage_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"damage_set",
+  "parent":{
+    "name":"Methods",
+    "path":"folders/Scripts/Enemy/Methods.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

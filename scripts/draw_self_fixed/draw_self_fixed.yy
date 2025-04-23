@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_self_fixed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Utils/Draw.yy",
+  "$GMScript":"",
+  "%Name":"draw_self_fixed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_self_fixed",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Scripts/Utils/Draw.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

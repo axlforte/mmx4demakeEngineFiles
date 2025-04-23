@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "char_index",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Text",
-    "path": "folders/Scripts/Utils/Text.yy",
+  "$GMScript":"",
+  "%Name":"char_index",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"char_index",
+  "parent":{
+    "name":"Text",
+    "path":"folders/Scripts/Utils/Text.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_update_subitem",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Item",
-    "path": "folders/Scripts/Start Menu/Item.yy",
+  "$GMScript":"",
+  "%Name":"menu_update_subitem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_update_subitem",
+  "parent":{
+    "name":"Item",
+    "path":"folders/Scripts/Start Menu/Item.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -4,6 +4,7 @@ hp = 1;
 collide_damage = array_get([1, 2, 3, 128], global.difficulty);
 fly_speed = array_get([3.5, 4, 4.5, 7], global.difficulty);
 grav = 0;
+fly_delay = 45;
 
 x_spd = 0;
 y_spd = 0;

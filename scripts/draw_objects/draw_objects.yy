@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_objects",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Surface",
-    "path": "folders/Scripts/Utils/Draw/Surface.yy",
+  "$GMScript":"",
+  "%Name":"draw_objects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_objects",
+  "parent":{
+    "name":"Surface",
+    "path":"folders/Scripts/Utils/Draw/Surface.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

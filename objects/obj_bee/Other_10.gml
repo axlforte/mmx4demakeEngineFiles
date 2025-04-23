@@ -7,7 +7,7 @@ switch(state) {
 	#region Hanging
 	case bee.hanging:
 		animation_play("H");
-	    if (distance_x < 128){
+	    if (distance_x < 128 && fly_delay <= 0){
 			
 			x_spd = pl_x - x;
 			y_spd = pl_y - y;
@@ -19,6 +19,7 @@ switch(state) {
 			
 			state_set(bee.attacking);
 		}
+		fly_delay = clamp(fly_delay - 1, 0, 256);
 		break;
 	#endregion
 	#region Attacking

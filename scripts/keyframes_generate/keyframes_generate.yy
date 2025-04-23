@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "keyframes_generate",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Animation",
-    "path": "folders/Scripts/Object/Animation.yy",
+  "$GMScript":"",
+  "%Name":"keyframes_generate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"keyframes_generate",
+  "parent":{
+    "name":"Animation",
+    "path":"folders/Scripts/Object/Animation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

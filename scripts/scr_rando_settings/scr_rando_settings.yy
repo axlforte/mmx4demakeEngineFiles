@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_rando_settings",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Randomizer",
-    "path": "folders/Scripts/Settings/Randomizer.yy",
+  "$GMScript":"",
+  "%Name":"scr_rando_settings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_rando_settings",
+  "parent":{
+    "name":"Randomizer",
+    "path":"folders/Scripts/Settings/Randomizer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

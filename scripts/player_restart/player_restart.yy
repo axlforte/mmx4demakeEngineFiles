@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_restart",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Create",
-    "path": "folders/Scripts/Player/Base/Create.yy",
+  "$GMScript":"",
+  "%Name":"player_restart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_restart",
+  "parent":{
+    "name":"Create",
+    "path":"folders/Scripts/Player/Base/Create.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

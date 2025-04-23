@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Script423",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Utils",
-    "path": "folders/Scripts/Utils.yy",
+  "$GMScript":"",
+  "%Name":"Script423",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script423",
+  "parent":{
+    "name":"Utils",
+    "path":"folders/Scripts/Utils.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

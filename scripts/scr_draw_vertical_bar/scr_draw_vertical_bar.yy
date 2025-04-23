@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_draw_vertical_bar",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bars",
-    "path": "folders/Scripts/Bars.yy",
+  "$GMScript":"",
+  "%Name":"scr_draw_vertical_bar",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_draw_vertical_bar",
+  "parent":{
+    "name":"Bars",
+    "path":"folders/Scripts/Bars.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

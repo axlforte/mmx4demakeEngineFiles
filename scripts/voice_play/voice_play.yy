@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "voice_play",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Voices",
-    "path": "folders/Scripts/Player/Base/Voices.yy",
+  "$GMScript":"",
+  "%Name":"voice_play",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"voice_play",
+  "parent":{
+    "name":"Voices",
+    "path":"folders/Scripts/Player/Base/Voices.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_string_width",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Text",
-    "path": "folders/Scripts/Utils/Text.yy",
+  "$GMScript":"",
+  "%Name":"get_string_width",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_string_width",
+  "parent":{
+    "name":"Text",
+    "path":"folders/Scripts/Utils/Text.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -291,7 +291,7 @@ switch (state) {
 			settings_apply();
 			room = rm_music_unfucker;
 			music_stop(1000);
-			G.player_character_armor[pl_char.x][3] = x_armor.x1;
+			//G.player_character_armor[pl_char.x][3] = x_armor.x1;
 			global.character_selected[0] = global.character_object[global.character_selected_index[0]];
 			//original
 			audio_play(snd_player_success);

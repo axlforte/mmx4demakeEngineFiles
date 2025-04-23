@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_x_buster_x7",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "X7",
-    "path": "folders/Scripts/Player/Characters/X/Weapons/Shots/X7.yy",
+  "$GMScript":"",
+  "%Name":"player_x_buster_x7",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_x_buster_x7",
+  "parent":{
+    "name":"X7",
+    "path":"folders/Scripts/Player/Characters/X/Weapons/Shots/X7.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_letter_apply",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Dialouge",
-    "path": "folders/Objects/Camera/Dialouge.yy",
+  "$GMScript":"",
+  "%Name":"scr_letter_apply",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_letter_apply",
+  "parent":{
+    "name":"Dialouge",
+    "path":"folders/Objects/Camera/Dialouge.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -4,16 +4,18 @@ function player_state_ladder() {
 	v_speed = 0;
 	grav = 0;
 	
-	if(key_p_left){
+	if(key_p_right){
 		dir = 1;
 		xscale = 1;
-	} else if(key_p_right){
-		dir = 1;
-		xscale = 1;
+	} else if(key_p_left){
+		dir = -1;
+		xscale = -1;
 	}
 	
 	if(t <= 7){
 		player_trail_minimize();
+		player_effects_reset();
+		shoot_t = 0;
 		animation_play("ladder",2);
 	} else if(shoot_t > 10){
 		animation_play("ladder",42);
@@ -54,6 +56,7 @@ function player_state_ladder() {
 
 	if (is_on_floor() && !key_up) {
 		player_state_set(states.land, 1);
+			player_trail_minimize();
 		animation_play("land");
 		v_speed = 0;
 		h_speed = 0;
@@ -64,6 +67,7 @@ function player_state_ladder() {
 	}
 	
 	if(key_p_jump){
+			player_trail_minimize();
 		player_state_set(states.fall, 1);
 		v_speed = 0;
 		h_speed = 0;

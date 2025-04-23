@@ -9,9 +9,12 @@ switch(state) {
 		draw_string_center(160, 52, "recorded and posted in the Repliforce", colors.red);
 		draw_string_center(160, 62, "discord server.", colors.red);
 		draw_string_center(160, 82, "This also does not include the entire", colors.red);
-		draw_string_center(160, 92, " game, it only includes 3 hand picked", colors.red);
-		draw_string_center(160, 102, "stages to show offthe gameplay features ", colors.red);
-		draw_string_center(160, 112, "you can expect.", colors.red);
+		draw_string_center(160, 92, "game, it only includes 3 hand picked", colors.red);
+		draw_string_center(160, 102, "stages to show off the gameplay", colors.red);
+		draw_string_center(160, 112, "features you can expect.", colors.red);
+		draw_string_center(160, 132, "You can find the credits by talking", colors.red);
+		draw_string_center(160, 142, "to Axlforte in the top floor of the", colors.red);
+		draw_string_center(160, 152, "maverick hunters HQ.", colors.red);
 	break;
 	#endregion
 	#region load

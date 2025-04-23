@@ -8,6 +8,7 @@ if(global.rando){
 //regular information
 amount = 1;
 name = "none"
+shows_notification = true;
 enum pickup_types {
 	none,
 	heart,

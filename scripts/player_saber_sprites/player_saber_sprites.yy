@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_saber_sprites",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Saber",
-    "path": "folders/Scripts/Player/Base/Saber.yy",
+  "$GMScript":"",
+  "%Name":"player_saber_sprites",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_saber_sprites",
+  "parent":{
+    "name":"Saber",
+    "path":"folders/Scripts/Player/Base/Saber.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

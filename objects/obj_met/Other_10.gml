@@ -10,8 +10,9 @@ switch(state) {
 			animation_play("shoop");
 			damageable = false;
 		}
-		if(t == 120){
+		if(t == 90){
 			damageable = true;
+			face_x = true;
 			state_set(met.look);
 		}
 		break;
@@ -23,6 +24,7 @@ switch(state) {
 		}
 		
 		if(t == 15){
+			face_x = false;
 			if(abs(DPX) > 48){
 				state_set(met.hide);
 			} else {

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "boss_effect_draw",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effect",
-    "path": "folders/Scripts/Bosses/Effect.yy",
+  "$GMScript":"",
+  "%Name":"boss_effect_draw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"boss_effect_draw",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Bosses/Effect.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

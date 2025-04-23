@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "directory_exists_fixed",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Directory",
-    "path": "folders/Scripts/Utils/Directory.yy",
+  "$GMScript":"",
+  "%Name":"directory_exists_fixed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"directory_exists_fixed",
+  "parent":{
+    "name":"Directory",
+    "path":"folders/Scripts/Utils/Directory.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

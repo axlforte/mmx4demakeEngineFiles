@@ -20,7 +20,7 @@ switch(state) {
 		if(t == 0){
 			animation_play("pew");
 		}
-		if(t > 30 && t < 60){
+		if(t > 35 && t < 60){
 			if(hp < max_hp / 2){
 				if(t mod 3 == 1){//this one carpet bombs the ground
 					var p = instance_create_depth(x + 19*dir, y - 6, depth - 1, obj_eregion_barf);
@@ -30,7 +30,7 @@ switch(state) {
 					p.owner = id;
 				}
 			} else {
-				if(t mod 9 == 1){//this one shoots in the direction of the player
+				if((t+5) mod 9 == 1){//this one shoots in the direction of the player
 					var p = instance_create_depth(x + 19*dir, y - 6, depth - 1, obj_eregion_barf);
 					p.h_speed = 6 * dir;
 					p.v_speed = 0;
@@ -65,10 +65,13 @@ switch(state) {
 			y -= 1
 		} else if(t < 60){
 			x += 2 * dir;
+		} else if(t < 75){
+			//stall
 		} else {
 			grav = 0.5;
 			state_set(boss_states.idle);
 		}
+		x = clamp(x, 4672 + 64, 5248 - 64);
 		break;
 	#endregion
 }

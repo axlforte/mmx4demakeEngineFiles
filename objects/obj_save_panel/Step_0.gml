@@ -33,7 +33,7 @@ if(check_tick == check_tick_delay){
 if(save_timer > 40 && !saved){
 	save_timer --;
 	//global.game_save_num = 1;
-	global.save_dest = save_loc;
+	global.save_dest = room;
 	scr_save_game_data();
 	saved = true;
 	audio_play(snd_player_success);

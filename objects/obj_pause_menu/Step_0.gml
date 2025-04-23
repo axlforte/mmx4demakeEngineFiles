@@ -6,7 +6,7 @@ if(piss_off){
 	switch(y_steps){
 		case(1):
 			with(obj_player_parent){
-				if(!instance_place(x,y,par_ride_armor)){//maybe fixes the issue?
+				if(!instance_place(x,y,par_ride_armor) && is_on_floor()){//maybe fixes the issue?
 					state_set(states.idle);
 				}
 			}

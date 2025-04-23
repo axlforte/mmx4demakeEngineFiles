@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "NetworkSpawner",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Classes",
-    "path": "folders/Scripts/netcode/Classes.yy",
+  "$GMScript":"",
+  "%Name":"NetworkSpawner",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"NetworkSpawner",
+  "parent":{
+    "name":"Classes",
+    "path":"folders/Scripts/netcode/Classes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "menu_draw_buttons",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Start Menu/Draw.yy",
+  "$GMScript":"",
+  "%Name":"menu_draw_buttons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"menu_draw_buttons",
+  "parent":{
+    "name":"Draw",
+    "path":"folders/Scripts/Start Menu/Draw.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

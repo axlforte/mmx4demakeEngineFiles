@@ -17,4 +17,5 @@ radius = 12;
 spd = 3;
 index = 0;
 ind_flip = 0;
+depth = -10000;
 player = instance_nearest(x,y,obj_player_parent);

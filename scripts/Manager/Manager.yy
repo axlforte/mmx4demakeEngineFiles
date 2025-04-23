@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Manager",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Classes",
-    "path": "folders/Scripts/netcode/Classes.yy",
+  "$GMScript":"",
+  "%Name":"Manager",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Manager",
+  "parent":{
+    "name":"Classes",
+    "path":"folders/Scripts/netcode/Classes.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

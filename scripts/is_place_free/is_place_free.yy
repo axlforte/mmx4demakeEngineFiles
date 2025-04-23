@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_place_free",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Physics",
-    "path": "folders/Scripts/Player/Base/Physics.yy",
+  "$GMScript":"",
+  "%Name":"is_place_free",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_place_free",
+  "parent":{
+    "name":"Physics",
+    "path":"folders/Scripts/Player/Base/Physics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

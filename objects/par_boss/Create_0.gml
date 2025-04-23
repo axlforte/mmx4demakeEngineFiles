@@ -103,7 +103,7 @@ function default_boss_intro_sequence(){
 		if(instance_exists(obj_jet_stingray))
 			state_timer = boss_intro_start_time / 2;
 		else
-			state_timer = boss_intro_start_time - 1;
+			state_timer--;
 	}
 			
 	if(!has_worded){
@@ -128,6 +128,7 @@ function default_boss_intro_sequence(){
 		inst.amount = max_hp;
 		inst.time_per_unit = 1;
 		inst.pickup_type = pickup_types.hp;
+		inst.shows_notification = false;
 	}
 	// Full Health
 	if (hp == max_hp) {

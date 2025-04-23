@@ -130,3 +130,5 @@ tpix = noone;
 if(global.pause_type == pause_types.none){
 	instance_destroy();
 }
+
+depth = -100000;

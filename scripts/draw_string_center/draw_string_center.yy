@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_string_center",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Text",
-    "path": "folders/Scripts/Utils/Text.yy",
+  "$GMScript":"",
+  "%Name":"draw_string_center",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_string_center",
+  "parent":{
+    "name":"Text",
+    "path":"folders/Scripts/Utils/Text.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

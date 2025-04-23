@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GameServer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "netcode",
-    "path": "folders/Scripts/netcode.yy",
+  "$GMScript":"",
+  "%Name":"GameServer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GameServer",
+  "parent":{
+    "name":"netcode",
+    "path":"folders/Scripts/netcode.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

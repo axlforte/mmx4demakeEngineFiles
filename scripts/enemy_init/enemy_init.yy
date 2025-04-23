@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "enemy_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Start",
-    "path": "folders/Scripts/Enemy/Start.yy",
+  "$GMScript":"",
+  "%Name":"enemy_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enemy_init",
+  "parent":{
+    "name":"Start",
+    "path":"folders/Scripts/Enemy/Start.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

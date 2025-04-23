@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tilemap_layer_set_visible",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Layer",
-    "path": "folders/Scripts/Utils/Layer.yy",
+  "$GMScript":"",
+  "%Name":"tilemap_layer_set_visible",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tilemap_layer_set_visible",
+  "parent":{
+    "name":"Layer",
+    "path":"folders/Scripts/Utils/Layer.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

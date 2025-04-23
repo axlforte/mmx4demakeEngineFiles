@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "mobile_start",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Mobile",
-    "path": "folders/Scripts/Mobile.yy",
+  "$GMScript":"",
+  "%Name":"mobile_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mobile_start",
+  "parent":{
+    "name":"Mobile",
+    "path":"folders/Scripts/Mobile.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

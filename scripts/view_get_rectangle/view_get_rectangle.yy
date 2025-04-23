@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "view_get_rectangle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Views",
-    "path": "folders/Scripts/Utils/Views.yy",
+  "$GMScript":"",
+  "%Name":"view_get_rectangle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"view_get_rectangle",
+  "parent":{
+    "name":"Views",
+    "path":"folders/Scripts/Utils/Views.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

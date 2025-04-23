@@ -19,15 +19,18 @@ if(!activate){
 		} else {
 			dilog = instance_create_depth(x - 144,y - 34,-100, obj_dialouge);
 			dilog.convo = self;
-			dilog.linone = array_get(conversation, index);
+			log(array_get(conversation, index))
+			dilog.linone = array_get(conversation, index)[0];
 			if (index <= 0){
 				dilog.delay = 30;	
 			}
 		}
 		audio_stop_sound(lines[clamp(index - 1, 0, array_length(lines))])
 		var temp_audio = lines[clamp(index, 0, array_length(lines))];
-		audio_play_sound(temp_audio, 0, 0);
-		audio_sound_gain(temp_audio, global.sfx_volume * 1.5, 0);
+			if temp_audio != noone {
+			audio_play_sound(temp_audio, 0, 0);
+			audio_sound_gain(temp_audio, global.sfx_volume * 1.5, 0);
+		}
 	}
 }
 

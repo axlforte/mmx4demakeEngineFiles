@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_variables",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Create",
-    "path": "folders/Scripts/Player/Base/Create.yy",
+  "$GMScript":"",
+  "%Name":"player_variables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_variables",
+  "parent":{
+    "name":"Create",
+    "path":"folders/Scripts/Player/Base/Create.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

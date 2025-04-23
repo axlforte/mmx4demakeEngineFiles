@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "audio_play",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Audio",
-    "path": "folders/Scripts/Utils/Audio.yy",
+  "$GMScript":"",
+  "%Name":"audio_play",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"audio_play",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Utils/Audio.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

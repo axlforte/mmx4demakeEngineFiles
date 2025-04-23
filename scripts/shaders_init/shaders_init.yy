@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "shaders_init",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Shaders",
-    "path": "folders/Scripts/Utils/Shaders.yy",
+  "$GMScript":"",
+  "%Name":"shaders_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"shaders_init",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Scripts/Utils/Shaders.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

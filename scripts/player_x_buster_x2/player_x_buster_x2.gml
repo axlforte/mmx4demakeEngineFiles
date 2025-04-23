@@ -28,25 +28,7 @@ function player_x_buster_x2() {
 		break;
 		// Super-Charged shot
 		case 3:
-			charge_level = lvl;
-			if (t == 0) {
-				player_shoot_db_buster(obj_player_x_shot_2, RIGHT);
-			} else {
-				player_shoot_db_buster(obj_player_x_shot_x2_super, LEFT);	
-				player_shoot_sequence_end();
-			}
-			shot_id++;
-			break;
-		case 4:
-			// Keep this charge level, so the player can shoot at this level again
-			charge_level = lvl;
-			if (t == 0) {
-				player_shoot_db_buster(obj_player_x_shot_x2_3, RIGHT);
-			} else {
-				player_shoot_db_buster(obj_player_x_shot_x2_super, LEFT);	
-				player_shoot_sequence_end();
-			}
-			shot_id++;
+			player_shoot_db_buster(obj_player_x_shot_ult_super);
 		break;
 	
 	}

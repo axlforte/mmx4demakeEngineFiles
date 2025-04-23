@@ -14,11 +14,11 @@ function player_check_jump() {
 				sound_index = voice_x_jump_3;	
 			}
 			
-			audio_play_sound(sound_index, 0, 0);
-			audio_sound_gain(sound_index, global.sfx_volume, 0);
+			//audio_play_sound(sound_index, 0, 0);
+			//audio_sound_gain(sound_index, global.sfx_volume, 0);
 			
 			animation_play("jump");
-			voice_play();
+			//voice_play();
 			v_speed = -jump_strength;
 			if (state_unlocked[states.high_jump] && key_up) {
 				v_speed = -high_jump_strength;
@@ -26,6 +26,7 @@ function player_check_jump() {
 				substates[0] = 1; // High Jump
 				dash_air_count++;
 			}
+			y += v_speed;
 		    audio_play(jump_sound);
 		}
 		

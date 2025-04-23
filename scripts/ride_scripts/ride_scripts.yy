@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ride_scripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Scripts",
-    "path": "folders/Objects/Ride/Scripts.yy",
+  "$GMScript":"",
+  "%Name":"ride_scripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ride_scripts",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Objects/Ride/Scripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tile_get_depth",
-  "isCompatibility": true,
-  "isDnD": false,
-  "parent": {
-    "name": "tile",
-    "path": "folders/Scripts/Compatibility/tile.yy",
+  "$GMScript":"",
+  "%Name":"tile_get_depth",
+  "isCompatibility":true,
+  "isDnD":false,
+  "name":"tile_get_depth",
+  "parent":{
+    "name":"tile",
+    "path":"folders/Scripts/Compatibility/tile.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

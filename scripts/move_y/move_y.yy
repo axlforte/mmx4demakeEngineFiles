@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "move_y",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Physics",
-    "path": "folders/Scripts/Player/Base/Physics.yy",
+  "$GMScript":"",
+  "%Name":"move_y",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"move_y",
+  "parent":{
+    "name":"Physics",
+    "path":"folders/Scripts/Player/Base/Physics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

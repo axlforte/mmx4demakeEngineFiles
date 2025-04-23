@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_effect_top",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effects Top Bottom",
-    "path": "folders/Scripts/Player/Base/Step/Effects Top Bottom.yy",
+  "$GMScript":"",
+  "%Name":"player_effect_top",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_effect_top",
+  "parent":{
+    "name":"Effects Top Bottom",
+    "path":"folders/Scripts/Player/Base/Step/Effects Top Bottom.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

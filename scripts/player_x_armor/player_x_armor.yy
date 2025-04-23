@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_x_armor",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Armors",
-    "path": "folders/Scripts/Player/Characters/X/Armors.yy",
+  "$GMScript":"",
+  "%Name":"player_x_armor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_x_armor",
+  "parent":{
+    "name":"Armors",
+    "path":"folders/Scripts/Player/Characters/X/Armors.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

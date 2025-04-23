@@ -8,7 +8,7 @@ if (instance_exists(obj_player_parent))
        vinput = key_down - key_up;
        enter = key_p_start;
 	if ((obj_player_parent.bbox_bottom) > y) || 
-	   (key_down && key_jump)
+	   (key_down/* && key_jump*/)
 	   {
 	     mask_index = -1;sprite_index = -1;	
 	   }

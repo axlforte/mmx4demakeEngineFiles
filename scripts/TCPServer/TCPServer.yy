@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "TCPServer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "TCP",
-    "path": "folders/Scripts/netcode/Protocol/TCP.yy",
+  "$GMScript":"",
+  "%Name":"TCPServer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TCPServer",
+  "parent":{
+    "name":"TCP",
+    "path":"folders/Scripts/netcode/Protocol/TCP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

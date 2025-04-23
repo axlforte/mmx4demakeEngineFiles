@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "smoke_update",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Effects",
-    "path": "folders/Scripts/Enemy/Effects.yy",
+  "$GMScript":"",
+  "%Name":"smoke_update",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"smoke_update",
+  "parent":{
+    "name":"Effects",
+    "path":"folders/Scripts/Enemy/Effects.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Light",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Light",
-    "path": "folders/Scripts/Utils/Light.yy",
+  "$GMScript":"",
+  "%Name":"Light",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Light",
+  "parent":{
+    "name":"Light",
+    "path":"folders/Scripts/Utils/Light.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

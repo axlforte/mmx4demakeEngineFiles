@@ -9,6 +9,8 @@ if global.crt > 0 && global.settings[0] != global.fullscreen_index//streched mad
 	else 
 		shader_set_uniform_f_array(UCRTParams, CRT.Params_harsh);
 
+} else {
+	return;
 }
 gpu_set_blendenable(false);
 var drawsize = (global.settings[0] < global.fullscreen_index - 1 ? global.settings[0] : 3.5);//.125

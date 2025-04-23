@@ -112,6 +112,7 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 // Amount is over, unpause and destroy this instance
 if (amount <= 0) {
 	pause_set(false);
+	if(shows_notification && global.notes){
 	var note = instance_create_depth(x,y,depth,obj_notification);
 	if(pickup_type = pickup_types.hp){
 		note.text = "healed by ";
@@ -129,5 +130,6 @@ if (amount <= 0) {
 		note.text = "gained ";
 	}
 	note.text += string(start_amount);
+	}
 	instance_destroy();
 }

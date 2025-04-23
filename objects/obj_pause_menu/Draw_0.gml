@@ -47,7 +47,7 @@ switch(menu){
 			
 			draw_sprite(tank_in_menu, 0, x + 176, y + 176);
 			draw_set_color(#e87917);
-			draw_rectangle(x + 182, y + 176, x + 186, y + 176 + (global.tank_storage[0]/2), true);
+			draw_rectangle(x + 182, y + 176, x + 185, y + 176 + (global.tank_storage[0]/array_get([3,2,2,1], global.difficulty)), false);
 		} 
 		if(global.sub_tank_2){
 			draw_sprite(tank_in_menu, 0, x + 192, y + 176);

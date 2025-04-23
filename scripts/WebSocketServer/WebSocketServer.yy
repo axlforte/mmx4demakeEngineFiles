@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "WebSocketServer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "WebSocket",
-    "path": "folders/Scripts/netcode/Protocol/WebSocket.yy",
+  "$GMScript":"",
+  "%Name":"WebSocketServer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"WebSocketServer",
+  "parent":{
+    "name":"WebSocket",
+    "path":"folders/Scripts/netcode/Protocol/WebSocket.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
